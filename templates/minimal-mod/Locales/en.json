@@ -1,0 +1,11 @@
+{
+  "trait_group_my_mod_group": "My Mod",
+  "trait_my_trait": "My Trait",
+  "trait_my_trait_info": "A sturdier, faster unit.",
+  "status_my_effect": "My Effect",
+  "status_my_effect_description": "A short-lived buff.",
+  "my_power": "My Power",
+  "my_power_description": "Grants My Trait to units on the clicked tile.",
+  "my_mod_tab": "My Mod",
+  "my_mod_tab_description": "Powers from MyMod."
+}

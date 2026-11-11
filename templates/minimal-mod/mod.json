@@ -1,0 +1,14 @@
+{
+  "name": "MyMod",
+  "GUID": "com.example.mymod",
+  "author": "author",
+  "version": "0.1.0",
+  "description": "A WorldBox mod built from the worldbox-modder template.",
+  "RepoUrl": "",
+  "iconPath": "icon.png",
+  "Dependencies": [],
+  "OptionalDependencies": [],
+  "IncompatibleWith": [],
+  "targetGameBuild": 0,
+  "UsePublicizedAssembly": true
+}
