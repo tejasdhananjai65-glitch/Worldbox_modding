@@ -1,0 +1,829 @@
+﻿######## TYPE BrushLibrary : AssetLibrary`1<BrushData>
+---- System.Void init()
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: call System.Void BaseAssetLibrary::init()
+     0006 IL_0006: ldarg.0
+     0007 IL_0007: newobj System.Void BrushData::.ctor()
+     000c IL_000c: dup
+     000d IL_000d: ldstr "circ_0"
+     0012 IL_0012: stfld System.String Asset::id
+     0017 IL_0017: dup
+     0018 IL_0018: ldc.i4.0
+     0019 IL_0019: stfld System.Int32 BrushData::size
+     001e IL_001e: dup
+     001f IL_001f: ldc.i4.1
+     0020 IL_0020: stfld BrushGroup BrushData::group
+     0025 IL_0025: dup
+     0026 IL_0026: ldc.i4.1
+     0027 IL_0027: stfld System.Boolean BrushData::fast_spawn
+     002c IL_002c: dup
+     002d IL_002d: ldc.i4.1
+     002e IL_002e: stfld System.Boolean BrushData::continuous
+     0033 IL_0033: dup
+     0034 IL_0034: ldstr "brush_circ"
+     0039 IL_0039: stfld System.String BrushData::localized_key
+     003e IL_003e: dup
+     003f IL_003f: ldsfld BrushGenerateAction BrushLibrary/<>c::<>9__1_3
+     0044 IL_0044: dup
+     0045 IL_0045: brtrue.s IL_005e
+     0047 IL_0047: pop
+     0048 IL_0048: ldsfld BrushLibrary/<>c BrushLibrary/<>c::<>9
+     004d IL_004d: ldftn System.Void BrushLibrary/<>c::<init>b__1_3(BrushData)
+     0053 IL_0053: newobj System.Void BrushGenerateAction::.ctor(System.Object,System.IntPtr)
+     0058 IL_0058: dup
+     0059 IL_0059: stsfld BrushGenerateAction BrushLibrary/<>c::<>9__1_3
+     005e IL_005e: stfld BrushGenerateAction BrushData::generate_action
+     0063 IL_0063: callvirt T AssetLibrary`1<BrushData>::add(T)
+     0068 IL_0068: pop
+     0069 IL_0069: ldarg.0
+     006a IL_006a: ldfld T AssetLibrary`1<BrushData>::t
+     006f IL_006f: ldc.i4.1
+     0070 IL_0070: stfld System.Boolean BrushData::show_in_brush_window
+     0075 IL_0075: ldarg.0
+     0076 IL_0076: ldstr "circ_1"
+     007b IL_007b: ldstr "circ_0"
+     0080 IL_0080: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     0085 IL_0085: pop
+     0086 IL_0086: ldarg.0
+     0087 IL_0087: ldfld T AssetLibrary`1<BrushData>::t
+     008c IL_008c: ldc.i4.1
+     008d IL_008d: stfld System.Int32 BrushData::size
+     0092 IL_0092: ldarg.0
+     0093 IL_0093: ldfld T AssetLibrary`1<BrushData>::t
+     0098 IL_0098: ldc.i4.0
+     0099 IL_0099: stfld System.Boolean BrushData::fast_spawn
+     009e IL_009e: ldarg.0
+     009f IL_009f: ldfld T AssetLibrary`1<BrushData>::t
+     00a4 IL_00a4: ldc.i4.1
+     00a5 IL_00a5: stfld System.Boolean BrushData::show_in_brush_window
+     00aa IL_00aa: ldarg.0
+     00ab IL_00ab: ldfld T AssetLibrary`1<BrushData>::t
+     00b0 IL_00b0: ldsfld BrushGenerateAction BrushLibrary/<>c::<>9__1_0
+     00b5 IL_00b5: dup
+     00b6 IL_00b6: brtrue.s IL_00cf
+     00b8 IL_00b8: pop
+     00b9 IL_00b9: ldsfld BrushLibrary/<>c BrushLibrary/<>c::<>9
+     00be IL_00be: ldftn System.Void BrushLibrary/<>c::<init>b__1_0(BrushData)
+     00c4 IL_00c4: newobj System.Void BrushGenerateAction::.ctor(System.Object,System.IntPtr)
+     00c9 IL_00c9: dup
+     00ca IL_00ca: stsfld BrushGenerateAction BrushLibrary/<>c::<>9__1_0
+     00cf IL_00cf: stfld BrushGenerateAction BrushData::generate_action
+     00d4 IL_00d4: ldarg.0
+     00d5 IL_00d5: ldstr "circ_2"
+     00da IL_00da: ldstr "circ_1"
+     00df IL_00df: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     00e4 IL_00e4: pop
+     00e5 IL_00e5: ldarg.0
+     00e6 IL_00e6: ldfld T AssetLibrary`1<BrushData>::t
+     00eb IL_00eb: ldc.i4.2
+     00ec IL_00ec: stfld System.Int32 BrushData::size
+     00f1 IL_00f1: ldarg.0
+     00f2 IL_00f2: ldfld T AssetLibrary`1<BrushData>::t
+     00f7 IL_00f7: ldc.i4.1
+     00f8 IL_00f8: stfld System.Boolean BrushData::show_in_brush_window
+     00fd IL_00fd: ldarg.0
+     00fe IL_00fe: ldstr "circ_3"
+     0103 IL_0103: ldstr "circ_1"
+     0108 IL_0108: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     010d IL_010d: pop
+     010e IL_010e: ldarg.0
+     010f IL_010f: ldfld T AssetLibrary`1<BrushData>::t
+     0114 IL_0114: ldc.i4.3
+     0115 IL_0115: stfld System.Int32 BrushData::size
+     011a IL_011a: ldarg.0
+     011b IL_011b: ldfld T AssetLibrary`1<BrushData>::t
+     0120 IL_0120: ldc.i4.1
+     0121 IL_0121: stfld System.Boolean BrushData::show_in_brush_window
+     0126 IL_0126: ldarg.0
+     0127 IL_0127: ldstr "circ_4"
+     012c IL_012c: ldstr "circ_1"
+     0131 IL_0131: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     0136 IL_0136: pop
+     0137 IL_0137: ldarg.0
+     0138 IL_0138: ldfld T AssetLibrary`1<BrushData>::t
+     013d IL_013d: ldc.i4.4
+     013e IL_013e: stfld System.Int32 BrushData::size
+     0143 IL_0143: ldarg.0
+     0144 IL_0144: ldfld T AssetLibrary`1<BrushData>::t
+     0149 IL_0149: ldc.i4.0
+     014a IL_014a: stfld System.Boolean BrushData::continuous
+     014f IL_014f: ldarg.0
+     0150 IL_0150: ldfld T AssetLibrary`1<BrushData>::t
+     0155 IL_0155: ldc.i4.1
+     0156 IL_0156: stfld System.Boolean BrushData::show_in_brush_window
+     015b IL_015b: ldarg.0
+     015c IL_015c: ldstr "circ_5"
+     0161 IL_0161: ldstr "circ_4"
+     0166 IL_0166: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     016b IL_016b: pop
+     016c IL_016c: ldarg.0
+     016d IL_016d: ldfld T AssetLibrary`1<BrushData>::t
+     0172 IL_0172: ldc.i4.2
+     0173 IL_0173: stfld System.Int32 BrushData::drops
+     0178 IL_0178: ldarg.0
+     0179 IL_0179: ldfld T AssetLibrary`1<BrushData>::t
+     017e IL_017e: ldc.i4.5
+     017f IL_017f: stfld System.Int32 BrushData::size
+     0184 IL_0184: ldarg.0
+     0185 IL_0185: ldfld T AssetLibrary`1<BrushData>::t
+     018a IL_018a: ldc.i4.1
+     018b IL_018b: stfld System.Boolean BrushData::show_in_brush_window
+     0190 IL_0190: ldarg.0
+     0191 IL_0191: ldstr "circ_6"
+     0196 IL_0196: ldstr "circ_5"
+     019b IL_019b: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     01a0 IL_01a0: pop
+     01a1 IL_01a1: ldarg.0
+     01a2 IL_01a2: ldfld T AssetLibrary`1<BrushData>::t
+     01a7 IL_01a7: ldc.i4.6
+     01a8 IL_01a8: stfld System.Int32 BrushData::size
+     01ad IL_01ad: ldarg.0
+     01ae IL_01ae: ldfld T AssetLibrary`1<BrushData>::t
+     01b3 IL_01b3: ldc.i4.1
+     01b4 IL_01b4: stfld System.Boolean BrushData::show_in_brush_window
+     01b9 IL_01b9: ldarg.0
+     01ba IL_01ba: ldstr "circ_7"
+     01bf IL_01bf: ldstr "circ_5"
+     01c4 IL_01c4: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     01c9 IL_01c9: pop
+     01ca IL_01ca: ldarg.0
+     01cb IL_01cb: ldfld T AssetLibrary`1<BrushData>::t
+     01d0 IL_01d0: ldc.i4.7
+     01d1 IL_01d1: stfld System.Int32 BrushData::size
+     01d6 IL_01d6: ldarg.0
+     01d7 IL_01d7: ldfld T AssetLibrary`1<BrushData>::t
+     01dc IL_01dc: ldc.i4.1
+     01dd IL_01dd: stfld System.Boolean BrushData::show_in_brush_window
+     01e2 IL_01e2: ldarg.0
+     01e3 IL_01e3: ldstr "circ_8"
+     01e8 IL_01e8: ldstr "circ_5"
+     01ed IL_01ed: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     01f2 IL_01f2: pop
+     01f3 IL_01f3: ldarg.0
+     01f4 IL_01f4: ldfld T AssetLibrary`1<BrushData>::t
+     01f9 IL_01f9: ldc.i4.8
+     01fa IL_01fa: stfld System.Int32 BrushData::size
+     01ff IL_01ff: ldarg.0
+     0200 IL_0200: ldstr "circ_9"
+     0205 IL_0205: ldstr "circ_5"
+     020a IL_020a: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     020f IL_020f: pop
+     0210 IL_0210: ldarg.0
+     0211 IL_0211: ldfld T AssetLibrary`1<BrushData>::t
+     0216 IL_0216: ldc.i4.s 9
+     0218 IL_0218: stfld System.Int32 BrushData::size
+     021d IL_021d: ldarg.0
+     021e IL_021e: ldstr "circ_10"
+     0223 IL_0223: ldstr "circ_5"
+     0228 IL_0228: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     022d IL_022d: pop
+     022e IL_022e: ldarg.0
+     022f IL_022f: ldfld T AssetLibrary`1<BrushData>::t
+     0234 IL_0234: ldc.i4.s 10
+     0236 IL_0236: stfld System.Int32 BrushData::size
+     023b IL_023b: ldarg.0
+     023c IL_023c: ldfld T AssetLibrary`1<BrushData>::t
+     0241 IL_0241: ldc.i4.1
+     0242 IL_0242: stfld System.Boolean BrushData::show_in_brush_window
+     0247 IL_0247: ldarg.0
+     0248 IL_0248: ldfld T AssetLibrary`1<BrushData>::t
+     024d IL_024d: ldc.r4 0.9
+     0252 IL_0252: ldc.r4 0.9
+     0257 IL_0257: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     025c IL_025c: stfld UnityEngine.Vector2 BrushData::ui_scale
+     0261 IL_0261: ldarg.0
+     0262 IL_0262: ldstr "circ_11"
+     0267 IL_0267: ldstr "circ_5"
+     026c IL_026c: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     0271 IL_0271: pop
+     0272 IL_0272: ldarg.0
+     0273 IL_0273: ldfld T AssetLibrary`1<BrushData>::t
+     0278 IL_0278: ldc.i4.s 11
+     027a IL_027a: stfld System.Int32 BrushData::size
+     027f IL_027f: ldarg.0
+     0280 IL_0280: ldstr "circ_12"
+     0285 IL_0285: ldstr "circ_5"
+     028a IL_028a: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     028f IL_028f: pop
+     0290 IL_0290: ldarg.0
+     0291 IL_0291: ldfld T AssetLibrary`1<BrushData>::t
+     0296 IL_0296: ldc.i4.s 12
+     0298 IL_0298: stfld System.Int32 BrushData::size
+     029d IL_029d: ldarg.0
+     029e IL_029e: ldstr "circ_15"
+     02a3 IL_02a3: ldstr "circ_5"
+     02a8 IL_02a8: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     02ad IL_02ad: pop
+     02ae IL_02ae: ldarg.0
+     02af IL_02af: ldfld T AssetLibrary`1<BrushData>::t
+     02b4 IL_02b4: ldc.i4.s 15
+     02b6 IL_02b6: stfld System.Int32 BrushData::size
+     02bb IL_02bb: ldarg.0
+     02bc IL_02bc: ldfld T AssetLibrary`1<BrushData>::t
+     02c1 IL_02c1: ldc.i4.1
+     02c2 IL_02c2: stfld System.Boolean BrushData::show_in_brush_window
+     02c7 IL_02c7: ldarg.0
+     02c8 IL_02c8: ldfld T AssetLibrary`1<BrushData>::t
+     02cd IL_02cd: ldc.r4 0.9
+     02d2 IL_02d2: ldc.r4 0.9
+     02d7 IL_02d7: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     02dc IL_02dc: stfld UnityEngine.Vector2 BrushData::ui_scale
+     02e1 IL_02e1: ldarg.0
+     02e2 IL_02e2: ldstr "circ_20"
+     02e7 IL_02e7: ldstr "circ_5"
+     02ec IL_02ec: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     02f1 IL_02f1: pop
+     02f2 IL_02f2: ldarg.0
+     02f3 IL_02f3: ldfld T AssetLibrary`1<BrushData>::t
+     02f8 IL_02f8: ldc.i4.s 20
+     02fa IL_02fa: stfld System.Int32 BrushData::size
+     02ff IL_02ff: ldarg.0
+     0300 IL_0300: ldstr "circ_30"
+     0305 IL_0305: ldstr "circ_5"
+     030a IL_030a: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     030f IL_030f: pop
+     0310 IL_0310: ldarg.0
+     0311 IL_0311: ldfld T AssetLibrary`1<BrushData>::t
+     0316 IL_0316: ldc.i4.s 30
+     0318 IL_0318: stfld System.Int32 BrushData::size
+     031d IL_031d: ldarg.0
+     031e IL_031e: ldstr "circ_70"
+     0323 IL_0323: ldstr "circ_5"
+     0328 IL_0328: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     032d IL_032d: pop
+     032e IL_032e: ldarg.0
+     032f IL_032f: ldfld T AssetLibrary`1<BrushData>::t
+     0334 IL_0334: ldc.i4.3
+     0335 IL_0335: stfld System.Int32 BrushData::drops
+     033a IL_033a: ldarg.0
+     033b IL_033b: ldfld T AssetLibrary`1<BrushData>::t
+     0340 IL_0340: ldc.i4.s 70
+     0342 IL_0342: stfld System.Int32 BrushData::size
+     0347 IL_0347: ldarg.0
+     0348 IL_0348: newobj System.Void BrushData::.ctor()
+     034d IL_034d: dup
+     034e IL_034e: ldstr "sqr_0"
+     0353 IL_0353: stfld System.String Asset::id
+     0358 IL_0358: dup
+     0359 IL_0359: ldc.i4.0
+     035a IL_035a: stfld System.Int32 BrushData::size
+     035f IL_035f: dup
+     0360 IL_0360: ldc.i4.2
+     0361 IL_0361: stfld BrushGroup BrushData::group
+     0366 IL_0366: dup
+     0367 IL_0367: ldc.i4.1
+     0368 IL_0368: stfld System.Boolean BrushData::continuous
+     036d IL_036d: dup
+     036e IL_036e: ldc.i4.1
+     036f IL_036f: stfld System.Boolean BrushData::fast_spawn
+     0374 IL_0374: dup
+     0375 IL_0375: ldstr "brush_sqr"
+     037a IL_037a: stfld System.String BrushData::localized_key
+     037f IL_037f: dup
+     0380 IL_0380: ldsfld BrushGenerateAction BrushLibrary/<>c::<>9__1_4
+     0385 IL_0385: dup
+     0386 IL_0386: brtrue.s IL_039f
+     0388 IL_0388: pop
+     0389 IL_0389: ldsfld BrushLibrary/<>c BrushLibrary/<>c::<>9
+     038e IL_038e: ldftn System.Void BrushLibrary/<>c::<init>b__1_4(BrushData)
+     0394 IL_0394: newobj System.Void BrushGenerateAction::.ctor(System.Object,System.IntPtr)
+     0399 IL_0399: dup
+     039a IL_039a: stsfld BrushGenerateAction BrushLibrary/<>c::<>9__1_4
+     039f IL_039f: stfld BrushGenerateAction BrushData::generate_action
+     03a4 IL_03a4: callvirt T AssetLibrary`1<BrushData>::add(T)
+     03a9 IL_03a9: pop
+     03aa IL_03aa: ldarg.0
+     03ab IL_03ab: newobj System.Void BrushData::.ctor()
+     03b0 IL_03b0: dup
+     03b1 IL_03b1: ldstr "sqr_1"
+     03b6 IL_03b6: stfld System.String Asset::id
+     03bb IL_03bb: dup
+     03bc IL_03bc: ldc.i4.1
+     03bd IL_03bd: stfld System.Int32 BrushData::size
+     03c2 IL_03c2: dup
+     03c3 IL_03c3: ldc.i4.2
+     03c4 IL_03c4: stfld BrushGroup BrushData::group
+     03c9 IL_03c9: dup
+     03ca IL_03ca: ldc.i4.1
+     03cb IL_03cb: stfld System.Boolean BrushData::continuous
+     03d0 IL_03d0: dup
+     03d1 IL_03d1: ldc.i4.0
+     03d2 IL_03d2: stfld System.Boolean BrushData::fast_spawn
+     03d7 IL_03d7: dup
+     03d8 IL_03d8: ldstr "brush_sqr"
+     03dd IL_03dd: stfld System.String BrushData::localized_key
+     03e2 IL_03e2: callvirt T AssetLibrary`1<BrushData>::add(T)
+     03e7 IL_03e7: pop
+     03e8 IL_03e8: ldarg.0
+     03e9 IL_03e9: ldfld T AssetLibrary`1<BrushData>::t
+     03ee IL_03ee: ldc.i4.1
+     03ef IL_03ef: stfld System.Boolean BrushData::show_in_brush_window
+     03f4 IL_03f4: ldarg.0
+     03f5 IL_03f5: ldfld T AssetLibrary`1<BrushData>::t
+     03fa IL_03fa: ldsfld BrushGenerateAction BrushLibrary/<>c::<>9__1_1
+     03ff IL_03ff: dup
+     0400 IL_0400: brtrue.s IL_0419
+     0402 IL_0402: pop
+     0403 IL_0403: ldsfld BrushLibrary/<>c BrushLibrary/<>c::<>9
+     0408 IL_0408: ldftn System.Void BrushLibrary/<>c::<init>b__1_1(BrushData)
+     040e IL_040e: newobj System.Void BrushGenerateAction::.ctor(System.Object,System.IntPtr)
+     0413 IL_0413: dup
+     0414 IL_0414: stsfld BrushGenerateAction BrushLibrary/<>c::<>9__1_1
+     0419 IL_0419: stfld BrushGenerateAction BrushData::generate_action
+     041e IL_041e: ldarg.0
+     041f IL_041f: ldstr "sqr_2"
+     0424 IL_0424: ldstr "sqr_1"
+     0429 IL_0429: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     042e IL_042e: pop
+     042f IL_042f: ldarg.0
+     0430 IL_0430: ldfld T AssetLibrary`1<BrushData>::t
+     0435 IL_0435: ldc.i4.2
+     0436 IL_0436: stfld System.Int32 BrushData::size
+     043b IL_043b: ldarg.0
+     043c IL_043c: ldfld T AssetLibrary`1<BrushData>::t
+     0441 IL_0441: ldc.i4.0
+     0442 IL_0442: stfld System.Boolean BrushData::continuous
+     0447 IL_0447: ldarg.0
+     0448 IL_0448: ldfld T AssetLibrary`1<BrushData>::t
+     044d IL_044d: ldc.i4.1
+     044e IL_044e: stfld System.Boolean BrushData::show_in_brush_window
+     0453 IL_0453: ldarg.0
+     0454 IL_0454: ldstr "sqr_3"
+     0459 IL_0459: ldstr "sqr_1"
+     045e IL_045e: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     0463 IL_0463: pop
+     0464 IL_0464: ldarg.0
+     0465 IL_0465: ldfld T AssetLibrary`1<BrushData>::t
+     046a IL_046a: ldc.i4.3
+     046b IL_046b: stfld System.Int32 BrushData::size
+     0470 IL_0470: ldarg.0
+     0471 IL_0471: ldfld T AssetLibrary`1<BrushData>::t
+     0476 IL_0476: ldc.i4.0
+     0477 IL_0477: stfld System.Boolean BrushData::continuous
+     047c IL_047c: ldarg.0
+     047d IL_047d: ldstr "sqr_4"
+     0482 IL_0482: ldstr "sqr_1"
+     0487 IL_0487: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     048c IL_048c: pop
+     048d IL_048d: ldarg.0
+     048e IL_048e: ldfld T AssetLibrary`1<BrushData>::t
+     0493 IL_0493: ldc.i4.4
+     0494 IL_0494: stfld System.Int32 BrushData::size
+     0499 IL_0499: ldarg.0
+     049a IL_049a: ldfld T AssetLibrary`1<BrushData>::t
+     049f IL_049f: ldc.i4.0
+     04a0 IL_04a0: stfld System.Boolean BrushData::continuous
+     04a5 IL_04a5: ldarg.0
+     04a6 IL_04a6: ldfld T AssetLibrary`1<BrushData>::t
+     04ab IL_04ab: ldc.i4.1
+     04ac IL_04ac: stfld System.Boolean BrushData::show_in_brush_window
+     04b1 IL_04b1: ldarg.0
+     04b2 IL_04b2: ldstr "sqr_5"
+     04b7 IL_04b7: ldstr "sqr_1"
+     04bc IL_04bc: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     04c1 IL_04c1: pop
+     04c2 IL_04c2: ldarg.0
+     04c3 IL_04c3: ldfld T AssetLibrary`1<BrushData>::t
+     04c8 IL_04c8: ldc.i4.5
+     04c9 IL_04c9: stfld System.Int32 BrushData::size
+     04ce IL_04ce: ldarg.0
+     04cf IL_04cf: ldfld T AssetLibrary`1<BrushData>::t
+     04d4 IL_04d4: ldc.i4.0
+     04d5 IL_04d5: stfld System.Boolean BrushData::continuous
+     04da IL_04da: ldarg.0
+     04db IL_04db: ldstr "sqr_10"
+     04e0 IL_04e0: ldstr "sqr_1"
+     04e5 IL_04e5: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     04ea IL_04ea: pop
+     04eb IL_04eb: ldarg.0
+     04ec IL_04ec: ldfld T AssetLibrary`1<BrushData>::t
+     04f1 IL_04f1: ldc.i4.s 10
+     04f3 IL_04f3: stfld System.Int32 BrushData::size
+     04f8 IL_04f8: ldarg.0
+     04f9 IL_04f9: ldfld T AssetLibrary`1<BrushData>::t
+     04fe IL_04fe: ldc.i4.2
+     04ff IL_04ff: stfld System.Int32 BrushData::drops
+     0504 IL_0504: ldarg.0
+     0505 IL_0505: ldfld T AssetLibrary`1<BrushData>::t
+     050a IL_050a: ldc.i4.0
+     050b IL_050b: stfld System.Boolean BrushData::continuous
+     0510 IL_0510: ldarg.0
+     0511 IL_0511: ldfld T AssetLibrary`1<BrushData>::t
+     0516 IL_0516: ldc.i4.1
+     0517 IL_0517: stfld System.Boolean BrushData::show_in_brush_window
+     051c IL_051c: ldarg.0
+     051d IL_051d: ldfld T AssetLibrary`1<BrushData>::t
+     0522 IL_0522: ldc.r4 0.8
+     0527 IL_0527: ldc.r4 0.8
+     052c IL_052c: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     0531 IL_0531: stfld UnityEngine.Vector2 BrushData::ui_scale
+     0536 IL_0536: ldarg.0
+     0537 IL_0537: ldstr "sqr_15"
+     053c IL_053c: ldstr "sqr_10"
+     0541 IL_0541: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     0546 IL_0546: pop
+     0547 IL_0547: ldarg.0
+     0548 IL_0548: ldfld T AssetLibrary`1<BrushData>::t
+     054d IL_054d: ldc.i4.s 15
+     054f IL_054f: stfld System.Int32 BrushData::size
+     0554 IL_0554: ldarg.0
+     0555 IL_0555: ldfld T AssetLibrary`1<BrushData>::t
+     055a IL_055a: ldc.i4.0
+     055b IL_055b: stfld System.Boolean BrushData::continuous
+     0560 IL_0560: ldarg.0
+     0561 IL_0561: ldfld T AssetLibrary`1<BrushData>::t
+     0566 IL_0566: ldc.i4.1
+     0567 IL_0567: stfld System.Boolean BrushData::show_in_brush_window
+     056c IL_056c: ldarg.0
+     056d IL_056d: ldfld T AssetLibrary`1<BrushData>::t
+     0572 IL_0572: ldc.r4 0.8
+     0577 IL_0577: ldc.r4 0.8
+     057c IL_057c: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     0581 IL_0581: stfld UnityEngine.Vector2 BrushData::ui_scale
+     0586 IL_0586: ldarg.0
+     0587 IL_0587: newobj System.Void BrushData::.ctor()
+     058c IL_058c: dup
+     058d IL_058d: ldstr "diamond_1"
+     0592 IL_0592: stfld System.String Asset::id
+     0597 IL_0597: dup
+     0598 IL_0598: ldc.i4.1
+     0599 IL_0599: stfld System.Boolean BrushData::continuous
+     059e IL_059e: dup
+     059f IL_059f: ldc.i4.3
+     05a0 IL_05a0: stfld BrushGroup BrushData::group
+     05a5 IL_05a5: dup
+     05a6 IL_05a6: ldstr "brush_diamond"
+     05ab IL_05ab: stfld System.String BrushData::localized_key
+     05b0 IL_05b0: dup
+     05b1 IL_05b1: ldc.i4.1
+     05b2 IL_05b2: stfld System.Int32 BrushData::size
+     05b7 IL_05b7: dup
+     05b8 IL_05b8: ldc.i4.0
+     05b9 IL_05b9: stfld System.Boolean BrushData::fast_spawn
+     05be IL_05be: callvirt T AssetLibrary`1<BrushData>::add(T)
+     05c3 IL_05c3: pop
+     05c4 IL_05c4: ldarg.0
+     05c5 IL_05c5: ldfld T AssetLibrary`1<BrushData>::t
+     05ca IL_05ca: ldc.i4.1
+     05cb IL_05cb: stfld System.Boolean BrushData::show_in_brush_window
+     05d0 IL_05d0: ldarg.0
+     05d1 IL_05d1: ldfld T AssetLibrary`1<BrushData>::t
+     05d6 IL_05d6: ldsfld BrushGenerateAction BrushLibrary/<>c::<>9__1_2
+     05db IL_05db: dup
+     05dc IL_05dc: brtrue.s IL_05f5
+     05de IL_05de: pop
+     05df IL_05df: ldsfld BrushLibrary/<>c BrushLibrary/<>c::<>9
+     05e4 IL_05e4: ldftn System.Void BrushLibrary/<>c::<init>b__1_2(BrushData)
+     05ea IL_05ea: newobj System.Void BrushGenerateAction::.ctor(System.Object,System.IntPtr)
+     05ef IL_05ef: dup
+     05f0 IL_05f0: stsfld BrushGenerateAction BrushLibrary/<>c::<>9__1_2
+     05f5 IL_05f5: stfld BrushGenerateAction BrushData::generate_action
+     05fa IL_05fa: ldarg.0
+     05fb IL_05fb: ldstr "diamond_2"
+     0600 IL_0600: ldstr "diamond_1"
+     0605 IL_0605: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     060a IL_060a: pop
+     060b IL_060b: ldarg.0
+     060c IL_060c: ldfld T AssetLibrary`1<BrushData>::t
+     0611 IL_0611: ldc.i4.2
+     0612 IL_0612: stfld System.Int32 BrushData::size
+     0617 IL_0617: ldarg.0
+     0618 IL_0618: ldfld T AssetLibrary`1<BrushData>::t
+     061d IL_061d: ldc.i4.1
+     061e IL_061e: stfld System.Boolean BrushData::show_in_brush_window
+     0623 IL_0623: ldarg.0
+     0624 IL_0624: ldfld T AssetLibrary`1<BrushData>::t
+     0629 IL_0629: ldc.r4 0.8
+     062e IL_062e: ldc.r4 0.8
+     0633 IL_0633: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     0638 IL_0638: stfld UnityEngine.Vector2 BrushData::ui_scale
+     063d IL_063d: ldarg.0
+     063e IL_063e: ldstr "diamond_4"
+     0643 IL_0643: ldstr "diamond_1"
+     0648 IL_0648: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     064d IL_064d: pop
+     064e IL_064e: ldarg.0
+     064f IL_064f: ldfld T AssetLibrary`1<BrushData>::t
+     0654 IL_0654: ldc.i4.4
+     0655 IL_0655: stfld System.Int32 BrushData::size
+     065a IL_065a: ldarg.0
+     065b IL_065b: ldfld T AssetLibrary`1<BrushData>::t
+     0660 IL_0660: ldc.i4.0
+     0661 IL_0661: stfld System.Boolean BrushData::continuous
+     0666 IL_0666: ldarg.0
+     0667 IL_0667: ldfld T AssetLibrary`1<BrushData>::t
+     066c IL_066c: ldc.i4.1
+     066d IL_066d: stfld System.Boolean BrushData::show_in_brush_window
+     0672 IL_0672: ldarg.0
+     0673 IL_0673: ldfld T AssetLibrary`1<BrushData>::t
+     0678 IL_0678: ldc.r4 0.7
+     067d IL_067d: ldc.r4 0.7
+     0682 IL_0682: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     0687 IL_0687: stfld UnityEngine.Vector2 BrushData::ui_scale
+     068c IL_068c: ldarg.0
+     068d IL_068d: ldstr "diamond_5"
+     0692 IL_0692: ldstr "diamond_1"
+     0697 IL_0697: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     069c IL_069c: pop
+     069d IL_069d: ldarg.0
+     069e IL_069e: ldfld T AssetLibrary`1<BrushData>::t
+     06a3 IL_06a3: ldc.i4.2
+     06a4 IL_06a4: stfld System.Int32 BrushData::drops
+     06a9 IL_06a9: ldarg.0
+     06aa IL_06aa: ldfld T AssetLibrary`1<BrushData>::t
+     06af IL_06af: ldc.i4.5
+     06b0 IL_06b0: stfld System.Int32 BrushData::size
+     06b5 IL_06b5: ldarg.0
+     06b6 IL_06b6: ldfld T AssetLibrary`1<BrushData>::t
+     06bb IL_06bb: ldc.i4.0
+     06bc IL_06bc: stfld System.Boolean BrushData::continuous
+     06c1 IL_06c1: ldarg.0
+     06c2 IL_06c2: ldfld T AssetLibrary`1<BrushData>::t
+     06c7 IL_06c7: ldc.i4.1
+     06c8 IL_06c8: stfld System.Boolean BrushData::show_in_brush_window
+     06cd IL_06cd: ldarg.0
+     06ce IL_06ce: ldfld T AssetLibrary`1<BrushData>::t
+     06d3 IL_06d3: ldc.r4 0.7
+     06d8 IL_06d8: ldc.r4 0.7
+     06dd IL_06dd: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     06e2 IL_06e2: stfld UnityEngine.Vector2 BrushData::ui_scale
+     06e7 IL_06e7: ldarg.0
+     06e8 IL_06e8: ldstr "diamond_7"
+     06ed IL_06ed: ldstr "diamond_5"
+     06f2 IL_06f2: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     06f7 IL_06f7: pop
+     06f8 IL_06f8: ldarg.0
+     06f9 IL_06f9: ldfld T AssetLibrary`1<BrushData>::t
+     06fe IL_06fe: ldc.i4.7
+     06ff IL_06ff: stfld System.Int32 BrushData::size
+     0704 IL_0704: ldarg.0
+     0705 IL_0705: ldfld T AssetLibrary`1<BrushData>::t
+     070a IL_070a: ldc.i4.0
+     070b IL_070b: stfld System.Boolean BrushData::continuous
+     0710 IL_0710: ldarg.0
+     0711 IL_0711: ldfld T AssetLibrary`1<BrushData>::t
+     0716 IL_0716: ldc.i4.1
+     0717 IL_0717: stfld System.Boolean BrushData::show_in_brush_window
+     071c IL_071c: ldarg.0
+     071d IL_071d: ldfld T AssetLibrary`1<BrushData>::t
+     0722 IL_0722: ldc.r4 0.9
+     0727 IL_0727: ldc.r4 0.9
+     072c IL_072c: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     0731 IL_0731: stfld UnityEngine.Vector2 BrushData::ui_scale
+     0736 IL_0736: ldarg.0
+     0737 IL_0737: newobj System.Void BrushData::.ctor()
+     073c IL_073c: dup
+     073d IL_073d: ldstr "special_1"
+     0742 IL_0742: stfld System.String Asset::id
+     0747 IL_0747: dup
+     0748 IL_0748: ldc.i4.1
+     0749 IL_0749: stfld System.Boolean BrushData::continuous
+     074e IL_074e: dup
+     074f IL_074f: ldc.i4.4
+     0750 IL_0750: stfld BrushGroup BrushData::group
+     0755 IL_0755: dup
+     0756 IL_0756: ldstr "brush_special"
+     075b IL_075b: stfld System.String BrushData::localized_key
+     0760 IL_0760: dup
+     0761 IL_0761: ldc.i4.1
+     0762 IL_0762: stfld System.Int32 BrushData::size
+     0767 IL_0767: dup
+     0768 IL_0768: ldc.i4.0
+     0769 IL_0769: stfld System.Boolean BrushData::fast_spawn
+     076e IL_076e: callvirt T AssetLibrary`1<BrushData>::add(T)
+     0773 IL_0773: pop
+     0774 IL_0774: ldarg.0
+     0775 IL_0775: ldfld T AssetLibrary`1<BrushData>::t
+     077a IL_077a: ldarg.0
+     077b IL_077b: ldstr "diamond_1"
+     0780 IL_0780: callvirt T AssetLibrary`1<BrushData>::get(System.String)
+     0785 IL_0785: ldfld BrushGenerateAction BrushData::generate_action
+     078a IL_078a: stfld BrushGenerateAction BrushData::generate_action
+     078f IL_078f: ldarg.0
+     0790 IL_0790: ldfld T AssetLibrary`1<BrushData>::t
+     0795 IL_0795: ldc.i4.1
+     0796 IL_0796: stfld System.Boolean BrushData::show_in_brush_window
+     079b IL_079b: ldarg.0
+     079c IL_079c: ldfld T AssetLibrary`1<BrushData>::t
+     07a1 IL_07a1: ldc.r4 14
+     07a6 IL_07a6: ldc.r4 14
+     07ab IL_07ab: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     07b0 IL_07b0: stfld UnityEngine.Vector2 BrushData::ui_size
+     07b5 IL_07b5: ldarg.0
+     07b6 IL_07b6: ldstr "special_2"
+     07bb IL_07bb: ldstr "special_1"
+     07c0 IL_07c0: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     07c5 IL_07c5: pop
+     07c6 IL_07c6: ldarg.0
+     07c7 IL_07c7: ldfld T AssetLibrary`1<BrushData>::t
+     07cc IL_07cc: ldc.i4.2
+     07cd IL_07cd: stfld System.Int32 BrushData::size
+     07d2 IL_07d2: ldarg.0
+     07d3 IL_07d3: ldfld T AssetLibrary`1<BrushData>::t
+     07d8 IL_07d8: ldc.i4.1
+     07d9 IL_07d9: stfld System.Boolean BrushData::show_in_brush_window
+     07de IL_07de: ldarg.0
+     07df IL_07df: ldfld T AssetLibrary`1<BrushData>::t
+     07e4 IL_07e4: ldc.r4 17.93
+     07e9 IL_07e9: ldc.r4 17.93
+     07ee IL_07ee: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     07f3 IL_07f3: stfld UnityEngine.Vector2 BrushData::ui_size
+     07f8 IL_07f8: ldarg.0
+     07f9 IL_07f9: ldstr "special_3"
+     07fe IL_07fe: ldstr "special_1"
+     0803 IL_0803: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     0808 IL_0808: pop
+     0809 IL_0809: ldarg.0
+     080a IL_080a: ldfld T AssetLibrary`1<BrushData>::t
+     080f IL_080f: ldc.i4.3
+     0810 IL_0810: stfld System.Int32 BrushData::size
+     0815 IL_0815: ldarg.0
+     0816 IL_0816: ldfld T AssetLibrary`1<BrushData>::t
+     081b IL_081b: ldc.i4.0
+     081c IL_081c: stfld System.Boolean BrushData::continuous
+     0821 IL_0821: ldarg.0
+     0822 IL_0822: ldfld T AssetLibrary`1<BrushData>::t
+     0827 IL_0827: ldc.i4.1
+     0828 IL_0828: stfld System.Boolean BrushData::show_in_brush_window
+     082d IL_082d: ldarg.0
+     082e IL_082e: ldfld T AssetLibrary`1<BrushData>::t
+     0833 IL_0833: ldc.r4 21.4
+     0838 IL_0838: ldc.r4 21.4
+     083d IL_083d: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     0842 IL_0842: stfld UnityEngine.Vector2 BrushData::ui_size
+     0847 IL_0847: ldarg.0
+     0848 IL_0848: ldstr "special_4"
+     084d IL_084d: ldstr "special_1"
+     0852 IL_0852: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     0857 IL_0857: pop
+     0858 IL_0858: ldarg.0
+     0859 IL_0859: ldfld T AssetLibrary`1<BrushData>::t
+     085e IL_085e: ldc.i4.2
+     085f IL_085f: stfld System.Int32 BrushData::drops
+     0864 IL_0864: ldarg.0
+     0865 IL_0865: ldfld T AssetLibrary`1<BrushData>::t
+     086a IL_086a: ldc.i4.4
+     086b IL_086b: stfld System.Int32 BrushData::size
+     0870 IL_0870: ldarg.0
+     0871 IL_0871: ldfld T AssetLibrary`1<BrushData>::t
+     0876 IL_0876: ldc.i4.0
+     0877 IL_0877: stfld System.Boolean BrushData::continuous
+     087c IL_087c: ldarg.0
+     087d IL_087d: ldfld T AssetLibrary`1<BrushData>::t
+     0882 IL_0882: ldc.i4.1
+     0883 IL_0883: stfld System.Boolean BrushData::show_in_brush_window
+     0888 IL_0888: ldarg.0
+     0889 IL_0889: ldfld T AssetLibrary`1<BrushData>::t
+     088e IL_088e: ldc.r4 23.55
+     0893 IL_0893: ldc.r4 23.55
+     0898 IL_0898: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     089d IL_089d: stfld UnityEngine.Vector2 BrushData::ui_size
+     08a2 IL_08a2: ldarg.0
+     08a3 IL_08a3: ldstr "special_5"
+     08a8 IL_08a8: ldstr "special_4"
+     08ad IL_08ad: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     08b2 IL_08b2: pop
+     08b3 IL_08b3: ldarg.0
+     08b4 IL_08b4: ldfld T AssetLibrary`1<BrushData>::t
+     08b9 IL_08b9: ldc.i4.2
+     08ba IL_08ba: stfld System.Int32 BrushData::drops
+     08bf IL_08bf: ldarg.0
+     08c0 IL_08c0: ldfld T AssetLibrary`1<BrushData>::t
+     08c5 IL_08c5: ldc.i4.5
+     08c6 IL_08c6: stfld System.Int32 BrushData::size
+     08cb IL_08cb: ldarg.0
+     08cc IL_08cc: ldfld T AssetLibrary`1<BrushData>::t
+     08d1 IL_08d1: ldc.i4.0
+     08d2 IL_08d2: stfld System.Boolean BrushData::continuous
+     08d7 IL_08d7: ldarg.0
+     08d8 IL_08d8: ldfld T AssetLibrary`1<BrushData>::t
+     08dd IL_08dd: ldc.i4.1
+     08de IL_08de: stfld System.Boolean BrushData::show_in_brush_window
+     08e3 IL_08e3: ldarg.0
+     08e4 IL_08e4: ldfld T AssetLibrary`1<BrushData>::t
+     08e9 IL_08e9: ldc.r4 28.28
+     08ee IL_08ee: ldc.r4 28.28
+     08f3 IL_08f3: newobj System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+     08f8 IL_08f8: stfld UnityEngine.Vector2 BrushData::ui_size
+     08fd IL_08fd: ret
+
+---- System.Void post_init()
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: call System.Void BaseAssetLibrary::post_init()
+     0006 IL_0006: ldarg.0
+     0007 IL_0007: ldfld System.Collections.Generic.List`1<T> AssetLibrary`1<BrushData>::list
+     000c IL_000c: callvirt System.Collections.Generic.List`1/Enumerator<!0> System.Collections.Generic.List`1<BrushData>::GetEnumerator()
+     0011 IL_0011: stloc.0
+     0012 IL_0012: br IL_011a
+     0017 IL_0017: ldloca.s V_0
+     0019 IL_0019: call !0 System.Collections.Generic.List`1/Enumerator<BrushData>::get_Current()
+     001e IL_001e: stloc.1
+     001f IL_001f: ldloc.1
+     0020 IL_0020: ldfld System.Boolean BrushData::show_in_brush_window
+     0025 IL_0025: brfalse.s IL_0037
+     0027 IL_0027: ldsfld System.Collections.Generic.List`1<System.String> BrushLibrary::_available_brushes
+     002c IL_002c: ldloc.1
+     002d IL_002d: ldfld System.String Asset::id
+     0032 IL_0032: callvirt System.Void System.Collections.Generic.List`1<System.String>::Add(!0)
+     0037 IL_0037: ldloc.1
+     0038 IL_0038: ldfld BrushPixelData[] BrushData::pos
+     003d IL_003d: dup
+     003e IL_003e: brtrue.s IL_0044
+     0040 IL_0040: pop
+     0041 IL_0041: ldc.i4.0
+     0042 IL_0042: br.s IL_0048
+     0044 IL_0044: ldlen
+     0045 IL_0045: ldc.i4.0
+     0046 IL_0046: cgt.un
+     0048 IL_0048: brtrue IL_011a
+     004d IL_004d: ldloc.1
+     004e IL_004e: ldfld BrushGenerateAction BrushData::generate_action
+     0053 IL_0053: ldloc.1
+     0054 IL_0054: callvirt System.Void BrushGenerateAction::Invoke(BrushData)
+     0059 IL_0059: ldc.i4 2147483647
+     005e IL_005e: stloc.2
+     005f IL_005f: ldc.i4 -2147483648
+     0064 IL_0064: stloc.3
+     0065 IL_0065: ldc.i4 2147483647
+     006a IL_006a: stloc.s V_4
+     006c IL_006c: ldc.i4 -2147483648
+     0071 IL_0071: stloc.s V_5
+     0073 IL_0073: ldc.i4.0
+     0074 IL_0074: stloc.s V_6
+     0076 IL_0076: br.s IL_00d9
+     0078 IL_0078: ldloc.1
+     0079 IL_0079: ldfld BrushPixelData[] BrushData::pos
+     007e IL_007e: ldloc.s V_6
+     0080 IL_0080: ldelem.any BrushPixelData
+     0085 IL_0085: stloc.s V_7
+     0087 IL_0087: ldloc.s V_7
+     0089 IL_0089: ldfld System.Int32 BrushPixelData::x
+     008e IL_008e: ldloc.2
+     008f IL_008f: bge.s IL_0099
+     0091 IL_0091: ldloc.s V_7
+     0093 IL_0093: ldfld System.Int32 BrushPixelData::x
+     0098 IL_0098: stloc.2
+     0099 IL_0099: ldloc.s V_7
+     009b IL_009b: ldfld System.Int32 BrushPixelData::x
+     00a0 IL_00a0: ldloc.3
+     00a1 IL_00a1: ble.s IL_00ab
+     00a3 IL_00a3: ldloc.s V_7
+     00a5 IL_00a5: ldfld System.Int32 BrushPixelData::x
+     00aa IL_00aa: stloc.3
+     00ab IL_00ab: ldloc.s V_7
+     00ad IL_00ad: ldfld System.Int32 BrushPixelData::y
+     00b2 IL_00b2: ldloc.s V_4
+     00b4 IL_00b4: bge.s IL_00bf
+     00b6 IL_00b6: ldloc.s V_7
+     00b8 IL_00b8: ldfld System.Int32 BrushPixelData::y
+     00bd IL_00bd: stloc.s V_4
+     00bf IL_00bf: ldloc.s V_7
+     00c1 IL_00c1: ldfld System.Int32 BrushPixelData::y
+     00c6 IL_00c6: ldloc.s V_5
+     00c8 IL_00c8: ble.s IL_00d3
+     00ca IL_00ca: ldloc.s V_7
+     00cc IL_00cc: ldfld System.Int32 BrushPixelData::y
+     00d1 IL_00d1: stloc.s V_5
+     00d3 IL_00d3: ldloc.s V_6
+     00d5 IL_00d5: ldc.i4.1
+     00d6 IL_00d6: add
+     00d7 IL_00d7: stloc.s V_6
+     00d9 IL_00d9: ldloc.s V_6
+     00db IL_00db: ldloc.1
+     00dc IL_00dc: ldfld BrushPixelData[] BrushData::pos
+     00e1 IL_00e1: ldlen
+     00e2 IL_00e2: conv.i4
+     00e3 IL_00e3: blt.s IL_0078
+     00e5 IL_00e5: ldloc.1
+     00e6 IL_00e6: ldloc.3
+     00e7 IL_00e7: ldloc.2
+     00e8 IL_00e8: sub
+     00e9 IL_00e9: call System.Int32 UnityEngine.Mathf::Abs(System.Int32)
+     00ee IL_00ee: ldc.i4.1
+     00ef IL_00ef: add
+     00f0 IL_00f0: stfld System.Int32 BrushData::width
+     00f5 IL_00f5: ldloc.1
+     00f6 IL_00f6: ldloc.s V_5
+     00f8 IL_00f8: ldloc.s V_4
+     00fa IL_00fa: sub
+     00fb IL_00fb: call System.Int32 UnityEngine.Mathf::Abs(System.Int32)
+     0100 IL_0100: ldc.i4.1
+     0101 IL_0101: add
+     0102 IL_0102: stfld System.Int32 BrushData::height
+     0107 IL_0107: ldloc.1
+     0108 IL_0108: ldloc.1
+     0109 IL_0109: ldfld System.Int32 BrushData::width
+     010e IL_010e: ldloc.1
+     010f IL_010f: ldfld System.Int32 BrushData::height
+     0114 IL_0114: mul
+     0115 IL_0115: stfld System.Int32 BrushData::sqr_size
+     011a IL_011a: ldloca.s V_0
+     011c IL_011c: call System.Boolean System.Collections.Generic.List`1/Enumerator<BrushData>::MoveNext()
+     0121 IL_0121: brtrue IL_0017
+     0126 IL_0126: leave.s IL_0136
+     0128 IL_0128: ldloca.s V_0
+     012a IL_012a: constrained. System.Collections.Generic.List`1/Enumerator<BrushData>
+     0130 IL_0130: callvirt System.Void System.IDisposable::Dispose()
+     0135 IL_0135: endfinally
+     0136 IL_0136: ret
+

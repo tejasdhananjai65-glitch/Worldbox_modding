@@ -1,0 +1,73 @@
+﻿=== TYPE PowerButton : UnityEngine.MonoBehaviour
+    FIELD System.Boolean drag_power_bar
+    FIELD System.String open_window_id
+    FIELD System.Boolean block_same_window
+    FIELD UnityEngine.UI.Image icon
+    FIELD UnityEngine.UI.Image _image
+    FIELD UnityEngine.UI.Button _button
+    FIELD PowerButtonType type
+    FIELD UnityEngine.GameObject sizeButtons
+    FIELD PowerButton mainSizeButton
+    FIELD GodPower godPower
+    FIELD UnityEngine.UI.Image _icon_lock
+    FIELD UnityEngine.GameObject buttonUnlocked
+    FIELD UnityEngine.GameObject buttonUnlockedFlash
+    FIELD System.Collections.Generic.List`1<PowerButton> power_buttons [static]
+    FIELD System.Collections.Generic.List`1<PowerButton> toggle_buttons [static]
+    FIELD System.Collections.Generic.Dictionary`2<ActorAsset,PowerButton> actor_spawn_buttons [static]
+    FIELD UnityEngine.RectTransform rect_transform
+    FIELD PowerButton left
+    FIELD PowerButton right
+    FIELD PowerButton down
+    FIELD PowerButton up
+    FIELD UnityEngine.Vector3 _default_scale
+    FIELD UnityEngine.Vector3 _clicked_scale
+    FIELD System.Boolean is_selectable
+    FIELD System.Boolean _initialized
+    PROP PowerButtonSelector _selected_buttons { get;  }
+    METHOD PowerButtonSelector get__selected_buttons()
+    METHOD PowerButton get(System.String pID) [static]
+    METHOD System.Void init()
+    METHOD System.Void OnEnable()
+    METHOD System.Void OnPointerClick(UnityEngine.EventSystems.PointerEventData pEventData)
+    METHOD System.Void clickButton()
+    METHOD System.Void showTooltip()
+    METHOD System.String getText()
+    METHOD System.String getDescription()
+    METHOD System.Void clickOpenWindow()
+    METHOD System.Void clickSpecial()
+    METHOD System.Void checkToggleIcon()
+    METHOD System.Void playSound()
+    METHOD System.Void checkLockIcon()
+    METHOD System.Void showOthers()
+    METHOD System.Boolean isSelected()
+    METHOD System.Void cancelSelection()
+    METHOD System.Void unselectActivePower()
+    METHOD System.Void hideSizes()
+    METHOD System.Void clickSizeMainTool()
+    METHOD System.Void clickTimeScaleTool()
+    METHOD System.Void clickActivePower()
+    METHOD System.Boolean canSelect()
+    METHOD System.Void clickShop()
+    METHOD System.Void setSelectedPower(PowerButton pLibraryButton, System.Boolean pAnim)
+    METHOD System.Void newClickAnimation()
+    METHOD System.Collections.IEnumerator angleToZero()
+    METHOD System.Void animate(System.Single pElapsed)
+    METHOD System.Void destroyLockIcon()
+    METHOD System.Void showWindow(System.String pID, System.Boolean pBlockSame)
+    METHOD System.Void showWindow(System.String pID)
+    METHOD System.Void selectPowerTab(DG.Tweening.TweenCallback pOnComplete)
+    METHOD System.Void findNeighbours(System.Collections.Generic.List`1<PowerButton> pButtons, System.Boolean pCheckForActive)
+    METHOD System.Boolean isActorSpawn()
+    METHOD System.Void checkActorSpawnButtons() [static]
+    METHOD System.Boolean draggingBarEnabled()
+    METHOD System.Void OnBeginDrag(UnityEngine.EventSystems.PointerEventData pEventData)
+    METHOD System.Void OnDrag(UnityEngine.EventSystems.PointerEventData pEventData)
+    METHOD System.Void OnEndDrag(UnityEngine.EventSystems.PointerEventData pEventData)
+    METHOD System.Void OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData pEventData)
+    METHOD System.Void OnScroll(UnityEngine.EventSystems.PointerEventData pEventData)
+    METHOD System.Void OnDestroy()
+    METHOD System.Void .ctor()
+    METHOD System.Void .cctor() [static]
+    METHOD System.Boolean <OnDestroy>b__67_0(System.Collections.Generic.KeyValuePair`2<ActorAsset,PowerButton> x)
+

@@ -1,0 +1,30 @@
+﻿=== TYPE BaseStats : System.Object
+    FIELD System.Collections.Generic.List`1<BaseStatsContainer> _stats_list
+    FIELD System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer> _stats_dict
+    FIELD System.Collections.Generic.List`1<BaseStatsContainer> _multipliers_list
+    FIELD System.Collections.Generic.HashSet`1<System.String> _tags
+    PROP System.Single Item { get; set; }
+    METHOD System.Void set(System.String pID, System.Single pAmount)
+    METHOD System.Collections.Generic.List`1<BaseStatsContainer> getList()
+    METHOD System.Void checkStatName(System.String pID)
+    METHOD System.Single get(System.String pID)
+    METHOD System.Boolean hasStat(System.String pID)
+    METHOD BaseStatsContainer getContainer(System.String pID)
+    METHOD System.Void mergeStats(BaseStats pStats, System.Single pMultiplier)
+    METHOD System.Void checkMultipliers()
+    METHOD System.Boolean hasTag(System.String pTag)
+    METHOD System.Boolean hasTags(System.String[] pTags)
+    METHOD System.Void normalize()
+    METHOD System.Void clear()
+    METHOD System.Void reset()
+    METHOD System.Single get_Item(System.String pKey)
+    METHOD System.Void set_Item(System.String pKey, System.Single value)
+    METHOD System.Void addTag(System.String pTag)
+    METHOD System.Boolean hasTags()
+    METHOD System.Boolean hasStats()
+    METHOD System.Boolean ShouldSerialize_tags()
+    METHOD System.Boolean ShouldSerialize_stats_list()
+    METHOD System.Void addCombatAction(System.String pCombatAction)
+    METHOD System.Object Clone()
+    METHOD System.Void .ctor()
+

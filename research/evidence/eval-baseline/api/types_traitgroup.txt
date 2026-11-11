@@ -1,0 +1,3 @@
+﻿=== TYPE BaseTraitGroupAsset : BaseCategoryAsset
+    METHOD System.Void .ctor()
+

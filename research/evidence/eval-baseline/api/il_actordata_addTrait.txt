@@ -1,0 +1,2 @@
+﻿######## TYPE ActorData : BaseObjectData
+######## TYPE ActorDataObsolete : System.Object

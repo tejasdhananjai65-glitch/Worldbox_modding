@@ -1,0 +1,217 @@
+﻿######## TYPE MapBox : UnityEngine.MonoBehaviour
+---- System.Void loopWithBrush(WorldTile pCenterTile, BrushData pBrush, PowerAction pAction, GodPower pPower)
+     0000 IL_0000: ldarg.2
+     0001 IL_0001: ldfld BrushPixelData[] BrushData::pos
+     0006 IL_0006: stloc.0
+     0007 IL_0007: ldloc.0
+     0008 IL_0008: ldlen
+     0009 IL_0009: conv.i4
+     000a IL_000a: stloc.1
+     000b IL_000b: ldc.i4.0
+     000c IL_000c: stloc.2
+     000d IL_000d: br.s IL_0070
+     000f IL_000f: ldloc.0
+     0010 IL_0010: ldloc.2
+     0011 IL_0011: ldelem.any BrushPixelData
+     0016 IL_0016: stloc.3
+     0017 IL_0017: ldarg.1
+     0018 IL_0018: ldfld System.Int32 WorldTile::x
+     001d IL_001d: ldloc.3
+     001e IL_001e: ldfld System.Int32 BrushPixelData::x
+     0023 IL_0023: add
+     0024 IL_0024: stloc.s V_4
+     0026 IL_0026: ldarg.1
+     0027 IL_0027: ldfld System.Int32 WorldTile::y
+     002c IL_002c: ldloc.3
+     002d IL_002d: ldfld System.Int32 BrushPixelData::y
+     0032 IL_0032: add
+     0033 IL_0033: stloc.s V_5
+     0035 IL_0035: ldloc.s V_4
+     0037 IL_0037: ldc.i4.0
+     0038 IL_0038: blt.s IL_006c
+     003a IL_003a: ldloc.s V_4
+     003c IL_003c: ldsfld System.Int32 MapBox::width
+     0041 IL_0041: bge.s IL_006c
+     0043 IL_0043: ldloc.s V_5
+     0045 IL_0045: ldc.i4.0
+     0046 IL_0046: blt.s IL_006c
+     0048 IL_0048: ldloc.s V_5
+     004a IL_004a: ldsfld System.Int32 MapBox::height
+     004f IL_004f: bge.s IL_006c
+     0051 IL_0051: ldsfld MapBox MapBox::instance
+     0056 IL_0056: ldloc.s V_4
+     0058 IL_0058: ldloc.s V_5
+     005a IL_005a: callvirt WorldTile MapBox::GetTileSimple(System.Int32,System.Int32)
+     005f IL_005f: stloc.s V_6
+     0061 IL_0061: ldarg.3
+     0062 IL_0062: ldloc.s V_6
+     0064 IL_0064: ldarg.s pPower
+     0066 IL_0066: callvirt System.Boolean PowerAction::Invoke(WorldTile,GodPower)
+     006b IL_006b: pop
+     006c IL_006c: ldloc.2
+     006d IL_006d: ldc.i4.1
+     006e IL_006e: add
+     006f IL_006f: stloc.2
+     0070 IL_0070: ldloc.2
+     0071 IL_0071: ldloc.1
+     0072 IL_0072: blt.s IL_000f
+     0074 IL_0074: ret
+
+---- System.Void loopWithBrushPowerForDropsFull(WorldTile pCenterTile, BrushData pBrush, PowerAction pAction, GodPower pPower)
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: ldarg.1
+     0002 IL_0002: ldarg.2
+     0003 IL_0003: ldarg.3
+     0004 IL_0004: ldarg.s pPower
+     0006 IL_0006: call System.Void MapBox::loopWithBrush(WorldTile,BrushData,PowerAction,GodPower)
+     000b IL_000b: ret
+
+---- System.Void loopWithBrushPowerForDropsRandom(WorldTile pCenterTile, BrushData pBrush, PowerAction pAction, GodPower pPower)
+     0000 IL_0000: ldarg.2
+     0001 IL_0001: ldfld BrushPixelData[] BrushData::pos
+     0006 IL_0006: stloc.0
+     0007 IL_0007: ldloc.0
+     0008 IL_0008: ldlen
+     0009 IL_0009: conv.i4
+     000a IL_000a: stloc.1
+     000b IL_000b: newobj System.Void ListPool`1<WorldTile>::.ctor()
+     0010 IL_0010: stloc.2
+     0011 IL_0011: ldc.i4.0
+     0012 IL_0012: stloc.s V_4
+     0014 IL_0014: br.s IL_007a
+     0016 IL_0016: ldloc.0
+     0017 IL_0017: ldloc.s V_4
+     0019 IL_0019: ldelem.any BrushPixelData
+     001e IL_001e: stloc.s V_5
+     0020 IL_0020: ldarg.1
+     0021 IL_0021: ldfld System.Int32 WorldTile::x
+     0026 IL_0026: ldloc.s V_5
+     0028 IL_0028: ldfld System.Int32 BrushPixelData::x
+     002d IL_002d: add
+     002e IL_002e: stloc.s V_6
+     0030 IL_0030: ldarg.1
+     0031 IL_0031: ldfld System.Int32 WorldTile::y
+     0036 IL_0036: ldloc.s V_5
+     0038 IL_0038: ldfld System.Int32 BrushPixelData::y
+     003d IL_003d: add
+     003e IL_003e: stloc.s V_7
+     0040 IL_0040: ldloc.s V_6
+     0042 IL_0042: ldc.i4.0
+     0043 IL_0043: blt.s IL_0074
+     0045 IL_0045: ldloc.s V_6
+     0047 IL_0047: ldsfld System.Int32 MapBox::width
+     004c IL_004c: bge.s IL_0074
+     004e IL_004e: ldloc.s V_7
+     0050 IL_0050: ldc.i4.0
+     0051 IL_0051: blt.s IL_0074
+     0053 IL_0053: ldloc.s V_7
+     0055 IL_0055: ldsfld System.Int32 MapBox::height
+     005a IL_005a: bge.s IL_0074
+     005c IL_005c: ldsfld MapBox MapBox::instance
+     0061 IL_0061: ldloc.s V_6
+     0063 IL_0063: ldloc.s V_7
+     0065 IL_0065: callvirt WorldTile MapBox::GetTileSimple(System.Int32,System.Int32)
+     006a IL_006a: stloc.s V_8
+     006c IL_006c: ldloc.2
+     006d IL_006d: ldloc.s V_8
+     006f IL_006f: callvirt System.Void ListPool`1<WorldTile>::Add(T)
+     0074 IL_0074: ldloc.s V_4
+     0076 IL_0076: ldc.i4.1
+     0077 IL_0077: add
+     0078 IL_0078: stloc.s V_4
+     007a IL_007a: ldloc.s V_4
+     007c IL_007c: ldloc.1
+     007d IL_007d: blt.s IL_0016
+     007f IL_007f: ldarg.2
+     0080 IL_0080: ldfld System.Int32 BrushData::drops
+     0085 IL_0085: stloc.3
+     0086 IL_0086: ldloc.2
+     0087 IL_0087: call System.Void ListPoolExtensions::Shuffle<WorldTile>(ListPool`1<T>)
+     008c IL_008c: ldc.i4.0
+     008d IL_008d: stloc.s V_9
+     008f IL_008f: br.s IL_00b4
+     0091 IL_0091: ldloc.2
+     0092 IL_0092: callvirt System.Int32 ListPool`1<WorldTile>::get_Count()
+     0097 IL_0097: brtrue.s IL_009b
+     0099 IL_0099: leave.s IL_00c5
+     009b IL_009b: ldloc.2
+     009c IL_009c: call T ListPoolExtensions::Pop<WorldTile>(ListPool`1<T>)
+     00a1 IL_00a1: stloc.s V_10
+     00a3 IL_00a3: ldarg.3
+     00a4 IL_00a4: ldloc.s V_10
+     00a6 IL_00a6: ldarg.s pPower
+     00a8 IL_00a8: callvirt System.Boolean PowerAction::Invoke(WorldTile,GodPower)
+     00ad IL_00ad: pop
+     00ae IL_00ae: ldloc.s V_9
+     00b0 IL_00b0: ldc.i4.1
+     00b1 IL_00b1: add
+     00b2 IL_00b2: stloc.s V_9
+     00b4 IL_00b4: ldloc.s V_9
+     00b6 IL_00b6: ldloc.3
+     00b7 IL_00b7: blt.s IL_0091
+     00b9 IL_00b9: leave.s IL_00c5
+     00bb IL_00bb: ldloc.2
+     00bc IL_00bc: brfalse.s IL_00c4
+     00be IL_00be: ldloc.2
+     00bf IL_00bf: callvirt System.Void System.IDisposable::Dispose()
+     00c4 IL_00c4: endfinally
+     00c5 IL_00c5: ret
+
+---- System.Void loopWithBrush(WorldTile pCenterTile, BrushData pBrush, PowerActionWithID pAction, System.String pPowerID)
+     0000 IL_0000: ldarg.2
+     0001 IL_0001: ldfld BrushPixelData[] BrushData::pos
+     0006 IL_0006: stloc.0
+     0007 IL_0007: ldloc.0
+     0008 IL_0008: ldlen
+     0009 IL_0009: conv.i4
+     000a IL_000a: stloc.1
+     000b IL_000b: ldc.i4.0
+     000c IL_000c: stloc.2
+     000d IL_000d: br.s IL_0070
+     000f IL_000f: ldloc.0
+     0010 IL_0010: ldloc.2
+     0011 IL_0011: ldelem.any BrushPixelData
+     0016 IL_0016: stloc.3
+     0017 IL_0017: ldarg.1
+     0018 IL_0018: ldfld System.Int32 WorldTile::x
+     001d IL_001d: ldloc.3
+     001e IL_001e: ldfld System.Int32 BrushPixelData::x
+     0023 IL_0023: add
+     0024 IL_0024: stloc.s V_4
+     0026 IL_0026: ldarg.1
+     0027 IL_0027: ldfld System.Int32 WorldTile::y
+     002c IL_002c: ldloc.3
+     002d IL_002d: ldfld System.Int32 BrushPixelData::y
+     0032 IL_0032: add
+     0033 IL_0033: stloc.s V_5
+     0035 IL_0035: ldloc.s V_4
+     0037 IL_0037: ldc.i4.0
+     0038 IL_0038: blt.s IL_006c
+     003a IL_003a: ldloc.s V_4
+     003c IL_003c: ldsfld System.Int32 MapBox::width
+     0041 IL_0041: bge.s IL_006c
+     0043 IL_0043: ldloc.s V_5
+     0045 IL_0045: ldc.i4.0
+     0046 IL_0046: blt.s IL_006c
+     0048 IL_0048: ldloc.s V_5
+     004a IL_004a: ldsfld System.Int32 MapBox::height
+     004f IL_004f: bge.s IL_006c
+     0051 IL_0051: ldsfld MapBox MapBox::instance
+     0056 IL_0056: ldloc.s V_4
+     0058 IL_0058: ldloc.s V_5
+     005a IL_005a: callvirt WorldTile MapBox::GetTileSimple(System.Int32,System.Int32)
+     005f IL_005f: stloc.s V_6
+     0061 IL_0061: ldarg.3
+     0062 IL_0062: ldloc.s V_6
+     0064 IL_0064: ldarg.s pPowerID
+     0066 IL_0066: callvirt System.Boolean PowerActionWithID::Invoke(WorldTile,System.String)
+     006b IL_006b: pop
+     006c IL_006c: ldloc.2
+     006d IL_006d: ldc.i4.1
+     006e IL_006e: add
+     006f IL_006f: stloc.2
+     0070 IL_0070: ldloc.2
+     0071 IL_0071: ldloc.1
+     0072 IL_0072: blt.s IL_000f
+     0074 IL_0074: ret
+

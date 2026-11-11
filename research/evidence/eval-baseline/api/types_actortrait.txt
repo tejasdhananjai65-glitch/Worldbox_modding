@@ -1,0 +1,33 @@
+﻿=== TYPE ActorTrait : BaseTrait`1<ActorTrait>
+    FIELD System.Int32 rate_birth
+    FIELD System.Int32 rate_acquire_grow_up
+    FIELD System.Boolean acquire_grow_up_sapient_only
+    FIELD System.Int32 rate_inherit
+    FIELD System.Boolean is_mutation_box_allowed
+    FIELD System.Int32 same_trait_mod
+    FIELD System.Int32 opposite_trait_mod
+    FIELD System.Boolean only_active_on_era_flag
+    FIELD System.Boolean era_active_moon
+    FIELD System.Boolean era_active_night
+    FIELD TraitType type
+    FIELD System.Boolean remove_for_zombie_actor_asset
+    FIELD System.Boolean can_be_cured
+    FIELD System.Boolean affects_mind
+    FIELD System.Boolean is_kingdom_affected
+    FIELD System.String forced_kingdom
+    FIELD System.Boolean can_be_removed_by_divine_light
+    FIELD System.Boolean can_be_removed_by_accelerated_healing
+    FIELD System.Single likeability
+    FIELD System.Boolean in_training_dummy_combat_pot
+    PROP System.Collections.Generic.HashSet`1<System.String> progress_elements { get;  }
+    PROP System.String typed_id { get;  }
+    METHOD System.Collections.Generic.HashSet`1<System.String> get_progress_elements()
+    METHOD System.String get_typed_id()
+    METHOD BaseCategoryAsset getGroup()
+    METHOD System.Int32 getRate(System.String pGroup)
+    METHOD Kingdom getForcedKingdom()
+    METHOD System.Collections.Generic.IEnumerable`1<ITraitsOwner`1<ActorTrait>> getRelatedMetaList()
+    METHOD System.String getCountRows()
+    METHOD System.Boolean isSapient(ITraitsOwner`1<ActorTrait> pObject)
+    METHOD System.Void .ctor()
+

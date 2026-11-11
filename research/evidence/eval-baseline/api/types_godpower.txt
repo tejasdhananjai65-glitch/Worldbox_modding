@@ -1,0 +1,86 @@
+﻿=== TYPE GodPower : Asset
+    FIELD System.Collections.Generic.List`1<PowerButton> powers_rank_0 [static]
+    FIELD System.Collections.Generic.List`1<PowerButton> powers_rank_1 [static]
+    FIELD System.Collections.Generic.List`1<PowerButton> powers_rank_2 [static]
+    FIELD System.Collections.Generic.List`1<PowerButton> powers_rank_3 [static]
+    FIELD System.Collections.Generic.List`1<PowerButton> powers_rank_4 [static]
+    FIELD System.Collections.Generic.List`1<PowerButton> premium_buttons [static]
+    FIELD System.Collections.Generic.List`1<GodPower> premium_powers [static]
+    FIELD System.Collections.Generic.Dictionary`2<System.String,GodPower> god_powers_on_canvas [static]
+    FIELD System.String name
+    FIELD System.Boolean requires_premium
+    FIELD PowerRank rank
+    FIELD System.String path_icon
+    FIELD System.Boolean multiple_spawn_tip
+    FIELD System.Boolean show_unit_stats_overview
+    FIELD System.Boolean show_tool_sizes
+    FIELD System.Boolean unselect_when_window
+    FIELD System.Boolean make_buildings_transparent
+    FIELD MetaType force_map_mode
+    FIELD System.Boolean ignore_cursor_icon
+    FIELD System.Boolean hold_action
+    FIELD System.Single click_interval
+    FIELD System.Single particle_interval
+    FIELD System.Single falling_chance
+    FIELD System.String sound_drawing
+    FIELD System.String sound_event
+    FIELD System.String tile_type
+    FIELD TileType cached_tile_type_asset
+    FIELD System.String top_tile_type
+    FIELD TopTileType cached_top_tile_type_asset
+    FIELD System.String drop_id
+    FIELD DropAsset cached_drop_asset
+    FIELD System.String force_brush
+    FIELD System.Boolean terraform
+    FIELD System.Boolean draw_lines
+    FIELD PowerActionType type
+    FIELD MouseHoldAnimation mouse_hold_animation
+    FIELD System.Boolean highlight
+    FIELD PowerActionWithID click_brush_action
+    FIELD PowerActionWithID click_action
+    FIELD PowerActionWithID click_special_action
+    FIELD PowerAction click_power_brush_action
+    FIELD PowerAction click_power_action
+    FIELD PowerButtonClickAction select_button_action
+    FIELD System.Boolean disabled_on_mobile
+    FIELD System.String toggle_name
+    FIELD System.Boolean multi_toggle
+    FIELD PowerToggleAction toggle_action
+    FIELD System.String actor_asset_id
+    FIELD System.String[] actor_asset_ids
+    FIELD System.Single actor_spawn_height
+    FIELD System.Boolean show_spawn_effect
+    FIELD System.String printers_print
+    FIELD System.Boolean ignore_fast_spawn
+    FIELD System.Boolean set_used_camera_drag_on_long_move
+    FIELD System.Boolean can_drag_map
+    FIELD System.Boolean tester_enabled
+    FIELD System.Boolean track_activity
+    FIELD System.Boolean map_modes_switch
+    FIELD System.Boolean allow_unit_selection
+    FIELD System.Boolean show_close_actor
+    FIELD System.Boolean activate_on_hotkey_select
+    FIELD System.Boolean surprises_units
+    FIELD UnityEngine.Sprite sprite_icon
+    PROP System.Boolean has_sound_drawing { get;  }
+    PROP System.Boolean has_sound_event { get;  }
+    PROP OptionAsset option_asset { get;  }
+    METHOD System.Boolean get_has_sound_drawing()
+    METHOD System.Boolean get_has_sound_event()
+    METHOD OptionAsset get_option_asset()
+    METHOD System.Boolean isSelected()
+    METHOD System.Boolean isAvailable()
+    METHOD System.Void addPower(GodPower pPower, PowerButton pButton) [static]
+    METHOD UnityEngine.Sprite getIconSprite()
+    METHOD System.Void diagnostic() [static]
+    METHOD System.Void printRankedPowerButtons(System.String pID, System.Collections.Generic.List`1<PowerButton> pList) [static]
+    METHOD System.Void printRankedPowers(System.String pID, System.Collections.Generic.List`1<GodPower> pList) [static]
+    METHOD System.String getActorAssetID()
+    METHOD ActorAsset getActorAsset()
+    METHOD System.String getLocaleID()
+    METHOD System.String getDescriptionID()
+    METHOD System.String getTranslatedName()
+    METHOD System.String getTranslatedDescription()
+    METHOD System.Void .ctor()
+    METHOD System.Void .cctor() [static]
+

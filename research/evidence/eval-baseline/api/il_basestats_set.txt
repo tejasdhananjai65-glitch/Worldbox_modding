@@ -1,0 +1,102 @@
+﻿######## TYPE BaseStats : System.Object
+---- System.Void set(System.String pID, System.Single pAmount)
+     0000 IL_0000: ldsfld BaseStatsLibrary AssetManager::base_stats_library
+     0005 IL_0005: ldarg.1
+     0006 IL_0006: callvirt T AssetLibrary`1<BaseStatAsset>::get(System.String)
+     000b IL_000b: stloc.0
+     000c IL_000c: ldloc.0
+     000d IL_000d: ldfld System.Boolean BaseStatAsset::ignore
+     0012 IL_0012: brfalse.s IL_0015
+     0014 IL_0014: ret
+     0015 IL_0015: ldarg.2
+     0016 IL_0016: ldc.r4 0
+     001b IL_001b: bne.un.s IL_006b
+     001d IL_001d: ldloc.0
+     001e IL_001e: ldfld System.Boolean BaseStatAsset::normalize
+     0023 IL_0023: brtrue.s IL_006b
+     0025 IL_0025: ldarg.0
+     0026 IL_0026: ldfld System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer> BaseStats::_stats_dict
+     002b IL_002b: ldarg.1
+     002c IL_002c: ldloca.s V_2
+     002e IL_002e: callvirt System.Boolean System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer>::TryGetValue(!0,!1&)
+     0033 IL_0033: brfalse.s IL_006a
+     0035 IL_0035: ldloc.0
+     0036 IL_0036: ldfld System.Boolean BaseStatAsset::multiplier
+     003b IL_003b: brfalse.s IL_0050
+     003d IL_003d: ldarg.0
+     003e IL_003e: ldfld System.Collections.Generic.List`1<BaseStatsContainer> BaseStats::_multipliers_list
+     0043 IL_0043: dup
+     0044 IL_0044: brtrue.s IL_0049
+     0046 IL_0046: pop
+     0047 IL_0047: br.s IL_0050
+     0049 IL_0049: ldloc.2
+     004a IL_004a: call System.Boolean System.Collections.Generic.List`1<BaseStatsContainer>::Remove(!0)
+     004f IL_004f: pop
+     0050 IL_0050: ldarg.0
+     0051 IL_0051: ldfld System.Collections.Generic.List`1<BaseStatsContainer> BaseStats::_stats_list
+     0056 IL_0056: ldloc.2
+     0057 IL_0057: callvirt System.Boolean System.Collections.Generic.List`1<BaseStatsContainer>::Remove(!0)
+     005c IL_005c: pop
+     005d IL_005d: ldarg.0
+     005e IL_005e: ldfld System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer> BaseStats::_stats_dict
+     0063 IL_0063: ldarg.1
+     0064 IL_0064: callvirt System.Boolean System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer>::Remove(!0)
+     0069 IL_0069: pop
+     006a IL_006a: ret
+     006b IL_006b: ldarg.0
+     006c IL_006c: ldfld System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer> BaseStats::_stats_dict
+     0071 IL_0071: ldarg.1
+     0072 IL_0072: ldloca.s V_1
+     0074 IL_0074: callvirt System.Boolean System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer>::TryGetValue(!0,!1&)
+     0079 IL_0079: brtrue.s IL_00d0
+     007b IL_007b: newobj System.Void BaseStatsContainer::.ctor()
+     0080 IL_0080: stloc.1
+     0081 IL_0081: ldloc.1
+     0082 IL_0082: ldarg.2
+     0083 IL_0083: stfld System.Single BaseStatsContainer::value
+     0088 IL_0088: ldloc.1
+     0089 IL_0089: ldarg.1
+     008a IL_008a: stfld System.String BaseStatsContainer::id
+     008f IL_008f: ldarg.0
+     0090 IL_0090: ldfld System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer> BaseStats::_stats_dict
+     0095 IL_0095: ldarg.1
+     0096 IL_0096: ldloc.1
+     0097 IL_0097: callvirt System.Void System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer>::set_Item(!0,!1)
+     009c IL_009c: ldarg.0
+     009d IL_009d: ldfld System.Collections.Generic.List`1<BaseStatsContainer> BaseStats::_stats_list
+     00a2 IL_00a2: ldloc.1
+     00a3 IL_00a3: callvirt System.Void System.Collections.Generic.List`1<BaseStatsContainer>::Add(!0)
+     00a8 IL_00a8: ldloc.0
+     00a9 IL_00a9: ldfld System.Boolean BaseStatAsset::multiplier
+     00ae IL_00ae: brfalse.s IL_00cf
+     00b0 IL_00b0: ldarg.0
+     00b1 IL_00b1: ldfld System.Collections.Generic.List`1<BaseStatsContainer> BaseStats::_multipliers_list
+     00b6 IL_00b6: brtrue.s IL_00c3
+     00b8 IL_00b8: ldarg.0
+     00b9 IL_00b9: newobj System.Void System.Collections.Generic.List`1<BaseStatsContainer>::.ctor()
+     00be IL_00be: stfld System.Collections.Generic.List`1<BaseStatsContainer> BaseStats::_multipliers_list
+     00c3 IL_00c3: ldarg.0
+     00c4 IL_00c4: ldfld System.Collections.Generic.List`1<BaseStatsContainer> BaseStats::_multipliers_list
+     00c9 IL_00c9: ldloc.1
+     00ca IL_00ca: callvirt System.Void System.Collections.Generic.List`1<BaseStatsContainer>::Add(!0)
+     00cf IL_00cf: ret
+     00d0 IL_00d0: ldarg.0
+     00d1 IL_00d1: ldfld System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer> BaseStats::_stats_dict
+     00d6 IL_00d6: ldarg.1
+     00d7 IL_00d7: callvirt !1 System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer>::get_Item(!0)
+     00dc IL_00dc: ldarg.2
+     00dd IL_00dd: stfld System.Single BaseStatsContainer::value
+     00e2 IL_00e2: ret
+
+---- System.Void reset()
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: call System.Void BaseStats::clear()
+     0006 IL_0006: ret
+
+---- System.Void set_Item(System.String pKey, System.Single value)
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: ldarg.1
+     0002 IL_0002: ldarg.2
+     0003 IL_0003: call System.Void BaseStats::set(System.String,System.Single)
+     0008 IL_0008: ret
+

@@ -1,0 +1,4 @@
+﻿=== TYPE ActorTraitGroupLibrary : BaseCategoryLibrary`1<ActorTraitGroupAsset>
+    METHOD System.Void init()
+    METHOD System.Void .ctor()
+

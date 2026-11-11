@@ -1,0 +1,1158 @@
+﻿######## TYPE ActorAssetLibrary : BaseLibraryWithUnlockables`1<ActorAsset>
+######## TYPE ActorAssetLibrary/<>c : System.Object
+######## TYPE ActorEquipment : System.Object
+######## TYPE ActorEquipment/<GetEnumerator>d__18 : System.Object
+######## TYPE ActorEquipment/<getItems>d__13 : System.Object
+######## TYPE ActorEquipmentSlot : System.Object
+######## TYPE ActorRenderData : System.Object
+######## TYPE ActorTrait : BaseTrait`1<ActorTrait>
+######## TYPE ActorTraitGroupAsset : BaseTraitGroupAsset
+######## TYPE ActorTraitGroupLibrary : BaseCategoryLibrary`1<ActorTraitGroupAsset>
+######## TYPE ActorTraitLibrary : BaseTraitLibrary`1<ActorTrait>
+######## TYPE ActorContainer : ObjectContainer`1<Actor>
+######## TYPE Actor : BaseSimObject
+---- System.Void updateStats()
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: call System.Boolean BaseSimObject::isStatsDirty()
+     0006 IL_0006: brtrue.s IL_0009
+     0008 IL_0008: ret
+     0009 IL_0009: ldarg.0
+     000a IL_000a: call System.Void BaseSimObject::updateStats()
+     000f IL_000f: ldarg.0
+     0010 IL_0010: call System.Void Actor::checkGrowthEvent()
+     0015 IL_0015: ldarg.0
+     0016 IL_0016: ldc.i4.0
+     0017 IL_0017: stfld System.Int32 Actor::decisions_counter
+     001c IL_001c: ldarg.0
+     001d IL_001d: ldfld BatchActors Actor::batch
+     0022 IL_0022: ldfld ObjectContainer`1<Actor> BatchActors::c_stats_dirty
+     0027 IL_0027: ldarg.0
+     0028 IL_0028: ldfld Actor BaseSimObject::a
+     002d IL_002d: callvirt System.Void ObjectContainer`1<Actor>::Remove(T)
+     0032 IL_0032: ldarg.0
+     0033 IL_0033: call System.Boolean NanoObject::isAlive()
+     0038 IL_0038: brtrue.s IL_003b
+     003a IL_003a: ret
+     003b IL_003b: ldarg.0
+     003c IL_003c: ldnull
+     003d IL_003d: stfld AttackAction Actor::s_action_attack_target
+     0042 IL_0042: ldarg.0
+     0043 IL_0043: ldnull
+     0044 IL_0044: stfld GetHitAction Actor::s_get_hit_action
+     0049 IL_0049: ldarg.0
+     004a IL_004a: ldfld System.Collections.Generic.List`1<BaseAugmentationAsset> Actor::_s_special_effect_augmentations
+     004f IL_004f: callvirt System.Void System.Collections.Generic.List`1<BaseAugmentationAsset>::Clear()
+     0054 IL_0054: ldarg.0
+     0055 IL_0055: ldfld System.Collections.Generic.Dictionary`2<BaseAugmentationAsset,System.Double> Actor::_s_special_effect_augmentations_timers
+     005a IL_005a: callvirt System.Void System.Collections.Generic.Dictionary`2<BaseAugmentationAsset,System.Double>::Clear()
+     005f IL_005f: ldarg.0
+     0060 IL_0060: ldfld BaseStats BaseSimObject::stats
+     0065 IL_0065: callvirt System.Void BaseStats::clear()
+     006a IL_006a: ldarg.0
+     006b IL_006b: call System.Void Actor::clearCombatActions()
+     0070 IL_0070: ldarg.0
+     0071 IL_0071: call System.Void Actor::clearSpells()
+     0076 IL_0076: ldarg.0
+     0077 IL_0077: call System.Boolean Actor::hasSubspecies()
+     007c IL_007c: brfalse.s IL_00db
+     007e IL_007e: ldarg.0
+     007f IL_007f: ldfld BaseStats BaseSimObject::stats
+     0084 IL_0084: ldarg.0
+     0085 IL_0085: ldfld Subspecies Actor::subspecies
+     008a IL_008a: ldfld BaseStats MetaObjectWithTraits`2<SubspeciesData,SubspeciesTrait>::base_stats
+     008f IL_008f: ldc.r4 1
+     0094 IL_0094: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     0099 IL_0099: ldarg.0
+     009a IL_009a: call System.Boolean Actor::isSexMale()
+     009f IL_009f: brfalse.s IL_00be
+     00a1 IL_00a1: ldarg.0
+     00a2 IL_00a2: ldfld BaseStats BaseSimObject::stats
+     00a7 IL_00a7: ldarg.0
+     00a8 IL_00a8: ldfld Subspecies Actor::subspecies
+     00ad IL_00ad: callvirt BaseStats Subspecies::get_base_stats_male()
+     00b2 IL_00b2: ldc.r4 1
+     00b7 IL_00b7: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     00bc IL_00bc: br.s IL_00f6
+     00be IL_00be: ldarg.0
+     00bf IL_00bf: ldfld BaseStats BaseSimObject::stats
+     00c4 IL_00c4: ldarg.0
+     00c5 IL_00c5: ldfld Subspecies Actor::subspecies
+     00ca IL_00ca: callvirt BaseStats Subspecies::get_base_stats_female()
+     00cf IL_00cf: ldc.r4 1
+     00d4 IL_00d4: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     00d9 IL_00d9: br.s IL_00f6
+     00db IL_00db: ldarg.0
+     00dc IL_00dc: ldfld BaseStats BaseSimObject::stats
+     00e1 IL_00e1: ldarg.0
+     00e2 IL_00e2: ldfld ActorAsset Actor::asset
+     00e7 IL_00e7: ldfld BaseStats BaseUnlockableAsset::base_stats
+     00ec IL_00ec: ldc.r4 1
+     00f1 IL_00f1: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     00f6 IL_00f6: ldarg.0
+     00f7 IL_00f7: call System.Boolean Actor::hasClan()
+     00fc IL_00fc: brfalse.s IL_0159
+     00fe IL_00fe: ldarg.0
+     00ff IL_00ff: ldfld BaseStats BaseSimObject::stats
+     0104 IL_0104: ldarg.0
+     0105 IL_0105: ldfld Clan Actor::clan
+     010a IL_010a: ldfld BaseStats MetaObjectWithTraits`2<ClanData,ClanTrait>::base_stats
+     010f IL_010f: ldc.r4 1
+     0114 IL_0114: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     0119 IL_0119: ldarg.0
+     011a IL_011a: call System.Boolean Actor::isSexMale()
+     011f IL_011f: brfalse.s IL_013e
+     0121 IL_0121: ldarg.0
+     0122 IL_0122: ldfld BaseStats BaseSimObject::stats
+     0127 IL_0127: ldarg.0
+     0128 IL_0128: ldfld Clan Actor::clan
+     012d IL_012d: ldfld BaseStats Clan::base_stats_male
+     0132 IL_0132: ldc.r4 1
+     0137 IL_0137: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     013c IL_013c: br.s IL_0159
+     013e IL_013e: ldarg.0
+     013f IL_013f: ldfld BaseStats BaseSimObject::stats
+     0144 IL_0144: ldarg.0
+     0145 IL_0145: ldfld Clan Actor::clan
+     014a IL_014a: ldfld BaseStats Clan::base_stats_female
+     014f IL_014f: ldc.r4 1
+     0154 IL_0154: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     0159 IL_0159: ldarg.0
+     015a IL_015a: call System.Boolean Actor::hasLanguage()
+     015f IL_015f: brfalse.s IL_017c
+     0161 IL_0161: ldarg.0
+     0162 IL_0162: ldfld BaseStats BaseSimObject::stats
+     0167 IL_0167: ldarg.0
+     0168 IL_0168: ldfld Language Actor::language
+     016d IL_016d: ldfld BaseStats MetaObjectWithTraits`2<LanguageData,LanguageTrait>::base_stats
+     0172 IL_0172: ldc.r4 1
+     0177 IL_0177: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     017c IL_017c: ldarg.0
+     017d IL_017d: call System.Boolean Actor::hasCulture()
+     0182 IL_0182: brfalse.s IL_019f
+     0184 IL_0184: ldarg.0
+     0185 IL_0185: ldfld BaseStats BaseSimObject::stats
+     018a IL_018a: ldarg.0
+     018b IL_018b: ldfld Culture Actor::culture
+     0190 IL_0190: ldfld BaseStats MetaObjectWithTraits`2<CultureData,CultureTrait>::base_stats
+     0195 IL_0195: ldc.r4 1
+     019a IL_019a: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     019f IL_019f: ldarg.0
+     01a0 IL_01a0: ldfld BaseStats BaseSimObject::stats
+     01a5 IL_01a5: stloc.s V_4
+     01a7 IL_01a7: ldloc.s V_4
+     01a9 IL_01a9: ldstr "diplomacy"
+     01ae IL_01ae: ldloc.s V_4
+     01b0 IL_01b0: ldstr "diplomacy"
+     01b5 IL_01b5: callvirt System.Single BaseStats::get_Item(System.String)
+     01ba IL_01ba: ldarg.0
+     01bb IL_01bb: ldfld ActorData Actor::data
+     01c0 IL_01c0: ldstr "diplomacy"
+     01c5 IL_01c5: callvirt System.Single BaseSystemData::get_Item(System.String)
+     01ca IL_01ca: add
+     01cb IL_01cb: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     01d0 IL_01d0: ldarg.0
+     01d1 IL_01d1: ldfld BaseStats BaseSimObject::stats
+     01d6 IL_01d6: stloc.s V_4
+     01d8 IL_01d8: ldloc.s V_4
+     01da IL_01da: ldstr "stewardship"
+     01df IL_01df: ldloc.s V_4
+     01e1 IL_01e1: ldstr "stewardship"
+     01e6 IL_01e6: callvirt System.Single BaseStats::get_Item(System.String)
+     01eb IL_01eb: ldarg.0
+     01ec IL_01ec: ldfld ActorData Actor::data
+     01f1 IL_01f1: ldstr "stewardship"
+     01f6 IL_01f6: callvirt System.Single BaseSystemData::get_Item(System.String)
+     01fb IL_01fb: add
+     01fc IL_01fc: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0201 IL_0201: ldarg.0
+     0202 IL_0202: ldfld BaseStats BaseSimObject::stats
+     0207 IL_0207: stloc.s V_4
+     0209 IL_0209: ldloc.s V_4
+     020b IL_020b: ldstr "intelligence"
+     0210 IL_0210: ldloc.s V_4
+     0212 IL_0212: ldstr "intelligence"
+     0217 IL_0217: callvirt System.Single BaseStats::get_Item(System.String)
+     021c IL_021c: ldarg.0
+     021d IL_021d: ldfld ActorData Actor::data
+     0222 IL_0222: ldstr "intelligence"
+     0227 IL_0227: callvirt System.Single BaseSystemData::get_Item(System.String)
+     022c IL_022c: add
+     022d IL_022d: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0232 IL_0232: ldarg.0
+     0233 IL_0233: ldfld BaseStats BaseSimObject::stats
+     0238 IL_0238: stloc.s V_4
+     023a IL_023a: ldloc.s V_4
+     023c IL_023c: ldstr "warfare"
+     0241 IL_0241: ldloc.s V_4
+     0243 IL_0243: ldstr "warfare"
+     0248 IL_0248: callvirt System.Single BaseStats::get_Item(System.String)
+     024d IL_024d: ldarg.0
+     024e IL_024e: ldfld ActorData Actor::data
+     0253 IL_0253: ldstr "warfare"
+     0258 IL_0258: callvirt System.Single BaseSystemData::get_Item(System.String)
+     025d IL_025d: add
+     025e IL_025e: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0263 IL_0263: ldarg.0
+     0264 IL_0264: ldc.i4.0
+     0265 IL_0265: stfld System.Boolean Actor::_cache_check_has_status_removed_on_damage
+     026a IL_026a: ldarg.0
+     026b IL_026b: call System.Boolean BaseSimObject::hasAnyStatusEffect()
+     0270 IL_0270: brfalse IL_0311
+     0275 IL_0275: ldarg.0
+     0276 IL_0276: call System.Collections.Generic.Dictionary`2/ValueCollection<System.String,Status> BaseSimObject::getStatuses()
+     027b IL_027b: callvirt System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<!0,!1> System.Collections.Generic.Dictionary`2/ValueCollection<System.String,Status>::GetEnumerator()
+     0280 IL_0280: stloc.s V_5
+     0282 IL_0282: br.s IL_02f8
+     0284 IL_0284: ldloca.s V_5
+     0286 IL_0286: call !1 System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<System.String,Status>::get_Current()
+     028b IL_028b: stloc.s V_6
+     028d IL_028d: ldarg.0
+     028e IL_028e: ldfld BaseStats BaseSimObject::stats
+     0293 IL_0293: ldloc.s V_6
+     0295 IL_0295: callvirt StatusAsset Status::get_asset()
+     029a IL_029a: ldfld BaseStats StatusAsset::base_stats
+     029f IL_029f: ldc.r4 1
+     02a4 IL_02a4: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     02a9 IL_02a9: ldloc.s V_6
+     02ab IL_02ab: callvirt StatusAsset Status::get_asset()
+     02b0 IL_02b0: ldfld System.Boolean StatusAsset::removed_on_damage
+     02b5 IL_02b5: brfalse.s IL_02be
+     02b7 IL_02b7: ldarg.0
+     02b8 IL_02b8: ldc.i4.1
+     02b9 IL_02b9: stfld System.Boolean Actor::_cache_check_has_status_removed_on_damage
+     02be IL_02be: ldloc.s V_6
+     02c0 IL_02c0: callvirt StatusAsset Status::get_asset()
+     02c5 IL_02c5: ldfld System.String StatusAsset::decision_id
+     02ca IL_02ca: call System.Boolean System.String::IsNullOrEmpty(System.String)
+     02cf IL_02cf: brtrue.s IL_02f8
+     02d1 IL_02d1: ldarg.0
+     02d2 IL_02d2: ldfld DecisionAsset[] Actor::decisions
+     02d7 IL_02d7: ldarg.0
+     02d8 IL_02d8: ldarg.0
+     02d9 IL_02d9: ldfld System.Int32 Actor::decisions_counter
+     02de IL_02de: stloc.s V_7
+     02e0 IL_02e0: ldloc.s V_7
+     02e2 IL_02e2: ldc.i4.1
+     02e3 IL_02e3: add
+     02e4 IL_02e4: stfld System.Int32 Actor::decisions_counter
+     02e9 IL_02e9: ldloc.s V_7
+     02eb IL_02eb: ldloc.s V_6
+     02ed IL_02ed: callvirt StatusAsset Status::get_asset()
+     02f2 IL_02f2: callvirt DecisionAsset StatusAsset::getDecisionAsset()
+     02f7 IL_02f7: stelem.ref
+     02f8 IL_02f8: ldloca.s V_5
+     02fa IL_02fa: call System.Boolean System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<System.String,Status>::MoveNext()
+     02ff IL_02ff: brtrue.s IL_0284
+     0301 IL_0301: leave.s IL_0311
+     0303 IL_0303: ldloca.s V_5
+     0305 IL_0305: constrained. System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<System.String,Status>
+     030b IL_030b: callvirt System.Void System.IDisposable::Dispose()
+     0310 IL_0310: endfinally
+     0311 IL_0311: ldarg.0
+     0312 IL_0312: call System.Boolean Actor::hasWeapon()
+     0317 IL_0317: brtrue.s IL_034b
+     0319 IL_0319: ldsfld ItemLibrary AssetManager::items
+     031e IL_031e: ldarg.0
+     031f IL_031f: ldfld ActorAsset Actor::asset
+     0324 IL_0324: ldfld System.String ActorAsset::default_attack
+     0329 IL_0329: callvirt T AssetLibrary`1<EquipmentAsset>::get(System.String)
+     032e IL_032e: stloc.s V_8
+     0330 IL_0330: ldloc.s V_8
+     0332 IL_0332: brfalse.s IL_034b
+     0334 IL_0334: ldarg.0
+     0335 IL_0335: ldfld BaseStats BaseSimObject::stats
+     033a IL_033a: ldloc.s V_8
+     033c IL_033c: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0341 IL_0341: ldc.r4 1
+     0346 IL_0346: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     034b IL_034b: ldarg.0
+     034c IL_034c: call System.Void Actor::checkAttackTypes()
+     0351 IL_0351: ldarg.0
+     0352 IL_0352: ldfld System.Collections.Generic.HashSet`1<ActorTrait> Actor::traits
+     0357 IL_0357: callvirt System.Collections.Generic.HashSet`1/Enumerator<!0> System.Collections.Generic.HashSet`1<ActorTrait>::GetEnumerator()
+     035c IL_035c: stloc.s V_9
+     035e IL_035e: br.s IL_03d9
+     0360 IL_0360: ldloca.s V_9
+     0362 IL_0362: call !0 System.Collections.Generic.HashSet`1/Enumerator<ActorTrait>::get_Current()
+     0367 IL_0367: stloc.s V_10
+     0369 IL_0369: ldloc.s V_10
+     036b IL_036b: ldfld System.Boolean ActorTrait::only_active_on_era_flag
+     0370 IL_0370: brfalse.s IL_039c
+     0372 IL_0372: ldloc.s V_10
+     0374 IL_0374: ldfld System.Boolean ActorTrait::era_active_moon
+     0379 IL_0379: brfalse.s IL_0387
+     037b IL_037b: call WorldAgeAsset World::get_world_era()
+     0380 IL_0380: ldfld System.Boolean WorldAgeAsset::flag_moon
+     0385 IL_0385: brfalse.s IL_03d9
+     0387 IL_0387: ldloc.s V_10
+     0389 IL_0389: ldfld System.Boolean ActorTrait::era_active_night
+     038e IL_038e: brfalse.s IL_039c
+     0390 IL_0390: call WorldAgeAsset World::get_world_era()
+     0395 IL_0395: ldfld System.Boolean WorldAgeAsset::overlay_darkness
+     039a IL_039a: brfalse.s IL_03d9
+     039c IL_039c: ldloc.s V_10
+     039e IL_039e: ldfld GetHitAction BaseTrait`1<ActorTrait>::action_get_hit
+     03a3 IL_03a3: brfalse.s IL_03c2
+     03a5 IL_03a5: ldarg.0
+     03a6 IL_03a6: ldarg.0
+     03a7 IL_03a7: ldfld GetHitAction Actor::s_get_hit_action
+     03ac IL_03ac: ldloc.s V_10
+     03ae IL_03ae: ldfld GetHitAction BaseTrait`1<ActorTrait>::action_get_hit
+     03b3 IL_03b3: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     03b8 IL_03b8: castclass GetHitAction
+     03bd IL_03bd: stfld GetHitAction Actor::s_get_hit_action
+     03c2 IL_03c2: ldarg.0
+     03c3 IL_03c3: ldfld BaseStats BaseSimObject::stats
+     03c8 IL_03c8: ldloc.s V_10
+     03ca IL_03ca: ldfld BaseStats BaseUnlockableAsset::base_stats
+     03cf IL_03cf: ldc.r4 1
+     03d4 IL_03d4: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     03d9 IL_03d9: ldloca.s V_9
+     03db IL_03db: call System.Boolean System.Collections.Generic.HashSet`1/Enumerator<ActorTrait>::MoveNext()
+     03e0 IL_03e0: brtrue IL_0360
+     03e5 IL_03e5: leave.s IL_03f5
+     03e7 IL_03e7: ldloca.s V_9
+     03e9 IL_03e9: constrained. System.Collections.Generic.HashSet`1/Enumerator<ActorTrait>
+     03ef IL_03ef: callvirt System.Void System.IDisposable::Dispose()
+     03f4 IL_03f4: endfinally
+     03f5 IL_03f5: ldarg.0
+     03f6 IL_03f6: ldarg.0
+     03f7 IL_03f7: ldstr "possessed"
+     03fc IL_03fc: call System.Boolean BaseSimObject::hasStatus(System.String)
+     0401 IL_0401: brfalse.s IL_0410
+     0403 IL_0403: ldarg.0
+     0404 IL_0404: ldstr "strong_mind"
+     0409 IL_0409: call System.Boolean Actor::hasTag(System.String)
+     040e IL_040e: br.s IL_0411
+     0410 IL_0410: ldc.i4.0
+     0411 IL_0411: stfld System.Boolean Actor::is_forced_socialize_icon
+     0416 IL_0416: ldarg.0
+     0417 IL_0417: ldstr "budding"
+     041c IL_041c: call System.Boolean BaseSimObject::hasStatus(System.String)
+     0421 IL_0421: brfalse IL_04be
+     0426 IL_0426: ldarg.0
+     0427 IL_0427: ldfld BaseStats BaseSimObject::stats
+     042c IL_042c: stloc.s V_4
+     042e IL_042e: ldloc.s V_4
+     0430 IL_0430: ldstr "diplomacy"
+     0435 IL_0435: ldloc.s V_4
+     0437 IL_0437: ldstr "diplomacy"
+     043c IL_043c: callvirt System.Single BaseStats::get_Item(System.String)
+     0441 IL_0441: ldc.r4 2
+     0446 IL_0446: mul
+     0447 IL_0447: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     044c IL_044c: ldarg.0
+     044d IL_044d: ldfld BaseStats BaseSimObject::stats
+     0452 IL_0452: stloc.s V_4
+     0454 IL_0454: ldloc.s V_4
+     0456 IL_0456: ldstr "stewardship"
+     045b IL_045b: ldloc.s V_4
+     045d IL_045d: ldstr "stewardship"
+     0462 IL_0462: callvirt System.Single BaseStats::get_Item(System.String)
+     0467 IL_0467: ldc.r4 2
+     046c IL_046c: mul
+     046d IL_046d: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0472 IL_0472: ldarg.0
+     0473 IL_0473: ldfld BaseStats BaseSimObject::stats
+     0478 IL_0478: stloc.s V_4
+     047a IL_047a: ldloc.s V_4
+     047c IL_047c: ldstr "intelligence"
+     0481 IL_0481: ldloc.s V_4
+     0483 IL_0483: ldstr "intelligence"
+     0488 IL_0488: callvirt System.Single BaseStats::get_Item(System.String)
+     048d IL_048d: ldc.r4 2
+     0492 IL_0492: mul
+     0493 IL_0493: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0498 IL_0498: ldarg.0
+     0499 IL_0499: ldfld BaseStats BaseSimObject::stats
+     049e IL_049e: stloc.s V_4
+     04a0 IL_04a0: ldloc.s V_4
+     04a2 IL_04a2: ldstr "warfare"
+     04a7 IL_04a7: ldloc.s V_4
+     04a9 IL_04a9: ldstr "warfare"
+     04ae IL_04ae: callvirt System.Single BaseStats::get_Item(System.String)
+     04b3 IL_04b3: ldc.r4 2
+     04b8 IL_04b8: mul
+     04b9 IL_04b9: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     04be IL_04be: ldarg.0
+     04bf IL_04bf: call System.Boolean Actor::isSapient()
+     04c4 IL_04c4: brfalse IL_05bc
+     04c9 IL_04c9: ldarg.0
+     04ca IL_04ca: ldnull
+     04cb IL_04cb: stfld PersonalityAsset Actor::s_personality
+     04d0 IL_04d0: ldarg.0
+     04d1 IL_04d1: call System.Boolean Actor::isKing()
+     04d6 IL_04d6: brtrue.s IL_04e3
+     04d8 IL_04d8: ldarg.0
+     04d9 IL_04d9: call System.Boolean Actor::isCityLeader()
+     04de IL_04de: brfalse IL_05bc
+     04e3 IL_04e3: ldstr "balanced"
+     04e8 IL_04e8: stloc.s V_11
+     04ea IL_04ea: ldarg.0
+     04eb IL_04eb: ldfld BaseStats BaseSimObject::stats
+     04f0 IL_04f0: ldstr "diplomacy"
+     04f5 IL_04f5: callvirt System.Single BaseStats::get_Item(System.String)
+     04fa IL_04fa: stloc.s V_12
+     04fc IL_04fc: ldarg.0
+     04fd IL_04fd: ldfld BaseStats BaseSimObject::stats
+     0502 IL_0502: ldstr "diplomacy"
+     0507 IL_0507: callvirt System.Single BaseStats::get_Item(System.String)
+     050c IL_050c: ldarg.0
+     050d IL_050d: ldfld BaseStats BaseSimObject::stats
+     0512 IL_0512: ldstr "stewardship"
+     0517 IL_0517: callvirt System.Single BaseStats::get_Item(System.String)
+     051c IL_051c: ble.un.s IL_0539
+     051e IL_051e: ldstr "diplomat"
+     0523 IL_0523: stloc.s V_11
+     0525 IL_0525: ldarg.0
+     0526 IL_0526: ldfld BaseStats BaseSimObject::stats
+     052b IL_052b: ldstr "diplomacy"
+     0530 IL_0530: callvirt System.Single BaseStats::get_Item(System.String)
+     0535 IL_0535: stloc.s V_12
+     0537 IL_0537: br.s IL_0574
+     0539 IL_0539: ldarg.0
+     053a IL_053a: ldfld BaseStats BaseSimObject::stats
+     053f IL_053f: ldstr "diplomacy"
+     0544 IL_0544: callvirt System.Single BaseStats::get_Item(System.String)
+     0549 IL_0549: ldarg.0
+     054a IL_054a: ldfld BaseStats BaseSimObject::stats
+     054f IL_054f: ldstr "stewardship"
+     0554 IL_0554: callvirt System.Single BaseStats::get_Item(System.String)
+     0559 IL_0559: bge.un.s IL_0574
+     055b IL_055b: ldstr "administrator"
+     0560 IL_0560: stloc.s V_11
+     0562 IL_0562: ldarg.0
+     0563 IL_0563: ldfld BaseStats BaseSimObject::stats
+     0568 IL_0568: ldstr "stewardship"
+     056d IL_056d: callvirt System.Single BaseStats::get_Item(System.String)
+     0572 IL_0572: stloc.s V_12
+     0574 IL_0574: ldarg.0
+     0575 IL_0575: ldfld BaseStats BaseSimObject::stats
+     057a IL_057a: ldstr "warfare"
+     057f IL_057f: callvirt System.Single BaseStats::get_Item(System.String)
+     0584 IL_0584: ldloc.s V_12
+     0586 IL_0586: ble.un.s IL_058f
+     0588 IL_0588: ldstr "militarist"
+     058d IL_058d: stloc.s V_11
+     058f IL_058f: ldarg.0
+     0590 IL_0590: ldsfld PersonalityLibrary AssetManager::personalities
+     0595 IL_0595: ldloc.s V_11
+     0597 IL_0597: callvirt T AssetLibrary`1<PersonalityAsset>::get(System.String)
+     059c IL_059c: stfld PersonalityAsset Actor::s_personality
+     05a1 IL_05a1: ldarg.0
+     05a2 IL_05a2: ldfld BaseStats BaseSimObject::stats
+     05a7 IL_05a7: ldarg.0
+     05a8 IL_05a8: ldfld PersonalityAsset Actor::s_personality
+     05ad IL_05ad: ldfld BaseStats PersonalityAsset::base_stats
+     05b2 IL_05b2: ldc.r4 1
+     05b7 IL_05b7: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     05bc IL_05bc: ldarg.0
+     05bd IL_05bd: ldfld ActorData Actor::data
+     05c2 IL_05c2: callvirt System.Int32 ActorData::get_level()
+     05c7 IL_05c7: conv.r4
+     05c8 IL_05c8: ldsfld SimGlobalAsset SimGlobals::m
+     05cd IL_05cd: ldfld System.Single SimGlobalAsset::level_mod_bonus_health
+     05d2 IL_05d2: mul
+     05d3 IL_05d3: ldarg.0
+     05d4 IL_05d4: ldfld BaseStats BaseSimObject::stats
+     05d9 IL_05d9: ldstr "health"
+     05de IL_05de: callvirt System.Single BaseStats::get_Item(System.String)
+     05e3 IL_05e3: mul
+     05e4 IL_05e4: stloc.0
+     05e5 IL_05e5: ldarg.0
+     05e6 IL_05e6: ldfld ActorData Actor::data
+     05eb IL_05eb: callvirt System.Int32 ActorData::get_level()
+     05f0 IL_05f0: conv.r4
+     05f1 IL_05f1: ldsfld SimGlobalAsset SimGlobals::m
+     05f6 IL_05f6: ldfld System.Single SimGlobalAsset::level_mod_bonus_mana
+     05fb IL_05fb: mul
+     05fc IL_05fc: ldarg.0
+     05fd IL_05fd: ldfld BaseStats BaseSimObject::stats
+     0602 IL_0602: ldstr "mana"
+     0607 IL_0607: callvirt System.Single BaseStats::get_Item(System.String)
+     060c IL_060c: mul
+     060d IL_060d: stloc.1
+     060e IL_060e: ldarg.0
+     060f IL_060f: ldfld ActorData Actor::data
+     0614 IL_0614: callvirt System.Int32 ActorData::get_level()
+     0619 IL_0619: conv.r4
+     061a IL_061a: ldsfld SimGlobalAsset SimGlobals::m
+     061f IL_061f: ldfld System.Single SimGlobalAsset::level_mod_bonus_stamina
+     0624 IL_0624: mul
+     0625 IL_0625: ldarg.0
+     0626 IL_0626: ldfld BaseStats BaseSimObject::stats
+     062b IL_062b: ldstr "stamina"
+     0630 IL_0630: callvirt System.Single BaseStats::get_Item(System.String)
+     0635 IL_0635: mul
+     0636 IL_0636: stloc.2
+     0637 IL_0637: ldarg.0
+     0638 IL_0638: ldfld BaseStats BaseSimObject::stats
+     063d IL_063d: stloc.s V_4
+     063f IL_063f: ldloc.s V_4
+     0641 IL_0641: ldstr "health"
+     0646 IL_0646: ldloc.s V_4
+     0648 IL_0648: ldstr "health"
+     064d IL_064d: callvirt System.Single BaseStats::get_Item(System.String)
+     0652 IL_0652: ldloc.0
+     0653 IL_0653: add
+     0654 IL_0654: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0659 IL_0659: ldarg.0
+     065a IL_065a: ldfld BaseStats BaseSimObject::stats
+     065f IL_065f: stloc.s V_4
+     0661 IL_0661: ldloc.s V_4
+     0663 IL_0663: ldstr "mana"
+     0668 IL_0668: ldloc.s V_4
+     066a IL_066a: ldstr "mana"
+     066f IL_066f: callvirt System.Single BaseStats::get_Item(System.String)
+     0674 IL_0674: ldloc.1
+     0675 IL_0675: add
+     0676 IL_0676: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     067b IL_067b: ldarg.0
+     067c IL_067c: ldfld BaseStats BaseSimObject::stats
+     0681 IL_0681: stloc.s V_4
+     0683 IL_0683: ldloc.s V_4
+     0685 IL_0685: ldstr "stamina"
+     068a IL_068a: ldloc.s V_4
+     068c IL_068c: ldstr "stamina"
+     0691 IL_0691: callvirt System.Single BaseStats::get_Item(System.String)
+     0696 IL_0696: ldloc.2
+     0697 IL_0697: add
+     0698 IL_0698: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     069d IL_069d: ldarg.0
+     069e IL_069e: ldfld BaseStats BaseSimObject::stats
+     06a3 IL_06a3: stloc.s V_4
+     06a5 IL_06a5: ldloc.s V_4
+     06a7 IL_06a7: ldstr "skill_combat"
+     06ac IL_06ac: ldloc.s V_4
+     06ae IL_06ae: ldstr "skill_combat"
+     06b3 IL_06b3: callvirt System.Single BaseStats::get_Item(System.String)
+     06b8 IL_06b8: ldarg.0
+     06b9 IL_06b9: ldfld BaseStats BaseSimObject::stats
+     06be IL_06be: ldstr "warfare"
+     06c3 IL_06c3: callvirt System.Single BaseStats::get_Item(System.String)
+     06c8 IL_06c8: ldc.r4 5
+     06cd IL_06cd: div
+     06ce IL_06ce: conv.i4
+     06cf IL_06cf: conv.r4
+     06d0 IL_06d0: ldc.r4 0.01
+     06d5 IL_06d5: mul
+     06d6 IL_06d6: add
+     06d7 IL_06d7: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     06dc IL_06dc: ldarg.0
+     06dd IL_06dd: ldfld BaseStats BaseSimObject::stats
+     06e2 IL_06e2: stloc.s V_4
+     06e4 IL_06e4: ldloc.s V_4
+     06e6 IL_06e6: ldstr "skill_spell"
+     06eb IL_06eb: ldloc.s V_4
+     06ed IL_06ed: ldstr "skill_spell"
+     06f2 IL_06f2: callvirt System.Single BaseStats::get_Item(System.String)
+     06f7 IL_06f7: ldarg.0
+     06f8 IL_06f8: ldfld BaseStats BaseSimObject::stats
+     06fd IL_06fd: ldstr "intelligence"
+     0702 IL_0702: callvirt System.Single BaseStats::get_Item(System.String)
+     0707 IL_0707: ldc.r4 5
+     070c IL_070c: div
+     070d IL_070d: conv.i4
+     070e IL_070e: conv.r4
+     070f IL_070f: ldc.r4 0.01
+     0714 IL_0714: mul
+     0715 IL_0715: add
+     0716 IL_0716: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     071b IL_071b: ldarg.0
+     071c IL_071c: ldfld ActorData Actor::data
+     0721 IL_0721: callvirt System.Int32 ActorData::get_level()
+     0726 IL_0726: ldc.i4.5
+     0727 IL_0727: ble.s IL_0775
+     0729 IL_0729: ldarg.0
+     072a IL_072a: ldfld BaseStats BaseSimObject::stats
+     072f IL_072f: stloc.s V_4
+     0731 IL_0731: ldloc.s V_4
+     0733 IL_0733: ldstr "skill_combat"
+     0738 IL_0738: ldloc.s V_4
+     073a IL_073a: ldstr "skill_combat"
+     073f IL_073f: callvirt System.Single BaseStats::get_Item(System.String)
+     0744 IL_0744: ldc.r4 0.1
+     0749 IL_0749: add
+     074a IL_074a: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     074f IL_074f: ldarg.0
+     0750 IL_0750: ldfld BaseStats BaseSimObject::stats
+     0755 IL_0755: stloc.s V_4
+     0757 IL_0757: ldloc.s V_4
+     0759 IL_0759: ldstr "skill_spell"
+     075e IL_075e: ldloc.s V_4
+     0760 IL_0760: ldstr "skill_spell"
+     0765 IL_0765: callvirt System.Single BaseStats::get_Item(System.String)
+     076a IL_076a: ldc.r4 0.1
+     076f IL_076f: add
+     0770 IL_0770: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0775 IL_0775: ldarg.0
+     0776 IL_0776: ldarg.0
+     0777 IL_0777: ldfld System.Collections.Generic.HashSet`1<ActorTrait> Actor::traits
+     077c IL_077c: call System.Void Actor::addSpecialEffectAugmentations(System.Collections.Generic.IEnumerable`1<BaseAugmentationAsset>)
+     0781 IL_0781: ldarg.0
+     0782 IL_0782: call System.Void Actor::checkActionsFromAllMetas()
+     0787 IL_0787: ldarg.0
+     0788 IL_0788: call System.Void Actor::recalcCombatActions()
+     078d IL_078d: ldarg.0
+     078e IL_078e: call System.Void Actor::recalcSpells()
+     0793 IL_0793: ldarg.0
+     0794 IL_0794: call System.Void Actor::registerDecisions()
+     0799 IL_0799: ldarg.0
+     079a IL_079a: ldfld System.Boolean Actor::_has_tag_unconscious
+     079f IL_079f: stloc.3
+     07a0 IL_07a0: ldarg.0
+     07a1 IL_07a1: ldarg.0
+     07a2 IL_07a2: ldstr "generate_light"
+     07a7 IL_07a7: call System.Boolean Actor::hasTag(System.String)
+     07ac IL_07ac: stfld System.Boolean Actor::has_tag_generate_light
+     07b1 IL_07b1: ldarg.0
+     07b2 IL_07b2: ldarg.0
+     07b3 IL_07b3: ldstr "unconscious"
+     07b8 IL_07b8: call System.Boolean Actor::hasTag(System.String)
+     07bd IL_07bd: stfld System.Boolean Actor::_has_tag_unconscious
+     07c2 IL_07c2: ldarg.0
+     07c3 IL_07c3: ldarg.0
+     07c4 IL_07c4: ldstr "immunity_cold"
+     07c9 IL_07c9: call System.Boolean Actor::hasTag(System.String)
+     07ce IL_07ce: stfld System.Boolean Actor::has_tag_immunity_cold
+     07d3 IL_07d3: ldarg.0
+     07d4 IL_07d4: ldfld System.Boolean Actor::_has_tag_unconscious
+     07d9 IL_07d9: brfalse.s IL_080b
+     07db IL_07db: ldloc.3
+     07dc IL_07dc: brtrue.s IL_0800
+     07de IL_07de: ldarg.0
+     07df IL_07df: ldfld BatchActors Actor::batch
+     07e4 IL_07e4: ldflda Unity.Mathematics.Random BatchActors::rnd
+     07e9 IL_07e9: call System.Boolean Unity.Mathematics.Random::NextBool()
+     07ee IL_07ee: brfalse.s IL_07f9
+     07f0 IL_07f0: ldarg.0
+     07f1 IL_07f1: ldc.i4.0
+     07f2 IL_07f2: stfld RotationDirection Actor::_rotation_direction
+     07f7 IL_07f7: br.s IL_0800
+     07f9 IL_07f9: ldarg.0
+     07fa IL_07fa: ldc.i4.1
+     07fb IL_07fb: stfld RotationDirection Actor::_rotation_direction
+     0800 IL_0800: ldarg.0
+     0801 IL_0801: ldc.r4 0
+     0806 IL_0806: stfld System.Single Actor::timer_jump_animation
+     080b IL_080b: ldarg.0
+     080c IL_080c: ldarg.0
+     080d IL_080d: ldstr "weightless"
+     0812 IL_0812: call System.Boolean Actor::hasTrait(System.String)
+     0817 IL_0817: stfld System.Boolean Actor::_has_trait_weightless
+     081c IL_081c: ldarg.0
+     081d IL_081d: ldarg.0
+     081e IL_081e: ldstr "sleeping"
+     0823 IL_0823: call System.Boolean BaseSimObject::hasStatus(System.String)
+     0828 IL_0828: stfld System.Boolean Actor::_has_status_sleeping
+     082d IL_082d: ldarg.0
+     082e IL_082e: ldarg.0
+     082f IL_082f: ldstr "strange_urge"
+     0834 IL_0834: call System.Boolean BaseSimObject::hasStatus(System.String)
+     0839 IL_0839: stfld System.Boolean Actor::_has_status_strange_urge
+     083e IL_083e: ldarg.0
+     083f IL_083f: ldarg.0
+     0840 IL_0840: ldstr "possessed"
+     0845 IL_0845: call System.Boolean BaseSimObject::hasStatus(System.String)
+     084a IL_084a: stfld System.Boolean Actor::_has_status_possessed
+     084f IL_084f: ldarg.0
+     0850 IL_0850: ldarg.0
+     0851 IL_0851: ldstr "tantrum"
+     0856 IL_0856: call System.Boolean BaseSimObject::hasStatus(System.String)
+     085b IL_085b: stfld System.Boolean Actor::_has_status_tantrum
+     0860 IL_0860: ldarg.0
+     0861 IL_0861: ldarg.0
+     0862 IL_0862: ldstr "drowning"
+     0867 IL_0867: call System.Boolean BaseSimObject::hasStatus(System.String)
+     086c IL_086c: stfld System.Boolean Actor::_has_status_drowning
+     0871 IL_0871: ldarg.0
+     0872 IL_0872: ldarg.0
+     0873 IL_0873: ldstr "invincible"
+     0878 IL_0878: call System.Boolean BaseSimObject::hasStatus(System.String)
+     087d IL_087d: stfld System.Boolean Actor::_has_status_invincible
+     0882 IL_0882: ldarg.0
+     0883 IL_0883: ldarg.0
+     0884 IL_0884: call System.Boolean Actor::isImmovable()
+     0889 IL_0889: stfld System.Boolean Actor::is_immovable
+     088e IL_088e: ldarg.0
+     088f IL_088f: ldarg.0
+     0890 IL_0890: call System.Boolean Actor::isAiFrozen()
+     0895 IL_0895: stfld System.Boolean Actor::is_ai_frozen
+     089a IL_089a: ldarg.0
+     089b IL_089b: ldarg.0
+     089c IL_089c: call System.Boolean Actor::hasStopIdleAnimation()
+     08a1 IL_08a1: stfld System.Boolean Actor::_has_stop_idle_animation
+     08a6 IL_08a6: ldarg.0
+     08a7 IL_08a7: ldarg.0
+     08a8 IL_08a8: call System.Boolean Actor::isIgnoreFights()
+     08ad IL_08ad: stfld System.Boolean Actor::_ignore_fights
+     08b2 IL_08b2: ldarg.0
+     08b3 IL_08b3: call System.Boolean Actor::hasSubspecies()
+     08b8 IL_08b8: brfalse.s IL_08cd
+     08ba IL_08ba: ldarg.0
+     08bb IL_08bb: ldarg.0
+     08bc IL_08bc: ldfld Subspecies Actor::subspecies
+     08c1 IL_08c1: callvirt System.Boolean Subspecies::get_can_process_emotions()
+     08c6 IL_08c6: stfld System.Boolean Actor::_has_emotions
+     08cb IL_08cb: br.s IL_08d4
+     08cd IL_08cd: ldarg.0
+     08ce IL_08ce: ldc.i4.0
+     08cf IL_08cf: stfld System.Boolean Actor::_has_emotions
+     08d4 IL_08d4: ldarg.0
+     08d5 IL_08d5: call System.Boolean Actor::hasWeapon()
+     08da IL_08da: brtrue.s IL_0934
+     08dc IL_08dc: ldsfld ItemLibrary AssetManager::items
+     08e1 IL_08e1: ldarg.0
+     08e2 IL_08e2: ldfld ActorAsset Actor::asset
+     08e7 IL_08e7: ldfld System.String ActorAsset::default_attack
+     08ec IL_08ec: callvirt T AssetLibrary`1<EquipmentAsset>::get(System.String)
+     08f1 IL_08f1: stloc.s V_13
+     08f3 IL_08f3: ldarg.0
+     08f4 IL_08f4: ldloc.s V_13
+     08f6 IL_08f6: call System.Void Actor::addDefaultItemAttackActions(ItemAsset)
+     08fb IL_08fb: ldloc.s V_13
+     08fd IL_08fd: ldfld ItemModAsset[] ItemAsset::item_modifiers
+     0902 IL_0902: brfalse.s IL_0934
+     0904 IL_0904: ldc.i4.0
+     0905 IL_0905: stloc.s V_14
+     0907 IL_0907: br.s IL_0927
+     0909 IL_0909: ldloc.s V_13
+     090b IL_090b: ldfld ItemModAsset[] ItemAsset::item_modifiers
+     0910 IL_0910: ldloc.s V_14
+     0912 IL_0912: ldelem.ref
+     0913 IL_0913: stloc.s V_15
+     0915 IL_0915: ldloc.s V_15
+     0917 IL_0917: brfalse.s IL_0921
+     0919 IL_0919: ldarg.0
+     091a IL_091a: ldloc.s V_15
+     091c IL_091c: call System.Void Actor::addDefaultItemAttackActions(ItemAsset)
+     0921 IL_0921: ldloc.s V_14
+     0923 IL_0923: ldc.i4.1
+     0924 IL_0924: add
+     0925 IL_0925: stloc.s V_14
+     0927 IL_0927: ldloc.s V_14
+     0929 IL_0929: ldloc.s V_13
+     092b IL_092b: ldfld ItemModAsset[] ItemAsset::item_modifiers
+     0930 IL_0930: ldlen
+     0931 IL_0931: conv.i4
+     0932 IL_0932: blt.s IL_0909
+     0934 IL_0934: ldarg.0
+     0935 IL_0935: call System.Boolean Actor::canUseItems()
+     093a IL_093a: brfalse IL_0a0a
+     093f IL_093f: ldarg.0
+     0940 IL_0940: ldfld ActorEquipment Actor::equipment
+     0945 IL_0945: callvirt System.Collections.Generic.IEnumerator`1<ActorEquipmentSlot> ActorEquipment::GetEnumerator()
+     094a IL_094a: stloc.s V_16
+     094c IL_094c: br IL_09f0
+     0951 IL_0951: ldloc.s V_16
+     0953 IL_0953: callvirt !0 System.Collections.Generic.IEnumerator`1<ActorEquipmentSlot>::get_Current()
+     0958 IL_0958: stloc.s V_17
+     095a IL_095a: ldloc.s V_17
+     095c IL_095c: callvirt System.Boolean ActorEquipmentSlot::isEmpty()
+     0961 IL_0961: brtrue IL_09f0
+     0966 IL_0966: ldloc.s V_17
+     0968 IL_0968: callvirt Item ActorEquipmentSlot::getItem()
+     096d IL_096d: stloc.s V_18
+     096f IL_096f: ldarg.0
+     0970 IL_0970: ldloc.s V_18
+     0972 IL_0972: callvirt EquipmentAsset Item::getAsset()
+     0977 IL_0977: call System.Void Actor::addItemActions(ItemAsset)
+     097c IL_097c: ldloc.s V_18
+     097e IL_097e: ldfld AttackAction Item::action_attack_target
+     0983 IL_0983: brfalse.s IL_09a2
+     0985 IL_0985: ldarg.0
+     0986 IL_0986: ldarg.0
+     0987 IL_0987: ldfld AttackAction Actor::s_action_attack_target
+     098c IL_098c: ldloc.s V_18
+     098e IL_098e: ldfld AttackAction Item::action_attack_target
+     0993 IL_0993: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     0998 IL_0998: castclass AttackAction
+     099d IL_099d: stfld AttackAction Actor::s_action_attack_target
+     09a2 IL_09a2: ldloc.s V_18
+     09a4 IL_09a4: ldfld TData CoreSystemObject`1<ItemData>::data
+     09a9 IL_09a9: ldfld ListPool`1<System.String> ItemData::modifiers
+     09ae IL_09ae: callvirt ListPool`1/Enumerator<T> ListPool`1<System.String>::GetEnumerator()
+     09b3 IL_09b3: stloc.s V_19
+     09b5 IL_09b5: br.s IL_09d7
+     09b7 IL_09b7: ldloca.s V_19
+     09b9 IL_09b9: call T& ListPool`1/Enumerator<System.String>::get_Current()
+     09be IL_09be: ldind.ref
+     09bf IL_09bf: stloc.s V_20
+     09c1 IL_09c1: ldsfld ItemModifierLibrary AssetManager::items_modifiers
+     09c6 IL_09c6: ldloc.s V_20
+     09c8 IL_09c8: callvirt T AssetLibrary`1<ItemModAsset>::get(System.String)
+     09cd IL_09cd: stloc.s V_21
+     09cf IL_09cf: ldarg.0
+     09d0 IL_09d0: ldloc.s V_21
+     09d2 IL_09d2: call System.Void Actor::addItemActions(ItemAsset)
+     09d7 IL_09d7: ldloca.s V_19
+     09d9 IL_09d9: call System.Boolean ListPool`1/Enumerator<System.String>::MoveNext()
+     09de IL_09de: brtrue.s IL_09b7
+     09e0 IL_09e0: leave.s IL_09f0
+     09e2 IL_09e2: ldloca.s V_19
+     09e4 IL_09e4: constrained. ListPool`1/Enumerator<System.String>
+     09ea IL_09ea: callvirt System.Void System.IDisposable::Dispose()
+     09ef IL_09ef: endfinally
+     09f0 IL_09f0: ldloc.s V_16
+     09f2 IL_09f2: callvirt System.Boolean System.Collections.IEnumerator::MoveNext()
+     09f7 IL_09f7: brtrue IL_0951
+     09fc IL_09fc: leave.s IL_0a0a
+     09fe IL_09fe: ldloc.s V_16
+     0a00 IL_0a00: brfalse.s IL_0a09
+     0a02 IL_0a02: ldloc.s V_16
+     0a04 IL_0a04: callvirt System.Void System.IDisposable::Dispose()
+     0a09 IL_0a09: endfinally
+     0a0a IL_0a0a: ldarg.0
+     0a0b IL_0a0b: ldfld System.Collections.Generic.List`1<BaseAugmentationAsset> Actor::_s_special_effect_augmentations
+     0a10 IL_0a10: callvirt System.Int32 System.Collections.Generic.List`1<BaseAugmentationAsset>::get_Count()
+     0a15 IL_0a15: brtrue.s IL_0a2f
+     0a17 IL_0a17: ldarg.0
+     0a18 IL_0a18: ldfld BatchActors Actor::batch
+     0a1d IL_0a1d: ldfld ObjectContainer`1<Actor> BatchActors::c_augmentation_effects
+     0a22 IL_0a22: ldarg.0
+     0a23 IL_0a23: ldfld Actor BaseSimObject::a
+     0a28 IL_0a28: callvirt System.Void ObjectContainer`1<Actor>::Remove(T)
+     0a2d IL_0a2d: br.s IL_0a45
+     0a2f IL_0a2f: ldarg.0
+     0a30 IL_0a30: ldfld BatchActors Actor::batch
+     0a35 IL_0a35: ldfld ObjectContainer`1<Actor> BatchActors::c_augmentation_effects
+     0a3a IL_0a3a: ldarg.0
+     0a3b IL_0a3b: ldfld Actor BaseSimObject::a
+     0a40 IL_0a40: callvirt System.Void ObjectContainer`1<Actor>::Add(T)
+     0a45 IL_0a45: ldarg.0
+     0a46 IL_0a46: ldarg.0
+     0a47 IL_0a47: call System.Boolean Actor::calculateIsSick()
+     0a4c IL_0a4c: stfld System.Boolean Actor::_has_any_sick_trait
+     0a51 IL_0a51: ldarg.0
+     0a52 IL_0a52: ldarg.0
+     0a53 IL_0a53: ldstr "peaceful"
+     0a58 IL_0a58: call System.Boolean Actor::hasTrait(System.String)
+     0a5d IL_0a5d: stfld System.Boolean Actor::_has_trait_peaceful
+     0a62 IL_0a62: ldarg.0
+     0a63 IL_0a63: ldarg.0
+     0a64 IL_0a64: ldstr "clone"
+     0a69 IL_0a69: call System.Boolean Actor::hasTrait(System.String)
+     0a6e IL_0a6e: stfld System.Boolean Actor::_has_trait_clone
+     0a73 IL_0a73: ldarg.0
+     0a74 IL_0a74: call System.Boolean Actor::canUseItems()
+     0a79 IL_0a79: brfalse.s IL_0ae3
+     0a7b IL_0a7b: ldarg.0
+     0a7c IL_0a7c: ldfld ActorEquipment Actor::equipment
+     0a81 IL_0a81: callvirt System.Collections.Generic.IEnumerator`1<ActorEquipmentSlot> ActorEquipment::GetEnumerator()
+     0a86 IL_0a86: stloc.s V_16
+     0a88 IL_0a88: br.s IL_0acc
+     0a8a IL_0a8a: ldloc.s V_16
+     0a8c IL_0a8c: callvirt !0 System.Collections.Generic.IEnumerator`1<ActorEquipmentSlot>::get_Current()
+     0a91 IL_0a91: stloc.s V_22
+     0a93 IL_0a93: ldloc.s V_22
+     0a95 IL_0a95: callvirt System.Boolean ActorEquipmentSlot::isEmpty()
+     0a9a IL_0a9a: brtrue.s IL_0acc
+     0a9c IL_0a9c: ldloc.s V_22
+     0a9e IL_0a9e: callvirt Item ActorEquipmentSlot::getItem()
+     0aa3 IL_0aa3: stloc.s V_23
+     0aa5 IL_0aa5: ldc.r4 1
+     0aaa IL_0aaa: stloc.s V_24
+     0aac IL_0aac: ldloc.s V_23
+     0aae IL_0aae: callvirt System.Boolean Item::isBroken()
+     0ab3 IL_0ab3: brfalse.s IL_0abc
+     0ab5 IL_0ab5: ldc.r4 0.5
+     0aba IL_0aba: stloc.s V_24
+     0abc IL_0abc: ldarg.0
+     0abd IL_0abd: ldfld BaseStats BaseSimObject::stats
+     0ac2 IL_0ac2: ldloc.s V_23
+     0ac4 IL_0ac4: ldc.i4.0
+     0ac5 IL_0ac5: ldloc.s V_24
+     0ac7 IL_0ac7: call System.Void ItemTools::mergeStatsWithItem(BaseStats,Item,System.Boolean,System.Single)
+     0acc IL_0acc: ldloc.s V_16
+     0ace IL_0ace: callvirt System.Boolean System.Collections.IEnumerator::MoveNext()
+     0ad3 IL_0ad3: brtrue.s IL_0a8a
+     0ad5 IL_0ad5: leave.s IL_0ae3
+     0ad7 IL_0ad7: ldloc.s V_16
+     0ad9 IL_0ad9: brfalse.s IL_0ae2
+     0adb IL_0adb: ldloc.s V_16
+     0add IL_0add: callvirt System.Void System.IDisposable::Dispose()
+     0ae2 IL_0ae2: endfinally
+     0ae3 IL_0ae3: ldarg.0
+     0ae4 IL_0ae4: ldfld ActorAsset Actor::asset
+     0ae9 IL_0ae9: ldfld System.Boolean ActorAsset::only_melee_attack
+     0aee IL_0aee: brfalse.s IL_0b15
+     0af0 IL_0af0: ldarg.0
+     0af1 IL_0af1: ldfld BaseStats BaseSimObject::stats
+     0af6 IL_0af6: ldstr "range"
+     0afb IL_0afb: ldarg.0
+     0afc IL_0afc: ldfld ActorAsset Actor::asset
+     0b01 IL_0b01: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0b06 IL_0b06: ldstr "range"
+     0b0b IL_0b0b: callvirt System.Single BaseStats::get_Item(System.String)
+     0b10 IL_0b10: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0b15 IL_0b15: ldarg.0
+     0b16 IL_0b16: ldfld BaseStats BaseSimObject::stats
+     0b1b IL_0b1b: callvirt System.Void BaseStats::normalize()
+     0b20 IL_0b20: ldarg.0
+     0b21 IL_0b21: ldfld BaseStats BaseSimObject::stats
+     0b26 IL_0b26: stloc.s V_4
+     0b28 IL_0b28: ldloc.s V_4
+     0b2a IL_0b2a: ldstr "cities"
+     0b2f IL_0b2f: ldloc.s V_4
+     0b31 IL_0b31: ldstr "cities"
+     0b36 IL_0b36: callvirt System.Single BaseStats::get_Item(System.String)
+     0b3b IL_0b3b: ldarg.0
+     0b3c IL_0b3c: ldfld BaseStats BaseSimObject::stats
+     0b41 IL_0b41: ldstr "stewardship"
+     0b46 IL_0b46: callvirt System.Single BaseStats::get_Item(System.String)
+     0b4b IL_0b4b: conv.i4
+     0b4c IL_0b4c: ldc.i4.6
+     0b4d IL_0b4d: div
+     0b4e IL_0b4e: ldc.i4.1
+     0b4f IL_0b4f: add
+     0b50 IL_0b50: conv.r4
+     0b51 IL_0b51: add
+     0b52 IL_0b52: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0b57 IL_0b57: ldarg.0
+     0b58 IL_0b58: ldfld BaseStats BaseSimObject::stats
+     0b5d IL_0b5d: stloc.s V_4
+     0b5f IL_0b5f: ldloc.s V_4
+     0b61 IL_0b61: ldstr "bonus_towers"
+     0b66 IL_0b66: ldloc.s V_4
+     0b68 IL_0b68: ldstr "bonus_towers"
+     0b6d IL_0b6d: callvirt System.Single BaseStats::get_Item(System.String)
+     0b72 IL_0b72: ldarg.0
+     0b73 IL_0b73: ldfld BaseStats BaseSimObject::stats
+     0b78 IL_0b78: ldstr "warfare"
+     0b7d IL_0b7d: callvirt System.Single BaseStats::get_Item(System.String)
+     0b82 IL_0b82: ldc.r4 10
+     0b87 IL_0b87: div
+     0b88 IL_0b88: conv.i4
+     0b89 IL_0b89: conv.r4
+     0b8a IL_0b8a: add
+     0b8b IL_0b8b: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0b90 IL_0b90: ldarg.0
+     0b91 IL_0b91: ldfld BaseStats BaseSimObject::stats
+     0b96 IL_0b96: stloc.s V_4
+     0b98 IL_0b98: ldloc.s V_4
+     0b9a IL_0b9a: ldstr "mana"
+     0b9f IL_0b9f: ldloc.s V_4
+     0ba1 IL_0ba1: ldstr "mana"
+     0ba6 IL_0ba6: callvirt System.Single BaseStats::get_Item(System.String)
+     0bab IL_0bab: ldarg.0
+     0bac IL_0bac: ldfld BaseStats BaseSimObject::stats
+     0bb1 IL_0bb1: ldstr "intelligence"
+     0bb6 IL_0bb6: callvirt System.Single BaseStats::get_Item(System.String)
+     0bbb IL_0bbb: ldsfld SimGlobalAsset SimGlobals::m
+     0bc0 IL_0bc0: ldfld System.Single SimGlobalAsset::MANA_PER_INTELLIGENCE
+     0bc5 IL_0bc5: mul
+     0bc6 IL_0bc6: conv.i4
+     0bc7 IL_0bc7: conv.r4
+     0bc8 IL_0bc8: add
+     0bc9 IL_0bc9: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0bce IL_0bce: ldarg.0
+     0bcf IL_0bcf: ldfld BaseStats BaseSimObject::stats
+     0bd4 IL_0bd4: callvirt System.Void BaseStats::checkMultipliers()
+     0bd9 IL_0bd9: ldarg.0
+     0bda IL_0bda: call System.Boolean Actor::isSapient()
+     0bdf IL_0bdf: brfalse.s IL_0be7
+     0be1 IL_0be1: ldarg.0
+     0be2 IL_0be2: call System.Void Actor::calculateOffspringBasedOnAge()
+     0be7 IL_0be7: ldarg.0
+     0be8 IL_0be8: call System.Boolean Actor::hasRangeAttack()
+     0bed IL_0bed: brfalse.s IL_0c2b
+     0bef IL_0bef: ldarg.0
+     0bf0 IL_0bf0: ldfld BaseStats BaseSimObject::stats
+     0bf5 IL_0bf5: stloc.s V_4
+     0bf7 IL_0bf7: ldloc.s V_4
+     0bf9 IL_0bf9: ldstr "range"
+     0bfe IL_0bfe: ldloc.s V_4
+     0c00 IL_0c00: ldstr "range"
+     0c05 IL_0c05: callvirt System.Single BaseStats::get_Item(System.String)
+     0c0a IL_0c0a: ldarg.0
+     0c0b IL_0c0b: ldfld BaseStats BaseSimObject::stats
+     0c10 IL_0c10: ldstr "range"
+     0c15 IL_0c15: callvirt System.Single BaseStats::get_Item(System.String)
+     0c1a IL_0c1a: call WorldAgeAsset World::get_world_era()
+     0c1f IL_0c1f: ldfld System.Single WorldAgeAsset::range_weapons_multiplier
+     0c24 IL_0c24: mul
+     0c25 IL_0c25: add
+     0c26 IL_0c26: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0c2b IL_0c2b: ldarg.0
+     0c2c IL_0c2c: ldfld BaseStats BaseSimObject::stats
+     0c31 IL_0c31: stloc.s V_4
+     0c33 IL_0c33: ldloc.s V_4
+     0c35 IL_0c35: ldstr "damage"
+     0c3a IL_0c3a: ldloc.s V_4
+     0c3c IL_0c3c: ldstr "damage"
+     0c41 IL_0c41: callvirt System.Single BaseStats::get_Item(System.String)
+     0c46 IL_0c46: ldarg.0
+     0c47 IL_0c47: ldfld BaseStats BaseSimObject::stats
+     0c4c IL_0c4c: ldstr "warfare"
+     0c51 IL_0c51: callvirt System.Single BaseStats::get_Item(System.String)
+     0c56 IL_0c56: ldc.r4 5
+     0c5b IL_0c5b: div
+     0c5c IL_0c5c: add
+     0c5d IL_0c5d: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0c62 IL_0c62: ldarg.0
+     0c63 IL_0c63: call System.Boolean Actor::isBaby()
+     0c68 IL_0c68: brfalse.s IL_0cb6
+     0c6a IL_0c6a: ldarg.0
+     0c6b IL_0c6b: ldfld BaseStats BaseSimObject::stats
+     0c70 IL_0c70: ldstr "damage"
+     0c75 IL_0c75: ldarg.0
+     0c76 IL_0c76: ldfld BaseStats BaseSimObject::stats
+     0c7b IL_0c7b: ldstr "damage"
+     0c80 IL_0c80: callvirt System.Single BaseStats::get_Item(System.String)
+     0c85 IL_0c85: ldc.r4 0.5
+     0c8a IL_0c8a: mul
+     0c8b IL_0c8b: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0c90 IL_0c90: ldarg.0
+     0c91 IL_0c91: ldfld BaseStats BaseSimObject::stats
+     0c96 IL_0c96: ldstr "health"
+     0c9b IL_0c9b: ldarg.0
+     0c9c IL_0c9c: ldfld BaseStats BaseSimObject::stats
+     0ca1 IL_0ca1: ldstr "health"
+     0ca6 IL_0ca6: callvirt System.Single BaseStats::get_Item(System.String)
+     0cab IL_0cab: ldc.r4 0.5
+     0cb0 IL_0cb0: mul
+     0cb1 IL_0cb1: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0cb6 IL_0cb6: ldarg.0
+     0cb7 IL_0cb7: ldfld BaseStats BaseSimObject::stats
+     0cbc IL_0cbc: callvirt System.Void BaseStats::normalize()
+     0cc1 IL_0cc1: ldarg.0
+     0cc2 IL_0cc2: call System.Int32 BaseSimObject::getHealth()
+     0cc7 IL_0cc7: ldarg.0
+     0cc8 IL_0cc8: call System.Int32 BaseSimObject::getMaxHealth()
+     0ccd IL_0ccd: ble.s IL_0cd5
+     0ccf IL_0ccf: ldarg.0
+     0cd0 IL_0cd0: call System.Void BaseSimObject::setMaxHealth()
+     0cd5 IL_0cd5: ldarg.0
+     0cd6 IL_0cd6: call System.Int32 Actor::getHappiness()
+     0cdb IL_0cdb: ldarg.0
+     0cdc IL_0cdc: call System.Int32 Actor::getMaxHappiness()
+     0ce1 IL_0ce1: ble.s IL_0ce9
+     0ce3 IL_0ce3: ldarg.0
+     0ce4 IL_0ce4: call System.Void Actor::setMaxHappiness()
+     0ce9 IL_0ce9: ldarg.0
+     0cea IL_0cea: call System.Int32 Actor::getStamina()
+     0cef IL_0cef: ldarg.0
+     0cf0 IL_0cf0: call System.Int32 Actor::getMaxStamina()
+     0cf5 IL_0cf5: ble.s IL_0cfd
+     0cf7 IL_0cf7: ldarg.0
+     0cf8 IL_0cf8: call System.Void Actor::setMaxStamina()
+     0cfd IL_0cfd: ldarg.0
+     0cfe IL_0cfe: call System.Int32 Actor::getMana()
+     0d03 IL_0d03: ldarg.0
+     0d04 IL_0d04: call System.Int32 Actor::getMaxMana()
+     0d09 IL_0d09: ble.s IL_0d11
+     0d0b IL_0d0b: ldarg.0
+     0d0c IL_0d0c: call System.Void Actor::setMaxMana()
+     0d11 IL_0d11: ldarg.0
+     0d12 IL_0d12: ldfld System.Boolean BaseSimObject::event_full_stats
+     0d17 IL_0d17: brfalse.s IL_0d32
+     0d19 IL_0d19: ldarg.0
+     0d1a IL_0d1a: ldc.i4.0
+     0d1b IL_0d1b: stfld System.Boolean BaseSimObject::event_full_stats
+     0d20 IL_0d20: ldarg.0
+     0d21 IL_0d21: call System.Void BaseSimObject::setMaxHealth()
+     0d26 IL_0d26: ldarg.0
+     0d27 IL_0d27: call System.Void Actor::setMaxStamina()
+     0d2c IL_0d2c: ldarg.0
+     0d2d IL_0d2d: call System.Void Actor::setMaxMana()
+     0d32 IL_0d32: ldarg.0
+     0d33 IL_0d33: call System.Boolean Actor::isHovering()
+     0d38 IL_0d38: brfalse.s IL_0d52
+     0d3a IL_0d3a: ldarg.0
+     0d3b IL_0d3b: ldfld BatchActors Actor::batch
+     0d40 IL_0d40: ldfld ObjectContainer`1<Actor> BatchActors::c_hovering
+     0d45 IL_0d45: ldarg.0
+     0d46 IL_0d46: ldfld Actor BaseSimObject::a
+     0d4b IL_0d4b: callvirt System.Void ObjectContainer`1<Actor>::Add(T)
+     0d50 IL_0d50: br.s IL_0d78
+     0d52 IL_0d52: ldarg.0
+     0d53 IL_0d53: ldflda UnityEngine.Vector2 Actor::move_jump_offset
+     0d58 IL_0d58: ldc.r4 0
+     0d5d IL_0d5d: stfld System.Single UnityEngine.Vector2::y
+     0d62 IL_0d62: ldarg.0
+     0d63 IL_0d63: ldfld BatchActors Actor::batch
+     0d68 IL_0d68: ldfld ObjectContainer`1<Actor> BatchActors::c_hovering
+     0d6d IL_0d6d: ldarg.0
+     0d6e IL_0d6e: ldfld Actor BaseSimObject::a
+     0d73 IL_0d73: callvirt System.Void ObjectContainer`1<Actor>::Remove(T)
+     0d78 IL_0d78: ldarg.0
+     0d79 IL_0d79: call System.Boolean Actor::isPollinator()
+     0d7e IL_0d7e: brfalse.s IL_0d98
+     0d80 IL_0d80: ldarg.0
+     0d81 IL_0d81: ldfld BatchActors Actor::batch
+     0d86 IL_0d86: ldfld ObjectContainer`1<Actor> BatchActors::c_pollinating
+     0d8b IL_0d8b: ldarg.0
+     0d8c IL_0d8c: ldfld Actor BaseSimObject::a
+     0d91 IL_0d91: callvirt System.Void ObjectContainer`1<Actor>::Add(T)
+     0d96 IL_0d96: br.s IL_0dae
+     0d98 IL_0d98: ldarg.0
+     0d99 IL_0d99: ldfld BatchActors Actor::batch
+     0d9e IL_0d9e: ldfld ObjectContainer`1<Actor> BatchActors::c_pollinating
+     0da3 IL_0da3: ldarg.0
+     0da4 IL_0da4: ldfld Actor BaseSimObject::a
+     0da9 IL_0da9: callvirt System.Void ObjectContainer`1<Actor>::Remove(T)
+     0dae IL_0dae: ldarg.0
+     0daf IL_0daf: ldarg.0
+     0db0 IL_0db0: ldfld BaseStats BaseSimObject::stats
+     0db5 IL_0db5: ldstr "scale"
+     0dba IL_0dba: callvirt System.Single BaseStats::get_Item(System.String)
+     0dbf IL_0dbf: stfld System.Single Actor::target_scale
+     0dc4 IL_0dc4: ldarg.0
+     0dc5 IL_0dc5: ldfld System.Single Actor::attack_timer
+     0dca IL_0dca: ldarg.0
+     0dcb IL_0dcb: call System.Single Actor::getAttackCooldown()
+     0dd0 IL_0dd0: ble.un.s IL_0dde
+     0dd2 IL_0dd2: ldarg.0
+     0dd3 IL_0dd3: ldarg.0
+     0dd4 IL_0dd4: call System.Single Actor::getAttackCooldown()
+     0dd9 IL_0dd9: stfld System.Single Actor::attack_timer
+     0dde IL_0dde: ret
+
+######## TYPE Actor/<getChildren>d__335 : System.Object
+######## TYPE Actor/<getParents>d__334 : System.Object
+######## TYPE Actor/<getResourcesFromActor>d__504 : System.Object
+######## TYPE ActorVisibleDataArray : System.Object
+######## TYPE ActorManager : SimSystemManager`2<Actor,ActorData>
+######## TYPE ActorManager/<>c__DisplayClass21_0 : System.Object
+######## TYPE ActorGetSprite : System.MulticastDelegate
+######## TYPE ActorGetSprites : System.MulticastDelegate
+######## TYPE ActorAsset : BaseUnlockableAsset
+######## TYPE ActorAsset/<>c : System.Object
+######## TYPE ActorSex : System.Enum
+######## TYPE ActorGender : System.Enum
+######## TYPE ActorAvatar : UnityEngine.MonoBehaviour
+######## TYPE ActorBag : System.Object
+######## TYPE ActorBagExtensions : System.Object
+######## TYPE ActorSimpleComponent : System.Object
+######## TYPE ActorData : BaseObjectData
+######## TYPE ActorDataObsolete : System.Object
+######## TYPE ActorDamageEffectData : System.ValueType
+######## TYPE ActorHighlightEffectData : System.ValueType
+######## TYPE ActorAnimation : System.Object
+######## TYPE ActorAnimationLoader : System.Object
+######## TYPE ActorAnimationSequences : System.Object
+######## TYPE ActorColorEffect : System.Enum
+######## TYPE ActorIdleLoopSound : System.Object
+######## TYPE ActorSize : System.Enum
+######## TYPE ActorTextureSubAsset : System.Object
+######## TYPE ActorDirection : System.Enum
+######## TYPE ActorMove : System.Object
+######## TYPE ActorJob : JobAsset`2<BehaviourActorCondition,Actor>
+######## TYPE ActorJobLibrary : AssetLibrary`1<ActorJob>
+######## TYPE ActorAssetFilter : System.MulticastDelegate
+######## TYPE ActorAssetElementPlace : BaseAssetElementPlace`2<ActorAsset,ActorDebugAssetElement>
+######## TYPE ActorAssetWindow : BaseDebugAssetWindow`2<ActorAsset,ActorDebugAssetElement>
+######## TYPE ActorDebugAnimationElement : BaseDebugAnimationElement`1<ActorAsset>
+######## TYPE ActorDebugAssetElement : BaseDebugAssetElement`1<ActorAsset>
+######## TYPE ActorDebugAssetsComponent : BaseDebugAssetsComponent`3<ActorAsset,ActorDebugAssetElement,ActorAssetElementPlace>
+######## TYPE ActorAvatarData : System.Object
+######## TYPE ActorTraitButton : TraitButton`1<ActorTrait>
+######## TYPE ActorTraitEditorButton : TraitEditorButton`2<ActorTraitButton,ActorTrait>
+######## TYPE ActorTraitGroupElement : TraitGroupElement`3<ActorTrait,ActorTraitButton,ActorTraitEditorButton>
+######## TYPE ActorTraitsEditor : TraitsEditor`5<ActorTrait,ActorTraitButton,ActorTraitEditorButton,ActorTraitGroupAsset,ActorTraitGroupElement>
+######## TYPE ActorTraitsEditor/<>c__DisplayClass8_0 : System.Object
+######## TYPE ActorSelectedContainerEquipment : SelectedElementBase`1<EquipmentButton>
+######## TYPE ActorSelectedContainerStatus : SelectedElementBase`1<StatusEffectButton>
+######## TYPE ActorSelectedContainerTraits : SelectedContainerTraits`4<ActorTrait,ActorTraitButton,ActorTraitsContainer,ActorTraitsEditor>
+######## TYPE ActorSelectedMetaBanners : UnitMetaBanners
+######## TYPE ActorTraitsContainer : TraitsContainer`2<ActorTrait,ActorTraitButton>

@@ -1,0 +1,124 @@
+﻿######## TYPE BaseStatsContainer : System.Object
+---- BaseStatAsset get_asset()
+     0000 IL_0000: ldsfld BaseStatsLibrary AssetManager::base_stats_library
+     0005 IL_0005: ldarg.0
+     0006 IL_0006: ldfld System.String BaseStatsContainer::id
+     000b IL_000b: callvirt T AssetLibrary`1<BaseStatAsset>::get(System.String)
+     0010 IL_0010: ret
+
+######## TYPE BaseStats : System.Object
+---- System.Collections.Generic.List`1<BaseStatsContainer> getList()
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: ldfld System.Collections.Generic.List`1<BaseStatsContainer> BaseStats::_stats_list
+     0006 IL_0006: ret
+
+---- System.Single get(System.String pID)
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: ldfld System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer> BaseStats::_stats_dict
+     0006 IL_0006: ldarg.1
+     0007 IL_0007: ldloca.s V_0
+     0009 IL_0009: callvirt System.Boolean System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer>::TryGetValue(!0,!1&)
+     000e IL_000e: brfalse.s IL_0017
+     0010 IL_0010: ldloc.0
+     0011 IL_0011: ldfld System.Single BaseStatsContainer::value
+     0016 IL_0016: ret
+     0017 IL_0017: ldc.r4 0
+     001c IL_001c: ret
+
+---- BaseStatsContainer getContainer(System.String pID)
+     0000 IL_0000: ldnull
+     0001 IL_0001: stloc.0
+     0002 IL_0002: ldarg.0
+     0003 IL_0003: ldfld System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer> BaseStats::_stats_dict
+     0008 IL_0008: ldarg.1
+     0009 IL_0009: ldloca.s V_0
+     000b IL_000b: callvirt System.Boolean System.Collections.Generic.Dictionary`2<System.String,BaseStatsContainer>::TryGetValue(!0,!1&)
+     0010 IL_0010: pop
+     0011 IL_0011: ldloc.0
+     0012 IL_0012: ret
+
+---- System.Single get_Item(System.String pKey)
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: ldarg.1
+     0002 IL_0002: call System.Single BaseStats::get(System.String)
+     0007 IL_0007: ret
+
+######## TYPE BaseStatsExtension : System.Object
+######## TYPE BaseStatsHelper : System.Object
+---- BaseStats getTotalStatsFrom(BaseStats pBaseStats, BaseStats pBaseStatsMeta)
+     0000 IL_0000: ldsfld BaseStats BaseStatsHelper::_base_stats_tooltip_helper
+     0005 IL_0005: callvirt System.Void BaseStats::clear()
+     000a IL_000a: ldsfld BaseStats BaseStatsHelper::_base_stats_tooltip_helper
+     000f IL_000f: ldarg.0
+     0010 IL_0010: ldc.r4 1
+     0015 IL_0015: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     001a IL_001a: ldsfld BaseStats BaseStatsHelper::_base_stats_tooltip_helper
+     001f IL_001f: ldarg.1
+     0020 IL_0020: ldc.r4 1
+     0025 IL_0025: callvirt System.Void BaseStats::mergeStats(BaseStats,System.Single)
+     002a IL_002a: ldsfld BaseStats BaseStatsHelper::_base_stats_tooltip_helper
+     002f IL_002f: ret
+
+---- ListPool`1<TooltipModContainerInfo> getItemModsBase(Item pItem)
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: ldfld TData CoreSystemObject`1<ItemData>::data
+     0006 IL_0006: ldfld ListPool`1<System.String> ItemData::modifiers
+     000b IL_000b: callvirt System.Int32 ListPool`1<System.String>::get_Count()
+     0010 IL_0010: newobj System.Void ListPool`1<TooltipModContainerInfo>::.ctor(System.Int32)
+     0015 IL_0015: stloc.0
+     0016 IL_0016: ldarg.0
+     0017 IL_0017: ldfld TData CoreSystemObject`1<ItemData>::data
+     001c IL_001c: ldfld ListPool`1<System.String> ItemData::modifiers
+     0021 IL_0021: callvirt ListPool`1/Enumerator<T> ListPool`1<System.String>::GetEnumerator()
+     0026 IL_0026: stloc.1
+     0027 IL_0027: br.s IL_007c
+     0029 IL_0029: ldloca.s V_1
+     002b IL_002b: call T& ListPool`1/Enumerator<System.String>::get_Current()
+     0030 IL_0030: ldind.ref
+     0031 IL_0031: stloc.2
+     0032 IL_0032: ldsfld ItemModifierLibrary AssetManager::items_modifiers
+     0037 IL_0037: ldloc.2
+     0038 IL_0038: callvirt T AssetLibrary`1<ItemModAsset>::get(System.String)
+     003d IL_003d: stloc.3
+     003e IL_003e: ldstr ""
+     0043 IL_0043: stloc.s V_4
+     0045 IL_0045: ldc.i4.0
+     0046 IL_0046: stloc.s V_5
+     0048 IL_0048: br.s IL_005e
+     004a IL_004a: ldloc.s V_4
+     004c IL_004c: ldstr "+"
+     0051 IL_0051: call System.String System.String::Concat(System.String,System.String)
+     0056 IL_0056: stloc.s V_4
+     0058 IL_0058: ldloc.s V_5
+     005a IL_005a: ldc.i4.1
+     005b IL_005b: add
+     005c IL_005c: stloc.s V_5
+     005e IL_005e: ldloc.s V_5
+     0060 IL_0060: ldloc.3
+     0061 IL_0061: ldfld System.Int32 ItemAsset::mod_rank
+     0066 IL_0066: blt.s IL_004a
+     0068 IL_0068: ldloc.0
+     0069 IL_0069: ldloc.3
+     006a IL_006a: ldloc.3
+     006b IL_006b: ldfld System.Int32 ItemAsset::mod_rank
+     0070 IL_0070: ldloc.s V_4
+     0072 IL_0072: newobj System.Void TooltipModContainerInfo::.ctor(ItemAsset,System.Int32,System.String)
+     0077 IL_0077: callvirt System.Void ListPool`1<TooltipModContainerInfo>::Add(T)
+     007c IL_007c: ldloca.s V_1
+     007e IL_007e: call System.Boolean ListPool`1/Enumerator<System.String>::MoveNext()
+     0083 IL_0083: brtrue.s IL_0029
+     0085 IL_0085: leave.s IL_0095
+     0087 IL_0087: ldloca.s V_1
+     0089 IL_0089: constrained. ListPool`1/Enumerator<System.String>
+     008f IL_008f: callvirt System.Void System.IDisposable::Dispose()
+     0094 IL_0094: endfinally
+     0095 IL_0095: ldloc.0
+     0096 IL_0096: ldnull
+     0097 IL_0097: ldftn System.Int32 BaseStatsHelper::sortByPluses(TooltipModContainerInfo,TooltipModContainerInfo)
+     009d IL_009d: newobj System.Void System.Comparison`1<TooltipModContainerInfo>::.ctor(System.Object,System.IntPtr)
+     00a2 IL_00a2: callvirt System.Void ListPool`1<TooltipModContainerInfo>::Sort(System.Comparison`1<T>)
+     00a7 IL_00a7: ldloc.0
+     00a8 IL_00a8: ret
+
+######## TYPE BaseStatsHelper/KeyValueFieldGetter : System.MulticastDelegate
+######## TYPE BaseStatsLibrary : AssetLibrary`1<BaseStatAsset>

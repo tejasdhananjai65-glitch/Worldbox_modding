@@ -1,0 +1,245 @@
+﻿######## TYPE ActorAssetLibrary : BaseLibraryWithUnlockables`1<ActorAsset>
+######## TYPE ActorAssetLibrary/<>c : System.Object
+######## TYPE ActorEquipment : System.Object
+######## TYPE ActorEquipment/<GetEnumerator>d__18 : System.Object
+######## TYPE ActorEquipment/<getItems>d__13 : System.Object
+######## TYPE ActorEquipmentSlot : System.Object
+######## TYPE ActorRenderData : System.Object
+######## TYPE ActorTrait : BaseTrait`1<ActorTrait>
+######## TYPE ActorTraitGroupAsset : BaseTraitGroupAsset
+######## TYPE ActorTraitGroupLibrary : BaseCategoryLibrary`1<ActorTraitGroupAsset>
+######## TYPE ActorTraitLibrary : BaseTraitLibrary`1<ActorTrait>
+######## TYPE ActorContainer : ObjectContainer`1<Actor>
+######## TYPE Actor : BaseSimObject
+---- UnityEngine.Sprite calculateMainSprite()
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: ldfld ActorAsset Actor::asset
+     0006 IL_0006: ldfld System.Boolean ActorAsset::has_override_sprite
+     000b IL_000b: brfalse.s IL_001f
+     000d IL_000d: ldarg.0
+     000e IL_000e: ldfld ActorAsset Actor::asset
+     0013 IL_0013: ldfld ActorGetSprite ActorAsset::get_override_sprite
+     0018 IL_0018: ldarg.0
+     0019 IL_0019: callvirt UnityEngine.Sprite ActorGetSprite::Invoke(Actor)
+     001e IL_001e: ret
+     001f IL_001f: ldarg.0
+     0020 IL_0020: call System.Void Actor::checkAnimationContainer()
+     0025 IL_0025: ldarg.0
+     0026 IL_0026: ldfld AiSystemActor Actor::ai
+     002b IL_002b: ldfld TAction AiSystem`5<Actor,ActorJob,ai.behaviours.BehaviourTaskActor,ai.behaviours.BehaviourActionActor,BehaviourActorCondition>::action
+     0030 IL_0030: brfalse.s IL_0067
+     0032 IL_0032: ldarg.0
+     0033 IL_0033: ldfld AiSystemActor Actor::ai
+     0038 IL_0038: ldfld TAction AiSystem`5<Actor,ActorJob,ai.behaviours.BehaviourTaskActor,ai.behaviours.BehaviourActionActor,BehaviourActorCondition>::action
+     003d IL_003d: ldfld System.Boolean ai.behaviours.BehaviourActionActor::force_animation
+     0042 IL_0042: brfalse.s IL_0067
+     0044 IL_0044: ldarg.0
+     0045 IL_0045: ldfld AnimationContainerUnit Actor::animation_container
+     004a IL_004a: ldfld System.Collections.Generic.Dictionary`2<System.String,UnityEngine.Sprite> AnimationContainerUnit::sprites
+     004f IL_004f: ldarg.0
+     0050 IL_0050: ldfld AiSystemActor Actor::ai
+     0055 IL_0055: ldfld TAction AiSystem`5<Actor,ActorJob,ai.behaviours.BehaviourTaskActor,ai.behaviours.BehaviourActionActor,BehaviourActorCondition>::action
+     005a IL_005a: ldfld System.String ai.behaviours.BehaviourActionActor::force_animation_id
+     005f IL_005f: callvirt !1 System.Collections.Generic.Dictionary`2<System.String,UnityEngine.Sprite>::get_Item(!0)
+     0064 IL_0064: stloc.0
+     0065 IL_0065: ldloc.0
+     0066 IL_0066: ret
+     0067 IL_0067: ldarg.0
+     0068 IL_0068: call System.Boolean NanoObject::isAlive()
+     006d IL_006d: brfalse.s IL_0077
+     006f IL_006f: ldarg.0
+     0070 IL_0070: ldfld System.Boolean Actor::_has_stop_idle_animation
+     0075 IL_0075: brfalse.s IL_00b6
+     0077 IL_0077: ldarg.0
+     0078 IL_0078: ldfld AnimationContainerUnit Actor::animation_container
+     007d IL_007d: ldfld System.Boolean AnimationContainerUnit::has_swimming
+     0082 IL_0082: brfalse.s IL_00a1
+     0084 IL_0084: ldarg.0
+     0085 IL_0085: ldfld System.Boolean Actor::_has_status_drowning
+     008a IL_008a: brfalse.s IL_00a1
+     008c IL_008c: ldarg.0
+     008d IL_008d: ldfld AnimationContainerUnit Actor::animation_container
+     0092 IL_0092: ldfld ActorAnimation AnimationContainerUnit::swimming
+     0097 IL_0097: ldfld UnityEngine.Sprite[] ActorAnimation::frames
+     009c IL_009c: ldc.i4.0
+     009d IL_009d: ldelem.ref
+     009e IL_009e: stloc.0
+     009f IL_009f: br.s IL_00b4
+     00a1 IL_00a1: ldarg.0
+     00a2 IL_00a2: ldfld AnimationContainerUnit Actor::animation_container
+     00a7 IL_00a7: ldfld ActorAnimation AnimationContainerUnit::idle
+     00ac IL_00ac: ldfld UnityEngine.Sprite[] ActorAnimation::frames
+     00b1 IL_00b1: ldc.i4.0
+     00b2 IL_00b2: ldelem.ref
+     00b3 IL_00b3: stloc.0
+     00b4 IL_00b4: ldloc.0
+     00b5 IL_00b5: ret
+     00b6 IL_00b6: ldarg.0
+     00b7 IL_00b7: ldfld ActorAsset Actor::asset
+     00bc IL_00bc: ldfld System.Single ActorAsset::animation_walk_speed
+     00c1 IL_00c1: stloc.1
+     00c2 IL_00c2: ldc.i4.0
+     00c3 IL_00c3: stloc.3
+     00c4 IL_00c4: ldarg.0
+     00c5 IL_00c5: call System.Boolean Actor::get_is_moving()
+     00ca IL_00ca: brtrue.s IL_00f3
+     00cc IL_00cc: ldarg.0
+     00cd IL_00cd: ldfld System.Single Actor::timer_jump_animation
+     00d2 IL_00d2: ldc.r4 0
+     00d7 IL_00d7: bgt.s IL_00f3
+     00d9 IL_00d9: ldarg.0
+     00da IL_00da: ldflda UnityEngine.Vector2 Actor::move_jump_offset
+     00df IL_00df: ldfld System.Single UnityEngine.Vector2::y
+     00e4 IL_00e4: ldc.r4 0
+     00e9 IL_00e9: bgt.s IL_00f3
+     00eb IL_00eb: ldarg.0
+     00ec IL_00ec: ldfld System.Boolean Actor::is_in_magnet
+     00f1 IL_00f1: brfalse.s IL_0132
+     00f3 IL_00f3: ldarg.0
+     00f4 IL_00f4: ldfld AnimationContainerUnit Actor::animation_container
+     00f9 IL_00f9: ldfld System.Boolean AnimationContainerUnit::has_swimming
+     00fe IL_00fe: brfalse.s IL_0122
+     0100 IL_0100: ldarg.0
+     0101 IL_0101: call System.Boolean Actor::isAffectedByLiquid()
+     0106 IL_0106: brfalse.s IL_0122
+     0108 IL_0108: ldarg.0
+     0109 IL_0109: ldfld AnimationContainerUnit Actor::animation_container
+     010e IL_010e: ldfld ActorAnimation AnimationContainerUnit::swimming
+     0113 IL_0113: stloc.2
+     0114 IL_0114: ldarg.0
+     0115 IL_0115: ldfld ActorAsset Actor::asset
+     011a IL_011a: ldfld System.Single ActorAsset::animation_swim_speed
+     011f IL_011f: stloc.1
+     0120 IL_0120: br.s IL_012e
+     0122 IL_0122: ldarg.0
+     0123 IL_0123: ldfld AnimationContainerUnit Actor::animation_container
+     0128 IL_0128: ldfld ActorAnimation AnimationContainerUnit::walking
+     012d IL_012d: stloc.2
+     012e IL_012e: ldc.i4.1
+     012f IL_012f: stloc.3
+     0130 IL_0130: br.s IL_0196
+     0132 IL_0132: ldarg.0
+     0133 IL_0133: ldfld System.Single BaseSimObject::position_height
+     0138 IL_0138: ldc.r4 0
+     013d IL_013d: ble.un.s IL_014d
+     013f IL_013f: ldarg.0
+     0140 IL_0140: ldfld AnimationContainerUnit Actor::animation_container
+     0145 IL_0145: ldfld ActorAnimation AnimationContainerUnit::idle
+     014a IL_014a: stloc.2
+     014b IL_014b: br.s IL_0196
+     014d IL_014d: ldarg.0
+     014e IL_014e: ldfld AnimationContainerUnit Actor::animation_container
+     0153 IL_0153: ldfld System.Boolean AnimationContainerUnit::has_swimming
+     0158 IL_0158: brfalse.s IL_017e
+     015a IL_015a: ldarg.0
+     015b IL_015b: call System.Boolean Actor::isAffectedByLiquid()
+     0160 IL_0160: brfalse.s IL_017e
+     0162 IL_0162: ldarg.0
+     0163 IL_0163: ldfld AnimationContainerUnit Actor::animation_container
+     0168 IL_0168: ldfld ActorAnimation AnimationContainerUnit::swimming
+     016d IL_016d: stloc.2
+     016e IL_016e: ldarg.0
+     016f IL_016f: ldfld ActorAsset Actor::asset
+     0174 IL_0174: ldfld System.Single ActorAsset::animation_swim_speed
+     0179 IL_0179: stloc.1
+     017a IL_017a: ldc.i4.1
+     017b IL_017b: stloc.3
+     017c IL_017c: br.s IL_0196
+     017e IL_017e: ldarg.0
+     017f IL_017f: ldfld AnimationContainerUnit Actor::animation_container
+     0184 IL_0184: ldfld ActorAnimation AnimationContainerUnit::idle
+     0189 IL_0189: stloc.2
+     018a IL_018a: ldarg.0
+     018b IL_018b: ldfld ActorAsset Actor::asset
+     0190 IL_0190: ldfld System.Single ActorAsset::animation_idle_speed
+     0195 IL_0195: stloc.1
+     0196 IL_0196: ldarg.0
+     0197 IL_0197: ldfld ActorAsset Actor::asset
+     019c IL_019c: ldfld System.Boolean ActorAsset::animation_speed_based_on_walk_speed
+     01a1 IL_01a1: ldloc.3
+     01a2 IL_01a2: and
+     01a3 IL_01a3: brfalse.s IL_01cb
+     01a5 IL_01a5: ldloc.1
+     01a6 IL_01a6: ldarg.0
+     01a7 IL_01a7: ldfld BaseStats BaseSimObject::stats
+     01ac IL_01ac: ldstr "speed"
+     01b1 IL_01b1: callvirt System.Single BaseStats::get_Item(System.String)
+     01b6 IL_01b6: ldc.r4 10
+     01bb IL_01bb: div
+     01bc IL_01bc: mul
+     01bd IL_01bd: stloc.1
+     01be IL_01be: ldloc.1
+     01bf IL_01bf: ldc.r4 4
+     01c4 IL_01c4: ldloc.1
+     01c5 IL_01c5: call System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
+     01ca IL_01ca: stloc.1
+     01cb IL_01cb: ldloc.2
+     01cc IL_01cc: ldfld UnityEngine.Sprite[] ActorAnimation::frames
+     01d1 IL_01d1: ldlen
+     01d2 IL_01d2: conv.i4
+     01d3 IL_01d3: ldc.i4.1
+     01d4 IL_01d4: ble.s IL_01eb
+     01d6 IL_01d6: ldarg.0
+     01d7 IL_01d7: callvirt System.Int32 System.Object::GetHashCode()
+     01dc IL_01dc: ldloc.2
+     01dd IL_01dd: ldfld UnityEngine.Sprite[] ActorAnimation::frames
+     01e2 IL_01e2: ldloc.1
+     01e3 IL_01e3: call UnityEngine.Sprite AnimationHelper::getSpriteFromList(System.Int32,System.Collections.Generic.IList`1<UnityEngine.Sprite>,System.Single)
+     01e8 IL_01e8: stloc.0
+     01e9 IL_01e9: br.s IL_01f4
+     01eb IL_01eb: ldloc.2
+     01ec IL_01ec: ldfld UnityEngine.Sprite[] ActorAnimation::frames
+     01f1 IL_01f1: ldc.i4.0
+     01f2 IL_01f2: ldelem.ref
+     01f3 IL_01f3: stloc.0
+     01f4 IL_01f4: ldloc.0
+     01f5 IL_01f5: ret
+
+######## TYPE Actor/<getChildren>d__335 : System.Object
+######## TYPE Actor/<getParents>d__334 : System.Object
+######## TYPE Actor/<getResourcesFromActor>d__504 : System.Object
+######## TYPE ActorVisibleDataArray : System.Object
+######## TYPE ActorManager : SimSystemManager`2<Actor,ActorData>
+######## TYPE ActorManager/<>c__DisplayClass21_0 : System.Object
+######## TYPE ActorGetSprite : System.MulticastDelegate
+######## TYPE ActorGetSprites : System.MulticastDelegate
+######## TYPE ActorAsset : BaseUnlockableAsset
+######## TYPE ActorAsset/<>c : System.Object
+######## TYPE ActorSex : System.Enum
+######## TYPE ActorGender : System.Enum
+######## TYPE ActorAvatar : UnityEngine.MonoBehaviour
+######## TYPE ActorBag : System.Object
+######## TYPE ActorBagExtensions : System.Object
+######## TYPE ActorSimpleComponent : System.Object
+######## TYPE ActorData : BaseObjectData
+######## TYPE ActorDataObsolete : System.Object
+######## TYPE ActorDamageEffectData : System.ValueType
+######## TYPE ActorHighlightEffectData : System.ValueType
+######## TYPE ActorAnimation : System.Object
+######## TYPE ActorAnimationLoader : System.Object
+######## TYPE ActorAnimationSequences : System.Object
+######## TYPE ActorColorEffect : System.Enum
+######## TYPE ActorIdleLoopSound : System.Object
+######## TYPE ActorSize : System.Enum
+######## TYPE ActorTextureSubAsset : System.Object
+######## TYPE ActorDirection : System.Enum
+######## TYPE ActorMove : System.Object
+######## TYPE ActorJob : JobAsset`2<BehaviourActorCondition,Actor>
+######## TYPE ActorJobLibrary : AssetLibrary`1<ActorJob>
+######## TYPE ActorAssetFilter : System.MulticastDelegate
+######## TYPE ActorAssetElementPlace : BaseAssetElementPlace`2<ActorAsset,ActorDebugAssetElement>
+######## TYPE ActorAssetWindow : BaseDebugAssetWindow`2<ActorAsset,ActorDebugAssetElement>
+######## TYPE ActorDebugAnimationElement : BaseDebugAnimationElement`1<ActorAsset>
+######## TYPE ActorDebugAssetElement : BaseDebugAssetElement`1<ActorAsset>
+######## TYPE ActorDebugAssetsComponent : BaseDebugAssetsComponent`3<ActorAsset,ActorDebugAssetElement,ActorAssetElementPlace>
+######## TYPE ActorAvatarData : System.Object
+######## TYPE ActorTraitButton : TraitButton`1<ActorTrait>
+######## TYPE ActorTraitEditorButton : TraitEditorButton`2<ActorTraitButton,ActorTrait>
+######## TYPE ActorTraitGroupElement : TraitGroupElement`3<ActorTrait,ActorTraitButton,ActorTraitEditorButton>
+######## TYPE ActorTraitsEditor : TraitsEditor`5<ActorTrait,ActorTraitButton,ActorTraitEditorButton,ActorTraitGroupAsset,ActorTraitGroupElement>
+######## TYPE ActorTraitsEditor/<>c__DisplayClass8_0 : System.Object
+######## TYPE ActorSelectedContainerEquipment : SelectedElementBase`1<EquipmentButton>
+######## TYPE ActorSelectedContainerStatus : SelectedElementBase`1<StatusEffectButton>
+######## TYPE ActorSelectedContainerTraits : SelectedContainerTraits`4<ActorTrait,ActorTraitButton,ActorTraitsContainer,ActorTraitsEditor>
+######## TYPE ActorSelectedMetaBanners : UnitMetaBanners
+######## TYPE ActorTraitsContainer : TraitsContainer`2<ActorTrait,ActorTraitButton>

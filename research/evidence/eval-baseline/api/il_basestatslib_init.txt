@@ -1,0 +1,1004 @@
+﻿######## TYPE BaseStatsLibrary : AssetLibrary`1<BaseStatAsset>
+---- System.Void init()
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: call System.Void BaseAssetLibrary::init()
+     0006 IL_0006: ldarg.0
+     0007 IL_0007: newobj System.Void BaseStatAsset::.ctor()
+     000c IL_000c: dup
+     000d IL_000d: ldstr "personality_aggression"
+     0012 IL_0012: stfld System.String Asset::id
+     0017 IL_0017: dup
+     0018 IL_0018: ldc.i4.1
+     0019 IL_0019: stfld System.Boolean BaseStatAsset::hidden
+     001e IL_001e: dup
+     001f IL_001f: ldc.i4.1
+     0020 IL_0020: stfld System.Boolean BaseStatAsset::normalize
+     0025 IL_0025: dup
+     0026 IL_0026: ldc.r4 0
+     002b IL_002b: stfld System.Single BaseStatAsset::normalize_min
+     0030 IL_0030: dup
+     0031 IL_0031: ldc.r4 1
+     0036 IL_0036: stfld System.Single BaseStatAsset::normalize_max
+     003b IL_003b: dup
+     003c IL_003c: ldc.i4.1
+     003d IL_003d: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     0042 IL_0042: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0047 IL_0047: pop
+     0048 IL_0048: ldarg.0
+     0049 IL_0049: newobj System.Void BaseStatAsset::.ctor()
+     004e IL_004e: dup
+     004f IL_004f: ldstr "personality_administration"
+     0054 IL_0054: stfld System.String Asset::id
+     0059 IL_0059: dup
+     005a IL_005a: ldc.i4.1
+     005b IL_005b: stfld System.Boolean BaseStatAsset::hidden
+     0060 IL_0060: dup
+     0061 IL_0061: ldc.i4.1
+     0062 IL_0062: stfld System.Boolean BaseStatAsset::normalize
+     0067 IL_0067: dup
+     0068 IL_0068: ldc.r4 0
+     006d IL_006d: stfld System.Single BaseStatAsset::normalize_min
+     0072 IL_0072: dup
+     0073 IL_0073: ldc.r4 1
+     0078 IL_0078: stfld System.Single BaseStatAsset::normalize_max
+     007d IL_007d: dup
+     007e IL_007e: ldc.i4.1
+     007f IL_007f: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     0084 IL_0084: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0089 IL_0089: pop
+     008a IL_008a: ldarg.0
+     008b IL_008b: newobj System.Void BaseStatAsset::.ctor()
+     0090 IL_0090: dup
+     0091 IL_0091: ldstr "personality_diplomatic"
+     0096 IL_0096: stfld System.String Asset::id
+     009b IL_009b: dup
+     009c IL_009c: ldc.i4.1
+     009d IL_009d: stfld System.Boolean BaseStatAsset::hidden
+     00a2 IL_00a2: dup
+     00a3 IL_00a3: ldc.i4.1
+     00a4 IL_00a4: stfld System.Boolean BaseStatAsset::normalize
+     00a9 IL_00a9: dup
+     00aa IL_00aa: ldc.r4 0
+     00af IL_00af: stfld System.Single BaseStatAsset::normalize_min
+     00b4 IL_00b4: dup
+     00b5 IL_00b5: ldc.r4 1
+     00ba IL_00ba: stfld System.Single BaseStatAsset::normalize_max
+     00bf IL_00bf: dup
+     00c0 IL_00c0: ldc.i4.1
+     00c1 IL_00c1: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     00c6 IL_00c6: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     00cb IL_00cb: pop
+     00cc IL_00cc: ldarg.0
+     00cd IL_00cd: newobj System.Void BaseStatAsset::.ctor()
+     00d2 IL_00d2: dup
+     00d3 IL_00d3: ldstr "personality_rationality"
+     00d8 IL_00d8: stfld System.String Asset::id
+     00dd IL_00dd: dup
+     00de IL_00de: ldc.i4.1
+     00df IL_00df: stfld System.Boolean BaseStatAsset::hidden
+     00e4 IL_00e4: dup
+     00e5 IL_00e5: ldc.i4.1
+     00e6 IL_00e6: stfld System.Boolean BaseStatAsset::normalize
+     00eb IL_00eb: dup
+     00ec IL_00ec: ldc.r4 0
+     00f1 IL_00f1: stfld System.Single BaseStatAsset::normalize_min
+     00f6 IL_00f6: dup
+     00f7 IL_00f7: ldc.r4 1
+     00fc IL_00fc: stfld System.Single BaseStatAsset::normalize_max
+     0101 IL_0101: dup
+     0102 IL_0102: ldc.i4.1
+     0103 IL_0103: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     0108 IL_0108: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     010d IL_010d: pop
+     010e IL_010e: ldarg.0
+     010f IL_010f: newobj System.Void BaseStatAsset::.ctor()
+     0114 IL_0114: dup
+     0115 IL_0115: ldstr "diplomacy"
+     011a IL_011a: stfld System.String Asset::id
+     011f IL_011f: dup
+     0120 IL_0120: ldc.i4.1
+     0121 IL_0121: stfld System.Boolean BaseStatAsset::actor_data_attribute
+     0126 IL_0126: dup
+     0127 IL_0127: ldc.i4.1
+     0128 IL_0128: stfld System.Boolean BaseStatAsset::normalize
+     012d IL_012d: dup
+     012e IL_012e: ldc.r4 999
+     0133 IL_0133: stfld System.Single BaseStatAsset::normalize_max
+     0138 IL_0138: dup
+     0139 IL_0139: ldc.i4.1
+     013a IL_013a: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     013f IL_013f: dup
+     0140 IL_0140: ldc.i4 900
+     0145 IL_0145: stfld System.Int32 BaseStatAsset::sort_rank
+     014a IL_014a: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     014f IL_014f: pop
+     0150 IL_0150: ldarg.0
+     0151 IL_0151: newobj System.Void BaseStatAsset::.ctor()
+     0156 IL_0156: dup
+     0157 IL_0157: ldstr "warfare"
+     015c IL_015c: stfld System.String Asset::id
+     0161 IL_0161: dup
+     0162 IL_0162: ldc.i4.1
+     0163 IL_0163: stfld System.Boolean BaseStatAsset::actor_data_attribute
+     0168 IL_0168: dup
+     0169 IL_0169: ldc.i4.1
+     016a IL_016a: stfld System.Boolean BaseStatAsset::normalize
+     016f IL_016f: dup
+     0170 IL_0170: ldc.r4 999
+     0175 IL_0175: stfld System.Single BaseStatAsset::normalize_max
+     017a IL_017a: dup
+     017b IL_017b: ldc.i4.1
+     017c IL_017c: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     0181 IL_0181: dup
+     0182 IL_0182: ldc.i4 900
+     0187 IL_0187: stfld System.Int32 BaseStatAsset::sort_rank
+     018c IL_018c: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0191 IL_0191: pop
+     0192 IL_0192: ldarg.0
+     0193 IL_0193: newobj System.Void BaseStatAsset::.ctor()
+     0198 IL_0198: dup
+     0199 IL_0199: ldstr "stewardship"
+     019e IL_019e: stfld System.String Asset::id
+     01a3 IL_01a3: dup
+     01a4 IL_01a4: ldc.i4.1
+     01a5 IL_01a5: stfld System.Boolean BaseStatAsset::actor_data_attribute
+     01aa IL_01aa: dup
+     01ab IL_01ab: ldc.i4.1
+     01ac IL_01ac: stfld System.Boolean BaseStatAsset::normalize
+     01b1 IL_01b1: dup
+     01b2 IL_01b2: ldc.r4 999
+     01b7 IL_01b7: stfld System.Single BaseStatAsset::normalize_max
+     01bc IL_01bc: dup
+     01bd IL_01bd: ldc.i4.1
+     01be IL_01be: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     01c3 IL_01c3: dup
+     01c4 IL_01c4: ldc.i4 900
+     01c9 IL_01c9: stfld System.Int32 BaseStatAsset::sort_rank
+     01ce IL_01ce: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     01d3 IL_01d3: pop
+     01d4 IL_01d4: ldarg.0
+     01d5 IL_01d5: newobj System.Void BaseStatAsset::.ctor()
+     01da IL_01da: dup
+     01db IL_01db: ldstr "intelligence"
+     01e0 IL_01e0: stfld System.String Asset::id
+     01e5 IL_01e5: dup
+     01e6 IL_01e6: ldc.i4.1
+     01e7 IL_01e7: stfld System.Boolean BaseStatAsset::actor_data_attribute
+     01ec IL_01ec: dup
+     01ed IL_01ed: ldc.i4.1
+     01ee IL_01ee: stfld System.Boolean BaseStatAsset::normalize
+     01f3 IL_01f3: dup
+     01f4 IL_01f4: ldc.r4 999
+     01f9 IL_01f9: stfld System.Single BaseStatAsset::normalize_max
+     01fe IL_01fe: dup
+     01ff IL_01ff: ldc.i4.1
+     0200 IL_0200: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     0205 IL_0205: dup
+     0206 IL_0206: ldc.i4 900
+     020b IL_020b: stfld System.Int32 BaseStatAsset::sort_rank
+     0210 IL_0210: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0215 IL_0215: pop
+     0216 IL_0216: ldarg.0
+     0217 IL_0217: newobj System.Void BaseStatAsset::.ctor()
+     021c IL_021c: dup
+     021d IL_021d: ldstr "lifespan"
+     0222 IL_0222: stfld System.String Asset::id
+     0227 IL_0227: dup
+     0228 IL_0228: ldc.i4 997
+     022d IL_022d: stfld System.Int32 BaseStatAsset::sort_rank
+     0232 IL_0232: dup
+     0233 IL_0233: ldc.i4.1
+     0234 IL_0234: stfld System.Boolean BaseStatAsset::normalize
+     0239 IL_0239: dup
+     023a IL_023a: ldc.r4 1
+     023f IL_023f: stfld System.Single BaseStatAsset::normalize_min
+     0244 IL_0244: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0249 IL_0249: pop
+     024a IL_024a: ldarg.0
+     024b IL_024b: newobj System.Void BaseStatAsset::.ctor()
+     0250 IL_0250: dup
+     0251 IL_0251: ldstr "mutation"
+     0256 IL_0256: stfld System.String Asset::id
+     025b IL_025b: dup
+     025c IL_025c: ldc.i4 996
+     0261 IL_0261: stfld System.Int32 BaseStatAsset::sort_rank
+     0266 IL_0266: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     026b IL_026b: pop
+     026c IL_026c: ldarg.0
+     026d IL_026d: newobj System.Void BaseStatAsset::.ctor()
+     0272 IL_0272: dup
+     0273 IL_0273: ldstr "offspring"
+     0278 IL_0278: stfld System.String Asset::id
+     027d IL_027d: dup
+     027e IL_027e: ldc.i4.1
+     027f IL_027f: stfld System.Boolean BaseStatAsset::normalize
+     0284 IL_0284: dup
+     0285 IL_0285: ldc.r4 0
+     028a IL_028a: stfld System.Single BaseStatAsset::normalize_min
+     028f IL_028f: dup
+     0290 IL_0290: ldc.r4 1000
+     0295 IL_0295: stfld System.Single BaseStatAsset::normalize_max
+     029a IL_029a: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     029f IL_029f: pop
+     02a0 IL_02a0: ldarg.0
+     02a1 IL_02a1: newobj System.Void BaseStatAsset::.ctor()
+     02a6 IL_02a6: dup
+     02a7 IL_02a7: ldstr "multiplier_offspring"
+     02ac IL_02ac: stfld System.String Asset::id
+     02b1 IL_02b1: dup
+     02b2 IL_02b2: ldc.i4.1
+     02b3 IL_02b3: stfld System.Boolean BaseStatAsset::show_as_percents
+     02b8 IL_02b8: dup
+     02b9 IL_02b9: ldc.i4.1
+     02ba IL_02ba: stfld System.Boolean BaseStatAsset::multiplier
+     02bf IL_02bf: dup
+     02c0 IL_02c0: ldstr "offspring"
+     02c5 IL_02c5: stfld System.String BaseStatAsset::main_stat_to_multiply
+     02ca IL_02ca: dup
+     02cb IL_02cb: ldc.r4 100
+     02d0 IL_02d0: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     02d5 IL_02d5: dup
+     02d6 IL_02d6: ldstr "offspring"
+     02db IL_02db: stfld System.String BaseStatAsset::translation_key
+     02e0 IL_02e0: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     02e5 IL_02e5: pop
+     02e6 IL_02e6: ldarg.0
+     02e7 IL_02e7: newobj System.Void BaseStatAsset::.ctor()
+     02ec IL_02ec: dup
+     02ed IL_02ed: ldstr "army"
+     02f2 IL_02f2: stfld System.String Asset::id
+     02f7 IL_02f7: dup
+     02f8 IL_02f8: ldc.i4.1
+     02f9 IL_02f9: stfld System.Boolean BaseStatAsset::normalize
+     02fe IL_02fe: dup
+     02ff IL_02ff: ldc.r4 0.1
+     0304 IL_0304: stfld System.Single BaseStatAsset::normalize_min
+     0309 IL_0309: dup
+     030a IL_030a: ldc.i4.1
+     030b IL_030b: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     0310 IL_0310: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0315 IL_0315: pop
+     0316 IL_0316: ldarg.0
+     0317 IL_0317: newobj System.Void BaseStatAsset::.ctor()
+     031c IL_031c: dup
+     031d IL_031d: ldstr "cities"
+     0322 IL_0322: stfld System.String Asset::id
+     0327 IL_0327: dup
+     0328 IL_0328: ldc.i4.1
+     0329 IL_0329: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     032e IL_032e: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0333 IL_0333: pop
+     0334 IL_0334: ldarg.0
+     0335 IL_0335: newobj System.Void BaseStatAsset::.ctor()
+     033a IL_033a: dup
+     033b IL_033b: ldstr "range"
+     0340 IL_0340: stfld System.String Asset::id
+     0345 IL_0345: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     034a IL_034a: pop
+     034b IL_034b: ldarg.0
+     034c IL_034c: newobj System.Void BaseStatAsset::.ctor()
+     0351 IL_0351: dup
+     0352 IL_0352: ldstr "bonus_towers"
+     0357 IL_0357: stfld System.String Asset::id
+     035c IL_035c: dup
+     035d IL_035d: ldc.i4.1
+     035e IL_035e: stfld System.Boolean BaseStatAsset::normalize
+     0363 IL_0363: dup
+     0364 IL_0364: ldc.r4 2
+     0369 IL_0369: stfld System.Single BaseStatAsset::normalize_max
+     036e IL_036e: dup
+     036f IL_036f: ldc.i4.1
+     0370 IL_0370: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     0375 IL_0375: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     037a IL_037a: pop
+     037b IL_037b: ldarg.0
+     037c IL_037c: newobj System.Void BaseStatAsset::.ctor()
+     0381 IL_0381: dup
+     0382 IL_0382: ldstr "damage"
+     0387 IL_0387: stfld System.String Asset::id
+     038c IL_038c: dup
+     038d IL_038d: ldc.i4.1
+     038e IL_038e: stfld System.Boolean BaseStatAsset::normalize
+     0393 IL_0393: dup
+     0394 IL_0394: ldc.r4 1
+     0399 IL_0399: stfld System.Single BaseStatAsset::normalize_min
+     039e IL_039e: dup
+     039f IL_039f: ldc.i4 999
+     03a4 IL_03a4: stfld System.Int32 BaseStatAsset::sort_rank
+     03a9 IL_03a9: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     03ae IL_03ae: pop
+     03af IL_03af: ldarg.0
+     03b0 IL_03b0: newobj System.Void BaseStatAsset::.ctor()
+     03b5 IL_03b5: dup
+     03b6 IL_03b6: ldstr "speed"
+     03bb IL_03bb: stfld System.String Asset::id
+     03c0 IL_03c0: dup
+     03c1 IL_03c1: ldc.i4.1
+     03c2 IL_03c2: stfld System.Boolean BaseStatAsset::normalize
+     03c7 IL_03c7: dup
+     03c8 IL_03c8: ldc.r4 1
+     03cd IL_03cd: stfld System.Single BaseStatAsset::normalize_min
+     03d2 IL_03d2: dup
+     03d3 IL_03d3: ldc.i4 998
+     03d8 IL_03d8: stfld System.Int32 BaseStatAsset::sort_rank
+     03dd IL_03dd: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     03e2 IL_03e2: pop
+     03e3 IL_03e3: ldarg.0
+     03e4 IL_03e4: newobj System.Void BaseStatAsset::.ctor()
+     03e9 IL_03e9: dup
+     03ea IL_03ea: ldstr "health"
+     03ef IL_03ef: stfld System.String Asset::id
+     03f4 IL_03f4: dup
+     03f5 IL_03f5: ldc.i4.1
+     03f6 IL_03f6: stfld System.Boolean BaseStatAsset::normalize
+     03fb IL_03fb: dup
+     03fc IL_03fc: ldc.r4 1
+     0401 IL_0401: stfld System.Single BaseStatAsset::normalize_min
+     0406 IL_0406: dup
+     0407 IL_0407: ldc.i4 1000
+     040c IL_040c: stfld System.Int32 BaseStatAsset::sort_rank
+     0411 IL_0411: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0416 IL_0416: pop
+     0417 IL_0417: ldarg.0
+     0418 IL_0418: newobj System.Void BaseStatAsset::.ctor()
+     041d IL_041d: dup
+     041e IL_041e: ldstr "armor"
+     0423 IL_0423: stfld System.String Asset::id
+     0428 IL_0428: dup
+     0429 IL_0429: ldc.i4.1
+     042a IL_042a: stfld System.Boolean BaseStatAsset::normalize
+     042f IL_042f: dup
+     0430 IL_0430: ldc.r4 0
+     0435 IL_0435: stfld System.Single BaseStatAsset::normalize_min
+     043a IL_043a: dup
+     043b IL_043b: ldc.r4 99
+     0440 IL_0440: stfld System.Single BaseStatAsset::normalize_max
+     0445 IL_0445: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     044a IL_044a: pop
+     044b IL_044b: ldarg.0
+     044c IL_044c: newobj System.Void BaseStatAsset::.ctor()
+     0451 IL_0451: dup
+     0452 IL_0452: ldstr "stamina"
+     0457 IL_0457: stfld System.String Asset::id
+     045c IL_045c: dup
+     045d IL_045d: ldc.i4.1
+     045e IL_045e: stfld System.Boolean BaseStatAsset::normalize
+     0463 IL_0463: dup
+     0464 IL_0464: ldc.r4 1
+     0469 IL_0469: stfld System.Single BaseStatAsset::normalize_min
+     046e IL_046e: dup
+     046f IL_046f: ldc.i4 1000
+     0474 IL_0474: stfld System.Int32 BaseStatAsset::sort_rank
+     0479 IL_0479: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     047e IL_047e: pop
+     047f IL_047f: ldarg.0
+     0480 IL_0480: newobj System.Void BaseStatAsset::.ctor()
+     0485 IL_0485: dup
+     0486 IL_0486: ldstr "mana"
+     048b IL_048b: stfld System.String Asset::id
+     0490 IL_0490: dup
+     0491 IL_0491: ldc.i4.1
+     0492 IL_0492: stfld System.Boolean BaseStatAsset::normalize
+     0497 IL_0497: dup
+     0498 IL_0498: ldc.r4 0
+     049d IL_049d: stfld System.Single BaseStatAsset::normalize_min
+     04a2 IL_04a2: dup
+     04a3 IL_04a3: ldc.i4 1000
+     04a8 IL_04a8: stfld System.Int32 BaseStatAsset::sort_rank
+     04ad IL_04ad: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     04b2 IL_04b2: pop
+     04b3 IL_04b3: ldarg.0
+     04b4 IL_04b4: newobj System.Void BaseStatAsset::.ctor()
+     04b9 IL_04b9: dup
+     04ba IL_04ba: ldstr "accuracy"
+     04bf IL_04bf: stfld System.String Asset::id
+     04c4 IL_04c4: dup
+     04c5 IL_04c5: ldc.r4 1
+     04ca IL_04ca: stfld System.Single BaseStatAsset::normalize_min
+     04cf IL_04cf: dup
+     04d0 IL_04d0: ldc.r4 10
+     04d5 IL_04d5: stfld System.Single BaseStatAsset::normalize_max
+     04da IL_04da: dup
+     04db IL_04db: ldc.i4.1
+     04dc IL_04dc: stfld System.Boolean BaseStatAsset::normalize
+     04e1 IL_04e1: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     04e6 IL_04e6: pop
+     04e7 IL_04e7: ldarg.0
+     04e8 IL_04e8: newobj System.Void BaseStatAsset::.ctor()
+     04ed IL_04ed: dup
+     04ee IL_04ee: ldstr "targets"
+     04f3 IL_04f3: stfld System.String Asset::id
+     04f8 IL_04f8: dup
+     04f9 IL_04f9: ldc.i4.1
+     04fa IL_04fa: stfld System.Boolean BaseStatAsset::hidden
+     04ff IL_04ff: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0504 IL_0504: pop
+     0505 IL_0505: ldarg.0
+     0506 IL_0506: newobj System.Void BaseStatAsset::.ctor()
+     050b IL_050b: dup
+     050c IL_050c: ldstr "projectiles"
+     0511 IL_0511: stfld System.String Asset::id
+     0516 IL_0516: dup
+     0517 IL_0517: ldc.i4.1
+     0518 IL_0518: stfld System.Boolean BaseStatAsset::normalize
+     051d IL_051d: dup
+     051e IL_051e: ldc.r4 1
+     0523 IL_0523: stfld System.Single BaseStatAsset::normalize_min
+     0528 IL_0528: dup
+     0529 IL_0529: ldc.i4.1
+     052a IL_052a: stfld System.Boolean BaseStatAsset::hidden
+     052f IL_052f: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0534 IL_0534: pop
+     0535 IL_0535: ldarg.0
+     0536 IL_0536: newobj System.Void BaseStatAsset::.ctor()
+     053b IL_053b: dup
+     053c IL_053c: ldstr "experience"
+     0541 IL_0541: stfld System.String Asset::id
+     0546 IL_0546: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     054b IL_054b: pop
+     054c IL_054c: ldarg.0
+     054d IL_054d: newobj System.Void BaseStatAsset::.ctor()
+     0552 IL_0552: dup
+     0553 IL_0553: ldstr "happiness"
+     0558 IL_0558: stfld System.String Asset::id
+     055d IL_055d: dup
+     055e IL_055e: ldc.i4.1
+     055f IL_055f: stfld System.Boolean BaseStatAsset::normalize
+     0564 IL_0564: dup
+     0565 IL_0565: ldc.r4 0
+     056a IL_056a: stfld System.Single BaseStatAsset::normalize_min
+     056f IL_056f: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0574 IL_0574: pop
+     0575 IL_0575: ldarg.0
+     0576 IL_0576: newobj System.Void BaseStatAsset::.ctor()
+     057b IL_057b: dup
+     057c IL_057c: ldstr "critical_chance"
+     0581 IL_0581: stfld System.String Asset::id
+     0586 IL_0586: dup
+     0587 IL_0587: ldc.i4.1
+     0588 IL_0588: stfld System.Boolean BaseStatAsset::normalize
+     058d IL_058d: dup
+     058e IL_058e: ldc.r4 0
+     0593 IL_0593: stfld System.Single BaseStatAsset::normalize_min
+     0598 IL_0598: dup
+     0599 IL_0599: ldc.i4.1
+     059a IL_059a: stfld System.Boolean BaseStatAsset::show_as_percents
+     059f IL_059f: dup
+     05a0 IL_05a0: ldc.r4 100
+     05a5 IL_05a5: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     05aa IL_05aa: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     05af IL_05af: pop
+     05b0 IL_05b0: ldarg.0
+     05b1 IL_05b1: newobj System.Void BaseStatAsset::.ctor()
+     05b6 IL_05b6: dup
+     05b7 IL_05b7: ldstr "critical_damage_multiplier"
+     05bc IL_05bc: stfld System.String Asset::id
+     05c1 IL_05c1: dup
+     05c2 IL_05c2: ldc.i4.1
+     05c3 IL_05c3: stfld System.Boolean BaseStatAsset::show_as_percents
+     05c8 IL_05c8: dup
+     05c9 IL_05c9: ldc.r4 100
+     05ce IL_05ce: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     05d3 IL_05d3: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     05d8 IL_05d8: pop
+     05d9 IL_05d9: ldarg.0
+     05da IL_05da: newobj System.Void BaseStatAsset::.ctor()
+     05df IL_05df: dup
+     05e0 IL_05e0: ldstr "size"
+     05e5 IL_05e5: stfld System.String Asset::id
+     05ea IL_05ea: dup
+     05eb IL_05eb: ldc.i4.1
+     05ec IL_05ec: stfld System.Boolean BaseStatAsset::hidden
+     05f1 IL_05f1: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     05f6 IL_05f6: pop
+     05f7 IL_05f7: ldarg.0
+     05f8 IL_05f8: newobj System.Void BaseStatAsset::.ctor()
+     05fd IL_05fd: dup
+     05fe IL_05fe: ldstr "area_of_effect"
+     0603 IL_0603: stfld System.String Asset::id
+     0608 IL_0608: dup
+     0609 IL_0609: ldc.i4.1
+     060a IL_060a: stfld System.Boolean BaseStatAsset::hidden
+     060f IL_060f: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0614 IL_0614: pop
+     0615 IL_0615: ldarg.0
+     0616 IL_0616: newobj System.Void BaseStatAsset::.ctor()
+     061b IL_061b: dup
+     061c IL_061c: ldstr "attack_speed"
+     0621 IL_0621: stfld System.String Asset::id
+     0626 IL_0626: dup
+     0627 IL_0627: ldc.i4.1
+     0628 IL_0628: stfld System.Boolean BaseStatAsset::normalize
+     062d IL_062d: dup
+     062e IL_062e: ldc.r4 0.5
+     0633 IL_0633: stfld System.Single BaseStatAsset::normalize_min
+     0638 IL_0638: dup
+     0639 IL_0639: ldc.r4 10
+     063e IL_063e: stfld System.Single BaseStatAsset::normalize_max
+     0643 IL_0643: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0648 IL_0648: pop
+     0649 IL_0649: ldarg.0
+     064a IL_064a: newobj System.Void BaseStatAsset::.ctor()
+     064f IL_064f: dup
+     0650 IL_0650: ldstr "throwing_range"
+     0655 IL_0655: stfld System.String Asset::id
+     065a IL_065a: dup
+     065b IL_065b: ldc.i4.1
+     065c IL_065c: stfld System.Boolean BaseStatAsset::normalize
+     0661 IL_0661: dup
+     0662 IL_0662: ldc.r4 1
+     0667 IL_0667: stfld System.Single BaseStatAsset::normalize_min
+     066c IL_066c: dup
+     066d IL_066d: ldc.r4 100
+     0672 IL_0672: stfld System.Single BaseStatAsset::normalize_max
+     0677 IL_0677: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     067c IL_067c: pop
+     067d IL_067d: ldarg.0
+     067e IL_067e: newobj System.Void BaseStatAsset::.ctor()
+     0683 IL_0683: dup
+     0684 IL_0684: ldstr "construction_speed"
+     0689 IL_0689: stfld System.String Asset::id
+     068e IL_068e: dup
+     068f IL_068f: ldc.i4.1
+     0690 IL_0690: stfld System.Boolean BaseStatAsset::normalize
+     0695 IL_0695: dup
+     0696 IL_0696: ldc.r4 1
+     069b IL_069b: stfld System.Single BaseStatAsset::normalize_min
+     06a0 IL_06a0: dup
+     06a1 IL_06a1: ldc.r4 100
+     06a6 IL_06a6: stfld System.Single BaseStatAsset::normalize_max
+     06ab IL_06ab: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     06b0 IL_06b0: pop
+     06b1 IL_06b1: ldarg.0
+     06b2 IL_06b2: newobj System.Void BaseStatAsset::.ctor()
+     06b7 IL_06b7: dup
+     06b8 IL_06b8: ldstr "loyalty_traits"
+     06bd IL_06bd: stfld System.String Asset::id
+     06c2 IL_06c2: dup
+     06c3 IL_06c3: ldstr "loyalty"
+     06c8 IL_06c8: stfld System.String BaseStatAsset::translation_key
+     06cd IL_06cd: dup
+     06ce IL_06ce: ldc.i4.1
+     06cf IL_06cf: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     06d4 IL_06d4: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     06d9 IL_06d9: pop
+     06da IL_06da: ldarg.0
+     06db IL_06db: newobj System.Void BaseStatAsset::.ctor()
+     06e0 IL_06e0: dup
+     06e1 IL_06e1: ldstr "birth_rate"
+     06e6 IL_06e6: stfld System.String Asset::id
+     06eb IL_06eb: dup
+     06ec IL_06ec: ldstr "birth_rate"
+     06f1 IL_06f1: stfld System.String BaseStatAsset::translation_key
+     06f6 IL_06f6: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     06fb IL_06fb: pop
+     06fc IL_06fc: ldarg.0
+     06fd IL_06fd: newobj System.Void BaseStatAsset::.ctor()
+     0702 IL_0702: dup
+     0703 IL_0703: ldstr "maturation"
+     0708 IL_0708: stfld System.String Asset::id
+     070d IL_070d: dup
+     070e IL_070e: ldstr "maturation"
+     0713 IL_0713: stfld System.String BaseStatAsset::translation_key
+     0718 IL_0718: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     071d IL_071d: pop
+     071e IL_071e: ldarg.0
+     071f IL_071f: newobj System.Void BaseStatAsset::.ctor()
+     0724 IL_0724: dup
+     0725 IL_0725: ldstr "age_adult"
+     072a IL_072a: stfld System.String Asset::id
+     072f IL_072f: dup
+     0730 IL_0730: ldstr "age_adult"
+     0735 IL_0735: stfld System.String BaseStatAsset::translation_key
+     073a IL_073a: dup
+     073b IL_073b: ldc.i4.1
+     073c IL_073c: stfld System.Boolean BaseStatAsset::hidden
+     0741 IL_0741: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0746 IL_0746: pop
+     0747 IL_0747: ldarg.0
+     0748 IL_0748: newobj System.Void BaseStatAsset::.ctor()
+     074d IL_074d: dup
+     074e IL_074e: ldstr "age_breeding"
+     0753 IL_0753: stfld System.String Asset::id
+     0758 IL_0758: dup
+     0759 IL_0759: ldstr "age_breeding"
+     075e IL_075e: stfld System.String BaseStatAsset::translation_key
+     0763 IL_0763: dup
+     0764 IL_0764: ldc.i4.1
+     0765 IL_0765: stfld System.Boolean BaseStatAsset::hidden
+     076a IL_076a: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     076f IL_076f: pop
+     0770 IL_0770: ldarg.0
+     0771 IL_0771: newobj System.Void BaseStatAsset::.ctor()
+     0776 IL_0776: dup
+     0777 IL_0777: ldstr "max_nutrition"
+     077c IL_077c: stfld System.String Asset::id
+     0781 IL_0781: dup
+     0782 IL_0782: ldstr "max_nutrition"
+     0787 IL_0787: stfld System.String BaseStatAsset::translation_key
+     078c IL_078c: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0791 IL_0791: pop
+     0792 IL_0792: ldarg.0
+     0793 IL_0793: newobj System.Void BaseStatAsset::.ctor()
+     0798 IL_0798: dup
+     0799 IL_0799: ldstr "metabolic_rate"
+     079e IL_079e: stfld System.String Asset::id
+     07a3 IL_07a3: dup
+     07a4 IL_07a4: ldstr "metabolic_rate"
+     07a9 IL_07a9: stfld System.String BaseStatAsset::translation_key
+     07ae IL_07ae: dup
+     07af IL_07af: ldc.r4 1
+     07b4 IL_07b4: stfld System.Single BaseStatAsset::normalize_min
+     07b9 IL_07b9: dup
+     07ba IL_07ba: ldc.i4.1
+     07bb IL_07bb: stfld System.Boolean BaseStatAsset::hidden
+     07c0 IL_07c0: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     07c5 IL_07c5: pop
+     07c6 IL_07c6: ldarg.0
+     07c7 IL_07c7: newobj System.Void BaseStatAsset::.ctor()
+     07cc IL_07cc: dup
+     07cd IL_07cd: ldstr "loyalty_mood"
+     07d2 IL_07d2: stfld System.String Asset::id
+     07d7 IL_07d7: dup
+     07d8 IL_07d8: ldstr "loyalty"
+     07dd IL_07dd: stfld System.String BaseStatAsset::translation_key
+     07e2 IL_07e2: dup
+     07e3 IL_07e3: ldc.i4.1
+     07e4 IL_07e4: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     07e9 IL_07e9: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     07ee IL_07ee: pop
+     07ef IL_07ef: ldarg.0
+     07f0 IL_07f0: newobj System.Void BaseStatAsset::.ctor()
+     07f5 IL_07f5: dup
+     07f6 IL_07f6: ldstr "opinion"
+     07fb IL_07fb: stfld System.String Asset::id
+     0800 IL_0800: dup
+     0801 IL_0801: ldc.i4.1
+     0802 IL_0802: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     0807 IL_0807: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     080c IL_080c: pop
+     080d IL_080d: ldarg.0
+     080e IL_080e: newobj System.Void BaseStatAsset::.ctor()
+     0813 IL_0813: dup
+     0814 IL_0814: ldstr "skill_combat"
+     0819 IL_0819: stfld System.String Asset::id
+     081e IL_081e: dup
+     081f IL_081f: ldc.i4.1
+     0820 IL_0820: stfld System.Boolean BaseStatAsset::show_as_percents
+     0825 IL_0825: dup
+     0826 IL_0826: ldc.r4 100
+     082b IL_082b: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     0830 IL_0830: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0835 IL_0835: pop
+     0836 IL_0836: ldarg.0
+     0837 IL_0837: newobj System.Void BaseStatAsset::.ctor()
+     083c IL_083c: dup
+     083d IL_083d: ldstr "skill_spell"
+     0842 IL_0842: stfld System.String Asset::id
+     0847 IL_0847: dup
+     0848 IL_0848: ldc.i4.1
+     0849 IL_0849: stfld System.Boolean BaseStatAsset::show_as_percents
+     084e IL_084e: dup
+     084f IL_084f: ldc.r4 100
+     0854 IL_0854: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     0859 IL_0859: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     085e IL_085e: pop
+     085f IL_085f: ldarg.0
+     0860 IL_0860: newobj System.Void BaseStatAsset::.ctor()
+     0865 IL_0865: dup
+     0866 IL_0866: ldstr "knockback"
+     086b IL_086b: stfld System.String Asset::id
+     0870 IL_0870: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0875 IL_0875: pop
+     0876 IL_0876: ldarg.0
+     0877 IL_0877: newobj System.Void BaseStatAsset::.ctor()
+     087c IL_087c: dup
+     087d IL_087d: ldstr "recoil"
+     0882 IL_0882: stfld System.String Asset::id
+     0887 IL_0887: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     088c IL_088c: pop
+     088d IL_088d: ldarg.0
+     088e IL_088e: newobj System.Void BaseStatAsset::.ctor()
+     0893 IL_0893: dup
+     0894 IL_0894: ldstr "mass"
+     0899 IL_0899: stfld System.String Asset::id
+     089e IL_089e: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     08a3 IL_08a3: pop
+     08a4 IL_08a4: ldarg.0
+     08a5 IL_08a5: newobj System.Void BaseStatAsset::.ctor()
+     08aa IL_08aa: dup
+     08ab IL_08ab: ldstr "mass_2"
+     08b0 IL_08b0: stfld System.String Asset::id
+     08b5 IL_08b5: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     08ba IL_08ba: pop
+     08bb IL_08bb: ldarg.0
+     08bc IL_08bc: newobj System.Void BaseStatAsset::.ctor()
+     08c1 IL_08c1: dup
+     08c2 IL_08c2: ldstr "multiplier_mass"
+     08c7 IL_08c7: stfld System.String Asset::id
+     08cc IL_08cc: dup
+     08cd IL_08cd: ldc.i4.1
+     08ce IL_08ce: stfld System.Boolean BaseStatAsset::show_as_percents
+     08d3 IL_08d3: dup
+     08d4 IL_08d4: ldc.i4.1
+     08d5 IL_08d5: stfld System.Boolean BaseStatAsset::multiplier
+     08da IL_08da: dup
+     08db IL_08db: ldstr "mass_2"
+     08e0 IL_08e0: stfld System.String BaseStatAsset::main_stat_to_multiply
+     08e5 IL_08e5: dup
+     08e6 IL_08e6: ldc.i4.1
+     08e7 IL_08e7: stfld System.Boolean BaseStatAsset::hidden
+     08ec IL_08ec: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     08f1 IL_08f1: pop
+     08f2 IL_08f2: ldarg.0
+     08f3 IL_08f3: newobj System.Void BaseStatAsset::.ctor()
+     08f8 IL_08f8: dup
+     08f9 IL_08f9: ldstr "limit_population"
+     08fe IL_08fe: stfld System.String Asset::id
+     0903 IL_0903: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0908 IL_0908: pop
+     0909 IL_0909: ldarg.0
+     090a IL_090a: newobj System.Void BaseStatAsset::.ctor()
+     090f IL_090f: dup
+     0910 IL_0910: ldstr "multiplier_health"
+     0915 IL_0915: stfld System.String Asset::id
+     091a IL_091a: dup
+     091b IL_091b: ldc.i4.1
+     091c IL_091c: stfld System.Boolean BaseStatAsset::show_as_percents
+     0921 IL_0921: dup
+     0922 IL_0922: ldc.i4.1
+     0923 IL_0923: stfld System.Boolean BaseStatAsset::multiplier
+     0928 IL_0928: dup
+     0929 IL_0929: ldstr "health"
+     092e IL_092e: stfld System.String BaseStatAsset::main_stat_to_multiply
+     0933 IL_0933: dup
+     0934 IL_0934: ldc.r4 100
+     0939 IL_0939: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     093e IL_093e: dup
+     093f IL_093f: ldstr "health"
+     0944 IL_0944: stfld System.String BaseStatAsset::translation_key
+     0949 IL_0949: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     094e IL_094e: pop
+     094f IL_094f: ldarg.0
+     0950 IL_0950: newobj System.Void BaseStatAsset::.ctor()
+     0955 IL_0955: dup
+     0956 IL_0956: ldstr "multiplier_lifespan"
+     095b IL_095b: stfld System.String Asset::id
+     0960 IL_0960: dup
+     0961 IL_0961: ldc.i4.1
+     0962 IL_0962: stfld System.Boolean BaseStatAsset::show_as_percents
+     0967 IL_0967: dup
+     0968 IL_0968: ldc.i4.1
+     0969 IL_0969: stfld System.Boolean BaseStatAsset::multiplier
+     096e IL_096e: dup
+     096f IL_096f: ldstr "lifespan"
+     0974 IL_0974: stfld System.String BaseStatAsset::main_stat_to_multiply
+     0979 IL_0979: dup
+     097a IL_097a: ldc.r4 100
+     097f IL_097f: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     0984 IL_0984: dup
+     0985 IL_0985: ldstr "lifespan"
+     098a IL_098a: stfld System.String BaseStatAsset::translation_key
+     098f IL_098f: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0994 IL_0994: pop
+     0995 IL_0995: ldarg.0
+     0996 IL_0996: newobj System.Void BaseStatAsset::.ctor()
+     099b IL_099b: dup
+     099c IL_099c: ldstr "multiplier_stamina"
+     09a1 IL_09a1: stfld System.String Asset::id
+     09a6 IL_09a6: dup
+     09a7 IL_09a7: ldc.i4.1
+     09a8 IL_09a8: stfld System.Boolean BaseStatAsset::show_as_percents
+     09ad IL_09ad: dup
+     09ae IL_09ae: ldc.i4.1
+     09af IL_09af: stfld System.Boolean BaseStatAsset::multiplier
+     09b4 IL_09b4: dup
+     09b5 IL_09b5: ldstr "stamina"
+     09ba IL_09ba: stfld System.String BaseStatAsset::main_stat_to_multiply
+     09bf IL_09bf: dup
+     09c0 IL_09c0: ldc.r4 100
+     09c5 IL_09c5: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     09ca IL_09ca: dup
+     09cb IL_09cb: ldstr "stamina"
+     09d0 IL_09d0: stfld System.String BaseStatAsset::translation_key
+     09d5 IL_09d5: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     09da IL_09da: pop
+     09db IL_09db: ldarg.0
+     09dc IL_09dc: newobj System.Void BaseStatAsset::.ctor()
+     09e1 IL_09e1: dup
+     09e2 IL_09e2: ldstr "multiplier_mana"
+     09e7 IL_09e7: stfld System.String Asset::id
+     09ec IL_09ec: dup
+     09ed IL_09ed: ldc.i4.1
+     09ee IL_09ee: stfld System.Boolean BaseStatAsset::show_as_percents
+     09f3 IL_09f3: dup
+     09f4 IL_09f4: ldc.i4.1
+     09f5 IL_09f5: stfld System.Boolean BaseStatAsset::multiplier
+     09fa IL_09fa: dup
+     09fb IL_09fb: ldstr "mana"
+     0a00 IL_0a00: stfld System.String BaseStatAsset::main_stat_to_multiply
+     0a05 IL_0a05: dup
+     0a06 IL_0a06: ldc.r4 100
+     0a0b IL_0a0b: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     0a10 IL_0a10: dup
+     0a11 IL_0a11: ldstr "mana"
+     0a16 IL_0a16: stfld System.String BaseStatAsset::translation_key
+     0a1b IL_0a1b: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0a20 IL_0a20: pop
+     0a21 IL_0a21: ldarg.0
+     0a22 IL_0a22: newobj System.Void BaseStatAsset::.ctor()
+     0a27 IL_0a27: dup
+     0a28 IL_0a28: ldstr "multiplier_damage"
+     0a2d IL_0a2d: stfld System.String Asset::id
+     0a32 IL_0a32: dup
+     0a33 IL_0a33: ldc.i4.1
+     0a34 IL_0a34: stfld System.Boolean BaseStatAsset::show_as_percents
+     0a39 IL_0a39: dup
+     0a3a IL_0a3a: ldc.i4.1
+     0a3b IL_0a3b: stfld System.Boolean BaseStatAsset::multiplier
+     0a40 IL_0a40: dup
+     0a41 IL_0a41: ldstr "damage"
+     0a46 IL_0a46: stfld System.String BaseStatAsset::main_stat_to_multiply
+     0a4b IL_0a4b: dup
+     0a4c IL_0a4c: ldc.r4 100
+     0a51 IL_0a51: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     0a56 IL_0a56: dup
+     0a57 IL_0a57: ldstr "damage"
+     0a5c IL_0a5c: stfld System.String BaseStatAsset::translation_key
+     0a61 IL_0a61: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0a66 IL_0a66: pop
+     0a67 IL_0a67: ldarg.0
+     0a68 IL_0a68: newobj System.Void BaseStatAsset::.ctor()
+     0a6d IL_0a6d: dup
+     0a6e IL_0a6e: ldstr "multiplier_crit"
+     0a73 IL_0a73: stfld System.String Asset::id
+     0a78 IL_0a78: dup
+     0a79 IL_0a79: ldc.i4.1
+     0a7a IL_0a7a: stfld System.Boolean BaseStatAsset::show_as_percents
+     0a7f IL_0a7f: dup
+     0a80 IL_0a80: ldc.i4.1
+     0a81 IL_0a81: stfld System.Boolean BaseStatAsset::multiplier
+     0a86 IL_0a86: dup
+     0a87 IL_0a87: ldstr "critical_chance"
+     0a8c IL_0a8c: stfld System.String BaseStatAsset::main_stat_to_multiply
+     0a91 IL_0a91: dup
+     0a92 IL_0a92: ldc.r4 100
+     0a97 IL_0a97: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     0a9c IL_0a9c: dup
+     0a9d IL_0a9d: ldstr "critical_chance_multiplier"
+     0aa2 IL_0aa2: stfld System.String BaseStatAsset::translation_key
+     0aa7 IL_0aa7: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0aac IL_0aac: pop
+     0aad IL_0aad: ldarg.0
+     0aae IL_0aae: newobj System.Void BaseStatAsset::.ctor()
+     0ab3 IL_0ab3: dup
+     0ab4 IL_0ab4: ldstr "multiplier_diplomacy"
+     0ab9 IL_0ab9: stfld System.String Asset::id
+     0abe IL_0abe: dup
+     0abf IL_0abf: ldc.i4.1
+     0ac0 IL_0ac0: stfld System.Boolean BaseStatAsset::show_as_percents
+     0ac5 IL_0ac5: dup
+     0ac6 IL_0ac6: ldc.i4.1
+     0ac7 IL_0ac7: stfld System.Boolean BaseStatAsset::multiplier
+     0acc IL_0acc: dup
+     0acd IL_0acd: ldstr "diplomacy"
+     0ad2 IL_0ad2: stfld System.String BaseStatAsset::main_stat_to_multiply
+     0ad7 IL_0ad7: dup
+     0ad8 IL_0ad8: ldc.r4 100
+     0add IL_0add: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     0ae2 IL_0ae2: dup
+     0ae3 IL_0ae3: ldstr "diplomacy"
+     0ae8 IL_0ae8: stfld System.String BaseStatAsset::translation_key
+     0aed IL_0aed: dup
+     0aee IL_0aee: ldc.i4.1
+     0aef IL_0aef: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     0af4 IL_0af4: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0af9 IL_0af9: pop
+     0afa IL_0afa: ldarg.0
+     0afb IL_0afb: newobj System.Void BaseStatAsset::.ctor()
+     0b00 IL_0b00: dup
+     0b01 IL_0b01: ldstr "multiplier_speed"
+     0b06 IL_0b06: stfld System.String Asset::id
+     0b0b IL_0b0b: dup
+     0b0c IL_0b0c: ldc.i4.1
+     0b0d IL_0b0d: stfld System.Boolean BaseStatAsset::show_as_percents
+     0b12 IL_0b12: dup
+     0b13 IL_0b13: ldc.i4.1
+     0b14 IL_0b14: stfld System.Boolean BaseStatAsset::multiplier
+     0b19 IL_0b19: dup
+     0b1a IL_0b1a: ldstr "speed"
+     0b1f IL_0b1f: stfld System.String BaseStatAsset::main_stat_to_multiply
+     0b24 IL_0b24: dup
+     0b25 IL_0b25: ldc.r4 100
+     0b2a IL_0b2a: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     0b2f IL_0b2f: dup
+     0b30 IL_0b30: ldstr "speed"
+     0b35 IL_0b35: stfld System.String BaseStatAsset::translation_key
+     0b3a IL_0b3a: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0b3f IL_0b3f: pop
+     0b40 IL_0b40: ldarg.0
+     0b41 IL_0b41: newobj System.Void BaseStatAsset::.ctor()
+     0b46 IL_0b46: dup
+     0b47 IL_0b47: ldstr "multiplier_attack_speed"
+     0b4c IL_0b4c: stfld System.String Asset::id
+     0b51 IL_0b51: dup
+     0b52 IL_0b52: ldc.i4.1
+     0b53 IL_0b53: stfld System.Boolean BaseStatAsset::show_as_percents
+     0b58 IL_0b58: dup
+     0b59 IL_0b59: ldc.i4.1
+     0b5a IL_0b5a: stfld System.Boolean BaseStatAsset::multiplier
+     0b5f IL_0b5f: dup
+     0b60 IL_0b60: ldstr "attack_speed"
+     0b65 IL_0b65: stfld System.String BaseStatAsset::main_stat_to_multiply
+     0b6a IL_0b6a: dup
+     0b6b IL_0b6b: ldc.r4 100
+     0b70 IL_0b70: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     0b75 IL_0b75: dup
+     0b76 IL_0b76: ldstr "attack_speed"
+     0b7b IL_0b7b: stfld System.String BaseStatAsset::translation_key
+     0b80 IL_0b80: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0b85 IL_0b85: pop
+     0b86 IL_0b86: ldarg.0
+     0b87 IL_0b87: newobj System.Void BaseStatAsset::.ctor()
+     0b8c IL_0b8c: dup
+     0b8d IL_0b8d: ldstr "scale"
+     0b92 IL_0b92: stfld System.String Asset::id
+     0b97 IL_0b97: dup
+     0b98 IL_0b98: ldc.i4.1
+     0b99 IL_0b99: stfld System.Boolean BaseStatAsset::show_as_percents
+     0b9e IL_0b9e: dup
+     0b9f IL_0b9f: ldc.r4 1000
+     0ba4 IL_0ba4: stfld System.Single BaseStatAsset::tooltip_multiply_for_visual_number
+     0ba9 IL_0ba9: dup
+     0baa IL_0baa: ldstr "size"
+     0baf IL_0baf: stfld System.String BaseStatAsset::translation_key
+     0bb4 IL_0bb4: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0bb9 IL_0bb9: pop
+     0bba IL_0bba: ldarg.0
+     0bbb IL_0bbb: newobj System.Void BaseStatAsset::.ctor()
+     0bc0 IL_0bc0: dup
+     0bc1 IL_0bc1: ldstr "multiplier_supply_timer"
+     0bc6 IL_0bc6: stfld System.String Asset::id
+     0bcb IL_0bcb: dup
+     0bcc IL_0bcc: ldc.i4.1
+     0bcd IL_0bcd: stfld System.Boolean BaseStatAsset::hidden
+     0bd2 IL_0bd2: dup
+     0bd3 IL_0bd3: ldc.i4.1
+     0bd4 IL_0bd4: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     0bd9 IL_0bd9: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0bde IL_0bde: pop
+     0bdf IL_0bdf: ldarg.0
+     0be0 IL_0be0: newobj System.Void BaseStatAsset::.ctor()
+     0be5 IL_0be5: dup
+     0be6 IL_0be6: ldstr "limit_clan_members"
+     0beb IL_0beb: stfld System.String Asset::id
+     0bf0 IL_0bf0: dup
+     0bf1 IL_0bf1: ldc.i4.1
+     0bf2 IL_0bf2: stfld System.Boolean BaseStatAsset::used_only_for_civs
+     0bf7 IL_0bf7: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0bfc IL_0bfc: pop
+     0bfd IL_0bfd: ldarg.0
+     0bfe IL_0bfe: newobj System.Void BaseStatAsset::.ctor()
+     0c03 IL_0c03: dup
+     0c04 IL_0c04: ldstr "status_chance"
+     0c09 IL_0c09: stfld System.String Asset::id
+     0c0e IL_0c0e: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0c13 IL_0c13: pop
+     0c14 IL_0c14: ldarg.0
+     0c15 IL_0c15: newobj System.Void BaseStatAsset::.ctor()
+     0c1a IL_0c1a: dup
+     0c1b IL_0c1b: ldstr "damage_range"
+     0c20 IL_0c20: stfld System.String Asset::id
+     0c25 IL_0c25: dup
+     0c26 IL_0c26: ldc.i4.1
+     0c27 IL_0c27: stfld System.Boolean BaseStatAsset::hidden
+     0c2c IL_0c2c: dup
+     0c2d IL_0c2d: ldc.i4.1
+     0c2e IL_0c2e: stfld System.Boolean BaseStatAsset::normalize
+     0c33 IL_0c33: dup
+     0c34 IL_0c34: ldc.r4 0.1
+     0c39 IL_0c39: stfld System.Single BaseStatAsset::normalize_min
+     0c3e IL_0c3e: callvirt T AssetLibrary`1<BaseStatAsset>::add(T)
+     0c43 IL_0c43: pop
+     0c44 IL_0c44: ret
+

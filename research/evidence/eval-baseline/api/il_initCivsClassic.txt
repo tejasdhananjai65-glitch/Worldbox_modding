@@ -1,0 +1,1512 @@
+﻿######## TYPE ActorAssetLibrary : BaseLibraryWithUnlockables`1<ActorAsset>
+---- System.Void initCivsClassic()
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: ldstr "human"
+     0006 IL_0006: ldstr "$civ_advanced_unit$"
+     000b IL_000b: callvirt T AssetLibrary`1<ActorAsset>::clone(System.String,System.String)
+     0010 IL_0010: pop
+     0011 IL_0011: ldarg.0
+     0012 IL_0012: ldfld T AssetLibrary`1<ActorAsset>::t
+     0017 IL_0017: ldc.i4.s 11
+     0019 IL_0019: newarr System.String
+     001e IL_001e: dup
+     001f IL_001f: ldc.i4.0
+     0020 IL_0020: ldstr "human_default_set"
+     0025 IL_0025: stelem.ref
+     0026 IL_0026: dup
+     0027 IL_0027: ldc.i4.1
+     0028 IL_0028: ldstr "human_slavic_set"
+     002d IL_002d: stelem.ref
+     002e IL_002e: dup
+     002f IL_002f: ldc.i4.2
+     0030 IL_0030: ldstr "human_germanic_set"
+     0035 IL_0035: stelem.ref
+     0036 IL_0036: dup
+     0037 IL_0037: ldc.i4.3
+     0038 IL_0038: ldstr "human_rus_set"
+     003d IL_003d: stelem.ref
+     003e IL_003e: dup
+     003f IL_003f: ldc.i4.4
+     0040 IL_0040: ldstr "human_posh_set"
+     0045 IL_0045: stelem.ref
+     0046 IL_0046: dup
+     0047 IL_0047: ldc.i4.5
+     0048 IL_0048: ldstr "human_folk_set"
+     004d IL_004d: stelem.ref
+     004e IL_004e: dup
+     004f IL_004f: ldc.i4.6
+     0050 IL_0050: ldstr "human_pomeranian_set"
+     0055 IL_0055: stelem.ref
+     0056 IL_0056: dup
+     0057 IL_0057: ldc.i4.7
+     0058 IL_0058: ldstr "human_frankish_set"
+     005d IL_005d: stelem.ref
+     005e IL_005e: dup
+     005f IL_005f: ldc.i4.8
+     0060 IL_0060: ldstr "human_rome_set"
+     0065 IL_0065: stelem.ref
+     0066 IL_0066: dup
+     0067 IL_0067: ldc.i4.s 9
+     0069 IL_0069: ldstr "human_iberian_set"
+     006e IL_006e: stelem.ref
+     006f IL_006f: dup
+     0070 IL_0070: ldc.i4.s 10
+     0072 IL_0072: ldstr "human_monolux_set"
+     0077 IL_0077: stelem.ref
+     0078 IL_0078: call !!0[] AssetLibrary`1<ActorAsset>::a<System.String>(!!0[])
+     007d IL_007d: stfld System.String[] ActorAsset::name_template_sets
+     0082 IL_0082: ldarg.0
+     0083 IL_0083: ldfld T AssetLibrary`1<ActorAsset>::t
+     0088 IL_0088: ldc.i4.4
+     0089 IL_0089: newarr System.String
+     008e IL_008e: dup
+     008f IL_008f: ldc.i4.0
+     0090 IL_0090: ldstr "blue"
+     0095 IL_0095: stelem.ref
+     0096 IL_0096: dup
+     0097 IL_0097: ldc.i4.1
+     0098 IL_0098: ldstr "navy"
+     009d IL_009d: stelem.ref
+     009e IL_009e: dup
+     009f IL_009f: ldc.i4.2
+     00a0 IL_00a0: ldstr "teal"
+     00a5 IL_00a5: stelem.ref
+     00a6 IL_00a6: dup
+     00a7 IL_00a7: ldc.i4.3
+     00a8 IL_00a8: ldstr "cyan"
+     00ad IL_00ad: stelem.ref
+     00ae IL_00ae: callvirt System.Void ActorAsset::addPreferredColors(System.String[])
+     00b3 IL_00b3: ldarg.0
+     00b4 IL_00b4: ldfld T AssetLibrary`1<ActorAsset>::t
+     00b9 IL_00b9: ldstr "build_order_advanced"
+     00be IL_00be: stfld System.String ActorAsset::build_order_template_id
+     00c3 IL_00c3: ldarg.0
+     00c4 IL_00c4: ldfld T AssetLibrary`1<ActorAsset>::t
+     00c9 IL_00c9: ldstr "Humans_Neutral"
+     00ce IL_00ce: stfld System.String ActorAsset::music_theme
+     00d3 IL_00d3: ldarg.0
+     00d4 IL_00d4: ldfld T AssetLibrary`1<ActorAsset>::t
+     00d9 IL_00d9: ldstr "nomads_human"
+     00de IL_00de: stfld System.String ActorAsset::kingdom_id_wild
+     00e3 IL_00e3: ldarg.0
+     00e4 IL_00e4: ldfld T AssetLibrary`1<ActorAsset>::t
+     00e9 IL_00e9: ldstr "human"
+     00ee IL_00ee: stfld System.String ActorAsset::kingdom_id_civilization
+     00f3 IL_00f3: ldarg.0
+     00f4 IL_00f4: ldfld T AssetLibrary`1<ActorAsset>::t
+     00f9 IL_00f9: ldstr "human"
+     00fe IL_00fe: stfld System.String ActorAsset::banner_id
+     0103 IL_0103: ldarg.0
+     0104 IL_0104: ldfld T AssetLibrary`1<ActorAsset>::t
+     0109 IL_0109: ldstr "human"
+     010e IL_010e: stfld System.String ActorAsset::architecture_id
+     0113 IL_0113: ldarg.0
+     0114 IL_0114: ldfld T AssetLibrary`1<ActorAsset>::t
+     0119 IL_0119: ldstr "Human"
+     011e IL_011e: stfld System.String ActorAsset::name_locale
+     0123 IL_0123: ldarg.0
+     0124 IL_0124: ldfld T AssetLibrary`1<ActorAsset>::t
+     0129 IL_0129: ldstr "animalia"
+     012e IL_012e: stfld System.String ActorAsset::name_taxonomic_kingdom
+     0133 IL_0133: ldarg.0
+     0134 IL_0134: ldfld T AssetLibrary`1<ActorAsset>::t
+     0139 IL_0139: ldstr "chordata"
+     013e IL_013e: stfld System.String ActorAsset::name_taxonomic_phylum
+     0143 IL_0143: ldarg.0
+     0144 IL_0144: ldfld T AssetLibrary`1<ActorAsset>::t
+     0149 IL_0149: ldstr "mammalia"
+     014e IL_014e: stfld System.String ActorAsset::name_taxonomic_class
+     0153 IL_0153: ldarg.0
+     0154 IL_0154: ldfld T AssetLibrary`1<ActorAsset>::t
+     0159 IL_0159: ldstr "primates"
+     015e IL_015e: stfld System.String ActorAsset::name_taxonomic_order
+     0163 IL_0163: ldarg.0
+     0164 IL_0164: ldfld T AssetLibrary`1<ActorAsset>::t
+     0169 IL_0169: ldstr "hominidae"
+     016e IL_016e: stfld System.String ActorAsset::name_taxonomic_family
+     0173 IL_0173: ldarg.0
+     0174 IL_0174: ldfld T AssetLibrary`1<ActorAsset>::t
+     0179 IL_0179: ldstr "homo"
+     017e IL_017e: stfld System.String ActorAsset::name_taxonomic_genus
+     0183 IL_0183: ldarg.0
+     0184 IL_0184: ldfld T AssetLibrary`1<ActorAsset>::t
+     0189 IL_0189: ldstr "sapiens"
+     018e IL_018e: stfld System.String ActorAsset::name_taxonomic_species
+     0193 IL_0193: ldarg.0
+     0194 IL_0194: ldfld T AssetLibrary`1<ActorAsset>::t
+     0199 IL_0199: ldstr "iconHumans"
+     019e IL_019e: stfld System.String ActorAsset::icon
+     01a3 IL_01a3: ldarg.0
+     01a4 IL_01a4: ldfld T AssetLibrary`1<ActorAsset>::t
+     01a9 IL_01a9: ldstr "#005E72"
+     01ae IL_01ae: stfld System.String ActorAsset::color_hex
+     01b3 IL_01b3: ldarg.0
+     01b4 IL_01b4: ldfld T AssetLibrary`1<ActorAsset>::t
+     01b9 IL_01b9: ldstr "#00AD2C"
+     01be IL_01be: stfld System.String ActorAsset::zombie_color_hex
+     01c3 IL_01c3: ldarg.0
+     01c4 IL_01c4: ldfld T AssetLibrary`1<ActorAsset>::t
+     01c9 IL_01c9: ldc.i4.1
+     01ca IL_01ca: stfld System.Boolean ActorAsset::disable_jump_animation
+     01cf IL_01cf: ldarg.0
+     01d0 IL_01d0: ldfld T AssetLibrary`1<ActorAsset>::t
+     01d5 IL_01d5: ldfld BaseStats BaseUnlockableAsset::base_stats
+     01da IL_01da: ldstr "mass_2"
+     01df IL_01df: ldc.r4 65
+     01e4 IL_01e4: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     01e9 IL_01e9: ldarg.0
+     01ea IL_01ea: ldfld T AssetLibrary`1<ActorAsset>::t
+     01ef IL_01ef: ldc.i4.s 13
+     01f1 IL_01f1: newarr System.ValueTuple`2<System.String,System.Single>
+     01f6 IL_01f6: dup
+     01f7 IL_01f7: ldc.i4.0
+     01f8 IL_01f8: ldstr "health"
+     01fd IL_01fd: ldc.r4 100
+     0202 IL_0202: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0207 IL_0207: stelem.any System.ValueTuple`2<System.String,System.Single>
+     020c IL_020c: dup
+     020d IL_020d: ldc.i4.1
+     020e IL_020e: ldstr "stamina"
+     0213 IL_0213: ldc.r4 100
+     0218 IL_0218: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     021d IL_021d: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0222 IL_0222: dup
+     0223 IL_0223: ldc.i4.2
+     0224 IL_0224: ldstr "mutation"
+     0229 IL_0229: ldc.r4 1
+     022e IL_022e: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0233 IL_0233: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0238 IL_0238: dup
+     0239 IL_0239: ldc.i4.3
+     023a IL_023a: ldstr "bonus_sex_random"
+     023f IL_023f: ldc.r4 2
+     0244 IL_0244: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0249 IL_0249: stelem.any System.ValueTuple`2<System.String,System.Single>
+     024e IL_024e: dup
+     024f IL_024f: ldc.i4.4
+     0250 IL_0250: ldstr "bad"
+     0255 IL_0255: ldc.r4 2
+     025a IL_025a: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     025f IL_025f: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0264 IL_0264: dup
+     0265 IL_0265: ldc.i4.5
+     0266 IL_0266: ldstr "lifespan"
+     026b IL_026b: ldc.r4 70
+     0270 IL_0270: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0275 IL_0275: stelem.any System.ValueTuple`2<System.String,System.Single>
+     027a IL_027a: dup
+     027b IL_027b: ldc.i4.6
+     027c IL_027c: ldstr "damage"
+     0281 IL_0281: ldc.r4 15
+     0286 IL_0286: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     028b IL_028b: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0290 IL_0290: dup
+     0291 IL_0291: ldc.i4.7
+     0292 IL_0292: ldstr "speed"
+     0297 IL_0297: ldc.r4 15
+     029c IL_029c: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     02a1 IL_02a1: stelem.any System.ValueTuple`2<System.String,System.Single>
+     02a6 IL_02a6: dup
+     02a7 IL_02a7: ldc.i4.8
+     02a8 IL_02a8: ldstr "offspring"
+     02ad IL_02ad: ldc.r4 5
+     02b2 IL_02b2: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     02b7 IL_02b7: stelem.any System.ValueTuple`2<System.String,System.Single>
+     02bc IL_02bc: dup
+     02bd IL_02bd: ldc.i4.s 9
+     02bf IL_02bf: ldstr "diplomacy"
+     02c4 IL_02c4: ldc.r4 3
+     02c9 IL_02c9: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     02ce IL_02ce: stelem.any System.ValueTuple`2<System.String,System.Single>
+     02d3 IL_02d3: dup
+     02d4 IL_02d4: ldc.i4.s 10
+     02d6 IL_02d6: ldstr "warfare"
+     02db IL_02db: ldc.r4 3
+     02e0 IL_02e0: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     02e5 IL_02e5: stelem.any System.ValueTuple`2<System.String,System.Single>
+     02ea IL_02ea: dup
+     02eb IL_02eb: ldc.i4.s 11
+     02ed IL_02ed: ldstr "stewardship"
+     02f2 IL_02f2: ldc.r4 3
+     02f7 IL_02f7: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     02fc IL_02fc: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0301 IL_0301: dup
+     0302 IL_0302: ldc.i4.s 12
+     0304 IL_0304: ldstr "intelligence"
+     0309 IL_0309: ldc.r4 3
+     030e IL_030e: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0313 IL_0313: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0318 IL_0318: callvirt System.Void ActorAsset::addGenome(System.ValueTuple`2<System.String,System.Single>[])
+     031d IL_031d: ldarg.0
+     031e IL_031e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0323 IL_0323: ldstr "reproduction_strategy_viviparity"
+     0328 IL_0328: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     032d IL_032d: ldarg.0
+     032e IL_032e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0333 IL_0333: ldstr "gestation_long"
+     0338 IL_0338: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     033d IL_033d: ldarg.0
+     033e IL_033e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0343 IL_0343: ldstr "reproduction_sexual"
+     0348 IL_0348: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     034d IL_034d: ldarg.0
+     034e IL_034e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0353 IL_0353: ldstr "bad_genes"
+     0358 IL_0358: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     035d IL_035d: ldarg.0
+     035e IL_035e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0363 IL_0363: ldstr "advanced_hippocampus"
+     0368 IL_0368: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     036d IL_036d: ldarg.0
+     036e IL_036e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0373 IL_0373: ldstr "stomach"
+     0378 IL_0378: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     037d IL_037d: ldarg.0
+     037e IL_037e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0383 IL_0383: ldstr "amygdala"
+     0388 IL_0388: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     038d IL_038d: ldarg.0
+     038e IL_038e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0393 IL_0393: ldstr "wernicke_area"
+     0398 IL_0398: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     039d IL_039d: ldarg.0
+     039e IL_039e: ldfld T AssetLibrary`1<ActorAsset>::t
+     03a3 IL_03a3: ldstr "diet_omnivore"
+     03a8 IL_03a8: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     03ad IL_03ad: ldarg.0
+     03ae IL_03ae: ldfld T AssetLibrary`1<ActorAsset>::t
+     03b3 IL_03b3: ldstr "polyphasic_sleep"
+     03b8 IL_03b8: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     03bd IL_03bd: ldarg.0
+     03be IL_03be: ldfld T AssetLibrary`1<ActorAsset>::t
+     03c3 IL_03c3: ldstr "nocturnal_dormancy"
+     03c8 IL_03c8: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     03cd IL_03cd: ldarg.0
+     03ce IL_03ce: ldfld T AssetLibrary`1<ActorAsset>::t
+     03d3 IL_03d3: ldstr "divine_dozen"
+     03d8 IL_03d8: callvirt System.Void ActorAsset::addClanTrait(System.String)
+     03dd IL_03dd: ldarg.0
+     03de IL_03de: ldfld T AssetLibrary`1<ActorAsset>::t
+     03e3 IL_03e3: ldstr "city_layout_the_grand_arrangement"
+     03e8 IL_03e8: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     03ed IL_03ed: ldarg.0
+     03ee IL_03ee: ldfld T AssetLibrary`1<ActorAsset>::t
+     03f3 IL_03f3: ldstr "city_layout_stone_garden"
+     03f8 IL_03f8: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     03fd IL_03fd: ldarg.0
+     03fe IL_03fe: ldfld T AssetLibrary`1<ActorAsset>::t
+     0403 IL_0403: ldstr "roads"
+     0408 IL_0408: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     040d IL_040d: ldarg.0
+     040e IL_040e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0413 IL_0413: ldstr "statue_lovers"
+     0418 IL_0418: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     041d IL_041d: ldarg.0
+     041e IL_041e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0423 IL_0423: ldstr "pep_talks"
+     0428 IL_0428: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     042d IL_042d: ldarg.0
+     042e IL_042e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0433 IL_0433: ldstr "youth_reverence"
+     0438 IL_0438: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     043d IL_043d: ldarg.0
+     043e IL_043e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0443 IL_0443: ldstr "expansionists"
+     0448 IL_0448: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     044d IL_044d: ldarg.0
+     044e IL_044e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0453 IL_0453: ldstr "nicely_structured_grammar"
+     0458 IL_0458: callvirt System.Void ActorAsset::addLanguageTrait(System.String)
+     045d IL_045d: ldarg.0
+     045e IL_045e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0463 IL_0463: ldstr "bloodline_bond"
+     0468 IL_0468: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     046d IL_046d: ldarg.0
+     046e IL_046e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0473 IL_0473: ldstr "rite_of_roaring_skies"
+     0478 IL_0478: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     047d IL_047d: ldarg.0
+     047e IL_047e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0483 IL_0483: ldstr "cast_shield"
+     0488 IL_0488: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     048d IL_048d: ldarg.0
+     048e IL_048e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0493 IL_0493: ldc.i4.2
+     0494 IL_0494: newarr System.String
+     0499 IL_0499: dup
+     049a IL_049a: ldc.i4.0
+     049b IL_049b: ldstr "bread"
+     04a0 IL_04a0: stelem.ref
+     04a1 IL_04a1: dup
+     04a2 IL_04a2: ldc.i4.1
+     04a3 IL_04a3: ldstr "pie"
+     04a8 IL_04a8: stelem.ref
+     04a9 IL_04a9: stfld System.String[] ActorAsset::production
+     04ae IL_04ae: ldarg.0
+     04af IL_04af: ldstr "skin_light"
+     04b4 IL_04b4: ldstr "default_color"
+     04b9 IL_04b9: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     04be IL_04be: ldarg.0
+     04bf IL_04bf: ldstr "skin_dark"
+     04c4 IL_04c4: ldstr "default_color"
+     04c9 IL_04c9: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     04ce IL_04ce: ldarg.0
+     04cf IL_04cf: ldstr "skin_mixed"
+     04d4 IL_04d4: ldstr "default_color"
+     04d9 IL_04d9: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     04de IL_04de: ldarg.0
+     04df IL_04df: ldstr "elf"
+     04e4 IL_04e4: ldstr "$civ_advanced_unit$"
+     04e9 IL_04e9: callvirt T AssetLibrary`1<ActorAsset>::clone(System.String,System.String)
+     04ee IL_04ee: pop
+     04ef IL_04ef: ldarg.0
+     04f0 IL_04f0: ldfld T AssetLibrary`1<ActorAsset>::t
+     04f5 IL_04f5: ldc.i4.1
+     04f6 IL_04f6: newarr System.String
+     04fb IL_04fb: dup
+     04fc IL_04fc: ldc.i4.0
+     04fd IL_04fd: ldstr "elf_default_set"
+     0502 IL_0502: stelem.ref
+     0503 IL_0503: call !!0[] AssetLibrary`1<ActorAsset>::a<System.String>(!!0[])
+     0508 IL_0508: stfld System.String[] ActorAsset::name_template_sets
+     050d IL_050d: ldarg.0
+     050e IL_050e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0513 IL_0513: ldc.i4.3
+     0514 IL_0514: newarr System.String
+     0519 IL_0519: dup
+     051a IL_051a: ldc.i4.0
+     051b IL_051b: ldstr "green"
+     0520 IL_0520: stelem.ref
+     0521 IL_0521: dup
+     0522 IL_0522: ldc.i4.1
+     0523 IL_0523: ldstr "lime"
+     0528 IL_0528: stelem.ref
+     0529 IL_0529: dup
+     052a IL_052a: ldc.i4.2
+     052b IL_052b: ldstr "lavender"
+     0530 IL_0530: stelem.ref
+     0531 IL_0531: callvirt System.Void ActorAsset::addPreferredColors(System.String[])
+     0536 IL_0536: ldarg.0
+     0537 IL_0537: ldfld T AssetLibrary`1<ActorAsset>::t
+     053c IL_053c: ldstr "nomads_elf"
+     0541 IL_0541: stfld System.String ActorAsset::kingdom_id_wild
+     0546 IL_0546: ldarg.0
+     0547 IL_0547: ldfld T AssetLibrary`1<ActorAsset>::t
+     054c IL_054c: ldstr "elf"
+     0551 IL_0551: stfld System.String ActorAsset::kingdom_id_civilization
+     0556 IL_0556: ldarg.0
+     0557 IL_0557: ldfld T AssetLibrary`1<ActorAsset>::t
+     055c IL_055c: ldstr "elf"
+     0561 IL_0561: stfld System.String ActorAsset::banner_id
+     0566 IL_0566: ldarg.0
+     0567 IL_0567: ldfld T AssetLibrary`1<ActorAsset>::t
+     056c IL_056c: ldstr "elf"
+     0571 IL_0571: stfld System.String ActorAsset::architecture_id
+     0576 IL_0576: ldarg.0
+     0577 IL_0577: ldfld T AssetLibrary`1<ActorAsset>::t
+     057c IL_057c: ldstr "build_order_advanced"
+     0581 IL_0581: stfld System.String ActorAsset::build_order_template_id
+     0586 IL_0586: ldarg.0
+     0587 IL_0587: ldfld T AssetLibrary`1<ActorAsset>::t
+     058c IL_058c: ldstr "Elves_Neutral"
+     0591 IL_0591: stfld System.String ActorAsset::music_theme
+     0596 IL_0596: ldarg.0
+     0597 IL_0597: ldfld T AssetLibrary`1<ActorAsset>::t
+     059c IL_059c: ldstr "Elf"
+     05a1 IL_05a1: stfld System.String ActorAsset::name_locale
+     05a6 IL_05a6: ldarg.0
+     05a7 IL_05a7: ldfld T AssetLibrary`1<ActorAsset>::t
+     05ac IL_05ac: ldstr "animalia"
+     05b1 IL_05b1: stfld System.String ActorAsset::name_taxonomic_kingdom
+     05b6 IL_05b6: ldarg.0
+     05b7 IL_05b7: ldfld T AssetLibrary`1<ActorAsset>::t
+     05bc IL_05bc: ldstr "chordata"
+     05c1 IL_05c1: stfld System.String ActorAsset::name_taxonomic_phylum
+     05c6 IL_05c6: ldarg.0
+     05c7 IL_05c7: ldfld T AssetLibrary`1<ActorAsset>::t
+     05cc IL_05cc: ldstr "mammalia"
+     05d1 IL_05d1: stfld System.String ActorAsset::name_taxonomic_class
+     05d6 IL_05d6: ldarg.0
+     05d7 IL_05d7: ldfld T AssetLibrary`1<ActorAsset>::t
+     05dc IL_05dc: ldstr "primates"
+     05e1 IL_05e1: stfld System.String ActorAsset::name_taxonomic_order
+     05e6 IL_05e6: ldarg.0
+     05e7 IL_05e7: ldfld T AssetLibrary`1<ActorAsset>::t
+     05ec IL_05ec: ldstr "hominidae"
+     05f1 IL_05f1: stfld System.String ActorAsset::name_taxonomic_family
+     05f6 IL_05f6: ldarg.0
+     05f7 IL_05f7: ldfld T AssetLibrary`1<ActorAsset>::t
+     05fc IL_05fc: ldstr "elvus"
+     0601 IL_0601: stfld System.String ActorAsset::name_taxonomic_genus
+     0606 IL_0606: ldarg.0
+     0607 IL_0607: ldfld T AssetLibrary`1<ActorAsset>::t
+     060c IL_060c: ldstr "elegance"
+     0611 IL_0611: stfld System.String ActorAsset::name_taxonomic_species
+     0616 IL_0616: ldarg.0
+     0617 IL_0617: ldfld T AssetLibrary`1<ActorAsset>::t
+     061c IL_061c: ldstr "group_quiver"
+     0621 IL_0621: stfld System.String ActorAsset::collective_term
+     0626 IL_0626: ldarg.0
+     0627 IL_0627: ldfld T AssetLibrary`1<ActorAsset>::t
+     062c IL_062c: ldstr "iconElves"
+     0631 IL_0631: stfld System.String ActorAsset::icon
+     0636 IL_0636: ldarg.0
+     0637 IL_0637: ldfld T AssetLibrary`1<ActorAsset>::t
+     063c IL_063c: ldstr "#005D00"
+     0641 IL_0641: stfld System.String ActorAsset::color_hex
+     0646 IL_0646: ldarg.0
+     0647 IL_0647: ldfld T AssetLibrary`1<ActorAsset>::t
+     064c IL_064c: ldstr "#2C8D98"
+     0651 IL_0651: stfld System.String ActorAsset::zombie_color_hex
+     0656 IL_0656: ldarg.0
+     0657 IL_0657: ldfld T AssetLibrary`1<ActorAsset>::t
+     065c IL_065c: ldc.i4.3
+     065d IL_065d: stfld System.Int32 ActorAsset::civ_base_cities
+     0662 IL_0662: ldarg.0
+     0663 IL_0663: ldfld T AssetLibrary`1<ActorAsset>::t
+     0668 IL_0668: ldc.i4.s 20
+     066a IL_066a: stfld System.Int32 ActorAsset::family_limit
+     066f IL_066f: ldarg.0
+     0670 IL_0670: ldfld T AssetLibrary`1<ActorAsset>::t
+     0675 IL_0675: ldfld BaseStats BaseUnlockableAsset::base_stats
+     067a IL_067a: ldstr "mass_2"
+     067f IL_067f: ldc.r4 25
+     0684 IL_0684: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0689 IL_0689: ldarg.0
+     068a IL_068a: ldfld T AssetLibrary`1<ActorAsset>::t
+     068f IL_068f: ldc.i4.s 12
+     0691 IL_0691: newarr System.ValueTuple`2<System.String,System.Single>
+     0696 IL_0696: dup
+     0697 IL_0697: ldc.i4.0
+     0698 IL_0698: ldstr "health"
+     069d IL_069d: ldc.r4 70
+     06a2 IL_06a2: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     06a7 IL_06a7: stelem.any System.ValueTuple`2<System.String,System.Single>
+     06ac IL_06ac: dup
+     06ad IL_06ad: ldc.i4.1
+     06ae IL_06ae: ldstr "bonus_sex_random"
+     06b3 IL_06b3: ldc.r4 1
+     06b8 IL_06b8: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     06bd IL_06bd: stelem.any System.ValueTuple`2<System.String,System.Single>
+     06c2 IL_06c2: dup
+     06c3 IL_06c3: ldc.i4.2
+     06c4 IL_06c4: ldstr "stamina"
+     06c9 IL_06c9: ldc.r4 200
+     06ce IL_06ce: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     06d3 IL_06d3: stelem.any System.ValueTuple`2<System.String,System.Single>
+     06d8 IL_06d8: dup
+     06d9 IL_06d9: ldc.i4.3
+     06da IL_06da: ldstr "lifespan"
+     06df IL_06df: ldc.r4 500
+     06e4 IL_06e4: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     06e9 IL_06e9: stelem.any System.ValueTuple`2<System.String,System.Single>
+     06ee IL_06ee: dup
+     06ef IL_06ef: ldc.i4.4
+     06f0 IL_06f0: ldstr "mutation"
+     06f5 IL_06f5: ldc.r4 2
+     06fa IL_06fa: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     06ff IL_06ff: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0704 IL_0704: dup
+     0705 IL_0705: ldc.i4.5
+     0706 IL_0706: ldstr "damage"
+     070b IL_070b: ldc.r4 10
+     0710 IL_0710: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0715 IL_0715: stelem.any System.ValueTuple`2<System.String,System.Single>
+     071a IL_071a: dup
+     071b IL_071b: ldc.i4.6
+     071c IL_071c: ldstr "speed"
+     0721 IL_0721: ldc.r4 20
+     0726 IL_0726: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     072b IL_072b: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0730 IL_0730: dup
+     0731 IL_0731: ldc.i4.7
+     0732 IL_0732: ldstr "offspring"
+     0737 IL_0737: ldc.r4 2
+     073c IL_073c: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0741 IL_0741: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0746 IL_0746: dup
+     0747 IL_0747: ldc.i4.8
+     0748 IL_0748: ldstr "diplomacy"
+     074d IL_074d: ldc.r4 5
+     0752 IL_0752: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0757 IL_0757: stelem.any System.ValueTuple`2<System.String,System.Single>
+     075c IL_075c: dup
+     075d IL_075d: ldc.i4.s 9
+     075f IL_075f: ldstr "warfare"
+     0764 IL_0764: ldc.r4 2
+     0769 IL_0769: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     076e IL_076e: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0773 IL_0773: dup
+     0774 IL_0774: ldc.i4.s 10
+     0776 IL_0776: ldstr "stewardship"
+     077b IL_077b: ldc.r4 2
+     0780 IL_0780: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0785 IL_0785: stelem.any System.ValueTuple`2<System.String,System.Single>
+     078a IL_078a: dup
+     078b IL_078b: ldc.i4.s 11
+     078d IL_078d: ldstr "intelligence"
+     0792 IL_0792: ldc.r4 6
+     0797 IL_0797: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     079c IL_079c: stelem.any System.ValueTuple`2<System.String,System.Single>
+     07a1 IL_07a1: callvirt System.Void ActorAsset::addGenome(System.ValueTuple`2<System.String,System.Single>[])
+     07a6 IL_07a6: ldarg.0
+     07a7 IL_07a7: ldfld T AssetLibrary`1<ActorAsset>::t
+     07ac IL_07ac: ldstr "bow_lovers"
+     07b1 IL_07b1: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     07b6 IL_07b6: ldarg.0
+     07b7 IL_07b7: ldfld T AssetLibrary`1<ActorAsset>::t
+     07bc IL_07bc: ldstr "spear_lovers"
+     07c1 IL_07c1: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     07c6 IL_07c6: ldarg.0
+     07c7 IL_07c7: ldfld T AssetLibrary`1<ActorAsset>::t
+     07cc IL_07cc: ldstr "solitude_seekers"
+     07d1 IL_07d1: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     07d6 IL_07d6: ldarg.0
+     07d7 IL_07d7: ldfld T AssetLibrary`1<ActorAsset>::t
+     07dc IL_07dc: ldstr "youth_reverence"
+     07e1 IL_07e1: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     07e6 IL_07e6: ldarg.0
+     07e7 IL_07e7: ldfld T AssetLibrary`1<ActorAsset>::t
+     07ec IL_07ec: ldstr "reading_lovers"
+     07f1 IL_07f1: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     07f6 IL_07f6: ldarg.0
+     07f7 IL_07f7: ldfld T AssetLibrary`1<ActorAsset>::t
+     07fc IL_07fc: ldstr "attentive_readers"
+     0801 IL_0801: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0806 IL_0806: ldarg.0
+     0807 IL_0807: ldfld T AssetLibrary`1<ActorAsset>::t
+     080c IL_080c: ldstr "animal_whisperers"
+     0811 IL_0811: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0816 IL_0816: ldarg.0
+     0817 IL_0817: ldfld T AssetLibrary`1<ActorAsset>::t
+     081c IL_081c: ldstr "true_roots"
+     0821 IL_0821: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0826 IL_0826: ldarg.0
+     0827 IL_0827: ldfld T AssetLibrary`1<ActorAsset>::t
+     082c IL_082c: ldstr "legacy_keepers"
+     0831 IL_0831: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0836 IL_0836: ldarg.0
+     0837 IL_0837: ldfld T AssetLibrary`1<ActorAsset>::t
+     083c IL_083c: ldstr "unbroken_chain"
+     0841 IL_0841: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0846 IL_0846: ldarg.0
+     0847 IL_0847: ldfld T AssetLibrary`1<ActorAsset>::t
+     084c IL_084c: ldstr "city_layout_pillars"
+     0851 IL_0851: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0856 IL_0856: ldarg.0
+     0857 IL_0857: ldfld T AssetLibrary`1<ActorAsset>::t
+     085c IL_085c: ldstr "blood_pact"
+     0861 IL_0861: callvirt System.Void ActorAsset::addClanTrait(System.String)
+     0866 IL_0866: ldarg.0
+     0867 IL_0867: ldfld T AssetLibrary`1<ActorAsset>::t
+     086c IL_086c: ldstr "divine_dozen"
+     0871 IL_0871: callvirt System.Void ActorAsset::addClanTrait(System.String)
+     0876 IL_0876: ldarg.0
+     0877 IL_0877: ldfld T AssetLibrary`1<ActorAsset>::t
+     087c IL_087c: ldstr "witchs_vein"
+     0881 IL_0881: callvirt System.Void ActorAsset::addClanTrait(System.String)
+     0886 IL_0886: ldarg.0
+     0887 IL_0887: ldfld T AssetLibrary`1<ActorAsset>::t
+     088c IL_088c: ldstr "melodic"
+     0891 IL_0891: callvirt System.Void ActorAsset::addLanguageTrait(System.String)
+     0896 IL_0896: ldarg.0
+     0897 IL_0897: ldfld T AssetLibrary`1<ActorAsset>::t
+     089c IL_089c: ldstr "magic_words"
+     08a1 IL_08a1: callvirt System.Void ActorAsset::addLanguageTrait(System.String)
+     08a6 IL_08a6: ldarg.0
+     08a7 IL_08a7: ldfld T AssetLibrary`1<ActorAsset>::t
+     08ac IL_08ac: ldstr "reproduction_strategy_viviparity"
+     08b1 IL_08b1: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     08b6 IL_08b6: ldarg.0
+     08b7 IL_08b7: ldfld T AssetLibrary`1<ActorAsset>::t
+     08bc IL_08bc: ldstr "gestation_very_long"
+     08c1 IL_08c1: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     08c6 IL_08c6: ldarg.0
+     08c7 IL_08c7: ldfld T AssetLibrary`1<ActorAsset>::t
+     08cc IL_08cc: ldstr "reproduction_sexual"
+     08d1 IL_08d1: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     08d6 IL_08d6: ldarg.0
+     08d7 IL_08d7: ldfld T AssetLibrary`1<ActorAsset>::t
+     08dc IL_08dc: ldstr "death_grow_tree"
+     08e1 IL_08e1: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     08e6 IL_08e6: ldarg.0
+     08e7 IL_08e7: ldfld T AssetLibrary`1<ActorAsset>::t
+     08ec IL_08ec: ldstr "long_lifespan"
+     08f1 IL_08f1: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     08f6 IL_08f6: ldarg.0
+     08f7 IL_08f7: ldfld T AssetLibrary`1<ActorAsset>::t
+     08fc IL_08fc: ldstr "advanced_hippocampus"
+     0901 IL_0901: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0906 IL_0906: ldarg.0
+     0907 IL_0907: ldfld T AssetLibrary`1<ActorAsset>::t
+     090c IL_090c: ldstr "stomach"
+     0911 IL_0911: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0916 IL_0916: ldarg.0
+     0917 IL_0917: ldfld T AssetLibrary`1<ActorAsset>::t
+     091c IL_091c: ldstr "amygdala"
+     0921 IL_0921: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0926 IL_0926: ldarg.0
+     0927 IL_0927: ldfld T AssetLibrary`1<ActorAsset>::t
+     092c IL_092c: ldstr "wernicke_area"
+     0931 IL_0931: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0936 IL_0936: ldarg.0
+     0937 IL_0937: ldfld T AssetLibrary`1<ActorAsset>::t
+     093c IL_093c: ldstr "diet_frugivore"
+     0941 IL_0941: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0946 IL_0946: ldarg.0
+     0947 IL_0947: ldfld T AssetLibrary`1<ActorAsset>::t
+     094c IL_094c: ldstr "diet_granivore"
+     0951 IL_0951: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0956 IL_0956: ldarg.0
+     0957 IL_0957: ldfld T AssetLibrary`1<ActorAsset>::t
+     095c IL_095c: ldstr "diet_florivore"
+     0961 IL_0961: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0966 IL_0966: ldarg.0
+     0967 IL_0967: ldfld T AssetLibrary`1<ActorAsset>::t
+     096c IL_096c: ldstr "diet_folivore"
+     0971 IL_0971: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0976 IL_0976: ldarg.0
+     0977 IL_0977: ldfld T AssetLibrary`1<ActorAsset>::t
+     097c IL_097c: ldstr "pure"
+     0981 IL_0981: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0986 IL_0986: ldarg.0
+     0987 IL_0987: ldfld T AssetLibrary`1<ActorAsset>::t
+     098c IL_098c: ldstr "tax_rate_local_low"
+     0991 IL_0991: callvirt System.Void ActorAsset::addKingdomTrait(System.String)
+     0996 IL_0996: ldarg.0
+     0997 IL_0997: ldfld T AssetLibrary`1<ActorAsset>::t
+     099c IL_099c: ldstr "tax_rate_tribute_low"
+     09a1 IL_09a1: callvirt System.Void ActorAsset::addKingdomTrait(System.String)
+     09a6 IL_09a6: ldarg.0
+     09a7 IL_09a7: ldfld T AssetLibrary`1<ActorAsset>::t
+     09ac IL_09ac: ldstr "rite_of_living_harvest"
+     09b1 IL_09b1: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     09b6 IL_09b6: ldarg.0
+     09b7 IL_09b7: ldfld T AssetLibrary`1<ActorAsset>::t
+     09bc IL_09bc: ldstr "rite_of_entanglement"
+     09c1 IL_09c1: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     09c6 IL_09c6: ldarg.0
+     09c7 IL_09c7: ldfld T AssetLibrary`1<ActorAsset>::t
+     09cc IL_09cc: ldstr "cast_grass_seeds"
+     09d1 IL_09d1: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     09d6 IL_09d6: ldarg.0
+     09d7 IL_09d7: ldstr "weightless"
+     09dc IL_09dc: call System.Void ActorAssetLibrary::addTrait(System.String)
+     09e1 IL_09e1: ldarg.0
+     09e2 IL_09e2: ldstr "moonchild"
+     09e7 IL_09e7: call System.Void ActorAssetLibrary::addTrait(System.String)
+     09ec IL_09ec: ldarg.0
+     09ed IL_09ed: ldstr "soft_skin"
+     09f2 IL_09f2: call System.Void ActorAssetLibrary::addTrait(System.String)
+     09f7 IL_09f7: ldarg.0
+     09f8 IL_09f8: ldfld T AssetLibrary`1<ActorAsset>::t
+     09fd IL_09fd: ldc.i4.1
+     09fe IL_09fe: stfld System.Boolean ActorAsset::disable_jump_animation
+     0a03 IL_0a03: ldarg.0
+     0a04 IL_0a04: ldfld T AssetLibrary`1<ActorAsset>::t
+     0a09 IL_0a09: ldc.i4.4
+     0a0a IL_0a0a: newarr System.String
+     0a0f IL_0a0f: dup
+     0a10 IL_0a10: ldc.i4.0
+     0a11 IL_0a11: ldstr "bread"
+     0a16 IL_0a16: stelem.ref
+     0a17 IL_0a17: dup
+     0a18 IL_0a18: ldc.i4.1
+     0a19 IL_0a19: ldstr "jam"
+     0a1e IL_0a1e: stelem.ref
+     0a1f IL_0a1f: dup
+     0a20 IL_0a20: ldc.i4.2
+     0a21 IL_0a21: ldstr "sushi"
+     0a26 IL_0a26: stelem.ref
+     0a27 IL_0a27: dup
+     0a28 IL_0a28: ldc.i4.3
+     0a29 IL_0a29: ldstr "cider"
+     0a2e IL_0a2e: stelem.ref
+     0a2f IL_0a2f: stfld System.String[] ActorAsset::production
+     0a34 IL_0a34: ldarg.0
+     0a35 IL_0a35: ldstr "skin_light"
+     0a3a IL_0a3a: ldstr "default_color"
+     0a3f IL_0a3f: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     0a44 IL_0a44: ldarg.0
+     0a45 IL_0a45: ldstr "skin_mixed"
+     0a4a IL_0a4a: ldstr "default_color"
+     0a4f IL_0a4f: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     0a54 IL_0a54: ldarg.0
+     0a55 IL_0a55: ldstr "mid_gray"
+     0a5a IL_0a5a: ldstr "biome_corrupted"
+     0a5f IL_0a5f: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     0a64 IL_0a64: ldarg.0
+     0a65 IL_0a65: ldstr "skin_purple"
+     0a6a IL_0a6a: ldstr "biome_celestial"
+     0a6f IL_0a6f: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     0a74 IL_0a74: ldarg.0
+     0a75 IL_0a75: ldfld T AssetLibrary`1<ActorAsset>::t
+     0a7a IL_0a7a: ldstr "meat"
+     0a7f IL_0a7f: ldc.i4.1
+     0a80 IL_0a80: ldc.i4.1
+     0a81 IL_0a81: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     0a86 IL_0a86: ldarg.0
+     0a87 IL_0a87: ldfld T AssetLibrary`1<ActorAsset>::t
+     0a8c IL_0a8c: ldstr "bones"
+     0a91 IL_0a91: ldc.i4.1
+     0a92 IL_0a92: ldc.i4.0
+     0a93 IL_0a93: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     0a98 IL_0a98: ldarg.0
+     0a99 IL_0a99: ldstr "orc"
+     0a9e IL_0a9e: ldstr "$civ_advanced_unit$"
+     0aa3 IL_0aa3: callvirt T AssetLibrary`1<ActorAsset>::clone(System.String,System.String)
+     0aa8 IL_0aa8: pop
+     0aa9 IL_0aa9: ldarg.0
+     0aaa IL_0aaa: ldfld T AssetLibrary`1<ActorAsset>::t
+     0aaf IL_0aaf: ldc.i4.1
+     0ab0 IL_0ab0: newarr System.String
+     0ab5 IL_0ab5: dup
+     0ab6 IL_0ab6: ldc.i4.0
+     0ab7 IL_0ab7: ldstr "orc_default_set"
+     0abc IL_0abc: stelem.ref
+     0abd IL_0abd: call !!0[] AssetLibrary`1<ActorAsset>::a<System.String>(!!0[])
+     0ac2 IL_0ac2: stfld System.String[] ActorAsset::name_template_sets
+     0ac7 IL_0ac7: ldarg.0
+     0ac8 IL_0ac8: ldfld T AssetLibrary`1<ActorAsset>::t
+     0acd IL_0acd: ldc.i4.5
+     0ace IL_0ace: newarr System.String
+     0ad3 IL_0ad3: dup
+     0ad4 IL_0ad4: ldc.i4.0
+     0ad5 IL_0ad5: ldstr "red"
+     0ada IL_0ada: stelem.ref
+     0adb IL_0adb: dup
+     0adc IL_0adc: ldc.i4.1
+     0add IL_0add: ldstr "orange"
+     0ae2 IL_0ae2: stelem.ref
+     0ae3 IL_0ae3: dup
+     0ae4 IL_0ae4: ldc.i4.2
+     0ae5 IL_0ae5: ldstr "brown"
+     0aea IL_0aea: stelem.ref
+     0aeb IL_0aeb: dup
+     0aec IL_0aec: ldc.i4.3
+     0aed IL_0aed: ldstr "maroon"
+     0af2 IL_0af2: stelem.ref
+     0af3 IL_0af3: dup
+     0af4 IL_0af4: ldc.i4.4
+     0af5 IL_0af5: ldstr "black"
+     0afa IL_0afa: stelem.ref
+     0afb IL_0afb: callvirt System.Void ActorAsset::addPreferredColors(System.String[])
+     0b00 IL_0b00: ldarg.0
+     0b01 IL_0b01: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b06 IL_0b06: ldstr "nomads_orc"
+     0b0b IL_0b0b: stfld System.String ActorAsset::kingdom_id_wild
+     0b10 IL_0b10: ldarg.0
+     0b11 IL_0b11: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b16 IL_0b16: ldstr "orc"
+     0b1b IL_0b1b: stfld System.String ActorAsset::kingdom_id_civilization
+     0b20 IL_0b20: ldarg.0
+     0b21 IL_0b21: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b26 IL_0b26: ldstr "orc"
+     0b2b IL_0b2b: stfld System.String ActorAsset::banner_id
+     0b30 IL_0b30: ldarg.0
+     0b31 IL_0b31: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b36 IL_0b36: ldstr "orc"
+     0b3b IL_0b3b: stfld System.String ActorAsset::architecture_id
+     0b40 IL_0b40: ldarg.0
+     0b41 IL_0b41: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b46 IL_0b46: ldstr "build_order_advanced"
+     0b4b IL_0b4b: stfld System.String ActorAsset::build_order_template_id
+     0b50 IL_0b50: ldarg.0
+     0b51 IL_0b51: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b56 IL_0b56: ldstr "Orcs_Neutral"
+     0b5b IL_0b5b: stfld System.String ActorAsset::music_theme
+     0b60 IL_0b60: ldarg.0
+     0b61 IL_0b61: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b66 IL_0b66: ldc.i4.s 50
+     0b68 IL_0b68: stfld System.Int32 ActorAsset::family_limit
+     0b6d IL_0b6d: ldarg.0
+     0b6e IL_0b6e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b73 IL_0b73: ldstr "Orc"
+     0b78 IL_0b78: stfld System.String ActorAsset::name_locale
+     0b7d IL_0b7d: ldarg.0
+     0b7e IL_0b7e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b83 IL_0b83: ldstr "animalia"
+     0b88 IL_0b88: stfld System.String ActorAsset::name_taxonomic_kingdom
+     0b8d IL_0b8d: ldarg.0
+     0b8e IL_0b8e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b93 IL_0b93: ldstr "chordata"
+     0b98 IL_0b98: stfld System.String ActorAsset::name_taxonomic_phylum
+     0b9d IL_0b9d: ldarg.0
+     0b9e IL_0b9e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0ba3 IL_0ba3: ldstr "mammalia"
+     0ba8 IL_0ba8: stfld System.String ActorAsset::name_taxonomic_class
+     0bad IL_0bad: ldarg.0
+     0bae IL_0bae: ldfld T AssetLibrary`1<ActorAsset>::t
+     0bb3 IL_0bb3: ldstr "primates"
+     0bb8 IL_0bb8: stfld System.String ActorAsset::name_taxonomic_order
+     0bbd IL_0bbd: ldarg.0
+     0bbe IL_0bbe: ldfld T AssetLibrary`1<ActorAsset>::t
+     0bc3 IL_0bc3: ldstr "hominidae"
+     0bc8 IL_0bc8: stfld System.String ActorAsset::name_taxonomic_family
+     0bcd IL_0bcd: ldarg.0
+     0bce IL_0bce: ldfld T AssetLibrary`1<ActorAsset>::t
+     0bd3 IL_0bd3: ldstr "orcus"
+     0bd8 IL_0bd8: stfld System.String ActorAsset::name_taxonomic_genus
+     0bdd IL_0bdd: ldarg.0
+     0bde IL_0bde: ldfld T AssetLibrary`1<ActorAsset>::t
+     0be3 IL_0be3: ldstr "bellicus"
+     0be8 IL_0be8: stfld System.String ActorAsset::name_taxonomic_species
+     0bed IL_0bed: ldarg.0
+     0bee IL_0bee: ldfld T AssetLibrary`1<ActorAsset>::t
+     0bf3 IL_0bf3: ldstr "group_horde"
+     0bf8 IL_0bf8: stfld System.String ActorAsset::collective_term
+     0bfd IL_0bfd: ldarg.0
+     0bfe IL_0bfe: ldfld T AssetLibrary`1<ActorAsset>::t
+     0c03 IL_0c03: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0c08 IL_0c08: ldstr "mass_2"
+     0c0d IL_0c0d: ldc.r4 85
+     0c12 IL_0c12: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0c17 IL_0c17: ldarg.0
+     0c18 IL_0c18: ldfld T AssetLibrary`1<ActorAsset>::t
+     0c1d IL_0c1d: ldstr "iconOrcs"
+     0c22 IL_0c22: stfld System.String ActorAsset::icon
+     0c27 IL_0c27: ldarg.0
+     0c28 IL_0c28: ldfld T AssetLibrary`1<ActorAsset>::t
+     0c2d IL_0c2d: ldstr "#2F5225"
+     0c32 IL_0c32: stfld System.String ActorAsset::color_hex
+     0c37 IL_0c37: ldarg.0
+     0c38 IL_0c38: ldfld T AssetLibrary`1<ActorAsset>::t
+     0c3d IL_0c3d: ldstr "#7C5280"
+     0c42 IL_0c42: stfld System.String ActorAsset::zombie_color_hex
+     0c47 IL_0c47: ldarg.0
+     0c48 IL_0c48: ldfld T AssetLibrary`1<ActorAsset>::t
+     0c4d IL_0c4d: ldc.i4.4
+     0c4e IL_0c4e: stfld System.Int32 ActorAsset::civ_base_cities
+     0c53 IL_0c53: ldarg.0
+     0c54 IL_0c54: ldfld T AssetLibrary`1<ActorAsset>::t
+     0c59 IL_0c59: ldc.i4.s 13
+     0c5b IL_0c5b: newarr System.ValueTuple`2<System.String,System.Single>
+     0c60 IL_0c60: dup
+     0c61 IL_0c61: ldc.i4.0
+     0c62 IL_0c62: ldstr "health"
+     0c67 IL_0c67: ldc.r4 150
+     0c6c IL_0c6c: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0c71 IL_0c71: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0c76 IL_0c76: dup
+     0c77 IL_0c77: ldc.i4.1
+     0c78 IL_0c78: ldstr "bonus_sex_random"
+     0c7d IL_0c7d: ldc.r4 1
+     0c82 IL_0c82: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0c87 IL_0c87: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0c8c IL_0c8c: dup
+     0c8d IL_0c8d: ldc.i4.2
+     0c8e IL_0c8e: ldstr "stamina"
+     0c93 IL_0c93: ldc.r4 130
+     0c98 IL_0c98: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0c9d IL_0c9d: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0ca2 IL_0ca2: dup
+     0ca3 IL_0ca3: ldc.i4.3
+     0ca4 IL_0ca4: ldstr "lifespan"
+     0ca9 IL_0ca9: ldc.r4 50
+     0cae IL_0cae: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0cb3 IL_0cb3: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0cb8 IL_0cb8: dup
+     0cb9 IL_0cb9: ldc.i4.4
+     0cba IL_0cba: ldstr "mutation"
+     0cbf IL_0cbf: ldc.r4 2
+     0cc4 IL_0cc4: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0cc9 IL_0cc9: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0cce IL_0cce: dup
+     0ccf IL_0ccf: ldc.i4.5
+     0cd0 IL_0cd0: ldstr "damage"
+     0cd5 IL_0cd5: ldc.r4 20
+     0cda IL_0cda: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0cdf IL_0cdf: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0ce4 IL_0ce4: dup
+     0ce5 IL_0ce5: ldc.i4.6
+     0ce6 IL_0ce6: ldstr "speed"
+     0ceb IL_0ceb: ldc.r4 14
+     0cf0 IL_0cf0: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0cf5 IL_0cf5: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0cfa IL_0cfa: dup
+     0cfb IL_0cfb: ldc.i4.7
+     0cfc IL_0cfc: ldstr "offspring"
+     0d01 IL_0d01: ldc.r4 10
+     0d06 IL_0d06: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0d0b IL_0d0b: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0d10 IL_0d10: dup
+     0d11 IL_0d11: ldc.i4.8
+     0d12 IL_0d12: ldstr "diplomacy"
+     0d17 IL_0d17: ldc.r4 2
+     0d1c IL_0d1c: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0d21 IL_0d21: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0d26 IL_0d26: dup
+     0d27 IL_0d27: ldc.i4.s 9
+     0d29 IL_0d29: ldstr "warfare"
+     0d2e IL_0d2e: ldc.r4 5
+     0d33 IL_0d33: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0d38 IL_0d38: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0d3d IL_0d3d: dup
+     0d3e IL_0d3e: ldc.i4.s 10
+     0d40 IL_0d40: ldstr "birth_rate"
+     0d45 IL_0d45: ldc.r4 5
+     0d4a IL_0d4a: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0d4f IL_0d4f: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0d54 IL_0d54: dup
+     0d55 IL_0d55: ldc.i4.s 11
+     0d57 IL_0d57: ldstr "stewardship"
+     0d5c IL_0d5c: ldc.r4 3
+     0d61 IL_0d61: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0d66 IL_0d66: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0d6b IL_0d6b: dup
+     0d6c IL_0d6c: ldc.i4.s 12
+     0d6e IL_0d6e: ldstr "intelligence"
+     0d73 IL_0d73: ldc.r4 2
+     0d78 IL_0d78: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0d7d IL_0d7d: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0d82 IL_0d82: callvirt System.Void ActorAsset::addGenome(System.ValueTuple`2<System.String,System.Single>[])
+     0d87 IL_0d87: ldarg.0
+     0d88 IL_0d88: ldstr "regeneration"
+     0d8d IL_0d8d: call System.Void ActorAssetLibrary::addTrait(System.String)
+     0d92 IL_0d92: ldarg.0
+     0d93 IL_0d93: ldstr "savage"
+     0d98 IL_0d98: call System.Void ActorAssetLibrary::addTrait(System.String)
+     0d9d IL_0d9d: ldarg.0
+     0d9e IL_0d9e: ldstr "nightchild"
+     0da3 IL_0da3: call System.Void ActorAssetLibrary::addTrait(System.String)
+     0da8 IL_0da8: ldarg.0
+     0da9 IL_0da9: ldstr "bloodlust"
+     0dae IL_0dae: call System.Void ActorAssetLibrary::addTrait(System.String)
+     0db3 IL_0db3: ldarg.0
+     0db4 IL_0db4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0db9 IL_0db9: ldstr "reproduction_strategy_viviparity"
+     0dbe IL_0dbe: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0dc3 IL_0dc3: ldarg.0
+     0dc4 IL_0dc4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0dc9 IL_0dc9: ldstr "gestation_moderate"
+     0dce IL_0dce: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0dd3 IL_0dd3: ldarg.0
+     0dd4 IL_0dd4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0dd9 IL_0dd9: ldstr "reproduction_sexual"
+     0dde IL_0dde: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0de3 IL_0de3: ldarg.0
+     0de4 IL_0de4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0de9 IL_0de9: ldstr "bad_genes"
+     0dee IL_0dee: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0df3 IL_0df3: ldarg.0
+     0df4 IL_0df4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0df9 IL_0df9: ldstr "advanced_hippocampus"
+     0dfe IL_0dfe: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0e03 IL_0e03: ldarg.0
+     0e04 IL_0e04: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e09 IL_0e09: ldstr "stomach"
+     0e0e IL_0e0e: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0e13 IL_0e13: ldarg.0
+     0e14 IL_0e14: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e19 IL_0e19: ldstr "amygdala"
+     0e1e IL_0e1e: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0e23 IL_0e23: ldarg.0
+     0e24 IL_0e24: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e29 IL_0e29: ldstr "wernicke_area"
+     0e2e IL_0e2e: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0e33 IL_0e33: ldarg.0
+     0e34 IL_0e34: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e39 IL_0e39: ldstr "diet_omnivore"
+     0e3e IL_0e3e: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0e43 IL_0e43: ldarg.0
+     0e44 IL_0e44: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e49 IL_0e49: ldstr "diet_cannibalism"
+     0e4e IL_0e4e: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0e53 IL_0e53: ldarg.0
+     0e54 IL_0e54: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e59 IL_0e59: ldstr "slow_builders"
+     0e5e IL_0e5e: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0e63 IL_0e63: ldarg.0
+     0e64 IL_0e64: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e69 IL_0e69: ldstr "polyphasic_sleep"
+     0e6e IL_0e6e: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0e73 IL_0e73: ldarg.0
+     0e74 IL_0e74: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e79 IL_0e79: ldstr "prolonged_rest"
+     0e7e IL_0e7e: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0e83 IL_0e83: ldarg.0
+     0e84 IL_0e84: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e89 IL_0e89: ldstr "aggressive"
+     0e8e IL_0e8e: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     0e93 IL_0e93: ldarg.0
+     0e94 IL_0e94: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e99 IL_0e99: ldstr "warlocks_vein"
+     0e9e IL_0e9e: callvirt System.Void ActorAsset::addClanTrait(System.String)
+     0ea3 IL_0ea3: ldarg.0
+     0ea4 IL_0ea4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0ea9 IL_0ea9: ldstr "combat_instincts"
+     0eae IL_0eae: callvirt System.Void ActorAsset::addClanTrait(System.String)
+     0eb3 IL_0eb3: ldarg.0
+     0eb4 IL_0eb4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0eb9 IL_0eb9: ldstr "buildings_spread"
+     0ebe IL_0ebe: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0ec3 IL_0ec3: ldarg.0
+     0ec4 IL_0ec4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0ec9 IL_0ec9: ldstr "training_potential"
+     0ece IL_0ece: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0ed3 IL_0ed3: ldarg.0
+     0ed4 IL_0ed4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0ed9 IL_0ed9: ldstr "fast_learners"
+     0ede IL_0ede: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0ee3 IL_0ee3: ldarg.0
+     0ee4 IL_0ee4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0ee9 IL_0ee9: ldstr "happiness_from_war"
+     0eee IL_0eee: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0ef3 IL_0ef3: ldarg.0
+     0ef4 IL_0ef4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0ef9 IL_0ef9: ldstr "dense_dwellings"
+     0efe IL_0efe: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0f03 IL_0f03: ldarg.0
+     0f04 IL_0f04: ldfld T AssetLibrary`1<ActorAsset>::t
+     0f09 IL_0f09: ldstr "tiny_legends"
+     0f0e IL_0f0e: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0f13 IL_0f13: ldarg.0
+     0f14 IL_0f14: ldfld T AssetLibrary`1<ActorAsset>::t
+     0f19 IL_0f19: ldstr "warriors_ascension"
+     0f1e IL_0f1e: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0f23 IL_0f23: ldarg.0
+     0f24 IL_0f24: ldfld T AssetLibrary`1<ActorAsset>::t
+     0f29 IL_0f29: ldstr "shattered_crown"
+     0f2e IL_0f2e: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     0f33 IL_0f33: ldarg.0
+     0f34 IL_0f34: ldfld T AssetLibrary`1<ActorAsset>::t
+     0f39 IL_0f39: ldstr "scribble"
+     0f3e IL_0f3e: callvirt System.Void ActorAsset::addLanguageTrait(System.String)
+     0f43 IL_0f43: ldarg.0
+     0f44 IL_0f44: ldfld T AssetLibrary`1<ActorAsset>::t
+     0f49 IL_0f49: ldstr "raging_paragraphs"
+     0f4e IL_0f4e: callvirt System.Void ActorAsset::addLanguageTrait(System.String)
+     0f53 IL_0f53: ldarg.0
+     0f54 IL_0f54: ldfld T AssetLibrary`1<ActorAsset>::t
+     0f59 IL_0f59: ldstr "confusing_semantics"
+     0f5e IL_0f5e: callvirt System.Void ActorAsset::addLanguageTrait(System.String)
+     0f63 IL_0f63: ldarg.0
+     0f64 IL_0f64: ldfld T AssetLibrary`1<ActorAsset>::t
+     0f69 IL_0f69: ldstr "foolish_glyphs"
+     0f6e IL_0f6e: callvirt System.Void ActorAsset::addLanguageTrait(System.String)
+     0f73 IL_0f73: ldarg.0
+     0f74 IL_0f74: ldfld T AssetLibrary`1<ActorAsset>::t
+     0f79 IL_0f79: ldstr "rite_of_falling_stars"
+     0f7e IL_0f7e: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     0f83 IL_0f83: ldarg.0
+     0f84 IL_0f84: ldfld T AssetLibrary`1<ActorAsset>::t
+     0f89 IL_0f89: ldstr "zeal_of_conquest"
+     0f8e IL_0f8e: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     0f93 IL_0f93: ldarg.0
+     0f94 IL_0f94: ldfld T AssetLibrary`1<ActorAsset>::t
+     0f99 IL_0f99: ldstr "cast_fire"
+     0f9e IL_0f9e: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     0fa3 IL_0fa3: ldarg.0
+     0fa4 IL_0fa4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0fa9 IL_0fa9: ldc.i4.3
+     0faa IL_0faa: newarr System.String
+     0faf IL_0faf: dup
+     0fb0 IL_0fb0: ldc.i4.0
+     0fb1 IL_0fb1: ldstr "bread"
+     0fb6 IL_0fb6: stelem.ref
+     0fb7 IL_0fb7: dup
+     0fb8 IL_0fb8: ldc.i4.1
+     0fb9 IL_0fb9: ldstr "burger"
+     0fbe IL_0fbe: stelem.ref
+     0fbf IL_0fbf: dup
+     0fc0 IL_0fc0: ldc.i4.2
+     0fc1 IL_0fc1: ldstr "tea"
+     0fc6 IL_0fc6: stelem.ref
+     0fc7 IL_0fc7: stfld System.String[] ActorAsset::production
+     0fcc IL_0fcc: ldarg.0
+     0fcd IL_0fcd: ldfld T AssetLibrary`1<ActorAsset>::t
+     0fd2 IL_0fd2: ldc.i4.1
+     0fd3 IL_0fd3: stfld System.Boolean ActorAsset::disable_jump_animation
+     0fd8 IL_0fd8: ldarg.0
+     0fd9 IL_0fd9: ldstr "skin_green"
+     0fde IL_0fde: ldstr "default_color"
+     0fe3 IL_0fe3: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     0fe8 IL_0fe8: ldarg.0
+     0fe9 IL_0fe9: ldstr "skin_pale"
+     0fee IL_0fee: ldstr "biome_permafrost"
+     0ff3 IL_0ff3: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     0ff8 IL_0ff8: ldarg.0
+     0ff9 IL_0ff9: ldstr "mid_gray"
+     0ffe IL_0ffe: ldstr "biome_corrupted"
+     1003 IL_1003: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     1008 IL_1008: ldarg.0
+     1009 IL_1009: ldstr "skin_red"
+     100e IL_100e: ldstr "biome_infernal"
+     1013 IL_1013: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     1018 IL_1018: ldarg.0
+     1019 IL_1019: ldfld T AssetLibrary`1<ActorAsset>::t
+     101e IL_101e: ldstr "meat"
+     1023 IL_1023: ldc.i4.1
+     1024 IL_1024: ldc.i4.1
+     1025 IL_1025: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     102a IL_102a: ldarg.0
+     102b IL_102b: ldfld T AssetLibrary`1<ActorAsset>::t
+     1030 IL_1030: ldstr "bones"
+     1035 IL_1035: ldc.i4.2
+     1036 IL_1036: ldc.i4.0
+     1037 IL_1037: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     103c IL_103c: ldarg.0
+     103d IL_103d: ldstr "dwarf"
+     1042 IL_1042: ldstr "$civ_advanced_unit$"
+     1047 IL_1047: callvirt T AssetLibrary`1<ActorAsset>::clone(System.String,System.String)
+     104c IL_104c: pop
+     104d IL_104d: ldarg.0
+     104e IL_104e: ldfld T AssetLibrary`1<ActorAsset>::t
+     1053 IL_1053: ldc.i4.2
+     1054 IL_1054: newarr System.String
+     1059 IL_1059: dup
+     105a IL_105a: ldc.i4.0
+     105b IL_105b: ldstr "dwarf_default_set"
+     1060 IL_1060: stelem.ref
+     1061 IL_1061: dup
+     1062 IL_1062: ldc.i4.1
+     1063 IL_1063: ldstr "dwarf_nordic_set"
+     1068 IL_1068: stelem.ref
+     1069 IL_1069: call !!0[] AssetLibrary`1<ActorAsset>::a<System.String>(!!0[])
+     106e IL_106e: stfld System.String[] ActorAsset::name_template_sets
+     1073 IL_1073: ldarg.0
+     1074 IL_1074: ldfld T AssetLibrary`1<ActorAsset>::t
+     1079 IL_1079: ldc.i4.3
+     107a IL_107a: newarr System.String
+     107f IL_107f: dup
+     1080 IL_1080: ldc.i4.0
+     1081 IL_1081: ldstr "yellow"
+     1086 IL_1086: stelem.ref
+     1087 IL_1087: dup
+     1088 IL_1088: ldc.i4.1
+     1089 IL_1089: ldstr "orange"
+     108e IL_108e: stelem.ref
+     108f IL_108f: dup
+     1090 IL_1090: ldc.i4.2
+     1091 IL_1091: ldstr "brown"
+     1096 IL_1096: stelem.ref
+     1097 IL_1097: callvirt System.Void ActorAsset::addPreferredColors(System.String[])
+     109c IL_109c: ldarg.0
+     109d IL_109d: ldfld T AssetLibrary`1<ActorAsset>::t
+     10a2 IL_10a2: ldstr "nomads_dwarf"
+     10a7 IL_10a7: stfld System.String ActorAsset::kingdom_id_wild
+     10ac IL_10ac: ldarg.0
+     10ad IL_10ad: ldfld T AssetLibrary`1<ActorAsset>::t
+     10b2 IL_10b2: ldstr "dwarf"
+     10b7 IL_10b7: stfld System.String ActorAsset::kingdom_id_civilization
+     10bc IL_10bc: ldarg.0
+     10bd IL_10bd: ldfld T AssetLibrary`1<ActorAsset>::t
+     10c2 IL_10c2: ldstr "dwarf"
+     10c7 IL_10c7: stfld System.String ActorAsset::banner_id
+     10cc IL_10cc: ldarg.0
+     10cd IL_10cd: ldfld T AssetLibrary`1<ActorAsset>::t
+     10d2 IL_10d2: ldstr "dwarf"
+     10d7 IL_10d7: stfld System.String ActorAsset::architecture_id
+     10dc IL_10dc: ldarg.0
+     10dd IL_10dd: ldfld T AssetLibrary`1<ActorAsset>::t
+     10e2 IL_10e2: ldstr "build_order_advanced"
+     10e7 IL_10e7: stfld System.String ActorAsset::build_order_template_id
+     10ec IL_10ec: ldarg.0
+     10ed IL_10ed: ldfld T AssetLibrary`1<ActorAsset>::t
+     10f2 IL_10f2: ldstr "Dwarves_Neutral"
+     10f7 IL_10f7: stfld System.String ActorAsset::music_theme
+     10fc IL_10fc: ldarg.0
+     10fd IL_10fd: ldfld T AssetLibrary`1<ActorAsset>::t
+     1102 IL_1102: ldstr "Dwarf"
+     1107 IL_1107: stfld System.String ActorAsset::name_locale
+     110c IL_110c: ldarg.0
+     110d IL_110d: ldfld T AssetLibrary`1<ActorAsset>::t
+     1112 IL_1112: ldstr "animalia"
+     1117 IL_1117: stfld System.String ActorAsset::name_taxonomic_kingdom
+     111c IL_111c: ldarg.0
+     111d IL_111d: ldfld T AssetLibrary`1<ActorAsset>::t
+     1122 IL_1122: ldstr "chordata"
+     1127 IL_1127: stfld System.String ActorAsset::name_taxonomic_phylum
+     112c IL_112c: ldarg.0
+     112d IL_112d: ldfld T AssetLibrary`1<ActorAsset>::t
+     1132 IL_1132: ldstr "mammalia"
+     1137 IL_1137: stfld System.String ActorAsset::name_taxonomic_class
+     113c IL_113c: ldarg.0
+     113d IL_113d: ldfld T AssetLibrary`1<ActorAsset>::t
+     1142 IL_1142: ldstr "primates"
+     1147 IL_1147: stfld System.String ActorAsset::name_taxonomic_order
+     114c IL_114c: ldarg.0
+     114d IL_114d: ldfld T AssetLibrary`1<ActorAsset>::t
+     1152 IL_1152: ldstr "hominidae"
+     1157 IL_1157: stfld System.String ActorAsset::name_taxonomic_family
+     115c IL_115c: ldarg.0
+     115d IL_115d: ldfld T AssetLibrary`1<ActorAsset>::t
+     1162 IL_1162: ldstr "dworfus"
+     1167 IL_1167: stfld System.String ActorAsset::name_taxonomic_genus
+     116c IL_116c: ldarg.0
+     116d IL_116d: ldfld T AssetLibrary`1<ActorAsset>::t
+     1172 IL_1172: ldstr "fortis"
+     1177 IL_1177: stfld System.String ActorAsset::name_taxonomic_species
+     117c IL_117c: ldarg.0
+     117d IL_117d: ldfld T AssetLibrary`1<ActorAsset>::t
+     1182 IL_1182: ldstr "group_beard"
+     1187 IL_1187: stfld System.String ActorAsset::collective_term
+     118c IL_118c: ldarg.0
+     118d IL_118d: ldfld T AssetLibrary`1<ActorAsset>::t
+     1192 IL_1192: ldfld BaseStats BaseUnlockableAsset::base_stats
+     1197 IL_1197: ldstr "mass_2"
+     119c IL_119c: ldc.r4 75
+     11a1 IL_11a1: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     11a6 IL_11a6: ldarg.0
+     11a7 IL_11a7: ldfld T AssetLibrary`1<ActorAsset>::t
+     11ac IL_11ac: ldc.i4.s 30
+     11ae IL_11ae: stfld System.Int32 ActorAsset::family_limit
+     11b3 IL_11b3: ldarg.0
+     11b4 IL_11b4: ldfld T AssetLibrary`1<ActorAsset>::t
+     11b9 IL_11b9: ldc.i4.3
+     11ba IL_11ba: stfld System.Int32 ActorAsset::item_making_skill
+     11bf IL_11bf: ldarg.0
+     11c0 IL_11c0: ldfld T AssetLibrary`1<ActorAsset>::t
+     11c5 IL_11c5: ldstr "iconDwarf"
+     11ca IL_11ca: stfld System.String ActorAsset::icon
+     11cf IL_11cf: ldarg.0
+     11d0 IL_11d0: ldfld T AssetLibrary`1<ActorAsset>::t
+     11d5 IL_11d5: ldstr "#828282"
+     11da IL_11da: stfld System.String ActorAsset::color_hex
+     11df IL_11df: ldarg.0
+     11e0 IL_11e0: ldfld T AssetLibrary`1<ActorAsset>::t
+     11e5 IL_11e5: ldstr "#7C5280"
+     11ea IL_11ea: stfld System.String ActorAsset::zombie_color_hex
+     11ef IL_11ef: ldarg.0
+     11f0 IL_11f0: ldfld T AssetLibrary`1<ActorAsset>::t
+     11f5 IL_11f5: ldc.i4.3
+     11f6 IL_11f6: stfld System.Int32 ActorAsset::civ_base_cities
+     11fb IL_11fb: ldarg.0
+     11fc IL_11fc: ldfld T AssetLibrary`1<ActorAsset>::t
+     1201 IL_1201: ldc.i4.s 12
+     1203 IL_1203: newarr System.ValueTuple`2<System.String,System.Single>
+     1208 IL_1208: dup
+     1209 IL_1209: ldc.i4.0
+     120a IL_120a: ldstr "health"
+     120f IL_120f: ldc.r4 150
+     1214 IL_1214: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     1219 IL_1219: stelem.any System.ValueTuple`2<System.String,System.Single>
+     121e IL_121e: dup
+     121f IL_121f: ldc.i4.1
+     1220 IL_1220: ldstr "bonus_sex_random"
+     1225 IL_1225: ldc.r4 1
+     122a IL_122a: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     122f IL_122f: stelem.any System.ValueTuple`2<System.String,System.Single>
+     1234 IL_1234: dup
+     1235 IL_1235: ldc.i4.2
+     1236 IL_1236: ldstr "stamina"
+     123b IL_123b: ldc.r4 40
+     1240 IL_1240: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     1245 IL_1245: stelem.any System.ValueTuple`2<System.String,System.Single>
+     124a IL_124a: dup
+     124b IL_124b: ldc.i4.3
+     124c IL_124c: ldstr "lifespan"
+     1251 IL_1251: ldc.r4 220
+     1256 IL_1256: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     125b IL_125b: stelem.any System.ValueTuple`2<System.String,System.Single>
+     1260 IL_1260: dup
+     1261 IL_1261: ldc.i4.4
+     1262 IL_1262: ldstr "mutation"
+     1267 IL_1267: ldc.r4 2
+     126c IL_126c: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     1271 IL_1271: stelem.any System.ValueTuple`2<System.String,System.Single>
+     1276 IL_1276: dup
+     1277 IL_1277: ldc.i4.5
+     1278 IL_1278: ldstr "damage"
+     127d IL_127d: ldc.r4 18
+     1282 IL_1282: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     1287 IL_1287: stelem.any System.ValueTuple`2<System.String,System.Single>
+     128c IL_128c: dup
+     128d IL_128d: ldc.i4.6
+     128e IL_128e: ldstr "speed"
+     1293 IL_1293: ldc.r4 12
+     1298 IL_1298: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     129d IL_129d: stelem.any System.ValueTuple`2<System.String,System.Single>
+     12a2 IL_12a2: dup
+     12a3 IL_12a3: ldc.i4.7
+     12a4 IL_12a4: ldstr "offspring"
+     12a9 IL_12a9: ldc.r4 3
+     12ae IL_12ae: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     12b3 IL_12b3: stelem.any System.ValueTuple`2<System.String,System.Single>
+     12b8 IL_12b8: dup
+     12b9 IL_12b9: ldc.i4.8
+     12ba IL_12ba: ldstr "diplomacy"
+     12bf IL_12bf: ldc.r4 2
+     12c4 IL_12c4: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     12c9 IL_12c9: stelem.any System.ValueTuple`2<System.String,System.Single>
+     12ce IL_12ce: dup
+     12cf IL_12cf: ldc.i4.s 9
+     12d1 IL_12d1: ldstr "warfare"
+     12d6 IL_12d6: ldc.r4 3
+     12db IL_12db: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     12e0 IL_12e0: stelem.any System.ValueTuple`2<System.String,System.Single>
+     12e5 IL_12e5: dup
+     12e6 IL_12e6: ldc.i4.s 10
+     12e8 IL_12e8: ldstr "stewardship"
+     12ed IL_12ed: ldc.r4 5
+     12f2 IL_12f2: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     12f7 IL_12f7: stelem.any System.ValueTuple`2<System.String,System.Single>
+     12fc IL_12fc: dup
+     12fd IL_12fd: ldc.i4.s 11
+     12ff IL_12ff: ldstr "intelligence"
+     1304 IL_1304: ldc.r4 2
+     1309 IL_1309: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     130e IL_130e: stelem.any System.ValueTuple`2<System.String,System.Single>
+     1313 IL_1313: callvirt System.Void ActorAsset::addGenome(System.ValueTuple`2<System.String,System.Single>[])
+     1318 IL_1318: ldarg.0
+     1319 IL_1319: ldstr "miner"
+     131e IL_131e: call System.Void ActorAssetLibrary::addTrait(System.String)
+     1323 IL_1323: ldarg.0
+     1324 IL_1324: ldstr "deflect_projectile"
+     1329 IL_1329: call System.Void ActorAssetLibrary::addTrait(System.String)
+     132e IL_132e: ldarg.0
+     132f IL_132f: ldstr "block"
+     1334 IL_1334: call System.Void ActorAssetLibrary::addTrait(System.String)
+     1339 IL_1339: ldarg.0
+     133a IL_133a: ldstr "fat"
+     133f IL_133f: call System.Void ActorAssetLibrary::addTrait(System.String)
+     1344 IL_1344: ldarg.0
+     1345 IL_1345: ldfld T AssetLibrary`1<ActorAsset>::t
+     134a IL_134a: ldstr "reproduction_strategy_viviparity"
+     134f IL_134f: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     1354 IL_1354: ldarg.0
+     1355 IL_1355: ldfld T AssetLibrary`1<ActorAsset>::t
+     135a IL_135a: ldstr "gestation_long"
+     135f IL_135f: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     1364 IL_1364: ldarg.0
+     1365 IL_1365: ldfld T AssetLibrary`1<ActorAsset>::t
+     136a IL_136a: ldstr "reproduction_sexual"
+     136f IL_136f: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     1374 IL_1374: ldarg.0
+     1375 IL_1375: ldfld T AssetLibrary`1<ActorAsset>::t
+     137a IL_137a: ldstr "advanced_hippocampus"
+     137f IL_137f: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     1384 IL_1384: ldarg.0
+     1385 IL_1385: ldfld T AssetLibrary`1<ActorAsset>::t
+     138a IL_138a: ldstr "stomach"
+     138f IL_138f: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     1394 IL_1394: ldarg.0
+     1395 IL_1395: ldfld T AssetLibrary`1<ActorAsset>::t
+     139a IL_139a: ldstr "amygdala"
+     139f IL_139f: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     13a4 IL_13a4: ldarg.0
+     13a5 IL_13a5: ldfld T AssetLibrary`1<ActorAsset>::t
+     13aa IL_13aa: ldstr "wernicke_area"
+     13af IL_13af: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     13b4 IL_13b4: ldarg.0
+     13b5 IL_13b5: ldfld T AssetLibrary`1<ActorAsset>::t
+     13ba IL_13ba: ldstr "diet_omnivore"
+     13bf IL_13bf: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     13c4 IL_13c4: ldarg.0
+     13c5 IL_13c5: ldfld T AssetLibrary`1<ActorAsset>::t
+     13ca IL_13ca: ldstr "fast_builders"
+     13cf IL_13cf: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     13d4 IL_13d4: ldarg.0
+     13d5 IL_13d5: ldfld T AssetLibrary`1<ActorAsset>::t
+     13da IL_13da: ldstr "monophasic_sleep"
+     13df IL_13df: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     13e4 IL_13e4: ldarg.0
+     13e5 IL_13e5: ldfld T AssetLibrary`1<ActorAsset>::t
+     13ea IL_13ea: ldstr "roads"
+     13ef IL_13ef: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     13f4 IL_13f4: ldarg.0
+     13f5 IL_13f5: ldfld T AssetLibrary`1<ActorAsset>::t
+     13fa IL_13fa: ldstr "city_layout_the_grand_arrangement"
+     13ff IL_13ff: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     1404 IL_1404: ldarg.0
+     1405 IL_1405: ldfld T AssetLibrary`1<ActorAsset>::t
+     140a IL_140a: ldstr "hammer_lovers"
+     140f IL_140f: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     1414 IL_1414: ldarg.0
+     1415 IL_1415: ldfld T AssetLibrary`1<ActorAsset>::t
+     141a IL_141a: ldstr "tower_lovers"
+     141f IL_141f: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     1424 IL_1424: ldarg.0
+     1425 IL_1425: ldfld T AssetLibrary`1<ActorAsset>::t
+     142a IL_142a: ldstr "conscription_male_only"
+     142f IL_142f: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     1434 IL_1434: ldarg.0
+     1435 IL_1435: ldfld T AssetLibrary`1<ActorAsset>::t
+     143a IL_143a: ldstr "elder_reverence"
+     143f IL_143f: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     1444 IL_1444: ldarg.0
+     1445 IL_1445: ldfld T AssetLibrary`1<ActorAsset>::t
+     144a IL_144a: ldstr "gossip_lovers"
+     144f IL_144f: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     1454 IL_1454: ldarg.0
+     1455 IL_1455: ldfld T AssetLibrary`1<ActorAsset>::t
+     145a IL_145a: ldstr "weaponsmith_mastery"
+     145f IL_145f: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     1464 IL_1464: ldarg.0
+     1465 IL_1465: ldfld T AssetLibrary`1<ActorAsset>::t
+     146a IL_146a: ldstr "armorsmith_mastery"
+     146f IL_146f: callvirt System.Void ActorAsset::addCultureTrait(System.String)
+     1474 IL_1474: ldarg.0
+     1475 IL_1475: ldfld T AssetLibrary`1<ActorAsset>::t
+     147a IL_147a: ldstr "powerful_words"
+     147f IL_147f: callvirt System.Void ActorAsset::addLanguageTrait(System.String)
+     1484 IL_1484: ldarg.0
+     1485 IL_1485: ldfld T AssetLibrary`1<ActorAsset>::t
+     148a IL_148a: ldstr "ancient_runes"
+     148f IL_148f: callvirt System.Void ActorAsset::addLanguageTrait(System.String)
+     1494 IL_1494: ldarg.0
+     1495 IL_1495: ldfld T AssetLibrary`1<ActorAsset>::t
+     149a IL_149a: ldstr "divine_dozen"
+     149f IL_149f: callvirt System.Void ActorAsset::addClanTrait(System.String)
+     14a4 IL_14a4: ldarg.0
+     14a5 IL_14a5: ldfld T AssetLibrary`1<ActorAsset>::t
+     14aa IL_14aa: ldstr "iron_will"
+     14af IL_14af: callvirt System.Void ActorAsset::addClanTrait(System.String)
+     14b4 IL_14b4: ldarg.0
+     14b5 IL_14b5: ldfld T AssetLibrary`1<ActorAsset>::t
+     14ba IL_14ba: ldstr "rite_of_unbroken_shield"
+     14bf IL_14bf: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     14c4 IL_14c4: ldarg.0
+     14c5 IL_14c5: ldfld T AssetLibrary`1<ActorAsset>::t
+     14ca IL_14ca: ldstr "rite_of_shattered_earth"
+     14cf IL_14cf: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     14d4 IL_14d4: ldarg.0
+     14d5 IL_14d5: ldfld T AssetLibrary`1<ActorAsset>::t
+     14da IL_14da: ldc.i4.2
+     14db IL_14db: newarr System.String
+     14e0 IL_14e0: dup
+     14e1 IL_14e1: ldc.i4.0
+     14e2 IL_14e2: ldstr "bread"
+     14e7 IL_14e7: stelem.ref
+     14e8 IL_14e8: dup
+     14e9 IL_14e9: ldc.i4.1
+     14ea IL_14ea: ldstr "ale"
+     14ef IL_14ef: stelem.ref
+     14f0 IL_14f0: stfld System.String[] ActorAsset::production
+     14f5 IL_14f5: ldarg.0
+     14f6 IL_14f6: ldfld T AssetLibrary`1<ActorAsset>::t
+     14fb IL_14fb: ldc.i4.1
+     14fc IL_14fc: stfld System.Boolean ActorAsset::disable_jump_animation
+     1501 IL_1501: ldarg.0
+     1502 IL_1502: ldstr "skin_light"
+     1507 IL_1507: ldstr "default_color"
+     150c IL_150c: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     1511 IL_1511: ldarg.0
+     1512 IL_1512: ldstr "skin_medium"
+     1517 IL_1517: ldstr "default_color"
+     151c IL_151c: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     1521 IL_1521: ldarg.0
+     1522 IL_1522: ldstr "mid_gray"
+     1527 IL_1527: ldstr "default_color"
+     152c IL_152c: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     1531 IL_1531: ldarg.0
+     1532 IL_1532: ldfld T AssetLibrary`1<ActorAsset>::t
+     1537 IL_1537: ldstr "meat"
+     153c IL_153c: ldc.i4.2
+     153d IL_153d: ldc.i4.1
+     153e IL_153e: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     1543 IL_1543: ldarg.0
+     1544 IL_1544: ldfld T AssetLibrary`1<ActorAsset>::t
+     1549 IL_1549: ldstr "bones"
+     154e IL_154e: ldc.i4.1
+     154f IL_154f: ldc.i4.0
+     1550 IL_1550: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     1555 IL_1555: ldarg.0
+     1556 IL_1556: ldfld T AssetLibrary`1<ActorAsset>::t
+     155b IL_155b: ldstr "stone"
+     1560 IL_1560: ldc.i4.1
+     1561 IL_1561: ldc.i4.0
+     1562 IL_1562: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     1567 IL_1567: ret
+
+######## TYPE ActorAssetLibrary/<>c : System.Object

@@ -1,0 +1,9 @@
+{
+  "trait_group_giants_group": "Giants",
+  "trait_giant_villager": "Giant",
+  "trait_giant_villager_info": "Huge and fast.",
+  "giant_villager_power": "Turn Into Giants",
+  "giant_villager_power_description": "Turns every unit on the clicked tile into a huge, fast giant.",
+  "giants_tab": "Giants",
+  "giants_tab_description": "Powers from GiantVillagers."
+}

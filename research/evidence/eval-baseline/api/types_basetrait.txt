@@ -1,0 +1,85 @@
+﻿=== TYPE BaseTrait`1 : BaseAugmentationAsset
+    FIELD System.Single value
+    FIELD WorldAction action_death
+    FIELD WorldAction action_growth
+    FIELD WorldAction action_birth
+    FIELD GetHitAction action_get_hit
+    FIELD System.Boolean spawn_random_trait_allowed
+    FIELD System.Int32 spawn_random_rate
+    FIELD System.Boolean special_icon_logic
+    FIELD BaseStats base_stats_meta
+    FIELD System.Collections.Generic.List`1<System.String> opposite_list
+    FIELD System.Collections.Generic.HashSet`1<TTrait> opposite_traits
+    FIELD System.String[] traits_to_remove_ids
+    FIELD TTrait[] traits_to_remove
+    FIELD System.String special_locale_description
+    FIELD System.String special_locale_description_2
+    FIELD System.Boolean has_localized_id
+    FIELD System.Boolean has_description_1
+    FIELD System.Boolean has_description_2
+    FIELD Rarity rarity
+    FIELD System.Boolean can_be_in_book
+    FIELD System.String plot_id
+    FIELD System.Collections.Generic.List`1<ActorAsset> default_for_actor_assets
+    PROP System.String typed_id { get;  }
+    PROP PlotAsset plot_asset { get;  }
+    METHOD System.String get_typed_id()
+    METHOD System.Boolean hasPlotAsset()
+    METHOD PlotAsset get_plot_asset()
+    METHOD System.String getId()
+    METHOD WorldAction getSpecialEffect()
+    METHOD System.Single getSpecialEffectInterval()
+    METHOD System.Void addOpposite(System.String pID)
+    METHOD System.Void addOpposites(System.Collections.Generic.IEnumerable`1<System.String> pListIDS)
+    METHOD System.Void removeOpposite(System.String pID)
+    METHOD System.String getLocaleID()
+    METHOD System.String getDescriptionID()
+    METHOD System.String getDescriptionID2()
+    METHOD System.String getTranslatedName()
+    METHOD System.String getTranslatedDescription()
+    METHOD System.String getTranslatedDescription2()
+    METHOD System.Boolean isDebugUnlockedAll()
+    METHOD System.Collections.Generic.IEnumerable`1<ITraitsOwner`1<TTrait>> getRelatedMetaList()
+    METHOD ListPool`1<ITraitsOwner`1<TTrait>> getOwnersList()
+    METHOD System.ValueTuple`3<System.Int32,System.Int32,System.Int32> countTraitOwnersByCategories()
+    METHOD System.String getCountRows()
+    METHOD System.String getColoredNumber(System.String pText)
+    METHOD System.String getCountRowsByCategories()
+    METHOD System.Boolean isSapient(ITraitsOwner`1<TTrait> pObject)
+    METHOD System.Boolean ShouldSerializebase_stats_meta()
+    METHOD System.Void setTraitInfoToGrinMark()
+    METHOD System.Void .ctor()
+
+=== TYPE BaseTraitGroupAsset : BaseCategoryAsset
+    METHOD System.Void .ctor()
+
+=== TYPE BaseTraitLibrary`1 : BaseLibraryWithUnlockables`1<T>
+    FIELD System.Collections.Generic.List`1<T> _pot_allowed_to_be_given_randomly
+    PROP System.String icon_path { get;  }
+    METHOD System.Void post_init()
+    METHOD System.Void autoSetRarity()
+    METHOD System.Void linkAssets()
+    METHOD System.Void linkCombatActions()
+    METHOD System.Void linkSpells()
+    METHOD System.Void linkDecisions()
+    METHOD System.Void linkActorAssets()
+    METHOD System.Void editorDiagnostic()
+    METHOD System.Void editorDiagnosticLocales()
+    METHOD System.Void checkOppositeErrors()
+    METHOD System.Void fillOppositeHashsetsWithAssets()
+    METHOD System.Void checkIcons()
+    METHOD T add(T pAsset)
+    METHOD System.String addToGameplayReportShort(System.String pWhatFor)
+    METHOD System.String addToGameplayReport(System.String pWhatFor)
+    METHOD T getRandomSpawnTrait()
+    METHOD System.String get_icon_path()
+    METHOD System.Collections.Generic.List`1<System.String> getDefaultTraitsForMeta(ActorAsset pAsset)
+    METHOD System.Void .ctor()
+
+=== TYPE BaseTraitLibrary`1/<>c : System.Object
+    FIELD BaseTraitLibrary`1/<>c<T> <>9 [static]
+    FIELD System.Comparison`1<T> <>9__1_0 [static]
+    METHOD System.Void .cctor() [static]
+    METHOD System.Void .ctor()
+    METHOD System.Int32 <post_init>b__1_0(T pT1, T pT2)
+

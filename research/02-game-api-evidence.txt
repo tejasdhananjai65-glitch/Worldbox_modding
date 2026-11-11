@@ -1,0 +1,209 @@
+# 2. `<repo-root>\02-game-api-evidence.txt`
+
+```
+================================================================================
+WorldBox game API — raw extraction evidence
+Generated: 2026-10-23 (read-only investigation; no file in the WorldBox install
+was modified — verification commands were read-only.)
+================================================================================
+
+--------------------------------------------------------------------------------
+0. SOURCES (all READ-ONLY)
+--------------------------------------------------------------------------------
+GAME:
+  C:\Program Files (x86)\Steam\steamapps\common\WorldBox\
+    worldbox_Data\Managed\Assembly-CSharp.dll              (4,535,296 bytes)
+    worldbox_Data\Managed\UnityEngine*.dll
+    worldbox_Data\StreamingAssets\mods\NeoModLoader.dll     (22,558,208 bytes)
+    worldbox_Data\StreamingAssets\mods\NML\Assembly-CSharp-Publicized.dll
+    worldbox_Data\StreamingAssets\mods\NML\Assemblies\Mono.Cecil.dll
+    worldbox_Data\StreamingAssets\mods\NML\mod_compile_records.json
+    worldbox_Data\StreamingAssets\mods\NML\tab_order_records.json
+    worldbox_Data\StreamingAssets\mods\ElementalPowersMod\   (native mod, source)
+    worldbox_Data\StreamingAssets\mods\test_asset_load\powers\smile\iconSmilePlanet.png
+INSTALLED MODS (19 dirs, 1027 .cs files):
+  C:\Program Files (x86)\Steam\steamapps\common\WorldBox\Mods\
+    AGRICHE_GODZILLA
+    AHOYOS__KEYMASTERER__IFAILEDLIFE__DON_NIKON_POWERBOX
+    AVOIDINGBOREDOM_AVB_S_AESTHETIC_ADJUSTMENTS
+    AVOIDINGBOREDOM_AVB_S_EXPANDED_ARMORY
+    AVOIDINGBOREDOM_AVB_S_ULTRA_TRAIT_PACK
+    CORE4777_COREBOX
+    INVASION_SUMMONER
+    KIVEN_CHEN_CLANSUCCESSION
+    RAYTRACERX_SHINOBIBOX
+    SCPBOX_MOD
+    TAYFIM_ABYSSFALL
+    traitbox                     <- EMPTY (only GameResources\ui\Icons\desktop.ini)
+    TRIICKSTR_DEMON_SLAYER_MOD
+    TRIICKSTR_PLENTY_O_BIOMES
+    TRIICKSTR_SELECTIVE_BREEDING
+    TURBO_SAKUGA
+    _VILTRUM_EMPIRE
+
+--------------------------------------------------------------------------------
+1. METHOD NOTE — WHY REFLECTION FAILED
+--------------------------------------------------------------------------------
+  $a=[System.Reflection.Assembly]::LoadFrom("...\Assembly-CSharp.dll")
+  $a.GetTypes()            -> PARTIAL: 0 loader errors
+  TYPES: 0                 <- reflection yields nothing (Mono/PS5.1 assembly)
+
+  ASCII string scan of the raw DLL (4,535,296 bytes -> 4,535,296 chars):
+    ActorTraitLibrary => 3      ActorStats => 1      PowerLibrary => 3
+    AssetManager     => 3      ActorSpecies => 0    PlayerConfig => 6
+    SpriteAtlas      => 0      Texture2D    => 4    OnModLoad => 0
+  -> low counts do NOT mean the types are absent; .NET metadata strings are not
+     plainly visible via ASCII scan. Resolution: use Mono.Cecil.
+
+  WORKING METHOD (repeatable):
+    Add-Type -Path "C:\Program Files (x86)\Steam\steamapps\common\WorldBox\worldbox_Data\StreamingAssets\mods\NML\Assemblies\Mono.Cecil.dll"
+    $asm=[Mono.Cecil.AssemblyDefinition]::ReadAssembly("<path>.dll")
+    $asm.MainModule.Types | % { $_.FullName }
+
+  RESULT (authoritative, Assembly-CSharp.dll):
+    ORIGINAL TYPES: 2444
+    has ActorTrait:        True
+    has ActorTraitLibrary: True
+    has ActorSpecies:      False
+    has AssetManager:      True
+    has PlayerConfig:      True
+  Publicized reference assembly: TYPES: 2444  (identical type-name set)
+
+--------------------------------------------------------------------------------
+2. TYPE-NAME EXISTENCE CHECK (2444 types scanned)
+--------------------------------------------------------------------------------
+  ActorStats               => MISSING
+  ActorStatsLibrary        => MISSING
+  ActorSpecies             => MISSING
+  ActorDataLibrary         => MISSING
+  RaceLibrary              => MISSING
+  Race                     => MISSING
+  DataAction               => MISSING
+  SpeciesData              => MISSING
+  AddActorMenu             => MISSING
+  WorldPanel               => MISSING
+  StatsWindow              => EXISTS
+  ActorTraitLibrary        => EXISTS
+  TraitType                => EXISTS
+  WorldAction              => EXISTS
+  BuildingLibrary          => EXISTS
+  TileLibrary              => EXISTS
+  ItemLibrary              => EXISTS
+  EffectsLibrary           => EXISTS
+  KingdomLibrary           => EXISTS
+  SubspeciesTrait          => EXISTS
+  KingdomTrait             => EXISTS
+  SubspeciesTraitLibrary   => EXISTS
+  KingdomTraitLibrary      => EXISTS
+  PlayerConfig             => EXISTS
+  AssetManager             => EXISTS
+  LocalizedTextManager     => EXISTS
+  PowerLibrary             => EXISTS
+  StatusLibrary            => EXISTS
+  Actual substitutes: BaseStats, BaseStatsLibrary, ActorAsset, SubspeciesData,
+                       ActorData (save-only), Subspecies, KingdomAsset.
+
+--------------------------------------------------------------------------------
+3. CORE CLASS MEMBER DUMPS (Mono.Cecil)
+--------------------------------------------------------------------------------
+### Asset [base=Object]
+  F String DEFAULT_ASSET_ID
+  F String id
+  F Int32 _hashcode
+  F Int32 _index
+  M Void create()
+  M Void setHash(Int32 pHash)
+  M Void setIndexID(Int32 pValue)
+  M Int32 getIndexID()
+  M Boolean Equals(Asset pAsset)
+  M Int32 GetHashCode()
+  M Boolean isTemplateAsset()
+
+### BaseUnlockableAsset [base=Asset]
+  F String path_icon
+  F Boolean show_for_unlockables_ui
+  F BaseStats base_stats
+  F Boolean unlocked_with_achievement
+  F Boolean needs_to_be_explored
+  F String achievement_id
+  F Boolean show_in_knowledge_window
+  F Sprite cached_sprite
+  F Boolean has_locales
+  P GameProgressData _progress_data
+  P HashSet`1 progress_elements
+  M GameProgressData get__progress_data()
+  M HashSet`1 get_progress_elements()
+  M Void setUnlockedWithAchievement(String pAchievementID)
+  M Boolean unlock(Boolean pSaveData)
+  M Boolean isUnlocked()
+  M Boolean isAvailable()
+  M Boolean isUnlockedByPlayer()
+  M Boolean isDebugUnlockedAll()
+  M Boolean isCheatEnabled()
+  M String getLocaleID()
+  M String getAchievementLocaleID()
+  M Achievement getAchievement()
+  M Sprite getSprite()
+
+### BaseAugmentationAsset [base=BaseUnlockableAsset]
+  F Boolean can_be_given
+  F Boolean can_be_removed
+  F Boolean show_in_meta_editor
+  F WorldActionTrait action_on_object_remove
+  F WorldAction action_special_effect
+  F WorldActionTrait action_on_augmentation_add
+  F WorldActionTrait action_on_augmentation_remove
+  F WorldActionTrait action_on_augmentation_load
+  F Single special_effect_interval
+  F AttackAction action_attack_target
+  F String group_id
+  F Int32 priority
+  F String special_locale_id
+  F CombatActionHolder combat_actions
+  F List`1 spells
+  F List`1 combat_actions_ids
+  F DecisionAsset[] decisions_assets
+  F List`1 decision_ids
+
+### BaseTrait`1 [base=BaseAugmentationAsset]
+  F Single value
+  F WorldAction action_death
+  F WorldAction action_growth
+  F WorldAction action_birth
+  F GetHitAction action_get_hit
+  F Boolean spawn_random_trait_allowed
+  F Int32 spawn_random_rate
+  F Boolean special_icon_logic
+  F BaseStats base_stats_meta
+  F List`1 opposite_list
+  F HashSet`1 opposite_traits
+  F String[] traits_to_remove_ids
+  F TTrait[] traits_to_remove
+  F String special_locale_description
+  F String special_locale_description_2
+  F Boolean has_localized_id
+  F Boolean has_description_1
+  F Boolean has_description_2
+  F Rarity rarity
+  F Boolean can_be_in_book
+  F String plot_id
+  F List`1 default_for_actor_assets
+  P String typed_id
+  P PlotAsset plot_asset
+  M String get_typed_id()
+  M Boolean hasPlotAsset()
+  M PlotAsset get_plot_asset()
+  M String getId()
+  M WorldAction getSpecialEffect()
+  M Single getSpecialEffectInterval()
+  M Void addOpposite(String pID)
+  M Void addOpposites(IEnumerable`1 pListIDS)
+  M Void removeOpposite(String pID)
+  M String getLocaleID()
+  M String getDescriptionID()
+  M String getDescriptionID2()
+  M String getTranslatedName()
+  M String getTranslatedDescription()
+  M String getTranslatedDescription2()
+  M 
+</task_output>

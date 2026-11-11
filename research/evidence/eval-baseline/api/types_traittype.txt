@@ -1,0 +1,6 @@
+﻿=== TYPE TraitType : System.Enum
+    FIELD System.Int32 value__
+    FIELD TraitType Positive [static]
+    FIELD TraitType Negative [static]
+    FIELD TraitType Other [static]
+

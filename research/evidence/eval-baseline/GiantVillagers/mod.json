@@ -1,0 +1,10 @@
+{
+  "name": "GiantVillagers",
+  "GUID": "com.eval.giantvillagers",
+  "author": "eval-baseline",
+  "version": "1.0.0",
+  "description": "Adds a god power that turns the units on the clicked tile into huge, fast giants.",
+  "iconPath": "icon.png",
+  "targetGameBuild": 0,
+  "UsePublicizedAssembly": true
+}

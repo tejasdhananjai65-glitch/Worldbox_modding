@@ -1,0 +1,16 @@
+﻿ActionLibrary::singularityTeleportation  =>  scale
+ActionLibrary::teleportEffect  =>  scale
+Actor::create  =>  scale
+Actor::doCastAnimation  =>  scale
+Actor::updateStats  =>  scale
+ActorAssetLibrary::initBoats  =>  scale
+ActorAssetLibrary::initSpecial  =>  scale
+ActorAssetLibrary::initTemplates  =>  scale
+ActorTraitLibrary::addTraitsBody  =>  scale
+ai.behaviours.BehBoatFishing::spawnFishnet  =>  scale
+BaseStatsLibrary::init  =>  scale
+Boat::spawnBoatExplosion  =>  scale
+ClanTraitLibrary::init  =>  scale
+GeneLibrary::addBonusStats  =>  scale
+StatusLibrary::init  =>  scale
+---- 28 string literal(s) matched

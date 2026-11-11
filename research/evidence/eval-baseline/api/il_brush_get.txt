@@ -1,0 +1,85 @@
+﻿######## TYPE Brush : System.Object
+---- System.String getRandom()
+     0000 IL_0000: ldsfld BrushLibrary AssetManager::brush_library
+     0005 IL_0005: ldfld System.Collections.Generic.List`1<T> AssetLibrary`1<BrushData>::list
+     000a IL_000a: call T ListExtensions::GetRandom<BrushData>(System.Collections.Generic.List`1<T>)
+     000f IL_000f: ldfld System.String Asset::id
+     0014 IL_0014: ret
+
+---- System.String getRandom(System.Int32 pMinSize, System.Int32 pMaxSize, System.Predicate`1<BrushData> pMatch)
+     0000 IL_0000: ldsfld BrushLibrary AssetManager::brush_library
+     0005 IL_0005: ldfld System.Collections.Generic.List`1<T> AssetLibrary`1<BrushData>::list
+     000a IL_000a: call System.Collections.Generic.IEnumerable`1<T> Randy::LoopRandom<BrushData>(System.Collections.Generic.List`1<T>)
+     000f IL_000f: callvirt System.Collections.Generic.IEnumerator`1<!0> System.Collections.Generic.IEnumerable`1<BrushData>::GetEnumerator()
+     0014 IL_0014: stloc.0
+     0015 IL_0015: br.s IL_0045
+     0017 IL_0017: ldloc.0
+     0018 IL_0018: callvirt !0 System.Collections.Generic.IEnumerator`1<BrushData>::get_Current()
+     001d IL_001d: stloc.1
+     001e IL_001e: ldarg.2
+     001f IL_001f: brfalse.s IL_002a
+     0021 IL_0021: ldarg.2
+     0022 IL_0022: ldloc.1
+     0023 IL_0023: callvirt System.Boolean System.Predicate`1<BrushData>::Invoke(!0)
+     0028 IL_0028: brfalse.s IL_0045
+     002a IL_002a: ldloc.1
+     002b IL_002b: ldfld System.Int32 BrushData::sqr_size
+     0030 IL_0030: ldarg.0
+     0031 IL_0031: blt.s IL_0045
+     0033 IL_0033: ldloc.1
+     0034 IL_0034: ldfld System.Int32 BrushData::sqr_size
+     0039 IL_0039: ldarg.1
+     003a IL_003a: bgt.s IL_0045
+     003c IL_003c: ldloc.1
+     003d IL_003d: ldfld System.String Asset::id
+     0042 IL_0042: stloc.2
+     0043 IL_0043: leave.s IL_005f
+     0045 IL_0045: ldloc.0
+     0046 IL_0046: callvirt System.Boolean System.Collections.IEnumerator::MoveNext()
+     004b IL_004b: brtrue.s IL_0017
+     004d IL_004d: leave.s IL_0059
+     004f IL_004f: ldloc.0
+     0050 IL_0050: brfalse.s IL_0058
+     0052 IL_0052: ldloc.0
+     0053 IL_0053: callvirt System.Void System.IDisposable::Dispose()
+     0058 IL_0058: endfinally
+     0059 IL_0059: ldstr "circ_1"
+     005e IL_005e: ret
+     005f IL_005f: ldloc.2
+     0060 IL_0060: ret
+
+---- BrushData get(System.Int32 pSize, System.String pID)
+     0000 IL_0000: ldarg.1
+     0001 IL_0001: ldarga.s pSize
+     0003 IL_0003: call System.String System.Int32::ToString()
+     0008 IL_0008: call System.String System.String::Concat(System.String,System.String)
+     000d IL_000d: stloc.0
+     000e IL_000e: ldsfld BrushLibrary AssetManager::brush_library
+     0013 IL_0013: ldloc.0
+     0014 IL_0014: callvirt T AssetLibrary`1<BrushData>::get(System.String)
+     0019 IL_0019: stloc.1
+     001a IL_001a: ldloc.1
+     001b IL_001b: brfalse.s IL_001f
+     001d IL_001d: ldloc.1
+     001e IL_001e: ret
+     001f IL_001f: ldsfld BrushLibrary AssetManager::brush_library
+     0024 IL_0024: ldloc.0
+     0025 IL_0025: ldarg.1
+     0026 IL_0026: ldstr "1"
+     002b IL_002b: call System.String System.String::Concat(System.String,System.String)
+     0030 IL_0030: callvirt T AssetLibrary`1<BrushData>::clone(System.String,System.String)
+     0035 IL_0035: stloc.1
+     0036 IL_0036: ldloc.1
+     0037 IL_0037: ldarg.0
+     0038 IL_0038: stfld System.Int32 BrushData::size
+     003d IL_003d: ldsfld BrushLibrary AssetManager::brush_library
+     0042 IL_0042: callvirt System.Void BaseAssetLibrary::post_init()
+     0047 IL_0047: ldloc.1
+     0048 IL_0048: ret
+
+---- BrushData get(System.String pID)
+     0000 IL_0000: ldsfld BrushLibrary AssetManager::brush_library
+     0005 IL_0005: ldarg.0
+     0006 IL_0006: callvirt T AssetLibrary`1<BrushData>::get(System.String)
+     000b IL_000b: ret
+

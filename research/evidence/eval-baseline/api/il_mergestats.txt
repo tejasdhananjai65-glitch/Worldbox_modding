@@ -1,0 +1,52 @@
+﻿######## TYPE BaseStats : System.Object
+---- System.Void mergeStats(BaseStats pStats, System.Single pMultiplier)
+     0000 IL_0000: ldc.i4.0
+     0001 IL_0001: stloc.0
+     0002 IL_0002: br.s IL_0033
+     0004 IL_0004: ldarg.1
+     0005 IL_0005: ldfld System.Collections.Generic.List`1<BaseStatsContainer> BaseStats::_stats_list
+     000a IL_000a: ldloc.0
+     000b IL_000b: callvirt !0 System.Collections.Generic.List`1<BaseStatsContainer>::get_Item(System.Int32)
+     0010 IL_0010: stloc.1
+     0011 IL_0011: ldloc.1
+     0012 IL_0012: ldfld System.String BaseStatsContainer::id
+     0017 IL_0017: stloc.2
+     0018 IL_0018: ldarg.0
+     0019 IL_0019: ldloc.2
+     001a IL_001a: ldarg.0
+     001b IL_001b: ldloc.2
+     001c IL_001c: call System.Single BaseStats::get_Item(System.String)
+     0021 IL_0021: ldloc.1
+     0022 IL_0022: ldfld System.Single BaseStatsContainer::value
+     0027 IL_0027: ldarg.2
+     0028 IL_0028: mul
+     0029 IL_0029: add
+     002a IL_002a: call System.Void BaseStats::set_Item(System.String,System.Single)
+     002f IL_002f: ldloc.0
+     0030 IL_0030: ldc.i4.1
+     0031 IL_0031: add
+     0032 IL_0032: stloc.0
+     0033 IL_0033: ldloc.0
+     0034 IL_0034: ldarg.1
+     0035 IL_0035: ldfld System.Collections.Generic.List`1<BaseStatsContainer> BaseStats::_stats_list
+     003a IL_003a: callvirt System.Int32 System.Collections.Generic.List`1<BaseStatsContainer>::get_Count()
+     003f IL_003f: blt.s IL_0004
+     0041 IL_0041: ldarg.1
+     0042 IL_0042: ldfld System.Collections.Generic.HashSet`1<System.String> BaseStats::_tags
+     0047 IL_0047: brfalse.s IL_0074
+     0049 IL_0049: ldarg.0
+     004a IL_004a: ldfld System.Collections.Generic.HashSet`1<System.String> BaseStats::_tags
+     004f IL_004f: brtrue.s IL_0063
+     0051 IL_0051: ldarg.0
+     0052 IL_0052: ldarg.1
+     0053 IL_0053: ldfld System.Collections.Generic.HashSet`1<System.String> BaseStats::_tags
+     0058 IL_0058: newobj System.Void System.Collections.Generic.HashSet`1<System.String>::.ctor(System.Collections.Generic.IEnumerable`1<!0>)
+     005d IL_005d: stfld System.Collections.Generic.HashSet`1<System.String> BaseStats::_tags
+     0062 IL_0062: ret
+     0063 IL_0063: ldarg.0
+     0064 IL_0064: ldfld System.Collections.Generic.HashSet`1<System.String> BaseStats::_tags
+     0069 IL_0069: ldarg.1
+     006a IL_006a: ldfld System.Collections.Generic.HashSet`1<System.String> BaseStats::_tags
+     006f IL_006f: callvirt System.Void System.Collections.Generic.HashSet`1<System.String>::UnionWith(System.Collections.Generic.IEnumerable`1<!0>)
+     0074 IL_0074: ret
+

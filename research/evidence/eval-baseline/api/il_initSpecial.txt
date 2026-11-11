@@ -1,0 +1,1924 @@
+﻿######## TYPE ActorAssetLibrary : BaseLibraryWithUnlockables`1<ActorAsset>
+---- System.Void initSpecial()
+     0000 IL_0000: ldarg.0
+     0001 IL_0001: ldstr "greg"
+     0006 IL_0006: ldstr "$mob$"
+     000b IL_000b: callvirt T AssetLibrary`1<ActorAsset>::clone(System.String,System.String)
+     0010 IL_0010: pop
+     0011 IL_0011: ldarg.0
+     0012 IL_0012: ldfld T AssetLibrary`1<ActorAsset>::t
+     0017 IL_0017: ldstr "achievementCreaturesExplorer"
+     001c IL_001c: callvirt System.Void BaseUnlockableAsset::setUnlockedWithAchievement(System.String)
+     0021 IL_0021: ldarg.0
+     0022 IL_0022: ldfld T AssetLibrary`1<ActorAsset>::t
+     0027 IL_0027: ldc.i4.1
+     0028 IL_0028: newarr System.String
+     002d IL_002d: dup
+     002e IL_002e: ldc.i4.0
+     002f IL_002f: ldstr "greg_set"
+     0034 IL_0034: stelem.ref
+     0035 IL_0035: call !!0[] AssetLibrary`1<ActorAsset>::a<System.String>(!!0[])
+     003a IL_003a: stfld System.String[] ActorAsset::name_template_sets
+     003f IL_003f: ldarg.0
+     0040 IL_0040: ldfld T AssetLibrary`1<ActorAsset>::t
+     0045 IL_0045: ldstr "greg"
+     004a IL_004a: stfld System.String ActorAsset::kingdom_id_wild
+     004f IL_004f: ldarg.0
+     0050 IL_0050: ldfld T AssetLibrary`1<ActorAsset>::t
+     0055 IL_0055: ldstr "miniciv_greg"
+     005a IL_005a: stfld System.String ActorAsset::kingdom_id_civilization
+     005f IL_005f: ldarg.0
+     0060 IL_0060: ldfld T AssetLibrary`1<ActorAsset>::t
+     0065 IL_0065: ldstr "gregalia"
+     006a IL_006a: stfld System.String ActorAsset::name_taxonomic_kingdom
+     006f IL_006f: ldarg.0
+     0070 IL_0070: ldfld T AssetLibrary`1<ActorAsset>::t
+     0075 IL_0075: ldstr "gregata"
+     007a IL_007a: stfld System.String ActorAsset::name_taxonomic_phylum
+     007f IL_007f: ldarg.0
+     0080 IL_0080: ldfld T AssetLibrary`1<ActorAsset>::t
+     0085 IL_0085: ldstr "gregia"
+     008a IL_008a: stfld System.String ActorAsset::name_taxonomic_class
+     008f IL_008f: ldarg.0
+     0090 IL_0090: ldfld T AssetLibrary`1<ActorAsset>::t
+     0095 IL_0095: ldstr "greges"
+     009a IL_009a: stfld System.String ActorAsset::name_taxonomic_order
+     009f IL_009f: ldarg.0
+     00a0 IL_00a0: ldfld T AssetLibrary`1<ActorAsset>::t
+     00a5 IL_00a5: ldstr "gregae"
+     00aa IL_00aa: stfld System.String ActorAsset::name_taxonomic_family
+     00af IL_00af: ldarg.0
+     00b0 IL_00b0: ldfld T AssetLibrary`1<ActorAsset>::t
+     00b5 IL_00b5: ldstr "greg"
+     00ba IL_00ba: stfld System.String ActorAsset::name_taxonomic_genus
+     00bf IL_00bf: ldarg.0
+     00c0 IL_00c0: ldfld T AssetLibrary`1<ActorAsset>::t
+     00c5 IL_00c5: ldstr "greg"
+     00ca IL_00ca: stfld System.String ActorAsset::name_taxonomic_species
+     00cf IL_00cf: ldarg.0
+     00d0 IL_00d0: ldfld T AssetLibrary`1<ActorAsset>::t
+     00d5 IL_00d5: ldstr "group_grex"
+     00da IL_00da: stfld System.String ActorAsset::collective_term
+     00df IL_00df: ldarg.0
+     00e0 IL_00e0: ldfld T AssetLibrary`1<ActorAsset>::t
+     00e5 IL_00e5: ldstr "hydrophobia"
+     00ea IL_00ea: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     00ef IL_00ef: ldarg.0
+     00f0 IL_00f0: ldfld T AssetLibrary`1<ActorAsset>::t
+     00f5 IL_00f5: ldstr "enhanced_strength"
+     00fa IL_00fa: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     00ff IL_00ff: ldarg.0
+     0100 IL_0100: ldfld T AssetLibrary`1<ActorAsset>::t
+     0105 IL_0105: ldstr "stomach"
+     010a IL_010a: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     010f IL_010f: ldarg.0
+     0110 IL_0110: ldfld T AssetLibrary`1<ActorAsset>::t
+     0115 IL_0115: ldstr "big_stomach"
+     011a IL_011a: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     011f IL_011f: ldarg.0
+     0120 IL_0120: ldfld T AssetLibrary`1<ActorAsset>::t
+     0125 IL_0125: ldstr "diet_geophagy"
+     012a IL_012a: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     012f IL_012f: ldarg.0
+     0130 IL_0130: ldfld T AssetLibrary`1<ActorAsset>::t
+     0135 IL_0135: ldstr "diet_xylophagy"
+     013a IL_013a: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     013f IL_013f: ldarg.0
+     0140 IL_0140: ldfld T AssetLibrary`1<ActorAsset>::t
+     0145 IL_0145: ldstr "long_lifespan"
+     014a IL_014a: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     014f IL_014f: ldarg.0
+     0150 IL_0150: ldfld T AssetLibrary`1<ActorAsset>::t
+     0155 IL_0155: ldstr "high_fecundity"
+     015a IL_015a: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     015f IL_015f: ldarg.0
+     0160 IL_0160: ldfld T AssetLibrary`1<ActorAsset>::t
+     0165 IL_0165: ldstr "exoskeleton"
+     016a IL_016a: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     016f IL_016f: ldarg.0
+     0170 IL_0170: ldfld T AssetLibrary`1<ActorAsset>::t
+     0175 IL_0175: ldstr "fenix_born"
+     017a IL_017a: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     017f IL_017f: ldarg.0
+     0180 IL_0180: ldfld T AssetLibrary`1<ActorAsset>::t
+     0185 IL_0185: ldstr "parental_care"
+     018a IL_018a: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     018f IL_018f: ldarg.0
+     0190 IL_0190: ldfld T AssetLibrary`1<ActorAsset>::t
+     0195 IL_0195: ldstr "reproduction_parthenogenesis"
+     019a IL_019a: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     019f IL_019f: ldarg.0
+     01a0 IL_01a0: ldfld T AssetLibrary`1<ActorAsset>::t
+     01a5 IL_01a5: ldstr "genetic_mirror"
+     01aa IL_01aa: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     01af IL_01af: ldarg.0
+     01b0 IL_01b0: ldfld T AssetLibrary`1<ActorAsset>::t
+     01b5 IL_01b5: ldstr "gestation_extremely_long"
+     01ba IL_01ba: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     01bf IL_01bf: ldarg.0
+     01c0 IL_01c0: ldfld T AssetLibrary`1<ActorAsset>::t
+     01c5 IL_01c5: ldstr "voracious"
+     01ca IL_01ca: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     01cf IL_01cf: ldarg.0
+     01d0 IL_01d0: ldfld T AssetLibrary`1<ActorAsset>::t
+     01d5 IL_01d5: ldstr "egg_face"
+     01da IL_01da: callvirt System.Void ActorAsset::addSubspeciesTrait(System.String)
+     01df IL_01df: ldarg.0
+     01e0 IL_01e0: ldfld T AssetLibrary`1<ActorAsset>::t
+     01e5 IL_01e5: ldstr "echo_of_the_void"
+     01ea IL_01ea: callvirt System.Void ActorAsset::addReligionTrait(System.String)
+     01ef IL_01ef: ldarg.0
+     01f0 IL_01f0: ldfld T AssetLibrary`1<ActorAsset>::t
+     01f5 IL_01f5: ldstr "giant"
+     01fa IL_01fa: callvirt System.Void ActorAsset::addTrait(System.String)
+     01ff IL_01ff: ldarg.0
+     0200 IL_0200: ldfld T AssetLibrary`1<ActorAsset>::t
+     0205 IL_0205: ldstr "strong"
+     020a IL_020a: callvirt System.Void ActorAsset::addTrait(System.String)
+     020f IL_020f: ldarg.0
+     0210 IL_0210: ldfld T AssetLibrary`1<ActorAsset>::t
+     0215 IL_0215: ldstr "regeneration"
+     021a IL_021a: callvirt System.Void ActorAsset::addTrait(System.String)
+     021f IL_021f: ldarg.0
+     0220 IL_0220: ldstr "bright_yellow"
+     0225 IL_0225: ldstr "default_color"
+     022a IL_022a: call System.Void ActorAssetLibrary::addPhenotype(System.String,System.String)
+     022f IL_022f: ldarg.0
+     0230 IL_0230: ldfld T AssetLibrary`1<ActorAsset>::t
+     0235 IL_0235: ldc.i4.1
+     0236 IL_0236: stfld System.Boolean ActorAsset::special
+     023b IL_023b: ldarg.0
+     023c IL_023c: ldfld T AssetLibrary`1<ActorAsset>::t
+     0241 IL_0241: ldc.i4.1
+     0242 IL_0242: stfld System.Boolean ActorAsset::unit_other
+     0247 IL_0247: ldarg.0
+     0248 IL_0248: ldfld T AssetLibrary`1<ActorAsset>::t
+     024d IL_024d: ldstr "Greg"
+     0252 IL_0252: stfld System.String ActorAsset::name_locale
+     0257 IL_0257: ldarg.0
+     0258 IL_0258: ldfld T AssetLibrary`1<ActorAsset>::t
+     025d IL_025d: ldc.i4.s 15
+     025f IL_025f: stfld ActorSize ActorAsset::actor_size
+     0264 IL_0264: ldarg.0
+     0265 IL_0265: ldfld T AssetLibrary`1<ActorAsset>::t
+     026a IL_026a: ldstr "unitShadow_6"
+     026f IL_026f: stfld System.String ActorAsset::shadow_texture
+     0274 IL_0274: ldarg.0
+     0275 IL_0275: ldfld T AssetLibrary`1<ActorAsset>::t
+     027a IL_027a: ldsfld System.String[] ActorAnimationSequences::walk_0
+     027f IL_027f: stfld System.String[] ActorAsset::animation_walk
+     0284 IL_0284: ldarg.0
+     0285 IL_0285: ldfld T AssetLibrary`1<ActorAsset>::t
+     028a IL_028a: ldsfld System.String[] ActorAnimationSequences::walk_0
+     028f IL_028f: stfld System.String[] ActorAsset::animation_swim
+     0294 IL_0294: ldarg.0
+     0295 IL_0295: ldfld T AssetLibrary`1<ActorAsset>::t
+     029a IL_029a: ldc.i4.0
+     029b IL_029b: stfld System.Boolean ActorAsset::has_advanced_textures
+     02a0 IL_02a0: ldarg.0
+     02a1 IL_02a1: ldfld T AssetLibrary`1<ActorAsset>::t
+     02a6 IL_02a6: ldc.i4.0
+     02a7 IL_02a7: stfld System.Boolean ActorAsset::has_baby_form
+     02ac IL_02ac: ldarg.0
+     02ad IL_02ad: ldfld T AssetLibrary`1<ActorAsset>::t
+     02b2 IL_02b2: ldstr "civ_greg"
+     02b7 IL_02b7: stfld System.String ActorAsset::architecture_id
+     02bc IL_02bc: ldarg.0
+     02bd IL_02bd: ldfld T AssetLibrary`1<ActorAsset>::t
+     02c2 IL_02c2: ldstr "human"
+     02c7 IL_02c7: stfld System.String ActorAsset::banner_id
+     02cc IL_02cc: ldarg.0
+     02cd IL_02cd: ldfld T AssetLibrary`1<ActorAsset>::t
+     02d2 IL_02d2: ldc.i4.6
+     02d3 IL_02d3: newarr System.ValueTuple`2<System.String,System.Single>
+     02d8 IL_02d8: dup
+     02d9 IL_02d9: ldc.i4.0
+     02da IL_02da: ldstr "health"
+     02df IL_02df: ldc.r4 500
+     02e4 IL_02e4: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     02e9 IL_02e9: stelem.any System.ValueTuple`2<System.String,System.Single>
+     02ee IL_02ee: dup
+     02ef IL_02ef: ldc.i4.1
+     02f0 IL_02f0: ldstr "stamina"
+     02f5 IL_02f5: ldc.r4 200
+     02fa IL_02fa: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     02ff IL_02ff: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0304 IL_0304: dup
+     0305 IL_0305: ldc.i4.2
+     0306 IL_0306: ldstr "mutation"
+     030b IL_030b: ldc.r4 2
+     0310 IL_0310: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0315 IL_0315: stelem.any System.ValueTuple`2<System.String,System.Single>
+     031a IL_031a: dup
+     031b IL_031b: ldc.i4.3
+     031c IL_031c: ldstr "damage"
+     0321 IL_0321: ldc.r4 100
+     0326 IL_0326: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     032b IL_032b: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0330 IL_0330: dup
+     0331 IL_0331: ldc.i4.4
+     0332 IL_0332: ldstr "armor"
+     0337 IL_0337: ldc.r4 10
+     033c IL_033c: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0341 IL_0341: stelem.any System.ValueTuple`2<System.String,System.Single>
+     0346 IL_0346: dup
+     0347 IL_0347: ldc.i4.5
+     0348 IL_0348: ldstr "speed"
+     034d IL_034d: ldc.r4 40
+     0352 IL_0352: newobj System.Void System.ValueTuple`2<System.String,System.Single>::.ctor(!0,!1)
+     0357 IL_0357: stelem.any System.ValueTuple`2<System.String,System.Single>
+     035c IL_035c: callvirt System.Void ActorAsset::addGenome(System.ValueTuple`2<System.String,System.Single>[])
+     0361 IL_0361: ldarg.0
+     0362 IL_0362: ldfld T AssetLibrary`1<ActorAsset>::t
+     0367 IL_0367: ldstr "iconGreg"
+     036c IL_036c: stfld System.String ActorAsset::icon
+     0371 IL_0371: ldarg.0
+     0372 IL_0372: ldfld T AssetLibrary`1<ActorAsset>::t
+     0377 IL_0377: ldstr "#24803E"
+     037c IL_037c: stfld System.String ActorAsset::color_hex
+     0381 IL_0381: ldarg.0
+     0382 IL_0382: ldfld T AssetLibrary`1<ActorAsset>::t
+     0387 IL_0387: ldc.i4.1
+     0388 IL_0388: stfld System.Boolean ActorAsset::rotating_animation
+     038d IL_038d: ldarg.0
+     038e IL_038e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0393 IL_0393: ldc.i4.1
+     0394 IL_0394: stfld System.Boolean ActorAsset::has_soul
+     0399 IL_0399: ldarg.0
+     039a IL_039a: ldfld T AssetLibrary`1<ActorAsset>::t
+     039f IL_039f: ldstr "event:/SFX/HIT/HitFlesh"
+     03a4 IL_03a4: stfld System.String ActorAsset::sound_hit
+     03a9 IL_03a9: ldarg.0
+     03aa IL_03aa: ldfld T AssetLibrary`1<ActorAsset>::t
+     03af IL_03af: ldstr "worms"
+     03b4 IL_03b4: ldc.i4.2
+     03b5 IL_03b5: ldc.i4.1
+     03b6 IL_03b6: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     03bb IL_03bb: ldarg.0
+     03bc IL_03bc: ldfld T AssetLibrary`1<ActorAsset>::t
+     03c1 IL_03c1: ldstr "evil_beets"
+     03c6 IL_03c6: ldc.i4.1
+     03c7 IL_03c7: ldc.i4.0
+     03c8 IL_03c8: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     03cd IL_03cd: ldarg.0
+     03ce IL_03ce: ldstr "living_plants"
+     03d3 IL_03d3: ldstr "$mob_no_genes$"
+     03d8 IL_03d8: callvirt T AssetLibrary`1<ActorAsset>::clone(System.String,System.String)
+     03dd IL_03dd: pop
+     03de IL_03de: ldarg.0
+     03df IL_03df: ldfld T AssetLibrary`1<ActorAsset>::t
+     03e4 IL_03e4: ldc.i4.1
+     03e5 IL_03e5: newarr System.String
+     03ea IL_03ea: dup
+     03eb IL_03eb: ldc.i4.0
+     03ec IL_03ec: ldstr "living_plant_set"
+     03f1 IL_03f1: stelem.ref
+     03f2 IL_03f2: call !!0[] AssetLibrary`1<ActorAsset>::a<System.String>(!!0[])
+     03f7 IL_03f7: stfld System.String[] ActorAsset::name_template_sets
+     03fc IL_03fc: ldarg.0
+     03fd IL_03fd: ldfld T AssetLibrary`1<ActorAsset>::t
+     0402 IL_0402: ldc.i4.0
+     0403 IL_0403: stfld System.Boolean ActorAsset::use_phenotypes
+     0408 IL_0408: ldarg.0
+     0409 IL_0409: ldfld T AssetLibrary`1<ActorAsset>::t
+     040e IL_040e: ldc.i4.1
+     040f IL_040f: stfld System.Boolean ActorAsset::special
+     0414 IL_0414: ldarg.0
+     0415 IL_0415: ldfld T AssetLibrary`1<ActorAsset>::t
+     041a IL_041a: ldc.i4.0
+     041b IL_041b: stfld System.Boolean ActorAsset::has_baby_form
+     0420 IL_0420: ldarg.0
+     0421 IL_0421: ldfld T AssetLibrary`1<ActorAsset>::t
+     0426 IL_0426: ldstr "living_plant"
+     042b IL_042b: stfld System.String ActorAsset::name_locale
+     0430 IL_0430: ldarg.0
+     0431 IL_0431: ldfld T AssetLibrary`1<ActorAsset>::t
+     0436 IL_0436: ldc.i4.s 15
+     0438 IL_0438: stfld ActorSize ActorAsset::actor_size
+     043d IL_043d: ldarg.0
+     043e IL_043e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0443 IL_0443: ldstr "unitShadow_6"
+     0448 IL_0448: stfld System.String ActorAsset::shadow_texture
+     044d IL_044d: ldarg.0
+     044e IL_044e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0453 IL_0453: ldstr "living_plants"
+     0458 IL_0458: stfld System.String ActorAsset::kingdom_id_wild
+     045d IL_045d: ldarg.0
+     045e IL_045e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0463 IL_0463: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0468 IL_0468: ldstr "health"
+     046d IL_046d: ldc.r4 300
+     0472 IL_0472: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0477 IL_0477: ldarg.0
+     0478 IL_0478: ldfld T AssetLibrary`1<ActorAsset>::t
+     047d IL_047d: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0482 IL_0482: ldstr "speed"
+     0487 IL_0487: ldc.r4 10
+     048c IL_048c: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0491 IL_0491: ldarg.0
+     0492 IL_0492: ldfld T AssetLibrary`1<ActorAsset>::t
+     0497 IL_0497: ldfld BaseStats BaseUnlockableAsset::base_stats
+     049c IL_049c: ldstr "armor"
+     04a1 IL_04a1: ldc.r4 0
+     04a6 IL_04a6: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     04ab IL_04ab: ldarg.0
+     04ac IL_04ac: ldfld T AssetLibrary`1<ActorAsset>::t
+     04b1 IL_04b1: ldfld BaseStats BaseUnlockableAsset::base_stats
+     04b6 IL_04b6: ldstr "attack_speed"
+     04bb IL_04bb: ldc.r4 70
+     04c0 IL_04c0: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     04c5 IL_04c5: ldarg.0
+     04c6 IL_04c6: ldfld T AssetLibrary`1<ActorAsset>::t
+     04cb IL_04cb: ldfld BaseStats BaseUnlockableAsset::base_stats
+     04d0 IL_04d0: ldstr "damage"
+     04d5 IL_04d5: ldc.r4 30
+     04da IL_04da: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     04df IL_04df: ldarg.0
+     04e0 IL_04e0: ldfld T AssetLibrary`1<ActorAsset>::t
+     04e5 IL_04e5: ldfld BaseStats BaseUnlockableAsset::base_stats
+     04ea IL_04ea: ldstr "knockback"
+     04ef IL_04ef: ldc.r4 1.2
+     04f4 IL_04f4: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     04f9 IL_04f9: ldarg.0
+     04fa IL_04fa: ldfld T AssetLibrary`1<ActorAsset>::t
+     04ff IL_04ff: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0504 IL_0504: ldstr "mass"
+     0509 IL_0509: ldc.r4 50
+     050e IL_050e: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0513 IL_0513: ldarg.0
+     0514 IL_0514: ldfld T AssetLibrary`1<ActorAsset>::t
+     0519 IL_0519: ldfld BaseStats BaseUnlockableAsset::base_stats
+     051e IL_051e: ldstr "mass_2"
+     0523 IL_0523: ldc.r4 500
+     0528 IL_0528: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     052d IL_052d: ldarg.0
+     052e IL_052e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0533 IL_0533: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0538 IL_0538: ldstr "targets"
+     053d IL_053d: ldc.r4 3
+     0542 IL_0542: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0547 IL_0547: ldarg.0
+     0548 IL_0548: ldfld T AssetLibrary`1<ActorAsset>::t
+     054d IL_054d: ldc.i4.1
+     054e IL_054e: stfld System.Boolean ActorAsset::damaged_by_ocean
+     0553 IL_0553: ldarg.0
+     0554 IL_0554: ldfld T AssetLibrary`1<ActorAsset>::t
+     0559 IL_0559: ldstr "iconLivingPlants"
+     055e IL_055e: stfld System.String ActorAsset::icon
+     0563 IL_0563: ldarg.0
+     0564 IL_0564: ldfld T AssetLibrary`1<ActorAsset>::t
+     0569 IL_0569: ldc.i4.1
+     056a IL_056a: stfld System.Boolean ActorAsset::show_icon_inspect_window
+     056f IL_056f: ldarg.0
+     0570 IL_0570: ldfld T AssetLibrary`1<ActorAsset>::t
+     0575 IL_0575: ldstr "iconLivingPlants"
+     057a IL_057a: stfld System.String ActorAsset::show_icon_inspect_window_id
+     057f IL_057f: ldarg.0
+     0580 IL_0580: ldfld T AssetLibrary`1<ActorAsset>::t
+     0585 IL_0585: ldstr "#115D11"
+     058a IL_058a: stfld System.String ActorAsset::color_hex
+     058f IL_058f: ldarg.0
+     0590 IL_0590: ldfld T AssetLibrary`1<ActorAsset>::t
+     0595 IL_0595: ldc.i4.1
+     0596 IL_0596: stfld System.Boolean ActorAsset::rotating_animation
+     059b IL_059b: ldarg.0
+     059c IL_059c: ldfld T AssetLibrary`1<ActorAsset>::t
+     05a1 IL_05a1: ldc.i4.0
+     05a2 IL_05a2: stfld System.Boolean ActorAsset::disable_jump_animation
+     05a7 IL_05a7: ldarg.0
+     05a8 IL_05a8: ldfld T AssetLibrary`1<ActorAsset>::t
+     05ad IL_05ad: ldc.r4 1
+     05b2 IL_05b2: stfld System.Single ActorAsset::inspect_avatar_scale
+     05b7 IL_05b7: ldarg.0
+     05b8 IL_05b8: ldfld T AssetLibrary`1<ActorAsset>::t
+     05bd IL_05bd: ldfld BaseStats BaseUnlockableAsset::base_stats
+     05c2 IL_05c2: ldstr "scale"
+     05c7 IL_05c7: ldc.r4 0.25
+     05cc IL_05cc: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     05d1 IL_05d1: ldarg.0
+     05d2 IL_05d2: ldfld T AssetLibrary`1<ActorAsset>::t
+     05d7 IL_05d7: ldc.i4.0
+     05d8 IL_05d8: stfld System.Boolean ActorAsset::can_turn_into_mush
+     05dd IL_05dd: ldarg.0
+     05de IL_05de: ldfld T AssetLibrary`1<ActorAsset>::t
+     05e3 IL_05e3: ldc.i4.0
+     05e4 IL_05e4: stfld System.Boolean ActorAsset::can_turn_into_tumor
+     05e9 IL_05e9: ldarg.0
+     05ea IL_05ea: ldfld T AssetLibrary`1<ActorAsset>::t
+     05ef IL_05ef: ldc.i4.0
+     05f0 IL_05f0: stfld System.Boolean ActorAsset::can_turn_into_zombie
+     05f5 IL_05f5: ldarg.0
+     05f6 IL_05f6: ldfld T AssetLibrary`1<ActorAsset>::t
+     05fb IL_05fb: ldsfld BaseActionActor ActorAssetLibrary/<>c::<>9__4_0
+     0600 IL_0600: dup
+     0601 IL_0601: brtrue.s IL_061a
+     0603 IL_0603: pop
+     0604 IL_0604: ldsfld ActorAssetLibrary/<>c ActorAssetLibrary/<>c::<>9
+     0609 IL_0609: ldftn System.Void ActorAssetLibrary/<>c::<initSpecial>b__4_0(Actor)
+     060f IL_060f: newobj System.Void BaseActionActor::.ctor(System.Object,System.IntPtr)
+     0614 IL_0614: dup
+     0615 IL_0615: stsfld BaseActionActor ActorAssetLibrary/<>c::<>9__4_0
+     061a IL_061a: stfld BaseActionActor ActorAsset::action_on_load
+     061f IL_061f: ldarg.0
+     0620 IL_0620: ldfld T AssetLibrary`1<ActorAsset>::t
+     0625 IL_0625: ldsfld ActorGetSprite ActorAssetLibrary/<>c::<>9__4_1
+     062a IL_062a: dup
+     062b IL_062b: brtrue.s IL_0644
+     062d IL_062d: pop
+     062e IL_062e: ldsfld ActorAssetLibrary/<>c ActorAssetLibrary/<>c::<>9
+     0633 IL_0633: ldftn UnityEngine.Sprite ActorAssetLibrary/<>c::<initSpecial>b__4_1(Actor)
+     0639 IL_0639: newobj System.Void ActorGetSprite::.ctor(System.Object,System.IntPtr)
+     063e IL_063e: dup
+     063f IL_063f: stsfld ActorGetSprite ActorAssetLibrary/<>c::<>9__4_1
+     0644 IL_0644: stfld ActorGetSprite ActorAsset::get_override_sprite
+     0649 IL_0649: ldarg.0
+     064a IL_064a: ldstr "regeneration"
+     064f IL_064f: call System.Void ActorAssetLibrary::addTrait(System.String)
+     0654 IL_0654: ldarg.0
+     0655 IL_0655: ldfld T AssetLibrary`1<ActorAsset>::t
+     065a IL_065a: ldstr "Units_LivingPlants"
+     065f IL_065f: stfld System.String ActorAsset::music_theme
+     0664 IL_0664: ldarg.0
+     0665 IL_0665: ldfld T AssetLibrary`1<ActorAsset>::t
+     066a IL_066a: ldstr "event:/SFX/HIT/HitGeneric"
+     066f IL_066f: stfld System.String ActorAsset::sound_hit
+     0674 IL_0674: ldarg.0
+     0675 IL_0675: ldfld T AssetLibrary`1<ActorAsset>::t
+     067a IL_067a: ldc.i4.0
+     067b IL_067b: stfld System.Boolean BaseUnlockableAsset::show_in_knowledge_window
+     0680 IL_0680: ldarg.0
+     0681 IL_0681: ldfld T AssetLibrary`1<ActorAsset>::t
+     0686 IL_0686: ldc.i4.0
+     0687 IL_0687: stfld System.Boolean ActorAsset::use_items
+     068c IL_068c: ldarg.0
+     068d IL_068d: ldfld T AssetLibrary`1<ActorAsset>::t
+     0692 IL_0692: ldc.i4.0
+     0693 IL_0693: stfld System.Boolean ActorAsset::take_items
+     0698 IL_0698: ldarg.0
+     0699 IL_0699: ldfld T AssetLibrary`1<ActorAsset>::t
+     069e IL_069e: ldc.i4.0
+     069f IL_069f: stfld System.Boolean ActorAsset::can_edit_equipment
+     06a4 IL_06a4: ldarg.0
+     06a5 IL_06a5: ldfld T AssetLibrary`1<ActorAsset>::t
+     06aa IL_06aa: ldc.i4.0
+     06ab IL_06ab: stfld System.Boolean ActorAsset::use_tool_items
+     06b0 IL_06b0: ldarg.0
+     06b1 IL_06b1: ldfld T AssetLibrary`1<ActorAsset>::t
+     06b6 IL_06b6: ldstr "herbs"
+     06bb IL_06bb: ldc.i4.1
+     06bc IL_06bc: ldc.i4.1
+     06bd IL_06bd: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     06c2 IL_06c2: ldarg.0
+     06c3 IL_06c3: ldstr "living_house"
+     06c8 IL_06c8: ldstr "$mob_no_genes$"
+     06cd IL_06cd: callvirt T AssetLibrary`1<ActorAsset>::clone(System.String,System.String)
+     06d2 IL_06d2: pop
+     06d3 IL_06d3: ldarg.0
+     06d4 IL_06d4: ldfld T AssetLibrary`1<ActorAsset>::t
+     06d9 IL_06d9: ldc.i4.1
+     06da IL_06da: newarr System.String
+     06df IL_06df: dup
+     06e0 IL_06e0: ldc.i4.0
+     06e1 IL_06e1: ldstr "living_house_set"
+     06e6 IL_06e6: stelem.ref
+     06e7 IL_06e7: call !!0[] AssetLibrary`1<ActorAsset>::a<System.String>(!!0[])
+     06ec IL_06ec: stfld System.String[] ActorAsset::name_template_sets
+     06f1 IL_06f1: ldarg.0
+     06f2 IL_06f2: ldfld T AssetLibrary`1<ActorAsset>::t
+     06f7 IL_06f7: ldc.i4.0
+     06f8 IL_06f8: stfld System.Boolean ActorAsset::use_phenotypes
+     06fd IL_06fd: ldarg.0
+     06fe IL_06fe: ldfld T AssetLibrary`1<ActorAsset>::t
+     0703 IL_0703: ldc.i4.0
+     0704 IL_0704: stfld System.Boolean ActorAsset::has_baby_form
+     0709 IL_0709: ldarg.0
+     070a IL_070a: ldfld T AssetLibrary`1<ActorAsset>::t
+     070f IL_070f: ldc.i4.1
+     0710 IL_0710: stfld System.Boolean ActorAsset::special
+     0715 IL_0715: ldarg.0
+     0716 IL_0716: ldfld T AssetLibrary`1<ActorAsset>::t
+     071b IL_071b: ldstr "living_house"
+     0720 IL_0720: stfld System.String ActorAsset::name_locale
+     0725 IL_0725: ldarg.0
+     0726 IL_0726: ldfld T AssetLibrary`1<ActorAsset>::t
+     072b IL_072b: ldc.i4.s 15
+     072d IL_072d: stfld ActorSize ActorAsset::actor_size
+     0732 IL_0732: ldarg.0
+     0733 IL_0733: ldfld T AssetLibrary`1<ActorAsset>::t
+     0738 IL_0738: ldstr "unitShadow_6"
+     073d IL_073d: stfld System.String ActorAsset::shadow_texture
+     0742 IL_0742: ldarg.0
+     0743 IL_0743: ldfld T AssetLibrary`1<ActorAsset>::t
+     0748 IL_0748: ldstr "living_houses"
+     074d IL_074d: stfld System.String ActorAsset::kingdom_id_wild
+     0752 IL_0752: ldarg.0
+     0753 IL_0753: ldfld T AssetLibrary`1<ActorAsset>::t
+     0758 IL_0758: ldfld BaseStats BaseUnlockableAsset::base_stats
+     075d IL_075d: ldstr "health"
+     0762 IL_0762: ldc.r4 500
+     0767 IL_0767: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     076c IL_076c: ldarg.0
+     076d IL_076d: ldfld T AssetLibrary`1<ActorAsset>::t
+     0772 IL_0772: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0777 IL_0777: ldstr "armor"
+     077c IL_077c: ldc.r4 1
+     0781 IL_0781: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0786 IL_0786: ldarg.0
+     0787 IL_0787: ldfld T AssetLibrary`1<ActorAsset>::t
+     078c IL_078c: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0791 IL_0791: ldstr "speed"
+     0796 IL_0796: ldc.r4 10
+     079b IL_079b: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     07a0 IL_07a0: ldarg.0
+     07a1 IL_07a1: ldfld T AssetLibrary`1<ActorAsset>::t
+     07a6 IL_07a6: ldfld BaseStats BaseUnlockableAsset::base_stats
+     07ab IL_07ab: ldstr "attack_speed"
+     07b0 IL_07b0: ldc.r4 60
+     07b5 IL_07b5: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     07ba IL_07ba: ldarg.0
+     07bb IL_07bb: ldfld T AssetLibrary`1<ActorAsset>::t
+     07c0 IL_07c0: ldfld BaseStats BaseUnlockableAsset::base_stats
+     07c5 IL_07c5: ldstr "damage"
+     07ca IL_07ca: ldc.r4 50
+     07cf IL_07cf: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     07d4 IL_07d4: ldarg.0
+     07d5 IL_07d5: ldfld T AssetLibrary`1<ActorAsset>::t
+     07da IL_07da: ldfld BaseStats BaseUnlockableAsset::base_stats
+     07df IL_07df: ldstr "knockback"
+     07e4 IL_07e4: ldc.r4 1.4
+     07e9 IL_07e9: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     07ee IL_07ee: ldarg.0
+     07ef IL_07ef: ldfld T AssetLibrary`1<ActorAsset>::t
+     07f4 IL_07f4: ldfld BaseStats BaseUnlockableAsset::base_stats
+     07f9 IL_07f9: ldstr "mass"
+     07fe IL_07fe: ldc.r4 50
+     0803 IL_0803: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0808 IL_0808: ldarg.0
+     0809 IL_0809: ldfld T AssetLibrary`1<ActorAsset>::t
+     080e IL_080e: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0813 IL_0813: ldstr "mass_2"
+     0818 IL_0818: ldc.r4 10000
+     081d IL_081d: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0822 IL_0822: ldarg.0
+     0823 IL_0823: ldfld T AssetLibrary`1<ActorAsset>::t
+     0828 IL_0828: ldfld BaseStats BaseUnlockableAsset::base_stats
+     082d IL_082d: ldstr "targets"
+     0832 IL_0832: ldc.r4 3
+     0837 IL_0837: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     083c IL_083c: ldarg.0
+     083d IL_083d: ldfld T AssetLibrary`1<ActorAsset>::t
+     0842 IL_0842: ldc.i4.1
+     0843 IL_0843: stfld System.Boolean ActorAsset::damaged_by_ocean
+     0848 IL_0848: ldarg.0
+     0849 IL_0849: ldfld T AssetLibrary`1<ActorAsset>::t
+     084e IL_084e: ldstr "iconLivingHouse"
+     0853 IL_0853: stfld System.String ActorAsset::icon
+     0858 IL_0858: ldarg.0
+     0859 IL_0859: ldfld T AssetLibrary`1<ActorAsset>::t
+     085e IL_085e: ldc.i4.1
+     085f IL_085f: stfld System.Boolean ActorAsset::show_icon_inspect_window
+     0864 IL_0864: ldarg.0
+     0865 IL_0865: ldfld T AssetLibrary`1<ActorAsset>::t
+     086a IL_086a: ldstr "iconLivingHouse"
+     086f IL_086f: stfld System.String ActorAsset::show_icon_inspect_window_id
+     0874 IL_0874: ldarg.0
+     0875 IL_0875: ldfld T AssetLibrary`1<ActorAsset>::t
+     087a IL_087a: ldstr "#24803E"
+     087f IL_087f: stfld System.String ActorAsset::color_hex
+     0884 IL_0884: ldarg.0
+     0885 IL_0885: ldfld T AssetLibrary`1<ActorAsset>::t
+     088a IL_088a: ldc.i4.1
+     088b IL_088b: stfld System.Boolean ActorAsset::rotating_animation
+     0890 IL_0890: ldarg.0
+     0891 IL_0891: ldfld T AssetLibrary`1<ActorAsset>::t
+     0896 IL_0896: ldc.i4.0
+     0897 IL_0897: stfld System.Boolean ActorAsset::disable_jump_animation
+     089c IL_089c: ldarg.0
+     089d IL_089d: ldfld T AssetLibrary`1<ActorAsset>::t
+     08a2 IL_08a2: ldc.r4 1
+     08a7 IL_08a7: stfld System.Single ActorAsset::inspect_avatar_scale
+     08ac IL_08ac: ldarg.0
+     08ad IL_08ad: ldfld T AssetLibrary`1<ActorAsset>::t
+     08b2 IL_08b2: ldfld BaseStats BaseUnlockableAsset::base_stats
+     08b7 IL_08b7: ldstr "scale"
+     08bc IL_08bc: ldc.r4 0.25
+     08c1 IL_08c1: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     08c6 IL_08c6: ldarg.0
+     08c7 IL_08c7: ldfld T AssetLibrary`1<ActorAsset>::t
+     08cc IL_08cc: ldc.i4.0
+     08cd IL_08cd: stfld System.Boolean ActorAsset::can_turn_into_mush
+     08d2 IL_08d2: ldarg.0
+     08d3 IL_08d3: ldfld T AssetLibrary`1<ActorAsset>::t
+     08d8 IL_08d8: ldc.i4.0
+     08d9 IL_08d9: stfld System.Boolean ActorAsset::can_turn_into_tumor
+     08de IL_08de: ldarg.0
+     08df IL_08df: ldfld T AssetLibrary`1<ActorAsset>::t
+     08e4 IL_08e4: ldc.i4.0
+     08e5 IL_08e5: stfld System.Boolean ActorAsset::can_turn_into_zombie
+     08ea IL_08ea: ldarg.0
+     08eb IL_08eb: ldfld T AssetLibrary`1<ActorAsset>::t
+     08f0 IL_08f0: ldarg.0
+     08f1 IL_08f1: ldstr "living_plants"
+     08f6 IL_08f6: callvirt T AssetLibrary`1<ActorAsset>::get(System.String)
+     08fb IL_08fb: ldfld ActorGetSprite ActorAsset::get_override_sprite
+     0900 IL_0900: stfld ActorGetSprite ActorAsset::get_override_sprite
+     0905 IL_0905: ldarg.0
+     0906 IL_0906: ldfld T AssetLibrary`1<ActorAsset>::t
+     090b IL_090b: ldstr "event:/SFX/HIT/HitWood"
+     0910 IL_0910: stfld System.String ActorAsset::sound_hit
+     0915 IL_0915: ldarg.0
+     0916 IL_0916: ldfld T AssetLibrary`1<ActorAsset>::t
+     091b IL_091b: ldc.i4.0
+     091c IL_091c: stfld System.Boolean BaseUnlockableAsset::show_in_knowledge_window
+     0921 IL_0921: ldarg.0
+     0922 IL_0922: ldfld T AssetLibrary`1<ActorAsset>::t
+     0927 IL_0927: ldc.i4.0
+     0928 IL_0928: stfld System.Boolean ActorAsset::use_items
+     092d IL_092d: ldarg.0
+     092e IL_092e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0933 IL_0933: ldc.i4.0
+     0934 IL_0934: stfld System.Boolean ActorAsset::take_items
+     0939 IL_0939: ldarg.0
+     093a IL_093a: ldfld T AssetLibrary`1<ActorAsset>::t
+     093f IL_093f: ldc.i4.0
+     0940 IL_0940: stfld System.Boolean ActorAsset::can_edit_equipment
+     0945 IL_0945: ldarg.0
+     0946 IL_0946: ldfld T AssetLibrary`1<ActorAsset>::t
+     094b IL_094b: ldc.i4.0
+     094c IL_094c: stfld System.Boolean ActorAsset::use_tool_items
+     0951 IL_0951: ldarg.0
+     0952 IL_0952: ldfld T AssetLibrary`1<ActorAsset>::t
+     0957 IL_0957: ldstr "wood"
+     095c IL_095c: ldc.i4.1
+     095d IL_095d: ldc.i4.1
+     095e IL_095e: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     0963 IL_0963: ldarg.0
+     0964 IL_0964: ldarg.0
+     0965 IL_0965: newobj System.Void ActorAsset::.ctor()
+     096a IL_096a: stloc.0
+     096b IL_096b: ldloc.0
+     096c IL_096c: ldstr "dragon"
+     0971 IL_0971: stfld System.String Asset::id
+     0976 IL_0976: ldloc.0
+     0977 IL_0977: ldstr "dragons"
+     097c IL_097c: stfld System.String ActorAsset::kingdom_id_wild
+     0981 IL_0981: ldloc.0
+     0982 IL_0982: ldc.i4.1
+     0983 IL_0983: stfld System.Boolean ActorAsset::special
+     0988 IL_0988: ldloc.0
+     0989 IL_0989: ldc.i4.1
+     098a IL_098a: stfld System.Boolean ActorAsset::can_be_killed_by_stuff
+     098f IL_098f: ldloc.0
+     0990 IL_0990: ldc.i4.1
+     0991 IL_0991: stfld System.Boolean ActorAsset::can_be_killed_by_life_eraser
+     0996 IL_0996: ldloc.0
+     0997 IL_0997: ldc.i4.1
+     0998 IL_0998: stfld System.Boolean ActorAsset::ignore_tile_speed_multiplier
+     099d IL_099d: ldloc.0
+     099e IL_099e: ldc.i4.1
+     099f IL_099f: stfld System.Boolean ActorAsset::skip_fight_logic
+     09a4 IL_09a4: ldloc.0
+     09a5 IL_09a5: ldc.i4.1
+     09a6 IL_09a6: newarr System.String
+     09ab IL_09ab: dup
+     09ac IL_09ac: ldc.i4.0
+     09ad IL_09ad: ldstr "dragon_job"
+     09b2 IL_09b2: stelem.ref
+     09b3 IL_09b3: call !!0[] AssetLibrary`1<ActorAsset>::a<System.String>(!!0[])
+     09b8 IL_09b8: stfld System.String[] ActorAsset::job
+     09bd IL_09bd: ldloc.0
+     09be IL_09be: ldc.i4.1
+     09bf IL_09bf: stfld System.Boolean ActorAsset::can_be_moved_by_powers
+     09c4 IL_09c4: ldloc.0
+     09c5 IL_09c5: ldc.i4.1
+     09c6 IL_09c6: stfld System.Boolean ActorAsset::can_be_hurt_by_powers
+     09cb IL_09cb: ldloc.0
+     09cc IL_09cc: ldc.i4.1
+     09cd IL_09cd: stfld System.Boolean ActorAsset::update_z
+     09d2 IL_09d2: ldloc.0
+     09d3 IL_09d3: ldc.r4 0
+     09d8 IL_09d8: stfld System.Single ActorAsset::default_height
+     09dd IL_09dd: ldloc.0
+     09de IL_09de: ldc.i4.1
+     09df IL_09df: stfld System.Boolean ActorAsset::effect_damage
+     09e4 IL_09e4: ldloc.0
+     09e5 IL_09e5: ldc.i4.1
+     09e6 IL_09e6: stfld System.Boolean ActorAsset::can_flip
+     09eb IL_09eb: ldloc.0
+     09ec IL_09ec: ldc.i4.1
+     09ed IL_09ed: stfld System.Boolean ActorAsset::can_turn_into_zombie
+     09f2 IL_09f2: ldloc.0
+     09f3 IL_09f3: ldc.i4.s 17
+     09f5 IL_09f5: stfld ActorSize ActorAsset::actor_size
+     09fa IL_09fa: ldloc.0
+     09fb IL_09fb: ldstr "unitShadow_7"
+     0a00 IL_0a00: stfld System.String ActorAsset::shadow_texture
+     0a05 IL_0a05: ldloc.0
+     0a06 IL_0a06: ldc.i4.1
+     0a07 IL_0a07: stfld System.Boolean ActorAsset::can_be_inspected
+     0a0c IL_0a0c: ldloc.0
+     0a0d IL_0a0d: ldc.i4.1
+     0a0e IL_0a0e: stfld System.Boolean ActorAsset::hide_favorite_icon
+     0a13 IL_0a13: ldloc.0
+     0a14 IL_0a14: ldstr "iconDragon"
+     0a19 IL_0a19: stfld System.String ActorAsset::icon
+     0a1e IL_0a1e: ldloc.0
+     0a1f IL_0a1f: ldc.r4 1.1
+     0a24 IL_0a24: stfld System.Single ActorAsset::inspect_avatar_scale
+     0a29 IL_0a29: ldloc.0
+     0a2a IL_0a2a: ldc.r4 -22
+     0a2f IL_0a2f: stfld System.Single ActorAsset::inspect_avatar_offset_y
+     0a34 IL_0a34: ldloc.0
+     0a35 IL_0a35: ldstr "p_dragon"
+     0a3a IL_0a3a: stfld System.String ActorAsset::avatar_prefab
+     0a3f IL_0a3f: ldloc.0
+     0a40 IL_0a40: ldc.i4.1
+     0a41 IL_0a41: stfld System.Boolean ActorAsset::visible_on_minimap
+     0a46 IL_0a46: ldloc.0
+     0a47 IL_0a47: ldc.i4.0
+     0a48 IL_0a48: stfld System.Boolean ActorAsset::die_on_blocks
+     0a4d IL_0a4d: ldloc.0
+     0a4e IL_0a4e: ldc.i4.1
+     0a4f IL_0a4f: stfld System.Boolean ActorAsset::ignore_blocks
+     0a54 IL_0a54: ldloc.0
+     0a55 IL_0a55: ldc.i4.0
+     0a56 IL_0a56: stfld System.Boolean ActorAsset::move_from_block
+     0a5b IL_0a5b: ldloc.0
+     0a5c IL_0a5c: ldc.i4.0
+     0a5d IL_0a5d: stfld System.Boolean ActorAsset::run_to_water_when_on_fire
+     0a62 IL_0a62: ldloc.0
+     0a63 IL_0a63: ldc.i4.0
+     0a64 IL_0a64: stfld System.Boolean ActorAsset::split_ai_update
+     0a69 IL_0a69: ldloc.0
+     0a6a IL_0a6a: ldc.i4.s 100
+     0a6c IL_0a6c: stfld System.Int32 ActorAsset::experience_given
+     0a71 IL_0a71: ldloc.0
+     0a72 IL_0a72: ldc.i4.0
+     0a73 IL_0a73: stfld System.Boolean ActorAsset::can_be_surprised
+     0a78 IL_0a78: ldloc.0
+     0a79 IL_0a79: ldc.i4.0
+     0a7a IL_0a7a: stfld System.Boolean ActorAsset::allow_possession
+     0a7f IL_0a7f: ldloc.0
+     0a80 IL_0a80: ldc.i4.0
+     0a81 IL_0a81: stfld System.Boolean ActorAsset::show_task_icon
+     0a86 IL_0a86: ldloc.0
+     0a87 IL_0a87: ldc.i4.0
+     0a88 IL_0a88: stfld System.Boolean ActorAsset::can_talk_with
+     0a8d IL_0a8d: ldloc.0
+     0a8e IL_0a8e: ldc.i4.0
+     0a8f IL_0a8f: stfld System.Boolean ActorAsset::control_can_backstep
+     0a94 IL_0a94: ldloc.0
+     0a95 IL_0a95: ldc.i4.0
+     0a96 IL_0a96: stfld System.Boolean ActorAsset::control_can_dash
+     0a9b IL_0a9b: ldloc.0
+     0a9c IL_0a9c: ldc.i4.0
+     0a9d IL_0a9d: stfld System.Boolean ActorAsset::control_can_jump
+     0aa2 IL_0aa2: ldloc.0
+     0aa3 IL_0aa3: ldc.i4.0
+     0aa4 IL_0aa4: stfld System.Boolean ActorAsset::control_can_kick
+     0aa9 IL_0aa9: ldloc.0
+     0aaa IL_0aaa: ldc.i4.0
+     0aab IL_0aab: stfld System.Boolean ActorAsset::control_can_talk
+     0ab0 IL_0ab0: ldloc.0
+     0ab1 IL_0ab1: ldc.i4.0
+     0ab2 IL_0ab2: stfld System.Boolean ActorAsset::control_can_swear
+     0ab7 IL_0ab7: ldloc.0
+     0ab8 IL_0ab8: ldc.i4.0
+     0ab9 IL_0ab9: stfld System.Boolean ActorAsset::control_can_steal
+     0abe IL_0abe: ldloc.0
+     0abf IL_0abf: ldc.i4.0
+     0ac0 IL_0ac0: stfld System.Boolean ActorAsset::inspect_mind
+     0ac5 IL_0ac5: ldloc.0
+     0ac6 IL_0ac6: dup
+     0ac7 IL_0ac7: stloc.0
+     0ac8 IL_0ac8: stfld T AssetLibrary`1<ActorAsset>::t
+     0acd IL_0acd: ldloc.0
+     0ace IL_0ace: callvirt T AssetLibrary`1<ActorAsset>::add(T)
+     0ad3 IL_0ad3: pop
+     0ad4 IL_0ad4: ldarg.0
+     0ad5 IL_0ad5: ldfld T AssetLibrary`1<ActorAsset>::t
+     0ada IL_0ada: ldstr "zombie_dragon"
+     0adf IL_0adf: ldc.i4.0
+     0ae0 IL_0ae0: callvirt System.Void ActorAsset::setCanTurnIntoZombieAsset(System.String,System.Boolean)
+     0ae5 IL_0ae5: ldarg.0
+     0ae6 IL_0ae6: ldfld T AssetLibrary`1<ActorAsset>::t
+     0aeb IL_0aeb: ldsfld ActorGetSprite ActorAssetLibrary/<>c::<>9__4_2
+     0af0 IL_0af0: dup
+     0af1 IL_0af1: brtrue.s IL_0b0a
+     0af3 IL_0af3: pop
+     0af4 IL_0af4: ldsfld ActorAssetLibrary/<>c ActorAssetLibrary/<>c::<>9
+     0af9 IL_0af9: ldftn UnityEngine.Sprite ActorAssetLibrary/<>c::<initSpecial>b__4_2(Actor)
+     0aff IL_0aff: newobj System.Void ActorGetSprite::.ctor(System.Object,System.IntPtr)
+     0b04 IL_0b04: dup
+     0b05 IL_0b05: stsfld ActorGetSprite ActorAssetLibrary/<>c::<>9__4_2
+     0b0a IL_0b0a: stfld ActorGetSprite ActorAsset::get_override_sprite
+     0b0f IL_0b0f: ldarg.0
+     0b10 IL_0b10: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b15 IL_0b15: ldsfld ActorGetSprites ActorAssetLibrary/<>c::<>9__4_3
+     0b1a IL_0b1a: dup
+     0b1b IL_0b1b: brtrue.s IL_0b34
+     0b1d IL_0b1d: pop
+     0b1e IL_0b1e: ldsfld ActorAssetLibrary/<>c ActorAssetLibrary/<>c::<>9
+     0b23 IL_0b23: ldftn UnityEngine.Sprite[] ActorAssetLibrary/<>c::<initSpecial>b__4_3(Actor)
+     0b29 IL_0b29: newobj System.Void ActorGetSprites::.ctor(System.Object,System.IntPtr)
+     0b2e IL_0b2e: dup
+     0b2f IL_0b2f: stsfld ActorGetSprites ActorAssetLibrary/<>c::<>9__4_3
+     0b34 IL_0b34: stfld ActorGetSprites ActorAsset::get_override_avatar_frames
+     0b39 IL_0b39: ldarg.0
+     0b3a IL_0b3a: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b3f IL_0b3f: ldc.i4.1
+     0b40 IL_0b40: stfld StatusTier ActorAsset::allowed_status_tiers
+     0b45 IL_0b45: ldarg.0
+     0b46 IL_0b46: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b4b IL_0b4b: ldc.i4.0
+     0b4c IL_0b4c: stfld System.Boolean ActorAsset::render_status_effects
+     0b51 IL_0b51: ldarg.0
+     0b52 IL_0b52: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b57 IL_0b57: ldstr "Dragon"
+     0b5c IL_0b5c: stfld System.String ActorAsset::name_locale
+     0b61 IL_0b61: ldarg.0
+     0b62 IL_0b62: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b67 IL_0b67: ldc.i4.0
+     0b68 IL_0b68: stfld System.Boolean ActorAsset::die_in_lava
+     0b6d IL_0b6d: ldarg.0
+     0b6e IL_0b6e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b73 IL_0b73: ldc.i4.0
+     0b74 IL_0b74: stfld System.Boolean ActorAsset::cancel_beh_on_land
+     0b79 IL_0b79: ldarg.0
+     0b7a IL_0b7a: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b7f IL_0b7f: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0b84 IL_0b84: ldstr "health"
+     0b89 IL_0b89: ldc.r4 1000
+     0b8e IL_0b8e: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0b93 IL_0b93: ldarg.0
+     0b94 IL_0b94: ldfld T AssetLibrary`1<ActorAsset>::t
+     0b99 IL_0b99: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0b9e IL_0b9e: ldstr "damage"
+     0ba3 IL_0ba3: ldc.r4 100
+     0ba8 IL_0ba8: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0bad IL_0bad: ldarg.0
+     0bae IL_0bae: ldfld T AssetLibrary`1<ActorAsset>::t
+     0bb3 IL_0bb3: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0bb8 IL_0bb8: ldstr "speed"
+     0bbd IL_0bbd: ldc.r4 40
+     0bc2 IL_0bc2: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0bc7 IL_0bc7: ldarg.0
+     0bc8 IL_0bc8: ldfld T AssetLibrary`1<ActorAsset>::t
+     0bcd IL_0bcd: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0bd2 IL_0bd2: ldstr "scale"
+     0bd7 IL_0bd7: ldc.r4 0.3
+     0bdc IL_0bdc: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0be1 IL_0be1: ldarg.0
+     0be2 IL_0be2: ldfld T AssetLibrary`1<ActorAsset>::t
+     0be7 IL_0be7: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0bec IL_0bec: ldstr "size"
+     0bf1 IL_0bf1: ldc.r4 2
+     0bf6 IL_0bf6: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0bfb IL_0bfb: ldarg.0
+     0bfc IL_0bfc: ldfld T AssetLibrary`1<ActorAsset>::t
+     0c01 IL_0c01: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0c06 IL_0c06: ldstr "mass"
+     0c0b IL_0c0b: ldc.r4 4
+     0c10 IL_0c10: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0c15 IL_0c15: ldarg.0
+     0c16 IL_0c16: ldfld T AssetLibrary`1<ActorAsset>::t
+     0c1b IL_0c1b: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0c20 IL_0c20: ldstr "mass_2"
+     0c25 IL_0c25: ldc.r4 2500
+     0c2a IL_0c2a: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0c2f IL_0c2f: ldarg.0
+     0c30 IL_0c30: ldfld T AssetLibrary`1<ActorAsset>::t
+     0c35 IL_0c35: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0c3a IL_0c3a: ldstr "targets"
+     0c3f IL_0c3f: ldc.r4 20
+     0c44 IL_0c44: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0c49 IL_0c49: ldarg.0
+     0c4a IL_0c4a: ldfld T AssetLibrary`1<ActorAsset>::t
+     0c4f IL_0c4f: ldfld BaseStats BaseUnlockableAsset::base_stats
+     0c54 IL_0c54: ldstr "lifespan"
+     0c59 IL_0c59: ldc.r4 10000
+     0c5e IL_0c5e: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     0c63 IL_0c63: ldarg.0
+     0c64 IL_0c64: ldstr "regeneration"
+     0c69 IL_0c69: call System.Void ActorAssetLibrary::addTrait(System.String)
+     0c6e IL_0c6e: ldarg.0
+     0c6f IL_0c6f: ldstr "strong_minded"
+     0c74 IL_0c74: call System.Void ActorAssetLibrary::addTrait(System.String)
+     0c79 IL_0c79: ldarg.0
+     0c7a IL_0c7a: ldstr "fire_proof"
+     0c7f IL_0c7f: call System.Void ActorAssetLibrary::addTrait(System.String)
+     0c84 IL_0c84: ldarg.0
+     0c85 IL_0c85: ldstr "fire_blood"
+     0c8a IL_0c8a: call System.Void ActorAssetLibrary::addTrait(System.String)
+     0c8f IL_0c8f: ldarg.0
+     0c90 IL_0c90: ldfld T AssetLibrary`1<ActorAsset>::t
+     0c95 IL_0c95: ldstr "dragon_scales"
+     0c9a IL_0c9a: ldc.i4.s 10
+     0c9c IL_0c9c: ldc.i4.1
+     0c9d IL_0c9d: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     0ca2 IL_0ca2: ldarg.0
+     0ca3 IL_0ca3: ldfld T AssetLibrary`1<ActorAsset>::t
+     0ca8 IL_0ca8: ldstr "meat"
+     0cad IL_0cad: ldc.i4.s 10
+     0caf IL_0caf: ldc.i4.0
+     0cb0 IL_0cb0: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     0cb5 IL_0cb5: ldarg.0
+     0cb6 IL_0cb6: ldfld T AssetLibrary`1<ActorAsset>::t
+     0cbb IL_0cbb: ldstr "bones"
+     0cc0 IL_0cc0: ldc.i4.s 10
+     0cc2 IL_0cc2: ldc.i4.0
+     0cc3 IL_0cc3: callvirt System.Void ActorAsset::addResource(System.String,System.Int32,System.Boolean)
+     0cc8 IL_0cc8: ldarg.0
+     0cc9 IL_0cc9: ldfld T AssetLibrary`1<ActorAsset>::t
+     0cce IL_0cce: ldstr "Units_Dragon"
+     0cd3 IL_0cd3: stfld System.String ActorAsset::music_theme
+     0cd8 IL_0cd8: ldarg.0
+     0cd9 IL_0cd9: ldfld T AssetLibrary`1<ActorAsset>::t
+     0cde IL_0cde: ldstr "event:/SFX/HIT/HitFlesh"
+     0ce3 IL_0ce3: stfld System.String ActorAsset::sound_hit
+     0ce8 IL_0ce8: ldarg.0
+     0ce9 IL_0ce9: ldfld T AssetLibrary`1<ActorAsset>::t
+     0cee IL_0cee: dup
+     0cef IL_0cef: ldfld WorldAction ActorAsset::action_click
+     0cf4 IL_0cf4: ldnull
+     0cf5 IL_0cf5: ldftn System.Boolean Dragon::clickToWakeup(BaseSimObject,WorldTile)
+     0cfb IL_0cfb: newobj System.Void WorldAction::.ctor(System.Object,System.IntPtr)
+     0d00 IL_0d00: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     0d05 IL_0d05: castclass WorldAction
+     0d0a IL_0d0a: stfld WorldAction ActorAsset::action_click
+     0d0f IL_0d0f: ldarg.0
+     0d10 IL_0d10: ldfld T AssetLibrary`1<ActorAsset>::t
+     0d15 IL_0d15: ldnull
+     0d16 IL_0d16: ldftn System.Boolean Dragon::dragonFall(BaseSimObject,WorldTile,System.Single)
+     0d1c IL_0d1c: newobj System.Void DeadAnimation::.ctor(System.Object,System.IntPtr)
+     0d21 IL_0d21: stfld DeadAnimation ActorAsset::action_dead_animation
+     0d26 IL_0d26: ldarg.0
+     0d27 IL_0d27: ldfld T AssetLibrary`1<ActorAsset>::t
+     0d2c IL_0d2c: dup
+     0d2d IL_0d2d: ldfld WorldAction ActorAsset::action_death
+     0d32 IL_0d32: ldnull
+     0d33 IL_0d33: ldftn System.Boolean ActionLibrary::dragonSlayer(BaseSimObject,WorldTile)
+     0d39 IL_0d39: newobj System.Void WorldAction::.ctor(System.Object,System.IntPtr)
+     0d3e IL_0d3e: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     0d43 IL_0d43: castclass WorldAction
+     0d48 IL_0d48: stfld WorldAction ActorAsset::action_death
+     0d4d IL_0d4d: ldarg.0
+     0d4e IL_0d4e: ldfld T AssetLibrary`1<ActorAsset>::t
+     0d53 IL_0d53: dup
+     0d54 IL_0d54: ldfld GetHitAction ActorAsset::action_get_hit
+     0d59 IL_0d59: ldnull
+     0d5a IL_0d5a: ldftn System.Boolean Dragon::getHit(BaseSimObject,BaseSimObject,WorldTile)
+     0d60 IL_0d60: newobj System.Void GetHitAction::.ctor(System.Object,System.IntPtr)
+     0d65 IL_0d65: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     0d6a IL_0d6a: castclass GetHitAction
+     0d6f IL_0d6f: stfld GetHitAction ActorAsset::action_get_hit
+     0d74 IL_0d74: ldarg.0
+     0d75 IL_0d75: ldfld T AssetLibrary`1<ActorAsset>::t
+     0d7a IL_0d7a: ldnull
+     0d7b IL_0d7b: ldftn System.Boolean Dragon::canFlip(BaseSimObject,WorldTile)
+     0d81 IL_0d81: newobj System.Void WorldAction::.ctor(System.Object,System.IntPtr)
+     0d86 IL_0d86: stfld WorldAction ActorAsset::check_flip
+     0d8b IL_0d8b: ldarg.0
+     0d8c IL_0d8c: ldfld T AssetLibrary`1<ActorAsset>::t
+     0d91 IL_0d91: ldc.i4.0
+     0d92 IL_0d92: stfld System.Boolean ActorAsset::animation_speed_based_on_walk_speed
+     0d97 IL_0d97: ldarg.0
+     0d98 IL_0d98: ldfld T AssetLibrary`1<ActorAsset>::t
+     0d9d IL_0d9d: ldc.i4.0
+     0d9e IL_0d9e: stfld System.Boolean BaseUnlockableAsset::needs_to_be_explored
+     0da3 IL_0da3: ldarg.0
+     0da4 IL_0da4: ldfld T AssetLibrary`1<ActorAsset>::t
+     0da9 IL_0da9: ldc.i4.0
+     0daa IL_0daa: stfld System.Boolean ActorAsset::use_tool_items
+     0daf IL_0daf: ldarg.0
+     0db0 IL_0db0: ldstr "zombie_dragon"
+     0db5 IL_0db5: ldstr "dragon"
+     0dba IL_0dba: callvirt T AssetLibrary`1<ActorAsset>::clone(System.String,System.String)
+     0dbf IL_0dbf: pop
+     0dc0 IL_0dc0: ldarg.0
+     0dc1 IL_0dc1: ldfld T AssetLibrary`1<ActorAsset>::t
+     0dc6 IL_0dc6: ldc.i4.1
+     0dc7 IL_0dc7: stfld System.Boolean ActorAsset::special
+     0dcc IL_0dcc: ldarg.0
+     0dcd IL_0dcd: ldfld T AssetLibrary`1<ActorAsset>::t
+     0dd2 IL_0dd2: ldstr "Zombie"
+     0dd7 IL_0dd7: stfld System.String ActorAsset::name_locale
+     0ddc IL_0ddc: ldarg.0
+     0ddd IL_0ddd: ldfld T AssetLibrary`1<ActorAsset>::t
+     0de2 IL_0de2: ldstr "p_zombie_dragon"
+     0de7 IL_0de7: stfld System.String ActorAsset::avatar_prefab
+     0dec IL_0dec: ldarg.0
+     0ded IL_0ded: ldfld T AssetLibrary`1<ActorAsset>::t
+     0df2 IL_0df2: ldc.i4.1
+     0df3 IL_0df3: stfld System.Boolean ActorAsset::visible_on_minimap
+     0df8 IL_0df8: ldarg.0
+     0df9 IL_0df9: ldfld T AssetLibrary`1<ActorAsset>::t
+     0dfe IL_0dfe: ldc.i4.1
+     0dff IL_0dff: stfld System.Boolean ActorAsset::die_in_lava
+     0e04 IL_0e04: ldarg.0
+     0e05 IL_0e05: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e0a IL_0e0a: ldc.i4.0
+     0e0b IL_0e0b: stfld System.Boolean BaseUnlockableAsset::show_in_knowledge_window
+     0e10 IL_0e10: ldarg.0
+     0e11 IL_0e11: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e16 IL_0e16: ldc.i4.0
+     0e17 IL_0e17: callvirt System.Void ActorAsset::setZombie(System.Boolean)
+     0e1c IL_0e1c: ldarg.0
+     0e1d IL_0e1d: ldfld T AssetLibrary`1<ActorAsset>::t
+     0e22 IL_0e22: ldc.i4.1
+     0e23 IL_0e23: newarr System.String
+     0e28 IL_0e28: dup
+     0e29 IL_0e29: ldc.i4.0
+     0e2a IL_0e2a: ldstr "dragon_job"
+     0e2f IL_0e2f: stelem.ref
+     0e30 IL_0e30: call !!0[] AssetLibrary`1<ActorAsset>::a<System.String>(!!0[])
+     0e35 IL_0e35: stfld System.String[] ActorAsset::job
+     0e3a IL_0e3a: ldarg.0
+     0e3b IL_0e3b: ldstr "fire_proof"
+     0e40 IL_0e40: call System.Void ActorAssetLibrary::removeTrait(System.String)
+     0e45 IL_0e45: ldarg.0
+     0e46 IL_0e46: ldstr "fire_blood"
+     0e4b IL_0e4b: call System.Void ActorAssetLibrary::removeTrait(System.String)
+     0e50 IL_0e50: ldarg.0
+     0e51 IL_0e51: ldstr "acid_blood"
+     0e56 IL_0e56: call System.Void ActorAssetLibrary::addTrait(System.String)
+     0e5b IL_0e5b: ldarg.0
+     0e5c IL_0e5c: ldstr "acid_proof"
+     0e61 IL_0e61: call System.Void ActorAssetLibrary::addTrait(System.String)
+     0e66 IL_0e66: ldarg.0
+     0e67 IL_0e67: ldarg.0
+     0e68 IL_0e68: newobj System.Void ActorAsset::.ctor()
+     0e6d IL_0e6d: stloc.0
+     0e6e IL_0e6e: ldloc.0
+     0e6f IL_0e6f: ldstr "UFO"
+     0e74 IL_0e74: stfld System.String Asset::id
+     0e79 IL_0e79: ldloc.0
+     0e7a IL_0e7a: ldstr "aliens"
+     0e7f IL_0e7f: stfld System.String ActorAsset::kingdom_id_wild
+     0e84 IL_0e84: ldloc.0
+     0e85 IL_0e85: ldc.i4.1
+     0e86 IL_0e86: stfld System.Boolean ActorAsset::special
+     0e8b IL_0e8b: ldloc.0
+     0e8c IL_0e8c: ldc.i4.1
+     0e8d IL_0e8d: stfld System.Boolean ActorAsset::can_be_killed_by_stuff
+     0e92 IL_0e92: ldloc.0
+     0e93 IL_0e93: ldc.i4.1
+     0e94 IL_0e94: stfld System.Boolean ActorAsset::can_be_killed_by_life_eraser
+     0e99 IL_0e99: ldloc.0
+     0e9a IL_0e9a: ldc.i4.1
+     0e9b IL_0e9b: stfld System.Boolean ActorAsset::ignore_tile_speed_multiplier
+     0ea0 IL_0ea0: ldloc.0
+     0ea1 IL_0ea1: ldc.i4.1
+     0ea2 IL_0ea2: stfld System.Boolean ActorAsset::skip_fight_logic
+     0ea7 IL_0ea7: ldloc.0
+     0ea8 IL_0ea8: ldc.i4.1
+     0ea9 IL_0ea9: newarr System.String
+     0eae IL_0eae: dup
+     0eaf IL_0eaf: ldc.i4.0
+     0eb0 IL_0eb0: ldstr "ufo_job"
+     0eb5 IL_0eb5: stelem.ref
+     0eb6 IL_0eb6: call !!0[] AssetLibrary`1<ActorAsset>::a<System.String>(!!0[])
+     0ebb IL_0ebb: stfld System.String[] ActorAsset::job
+     0ec0 IL_0ec0: ldloc.0
+     0ec1 IL_0ec1: ldc.i4.1
+     0ec2 IL_0ec2: stfld System.Boolean ActorAsset::flying
+     0ec7 IL_0ec7: ldloc.0
+     0ec8 IL_0ec8: ldc.i4.1
+     0ec9 IL_0ec9: stfld System.Boolean ActorAsset::very_high_flyer
+     0ece IL_0ece: ldloc.0
+     0ecf IL_0ecf: ldc.i4.1
+     0ed0 IL_0ed0: stfld System.Boolean ActorAsset::can_be_moved_by_powers
+     0ed5 IL_0ed5: ldloc.0
+     0ed6 IL_0ed6: ldc.i4.1
+     0ed7 IL_0ed7: stfld System.Boolean ActorAsset::can_be_hurt_by_powers
+     0edc IL_0edc: ldloc.0
+     0edd IL_0edd: ldc.i4.1
+     0ede IL_0ede: stfld System.Boolean ActorAsset::effect_damage
+     0ee3 IL_0ee3: ldloc.0
+     0ee4 IL_0ee4: ldc.i4.1
+     0ee5 IL_0ee5: stfld System.Boolean ActorAsset::special_dead_animation
+     0eea IL_0eea: ldloc.0
+     0eeb IL_0eeb: ldc.i4.s 17
+     0eed IL_0eed: stfld ActorSize ActorAsset::actor_size
+     0ef2 IL_0ef2: ldloc.0
+     0ef3 IL_0ef3: ldstr "unitShadow_7"
+     0ef8 IL_0ef8: stfld System.String ActorAsset::shadow_texture
+     0efd IL_0efd: ldloc.0
+     0efe IL_0efe: ldc.i4.1
+     0eff IL_0eff: stfld System.Boolean ActorAsset::can_be_inspected
+     0f04 IL_0f04: ldloc.0
+     0f05 IL_0f05: ldstr "iconUfo"
+     0f0a IL_0f0a: stfld System.String ActorAsset::icon
+     0f0f IL_0f0f: ldloc.0
+     0f10 IL_0f10: ldc.i4.1
+     0f11 IL_0f11: stfld System.Boolean ActorAsset::hide_favorite_icon
+     0f16 IL_0f16: ldloc.0
+     0f17 IL_0f17: ldc.i4.1
+     0f18 IL_0f18: stfld System.Boolean ActorAsset::die_by_lightning
+     0f1d IL_0f1d: ldloc.0
+     0f1e IL_0f1e: ldstr "p_ufo"
+     0f23 IL_0f23: stfld System.String ActorAsset::avatar_prefab
+     0f28 IL_0f28: ldloc.0
+     0f29 IL_0f29: ldc.i4.1
+     0f2a IL_0f2a: stfld System.Boolean ActorAsset::visible_on_minimap
+     0f2f IL_0f2f: ldloc.0
+     0f30 IL_0f30: ldc.i4.0
+     0f31 IL_0f31: stfld System.Boolean ActorAsset::die_on_blocks
+     0f36 IL_0f36: ldloc.0
+     0f37 IL_0f37: ldc.i4.1
+     0f38 IL_0f38: stfld System.Boolean ActorAsset::ignore_blocks
+     0f3d IL_0f3d: ldloc.0
+     0f3e IL_0f3e: ldc.i4.0
+     0f3f IL_0f3f: stfld System.Boolean ActorAsset::move_from_block
+     0f44 IL_0f44: ldloc.0
+     0f45 IL_0f45: ldc.i4.0
+     0f46 IL_0f46: stfld System.Boolean ActorAsset::run_to_water_when_on_fire
+     0f4b IL_0f4b: ldloc.0
+     0f4c IL_0f4c: ldc.i4.0
+     0f4d IL_0f4d: stfld System.Boolean ActorAsset::has_skin
+     0f52 IL_0f52: ldloc.0
+     0f53 IL_0f53: ldc.i4.1
+     0f54 IL_0f54: stfld System.Boolean ActorAsset::flag_ufo
+     0f59 IL_0f59: ldloc.0
+     0f5a IL_0f5a: ldc.i4.0
+     0f5b IL_0f5b: stfld System.Boolean ActorAsset::split_ai_update
+     0f60 IL_0f60: ldloc.0
+     0f61 IL_0f61: ldc.i4.0
+     0f62 IL_0f62: stfld System.Boolean ActorAsset::allow_possession
+     0f67 IL_0f67: ldloc.0
+     0f68 IL_0f68: ldc.i4.0
+     0f69 IL_0f69: stfld System.Boolean ActorAsset::show_task_icon
+     0f6e IL_0f6e: ldloc.0
+     0f6f IL_0f6f: ldc.i4.0
+     0f70 IL_0f70: stfld System.Boolean ActorAsset::can_talk_with
+     0f75 IL_0f75: ldloc.0
+     0f76 IL_0f76: ldc.i4.0
+     0f77 IL_0f77: stfld System.Boolean ActorAsset::control_can_backstep
+     0f7c IL_0f7c: ldloc.0
+     0f7d IL_0f7d: ldc.i4.0
+     0f7e IL_0f7e: stfld System.Boolean ActorAsset::control_can_dash
+     0f83 IL_0f83: ldloc.0
+     0f84 IL_0f84: ldc.i4.0
+     0f85 IL_0f85: stfld System.Boolean ActorAsset::control_can_jump
+     0f8a IL_0f8a: ldloc.0
+     0f8b IL_0f8b: ldc.i4.0
+     0f8c IL_0f8c: stfld System.Boolean ActorAsset::control_can_kick
+     0f91 IL_0f91: ldloc.0
+     0f92 IL_0f92: ldc.i4.0
+     0f93 IL_0f93: stfld System.Boolean ActorAsset::control_can_talk
+     0f98 IL_0f98: ldloc.0
+     0f99 IL_0f99: ldc.i4.0
+     0f9a IL_0f9a: stfld System.Boolean ActorAsset::control_can_swear
+     0f9f IL_0f9f: ldloc.0
+     0fa0 IL_0fa0: ldc.i4.0
+     0fa1 IL_0fa1: stfld System.Boolean ActorAsset::control_can_steal
+     0fa6 IL_0fa6: ldloc.0
+     0fa7 IL_0fa7: dup
+     0fa8 IL_0fa8: stloc.0
+     0fa9 IL_0fa9: stfld T AssetLibrary`1<ActorAsset>::t
+     0fae IL_0fae: ldloc.0
+     0faf IL_0faf: callvirt T AssetLibrary`1<ActorAsset>::add(T)
+     0fb4 IL_0fb4: pop
+     0fb5 IL_0fb5: ldarg.0
+     0fb6 IL_0fb6: ldfld T AssetLibrary`1<ActorAsset>::t
+     0fbb IL_0fbb: ldsfld ActorGetSprite ActorAssetLibrary/<>c::<>9__4_4
+     0fc0 IL_0fc0: dup
+     0fc1 IL_0fc1: brtrue.s IL_0fda
+     0fc3 IL_0fc3: pop
+     0fc4 IL_0fc4: ldsfld ActorAssetLibrary/<>c ActorAssetLibrary/<>c::<>9
+     0fc9 IL_0fc9: ldftn UnityEngine.Sprite ActorAssetLibrary/<>c::<initSpecial>b__4_4(Actor)
+     0fcf IL_0fcf: newobj System.Void ActorGetSprite::.ctor(System.Object,System.IntPtr)
+     0fd4 IL_0fd4: dup
+     0fd5 IL_0fd5: stsfld ActorGetSprite ActorAssetLibrary/<>c::<>9__4_4
+     0fda IL_0fda: stfld ActorGetSprite ActorAsset::get_override_sprite
+     0fdf IL_0fdf: ldarg.0
+     0fe0 IL_0fe0: ldfld T AssetLibrary`1<ActorAsset>::t
+     0fe5 IL_0fe5: ldc.i4.1
+     0fe6 IL_0fe6: stfld StatusTier ActorAsset::allowed_status_tiers
+     0feb IL_0feb: ldarg.0
+     0fec IL_0fec: ldfld T AssetLibrary`1<ActorAsset>::t
+     0ff1 IL_0ff1: ldc.i4.0
+     0ff2 IL_0ff2: stfld System.Boolean ActorAsset::render_status_effects
+     0ff7 IL_0ff7: ldarg.0
+     0ff8 IL_0ff8: ldfld T AssetLibrary`1<ActorAsset>::t
+     0ffd IL_0ffd: ldc.r4 1.45
+     1002 IL_1002: stfld System.Single ActorAsset::inspect_avatar_scale
+     1007 IL_1007: ldarg.0
+     1008 IL_1008: ldfld T AssetLibrary`1<ActorAsset>::t
+     100d IL_100d: ldc.r4 8
+     1012 IL_1012: stfld System.Single ActorAsset::inspect_avatar_offset_y
+     1017 IL_1017: ldarg.0
+     1018 IL_1018: ldfld T AssetLibrary`1<ActorAsset>::t
+     101d IL_101d: ldstr "UFO"
+     1022 IL_1022: stfld System.String ActorAsset::name_locale
+     1027 IL_1027: ldarg.0
+     1028 IL_1028: ldfld T AssetLibrary`1<ActorAsset>::t
+     102d IL_102d: ldstr "ufo_name"
+     1032 IL_1032: stfld System.String ActorAsset::name_template_unit
+     1037 IL_1037: ldarg.0
+     1038 IL_1038: ldfld T AssetLibrary`1<ActorAsset>::t
+     103d IL_103d: ldfld BaseStats BaseUnlockableAsset::base_stats
+     1042 IL_1042: ldstr "health"
+     1047 IL_1047: ldc.r4 100
+     104c IL_104c: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     1051 IL_1051: ldarg.0
+     1052 IL_1052: ldfld T AssetLibrary`1<ActorAsset>::t
+     1057 IL_1057: ldfld BaseStats BaseUnlockableAsset::base_stats
+     105c IL_105c: ldstr "armor"
+     1061 IL_1061: ldc.r4 5
+     1066 IL_1066: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     106b IL_106b: ldarg.0
+     106c IL_106c: ldfld T AssetLibrary`1<ActorAsset>::t
+     1071 IL_1071: ldfld BaseStats BaseUnlockableAsset::base_stats
+     1076 IL_1076: ldstr "scale"
+     107b IL_107b: ldc.r4 0.3
+     1080 IL_1080: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     1085 IL_1085: ldarg.0
+     1086 IL_1086: ldfld T AssetLibrary`1<ActorAsset>::t
+     108b IL_108b: ldfld BaseStats BaseUnlockableAsset::base_stats
+     1090 IL_1090: ldstr "speed"
+     1095 IL_1095: ldc.r4 20
+     109a IL_109a: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     109f IL_109f: ldarg.0
+     10a0 IL_10a0: ldfld T AssetLibrary`1<ActorAsset>::t
+     10a5 IL_10a5: ldfld BaseStats BaseUnlockableAsset::base_stats
+     10aa IL_10aa: ldstr "damage"
+     10af IL_10af: ldc.r4 80
+     10b4 IL_10b4: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     10b9 IL_10b9: ldarg.0
+     10ba IL_10ba: ldfld T AssetLibrary`1<ActorAsset>::t
+     10bf IL_10bf: ldfld BaseStats BaseUnlockableAsset::base_stats
+     10c4 IL_10c4: ldstr "lifespan"
+     10c9 IL_10c9: ldc.r4 0
+     10ce IL_10ce: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     10d3 IL_10d3: ldarg.0
+     10d4 IL_10d4: ldfld T AssetLibrary`1<ActorAsset>::t
+     10d9 IL_10d9: ldfld BaseStats BaseUnlockableAsset::base_stats
+     10de IL_10de: ldstr "size"
+     10e3 IL_10e3: ldc.r4 2
+     10e8 IL_10e8: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     10ed IL_10ed: ldarg.0
+     10ee IL_10ee: ldfld T AssetLibrary`1<ActorAsset>::t
+     10f3 IL_10f3: dup
+     10f4 IL_10f4: ldfld WorldAction ActorAsset::action_death
+     10f9 IL_10f9: ldnull
+     10fa IL_10fa: ldftn System.Boolean ActionLibrary::spawnAliens(BaseSimObject,WorldTile)
+     1100 IL_1100: newobj System.Void WorldAction::.ctor(System.Object,System.IntPtr)
+     1105 IL_1105: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     110a IL_110a: castclass WorldAction
+     110f IL_110f: stfld WorldAction ActorAsset::action_death
+     1114 IL_1114: ldarg.0
+     1115 IL_1115: ldfld T AssetLibrary`1<ActorAsset>::t
+     111a IL_111a: ldfld BaseStats BaseUnlockableAsset::base_stats
+     111f IL_111f: ldstr "mass"
+     1124 IL_1124: ldc.r4 5
+     1129 IL_1129: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     112e IL_112e: ldarg.0
+     112f IL_112f: ldfld T AssetLibrary`1<ActorAsset>::t
+     1134 IL_1134: ldfld BaseStats BaseUnlockableAsset::base_stats
+     1139 IL_1139: ldstr "mass_2"
+     113e IL_113e: ldc.r4 2500
+     1143 IL_1143: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     1148 IL_1148: ldarg.0
+     1149 IL_1149: ldfld T AssetLibrary`1<ActorAsset>::t
+     114e IL_114e: ldnull
+     114f IL_114f: ldftn System.Boolean UFO::ufoFall(BaseSimObject,WorldTile,System.Single)
+     1155 IL_1155: newobj System.Void DeadAnimation::.ctor(System.Object,System.IntPtr)
+     115a IL_115a: stfld DeadAnimation ActorAsset::action_dead_animation
+     115f IL_115f: ldarg.0
+     1160 IL_1160: ldfld T AssetLibrary`1<ActorAsset>::t
+     1165 IL_1165: dup
+     1166 IL_1166: ldfld WorldAction ActorAsset::action_click
+     116b IL_116b: ldnull
+     116c IL_116c: ldftn System.Boolean UFO::click(BaseSimObject,WorldTile)
+     1172 IL_1172: newobj System.Void WorldAction::.ctor(System.Object,System.IntPtr)
+     1177 IL_1177: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     117c IL_117c: castclass WorldAction
+     1181 IL_1181: stfld WorldAction ActorAsset::action_click
+     1186 IL_1186: ldarg.0
+     1187 IL_1187: ldfld T AssetLibrary`1<ActorAsset>::t
+     118c IL_118c: dup
+     118d IL_118d: ldfld GetHitAction ActorAsset::action_get_hit
+     1192 IL_1192: ldnull
+     1193 IL_1193: ldftn System.Boolean UFO::getHit(BaseSimObject,BaseSimObject,WorldTile)
+     1199 IL_1199: newobj System.Void GetHitAction::.ctor(System.Object,System.IntPtr)
+     119e IL_119e: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     11a3 IL_11a3: castclass GetHitAction
+     11a8 IL_11a8: stfld GetHitAction ActorAsset::action_get_hit
+     11ad IL_11ad: ldarg.0
+     11ae IL_11ae: ldfld T AssetLibrary`1<ActorAsset>::t
+     11b3 IL_11b3: ldc.i4.1
+     11b4 IL_11b4: stfld System.Boolean ActorAsset::prevent_unconscious_rotation
+     11b9 IL_11b9: ldarg.0
+     11ba IL_11ba: ldstr "strong_minded"
+     11bf IL_11bf: call System.Void ActorAssetLibrary::addTrait(System.String)
+     11c4 IL_11c4: ldarg.0
+     11c5 IL_11c5: ldstr "fire_proof"
+     11ca IL_11ca: call System.Void ActorAssetLibrary::addTrait(System.String)
+     11cf IL_11cf: ldarg.0
+     11d0 IL_11d0: ldstr "light_lamp"
+     11d5 IL_11d5: call System.Void ActorAssetLibrary::addTrait(System.String)
+     11da IL_11da: ldarg.0
+     11db IL_11db: ldfld T AssetLibrary`1<ActorAsset>::t
+     11e0 IL_11e0: ldstr "Units_UFO"
+     11e5 IL_11e5: stfld System.String ActorAsset::music_theme
+     11ea IL_11ea: ldarg.0
+     11eb IL_11eb: ldfld T AssetLibrary`1<ActorAsset>::t
+     11f0 IL_11f0: ldstr "event:/SFX/HIT/HitMetal"
+     11f5 IL_11f5: stfld System.String ActorAsset::sound_hit
+     11fa IL_11fa: ldarg.0
+     11fb IL_11fb: ldfld T AssetLibrary`1<ActorAsset>::t
+     1200 IL_1200: ldc.i4.0
+     1201 IL_1201: stfld System.Boolean BaseUnlockableAsset::needs_to_be_explored
+     1206 IL_1206: ldarg.0
+     1207 IL_1207: ldfld T AssetLibrary`1<ActorAsset>::t
+     120c IL_120c: ldc.i4.0
+     120d IL_120d: stfld System.Boolean ActorAsset::can_be_surprised
+     1212 IL_1212: ldarg.0
+     1213 IL_1213: ldfld T AssetLibrary`1<ActorAsset>::t
+     1218 IL_1218: ldc.i4.0
+     1219 IL_1219: stfld System.Boolean ActorAsset::use_tool_items
+     121e IL_121e: ldarg.0
+     121f IL_121f: ldfld T AssetLibrary`1<ActorAsset>::t
+     1224 IL_1224: ldc.r4 8
+     1229 IL_1229: stfld System.Single ActorAsset::default_height
+     122e IL_122e: ldarg.0
+     122f IL_122f: ldarg.0
+     1230 IL_1230: newobj System.Void ActorAsset::.ctor()
+     1235 IL_1235: dup
+     1236 IL_1236: ldstr "crabzilla"
+     123b IL_123b: stfld System.String Asset::id
+     1240 IL_1240: dup
+     1241 IL_1241: ldstr "crabzilla"
+     1246 IL_1246: stfld System.String ActorAsset::kingdom_id_wild
+     124b IL_124b: dup
+     124c IL_124c: ldc.i4.1
+     124d IL_124d: stfld System.Boolean ActorAsset::special
+     1252 IL_1252: dup
+     1253 IL_1253: ldc.i4.1
+     1254 IL_1254: stfld System.Boolean ActorAsset::can_be_killed_by_stuff
+     1259 IL_1259: dup
+     125a IL_125a: ldc.i4.1
+     125b IL_125b: stfld System.Boolean ActorAsset::ignore_tile_speed_multiplier
+     1260 IL_1260: dup
+     1261 IL_1261: ldc.i4.1
+     1262 IL_1262: stfld System.Boolean ActorAsset::skip_fight_logic
+     1267 IL_1267: dup
+     1268 IL_1268: ldc.i4.0
+     1269 IL_1269: stfld System.Boolean ActorAsset::flying
+     126e IL_126e: dup
+     126f IL_126f: ldc.i4.0
+     1270 IL_1270: stfld System.Boolean ActorAsset::can_be_moved_by_powers
+     1275 IL_1275: dup
+     1276 IL_1276: ldc.i4.1
+     1277 IL_1277: stfld System.Boolean ActorAsset::can_be_hurt_by_powers
+     127c IL_127c: dup
+     127d IL_127d: ldc.i4.1
+     127e IL_127e: stfld System.Boolean ActorAsset::update_z
+     1283 IL_1283: dup
+     1284 IL_1284: ldc.i4.0
+     1285 IL_1285: stfld System.Boolean ActorAsset::can_flip
+     128a IL_128a: dup
+     128b IL_128b: ldc.i4.1
+     128c IL_128c: stfld System.Boolean ActorAsset::skip_save
+     1291 IL_1291: dup
+     1292 IL_1292: ldstr "p_crabzilla"
+     1297 IL_1297: stfld System.String ActorAsset::avatar_prefab
+     129c IL_129c: dup
+     129d IL_129d: ldc.i4.1
+     129e IL_129e: stfld System.Boolean ActorAsset::visible_on_minimap
+     12a3 IL_12a3: dup
+     12a4 IL_12a4: ldc.i4.1
+     12a5 IL_12a5: stfld System.Boolean ActorAsset::ignore_generic_render
+     12aa IL_12aa: dup
+     12ab IL_12ab: ldc.i4.0
+     12ac IL_12ac: stfld System.Boolean ActorAsset::die_on_blocks
+     12b1 IL_12b1: dup
+     12b2 IL_12b2: ldc.i4.1
+     12b3 IL_12b3: stfld System.Boolean ActorAsset::ignore_blocks
+     12b8 IL_12b8: dup
+     12b9 IL_12b9: ldc.i4.0
+     12ba IL_12ba: stfld System.Boolean ActorAsset::move_from_block
+     12bf IL_12bf: dup
+     12c0 IL_12c0: ldc.i4.0
+     12c1 IL_12c1: stfld System.Boolean ActorAsset::run_to_water_when_on_fire
+     12c6 IL_12c6: dup
+     12c7 IL_12c7: ldc.i4.1
+     12c8 IL_12c8: stfld System.Boolean ActorAsset::ignored_by_infinity_coin
+     12cd IL_12cd: dup
+     12ce IL_12ce: ldc.i4.0
+     12cf IL_12cf: stfld System.Boolean ActorAsset::split_ai_update
+     12d4 IL_12d4: dup
+     12d5 IL_12d5: ldc.i4.0
+     12d6 IL_12d6: stfld System.Boolean ActorAsset::has_ai_system
+     12db IL_12db: dup
+     12dc IL_12dc: ldc.i4.0
+     12dd IL_12dd: stfld System.Boolean BaseUnlockableAsset::show_in_knowledge_window
+     12e2 IL_12e2: dup
+     12e3 IL_12e3: ldc.i4.0
+     12e4 IL_12e4: stfld System.Boolean ActorAsset::show_task_icon
+     12e9 IL_12e9: dup
+     12ea IL_12ea: ldc.i4.0
+     12eb IL_12eb: stfld System.Boolean ActorAsset::can_talk_with
+     12f0 IL_12f0: dup
+     12f1 IL_12f1: ldc.i4.0
+     12f2 IL_12f2: stfld System.Boolean ActorAsset::control_can_backstep
+     12f7 IL_12f7: dup
+     12f8 IL_12f8: ldc.i4.0
+     12f9 IL_12f9: stfld System.Boolean ActorAsset::control_can_dash
+     12fe IL_12fe: dup
+     12ff IL_12ff: ldc.i4.0
+     1300 IL_1300: stfld System.Boolean ActorAsset::control_can_jump
+     1305 IL_1305: dup
+     1306 IL_1306: ldc.i4.0
+     1307 IL_1307: stfld System.Boolean ActorAsset::control_can_kick
+     130c IL_130c: dup
+     130d IL_130d: ldc.i4.0
+     130e IL_130e: stfld System.Boolean ActorAsset::control_can_talk
+     1313 IL_1313: dup
+     1314 IL_1314: ldc.i4.0
+     1315 IL_1315: stfld System.Boolean ActorAsset::control_can_swear
+     131a IL_131a: dup
+     131b IL_131b: ldc.i4.0
+     131c IL_131c: stfld System.Boolean ActorAsset::control_can_steal
+     1321 IL_1321: dup
+     1322 IL_1322: ldc.i4.0
+     1323 IL_1323: stfld System.Boolean ActorAsset::show_controllable_tip
+     1328 IL_1328: dup
+     1329 IL_1329: stloc.0
+     132a IL_132a: stfld T AssetLibrary`1<ActorAsset>::t
+     132f IL_132f: ldloc.0
+     1330 IL_1330: callvirt T AssetLibrary`1<ActorAsset>::add(T)
+     1335 IL_1335: pop
+     1336 IL_1336: ldarg.0
+     1337 IL_1337: ldfld T AssetLibrary`1<ActorAsset>::t
+     133c IL_133c: ldc.i4.0
+     133d IL_133d: stfld StatusTier ActorAsset::allowed_status_tiers
+     1342 IL_1342: ldarg.0
+     1343 IL_1343: ldfld T AssetLibrary`1<ActorAsset>::t
+     1348 IL_1348: ldc.i4.0
+     1349 IL_1349: stfld System.Boolean ActorAsset::has_sprite_renderer
+     134e IL_134e: ldarg.0
+     134f IL_134f: ldfld T AssetLibrary`1<ActorAsset>::t
+     1354 IL_1354: ldstr "Crabzilla"
+     1359 IL_1359: stfld System.String ActorAsset::name_locale
+     135e IL_135e: ldarg.0
+     135f IL_135f: ldfld T AssetLibrary`1<ActorAsset>::t
+     1364 IL_1364: ldstr "iconCrabzilla"
+     1369 IL_1369: stfld System.String ActorAsset::icon
+     136e IL_136e: ldarg.0
+     136f IL_136f: ldfld T AssetLibrary`1<ActorAsset>::t
+     1374 IL_1374: ldfld BaseStats BaseUnlockableAsset::base_stats
+     1379 IL_1379: ldstr "scale"
+     137e IL_137e: ldc.r4 0.25
+     1383 IL_1383: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     1388 IL_1388: ldarg.0
+     1389 IL_1389: ldfld T AssetLibrary`1<ActorAsset>::t
+     138e IL_138e: ldc.i4.s 17
+     1390 IL_1390: stfld ActorSize ActorAsset::actor_size
+     1395 IL_1395: ldarg.0
+     1396 IL_1396: ldfld T AssetLibrary`1<ActorAsset>::t
+     139b IL_139b: ldfld BaseStats BaseUnlockableAsset::base_stats
+     13a0 IL_13a0: ldstr "health"
+     13a5 IL_13a5: ldc.r4 10000
+     13aa IL_13aa: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     13af IL_13af: ldarg.0
+     13b0 IL_13b0: ldfld T AssetLibrary`1<ActorAsset>::t
+     13b5 IL_13b5: ldfld BaseStats BaseUnlockableAsset::base_stats
+     13ba IL_13ba: ldstr "speed"
+     13bf IL_13bf: ldc.r4 50
+     13c4 IL_13c4: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     13c9 IL_13c9: ldarg.0
+     13ca IL_13ca: ldfld T AssetLibrary`1<ActorAsset>::t
+     13cf IL_13cf: ldfld BaseStats BaseUnlockableAsset::base_stats
+     13d4 IL_13d4: ldstr "damage"
+     13d9 IL_13d9: ldc.r4 10
+     13de IL_13de: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     13e3 IL_13e3: ldarg.0
+     13e4 IL_13e4: ldfld T AssetLibrary`1<ActorAsset>::t
+     13e9 IL_13e9: ldfld BaseStats BaseUnlockableAsset::base_stats
+     13ee IL_13ee: ldstr "size"
+     13f3 IL_13f3: ldc.r4 8
+     13f8 IL_13f8: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     13fd IL_13fd: ldarg.0
+     13fe IL_13fe: ldfld T AssetLibrary`1<ActorAsset>::t
+     1403 IL_1403: ldfld BaseStats BaseUnlockableAsset::base_stats
+     1408 IL_1408: ldstr "mass_2"
+     140d IL_140d: ldc.r4 99999
+     1412 IL_1412: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     1417 IL_1417: ldarg.0
+     1418 IL_1418: ldfld T AssetLibrary`1<ActorAsset>::t
+     141d IL_141d: ldc.i4.0
+     141e IL_141e: stfld System.Boolean ActorAsset::can_level_up
+     1423 IL_1423: ldarg.0
+     1424 IL_1424: ldfld T AssetLibrary`1<ActorAsset>::t
+     1429 IL_1429: ldc.i4.0
+     142a IL_142a: stfld System.Boolean ActorAsset::shadow
+     142f IL_142f: ldarg.0
+     1430 IL_1430: ldfld T AssetLibrary`1<ActorAsset>::t
+     1435 IL_1435: ldc.i4.0
+     1436 IL_1436: stfld System.Boolean ActorAsset::hit_fx_alternative_offset
+     143b IL_143b: ldarg.0
+     143c IL_143c: ldfld T AssetLibrary`1<ActorAsset>::t
+     1441 IL_1441: dup
+     1442 IL_1442: ldfld WorldAction ActorAsset::action_death
+     1447 IL_1447: ldnull
+     1448 IL_1448: ldftn System.Boolean ActionLibrary::clearCrabzilla(BaseSimObject,WorldTile)
+     144e IL_144e: newobj System.Void WorldAction::.ctor(System.Object,System.IntPtr)
+     1453 IL_1453: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     1458 IL_1458: castclass WorldAction
+     145d IL_145d: stfld WorldAction ActorAsset::action_death
+     1462 IL_1462: ldarg.0
+     1463 IL_1463: ldfld T AssetLibrary`1<ActorAsset>::t
+     1468 IL_1468: dup
+     1469 IL_1469: ldfld WorldAction ActorAsset::action_death
+     146e IL_146e: ldnull
+     146f IL_146f: ldftn System.Boolean ActionLibrary::startCrabzillaNuke(BaseSimObject,WorldTile)
+     1475 IL_1475: newobj System.Void WorldAction::.ctor(System.Object,System.IntPtr)
+     147a IL_147a: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     147f IL_147f: castclass WorldAction
+     1484 IL_1484: stfld WorldAction ActorAsset::action_death
+     1489 IL_1489: ldarg.0
+     148a IL_148a: ldfld T AssetLibrary`1<ActorAsset>::t
+     148f IL_148f: ldsfld DeadAnimation ActorAssetLibrary/<>c::<>9__4_5
+     1494 IL_1494: dup
+     1495 IL_1495: brtrue.s IL_14ae
+     1497 IL_1497: pop
+     1498 IL_1498: ldsfld ActorAssetLibrary/<>c ActorAssetLibrary/<>c::<>9
+     149d IL_149d: ldftn System.Boolean ActorAssetLibrary/<>c::<initSpecial>b__4_5(BaseSimObject,WorldTile,System.Single)
+     14a3 IL_14a3: newobj System.Void DeadAnimation::.ctor(System.Object,System.IntPtr)
+     14a8 IL_14a8: dup
+     14a9 IL_14a9: stsfld DeadAnimation ActorAssetLibrary/<>c::<>9__4_5
+     14ae IL_14ae: stfld DeadAnimation ActorAsset::action_dead_animation
+     14b3 IL_14b3: ldarg.0
+     14b4 IL_14b4: ldfld T AssetLibrary`1<ActorAsset>::t
+     14b9 IL_14b9: dup
+     14ba IL_14ba: ldfld GetHitAction ActorAsset::action_get_hit
+     14bf IL_14bf: ldnull
+     14c0 IL_14c0: ldftn System.Boolean Crabzilla::getHit(BaseSimObject,BaseSimObject,WorldTile)
+     14c6 IL_14c6: newobj System.Void GetHitAction::.ctor(System.Object,System.IntPtr)
+     14cb IL_14cb: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     14d0 IL_14d0: castclass GetHitAction
+     14d5 IL_14d5: stfld GetHitAction ActorAsset::action_get_hit
+     14da IL_14da: ldarg.0
+     14db IL_14db: ldfld T AssetLibrary`1<ActorAsset>::t
+     14e0 IL_14e0: ldstr "event:/SFX/HIT/HitFlesh"
+     14e5 IL_14e5: stfld System.String ActorAsset::sound_hit
+     14ea IL_14ea: ldarg.0
+     14eb IL_14eb: ldstr "strong_minded"
+     14f0 IL_14f0: call System.Void ActorAssetLibrary::addTrait(System.String)
+     14f5 IL_14f5: ldarg.0
+     14f6 IL_14f6: ldfld T AssetLibrary`1<ActorAsset>::t
+     14fb IL_14fb: ldc.i4.0
+     14fc IL_14fc: stfld System.Boolean BaseUnlockableAsset::needs_to_be_explored
+     1501 IL_1501: ldarg.0
+     1502 IL_1502: ldfld T AssetLibrary`1<ActorAsset>::t
+     1507 IL_1507: ldc.i4.0
+     1508 IL_1508: stfld System.Boolean ActorAsset::can_be_surprised
+     150d IL_150d: ldarg.0
+     150e IL_150e: ldfld T AssetLibrary`1<ActorAsset>::t
+     1513 IL_1513: ldc.i4.0
+     1514 IL_1514: stfld System.Boolean ActorAsset::use_tool_items
+     1519 IL_1519: ldarg.0
+     151a IL_151a: ldarg.0
+     151b IL_151b: newobj System.Void ActorAsset::.ctor()
+     1520 IL_1520: stloc.0
+     1521 IL_1521: ldloc.0
+     1522 IL_1522: ldstr "god_finger"
+     1527 IL_1527: stfld System.String Asset::id
+     152c IL_152c: ldloc.0
+     152d IL_152d: ldc.i4.1
+     152e IL_152e: stfld System.Boolean ActorAsset::special
+     1533 IL_1533: ldloc.0
+     1534 IL_1534: ldc.i4.s 17
+     1536 IL_1536: stfld ActorSize ActorAsset::actor_size
+     153b IL_153b: ldloc.0
+     153c IL_153c: ldstr "unitShadow_7"
+     1541 IL_1541: stfld System.String ActorAsset::shadow_texture
+     1546 IL_1546: ldloc.0
+     1547 IL_1547: ldstr "godfinger"
+     154c IL_154c: stfld System.String ActorAsset::kingdom_id_wild
+     1551 IL_1551: ldloc.0
+     1552 IL_1552: ldc.i4.1
+     1553 IL_1553: stfld System.Boolean ActorAsset::can_be_killed_by_stuff
+     1558 IL_1558: ldloc.0
+     1559 IL_1559: ldc.i4.1
+     155a IL_155a: stfld System.Boolean ActorAsset::ignore_tile_speed_multiplier
+     155f IL_155f: ldloc.0
+     1560 IL_1560: ldc.i4.1
+     1561 IL_1561: stfld System.Boolean ActorAsset::can_be_killed_by_life_eraser
+     1566 IL_1566: ldloc.0
+     1567 IL_1567: ldc.i4.1
+     1568 IL_1568: stfld System.Boolean ActorAsset::skip_fight_logic
+     156d IL_156d: ldloc.0
+     156e IL_156e: ldc.i4.1
+     156f IL_156f: stfld System.Boolean ActorAsset::can_be_moved_by_powers
+     1574 IL_1574: ldloc.0
+     1575 IL_1575: ldc.i4.1
+     1576 IL_1576: stfld System.Boolean ActorAsset::can_be_hurt_by_powers
+     157b IL_157b: ldloc.0
+     157c IL_157c: ldc.i4.0
+     157d IL_157d: stfld System.Boolean ActorAsset::update_z
+     1582 IL_1582: ldloc.0
+     1583 IL_1583: ldc.i4.1
+     1584 IL_1584: stfld System.Boolean ActorAsset::effect_damage
+     1589 IL_1589: ldloc.0
+     158a IL_158a: ldc.i4.1
+     158b IL_158b: stfld System.Boolean ActorAsset::skip_save
+     1590 IL_1590: ldloc.0
+     1591 IL_1591: ldstr "p_god_finger"
+     1596 IL_1596: stfld System.String ActorAsset::avatar_prefab
+     159b IL_159b: ldloc.0
+     159c IL_159c: ldc.i4.1
+     159d IL_159d: stfld System.Boolean ActorAsset::visible_on_minimap
+     15a2 IL_15a2: ldloc.0
+     15a3 IL_15a3: ldc.i4.0
+     15a4 IL_15a4: stfld System.Boolean ActorAsset::die_on_blocks
+     15a9 IL_15a9: ldloc.0
+     15aa IL_15aa: ldc.i4.1
+     15ab IL_15ab: stfld System.Boolean ActorAsset::ignore_blocks
+     15b0 IL_15b0: ldloc.0
+     15b1 IL_15b1: ldc.i4.0
+     15b2 IL_15b2: stfld System.Boolean ActorAsset::move_from_block
+     15b7 IL_15b7: ldloc.0
+     15b8 IL_15b8: ldc.i4.0
+     15b9 IL_15b9: stfld System.Boolean ActorAsset::run_to_water_when_on_fire
+     15be IL_15be: ldloc.0
+     15bf IL_15bf: ldc.i4.0
+     15c0 IL_15c0: stfld System.Boolean ActorAsset::split_ai_update
+     15c5 IL_15c5: ldloc.0
+     15c6 IL_15c6: ldc.i4.1
+     15c7 IL_15c7: stfld System.Boolean ActorAsset::has_ai_system
+     15cc IL_15cc: ldloc.0
+     15cd IL_15cd: ldc.i4.1
+     15ce IL_15ce: newarr System.String
+     15d3 IL_15d3: dup
+     15d4 IL_15d4: ldc.i4.0
+     15d5 IL_15d5: ldstr "godfinger_job"
+     15da IL_15da: stelem.ref
+     15db IL_15db: call !!0[] AssetLibrary`1<ActorAsset>::a<System.String>(!!0[])
+     15e0 IL_15e0: stfld System.String[] ActorAsset::job
+     15e5 IL_15e5: ldloc.0
+     15e6 IL_15e6: ldc.i4.1
+     15e7 IL_15e7: stfld System.Boolean ActorAsset::flying
+     15ec IL_15ec: ldloc.0
+     15ed IL_15ed: ldc.i4.1
+     15ee IL_15ee: stfld System.Boolean ActorAsset::very_high_flyer
+     15f3 IL_15f3: ldloc.0
+     15f4 IL_15f4: ldc.i4.1
+     15f5 IL_15f5: stfld System.Boolean ActorAsset::die_by_lightning
+     15fa IL_15fa: ldloc.0
+     15fb IL_15fb: ldc.i4.0
+     15fc IL_15fc: stfld System.Boolean BaseUnlockableAsset::show_in_knowledge_window
+     1601 IL_1601: ldloc.0
+     1602 IL_1602: ldc.i4.0
+     1603 IL_1603: stfld System.Boolean ActorAsset::allow_possession
+     1608 IL_1608: ldloc.0
+     1609 IL_1609: ldc.i4.0
+     160a IL_160a: stfld System.Boolean ActorAsset::show_task_icon
+     160f IL_160f: ldloc.0
+     1610 IL_1610: ldc.i4.0
+     1611 IL_1611: stfld System.Boolean ActorAsset::can_talk_with
+     1616 IL_1616: ldloc.0
+     1617 IL_1617: ldc.i4.0
+     1618 IL_1618: stfld System.Boolean ActorAsset::control_can_backstep
+     161d IL_161d: ldloc.0
+     161e IL_161e: ldc.i4.0
+     161f IL_161f: stfld System.Boolean ActorAsset::control_can_dash
+     1624 IL_1624: ldloc.0
+     1625 IL_1625: ldc.i4.0
+     1626 IL_1626: stfld System.Boolean ActorAsset::control_can_jump
+     162b IL_162b: ldloc.0
+     162c IL_162c: ldc.i4.0
+     162d IL_162d: stfld System.Boolean ActorAsset::control_can_kick
+     1632 IL_1632: ldloc.0
+     1633 IL_1633: ldc.i4.0
+     1634 IL_1634: stfld System.Boolean ActorAsset::control_can_talk
+     1639 IL_1639: ldloc.0
+     163a IL_163a: ldc.i4.0
+     163b IL_163b: stfld System.Boolean ActorAsset::control_can_swear
+     1640 IL_1640: ldloc.0
+     1641 IL_1641: ldc.i4.0
+     1642 IL_1642: stfld System.Boolean ActorAsset::control_can_steal
+     1647 IL_1647: ldloc.0
+     1648 IL_1648: ldc.i4.0
+     1649 IL_1649: stfld System.Boolean ActorAsset::show_in_taxonomy_tooltip
+     164e IL_164e: ldloc.0
+     164f IL_164f: dup
+     1650 IL_1650: stloc.0
+     1651 IL_1651: stfld T AssetLibrary`1<ActorAsset>::t
+     1656 IL_1656: ldloc.0
+     1657 IL_1657: callvirt T AssetLibrary`1<ActorAsset>::add(T)
+     165c IL_165c: pop
+     165d IL_165d: ldarg.0
+     165e IL_165e: ldfld T AssetLibrary`1<ActorAsset>::t
+     1663 IL_1663: ldsfld ActorGetSprite ActorAssetLibrary/<>c::<>9__4_6
+     1668 IL_1668: dup
+     1669 IL_1669: brtrue.s IL_1682
+     166b IL_166b: pop
+     166c IL_166c: ldsfld ActorAssetLibrary/<>c ActorAssetLibrary/<>c::<>9
+     1671 IL_1671: ldftn UnityEngine.Sprite ActorAssetLibrary/<>c::<initSpecial>b__4_6(Actor)
+     1677 IL_1677: newobj System.Void ActorGetSprite::.ctor(System.Object,System.IntPtr)
+     167c IL_167c: dup
+     167d IL_167d: stsfld ActorGetSprite ActorAssetLibrary/<>c::<>9__4_6
+     1682 IL_1682: stfld ActorGetSprite ActorAsset::get_override_sprite
+     1687 IL_1687: ldarg.0
+     1688 IL_1688: ldfld T AssetLibrary`1<ActorAsset>::t
+     168d IL_168d: ldc.i4.1
+     168e IL_168e: stfld StatusTier ActorAsset::allowed_status_tiers
+     1693 IL_1693: ldarg.0
+     1694 IL_1694: ldfld T AssetLibrary`1<ActorAsset>::t
+     1699 IL_1699: ldc.i4.0
+     169a IL_169a: stfld System.Boolean ActorAsset::render_status_effects
+     169f IL_169f: ldarg.0
+     16a0 IL_16a0: ldfld T AssetLibrary`1<ActorAsset>::t
+     16a5 IL_16a5: ldc.i4.1
+     16a6 IL_16a6: stfld System.Boolean ActorAsset::flag_finger
+     16ab IL_16ab: ldarg.0
+     16ac IL_16ac: ldfld T AssetLibrary`1<ActorAsset>::t
+     16b1 IL_16b1: ldstr "God Finger"
+     16b6 IL_16b6: stfld System.String ActorAsset::name_locale
+     16bb IL_16bb: ldarg.0
+     16bc IL_16bc: ldfld T AssetLibrary`1<ActorAsset>::t
+     16c1 IL_16c1: ldfld BaseStats BaseUnlockableAsset::base_stats
+     16c6 IL_16c6: ldstr "scale"
+     16cb IL_16cb: ldc.r4 0.3
+     16d0 IL_16d0: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     16d5 IL_16d5: ldarg.0
+     16d6 IL_16d6: ldfld T AssetLibrary`1<ActorAsset>::t
+     16db IL_16db: ldfld BaseStats BaseUnlockableAsset::base_stats
+     16e0 IL_16e0: ldstr "mass"
+     16e5 IL_16e5: ldc.r4 5
+     16ea IL_16ea: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     16ef IL_16ef: ldarg.0
+     16f0 IL_16f0: ldfld T AssetLibrary`1<ActorAsset>::t
+     16f5 IL_16f5: ldfld BaseStats BaseUnlockableAsset::base_stats
+     16fa IL_16fa: ldstr "mass_2"
+     16ff IL_16ff: ldc.r4 99999
+     1704 IL_1704: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     1709 IL_1709: ldarg.0
+     170a IL_170a: ldfld T AssetLibrary`1<ActorAsset>::t
+     170f IL_170f: ldfld BaseStats BaseUnlockableAsset::base_stats
+     1714 IL_1714: ldstr "speed"
+     1719 IL_1719: ldc.r4 50
+     171e IL_171e: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     1723 IL_1723: ldarg.0
+     1724 IL_1724: ldfld T AssetLibrary`1<ActorAsset>::t
+     1729 IL_1729: ldfld BaseStats BaseUnlockableAsset::base_stats
+     172e IL_172e: ldstr "damage"
+     1733 IL_1733: ldc.r4 80
+     1738 IL_1738: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     173d IL_173d: ldarg.0
+     173e IL_173e: ldfld T AssetLibrary`1<ActorAsset>::t
+     1743 IL_1743: ldfld BaseStats BaseUnlockableAsset::base_stats
+     1748 IL_1748: ldstr "lifespan"
+     174d IL_174d: ldc.r4 10000
+     1752 IL_1752: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     1757 IL_1757: ldarg.0
+     1758 IL_1758: ldfld T AssetLibrary`1<ActorAsset>::t
+     175d IL_175d: ldfld BaseStats BaseUnlockableAsset::base_stats
+     1762 IL_1762: ldstr "size"
+     1767 IL_1767: ldc.r4 2
+     176c IL_176c: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     1771 IL_1771: ldarg.0
+     1772 IL_1772: ldfld T AssetLibrary`1<ActorAsset>::t
+     1777 IL_1777: ldfld BaseStats BaseUnlockableAsset::base_stats
+     177c IL_177c: ldstr "health"
+     1781 IL_1781: ldc.r4 100
+     1786 IL_1786: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     178b IL_178b: ldarg.0
+     178c IL_178c: ldfld T AssetLibrary`1<ActorAsset>::t
+     1791 IL_1791: ldfld BaseStats BaseUnlockableAsset::base_stats
+     1796 IL_1796: ldstr "armor"
+     179b IL_179b: ldc.r4 5
+     17a0 IL_17a0: callvirt System.Void BaseStats::set_Item(System.String,System.Single)
+     17a5 IL_17a5: ldarg.0
+     17a6 IL_17a6: ldfld T AssetLibrary`1<ActorAsset>::t
+     17ab IL_17ab: ldc.i4.0
+     17ac IL_17ac: stfld System.Boolean ActorAsset::die_in_lava
+     17b1 IL_17b1: ldarg.0
+     17b2 IL_17b2: ldstr "light_lamp"
+     17b7 IL_17b7: call System.Void ActorAssetLibrary::addTrait(System.String)
+     17bc IL_17bc: ldarg.0
+     17bd IL_17bd: ldstr "strong_minded"
+     17c2 IL_17c2: call System.Void ActorAssetLibrary::addTrait(System.String)
+     17c7 IL_17c7: ldarg.0
+     17c8 IL_17c8: ldstr "fire_proof"
+     17cd IL_17cd: call System.Void ActorAssetLibrary::addTrait(System.String)
+     17d2 IL_17d2: ldarg.0
+     17d3 IL_17d3: ldfld T AssetLibrary`1<ActorAsset>::t
+     17d8 IL_17d8: ldstr "Units_GodFinger"
+     17dd IL_17dd: stfld System.String ActorAsset::music_theme
+     17e2 IL_17e2: ldarg.0
+     17e3 IL_17e3: ldfld T AssetLibrary`1<ActorAsset>::t
+     17e8 IL_17e8: ldstr "event:/SFX/HIT/HitFlesh"
+     17ed IL_17ed: stfld System.String ActorAsset::sound_hit
+     17f2 IL_17f2: ldarg.0
+     17f3 IL_17f3: ldfld T AssetLibrary`1<ActorAsset>::t
+     17f8 IL_17f8: ldc.i4.0
+     17f9 IL_17f9: stfld System.Boolean BaseUnlockableAsset::needs_to_be_explored
+     17fe IL_17fe: ldarg.0
+     17ff IL_17ff: ldfld T AssetLibrary`1<ActorAsset>::t
+     1804 IL_1804: dup
+     1805 IL_1805: ldfld DeadAnimation ActorAsset::action_dead_animation
+     180a IL_180a: ldnull
+     180b IL_180b: ldftn System.Boolean GodFinger::deathFlip(BaseSimObject,WorldTile,System.Single)
+     1811 IL_1811: newobj System.Void DeadAnimation::.ctor(System.Object,System.IntPtr)
+     1816 IL_1816: call System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
+     181b IL_181b: castclass DeadAnimation
+     1820 IL_1820: stfld DeadAnimation ActorAsset::action_dead_animation
+     1825 IL_1825: ldarg.0
+     1826 IL_1826: ldfld T AssetLibrary`1<ActorAsset>::t
+     182b IL_182b: ldc.i4.0
+     182c IL_182c: stfld System.Boolean ActorAsset::can_be_surprised
+     1831 IL_1831: ldarg.0
+     1832 IL_1832: ldfld T AssetLibrary`1<ActorAsset>::t
+     1837 IL_1837: ldc.i4.0
+     1838 IL_1838: stfld System.Boolean ActorAsset::use_tool_items
+     183d IL_183d: ret
+
+######## TYPE ActorAssetLibrary/<>c : System.Object
+---- System.Void <initSpecial>b__4_0(Actor pActor)
+     0000 IL_0000: ldarg.1
+     0001 IL_0001: ldfld ActorData Actor::data
+     0006 IL_0006: ldstr "special_sprite_id"
+     000b IL_000b: ldloca.s V_0
+     000d IL_000d: ldnull
+     000e IL_000e: callvirt System.Void BaseSystemData::get(System.String,System.String&,System.String)
+     0013 IL_0013: ldloc.0
+     0014 IL_0014: call System.Boolean System.String::IsNullOrEmpty(System.String)
+     0019 IL_0019: brfalse.s IL_001c
+     001b IL_001b: ret
+     001c IL_001c: ldsfld BuildingLibrary AssetManager::buildings
+     0021 IL_0021: ldloc.0
+     0022 IL_0022: callvirt T AssetLibrary`1<BuildingAsset>::get(System.String)
+     0027 IL_0027: callvirt System.Void BuildingAsset::checkSpritesAreLoaded()
+     002c IL_002c: ret
+
+---- UnityEngine.Sprite <initSpecial>b__4_1(Actor pActor)
+     0000 IL_0000: ldarg.1
+     0001 IL_0001: ldfld ActorData Actor::data
+     0006 IL_0006: ldstr "special_sprite_id"
+     000b IL_000b: ldloca.s V_0
+     000d IL_000d: ldnull
+     000e IL_000e: callvirt System.Void BaseSystemData::get(System.String,System.String&,System.String)
+     0013 IL_0013: ldarg.1
+     0014 IL_0014: ldfld ActorData Actor::data
+     0019 IL_0019: ldstr "special_sprite_index"
+     001e IL_001e: ldloca.s V_1
+     0020 IL_0020: ldc.i4.0
+     0021 IL_0021: callvirt System.Void BaseSystemData::get(System.String,System.Int32&,System.Int32)
+     0026 IL_0026: ldloc.0
+     0027 IL_0027: call System.Boolean System.String::IsNullOrEmpty(System.String)
+     002c IL_002c: brfalse.s IL_003b
+     002e IL_002e: ldstr "ui/Icons/iconLivingPlants"
+     0033 IL_0033: stloc.0
+     0034 IL_0034: ldloc.0
+     0035 IL_0035: call UnityEngine.Sprite SpriteTextureLoader::getSprite(System.String)
+     003a IL_003a: ret
+     003b IL_003b: ldsfld BuildingLibrary AssetManager::buildings
+     0040 IL_0040: ldloc.0
+     0041 IL_0041: callvirt T AssetLibrary`1<BuildingAsset>::get(System.String)
+     0046 IL_0046: ldfld BuildingSprites BuildingAsset::building_sprites
+     004b IL_004b: ldfld System.Collections.Generic.List`1<BuildingAnimationData> BuildingSprites::animation_data
+     0050 IL_0050: ldloc.1
+     0051 IL_0051: callvirt !0 System.Collections.Generic.List`1<BuildingAnimationData>::get_Item(System.Int32)
+     0056 IL_0056: ldfld UnityEngine.Sprite[] BuildingAnimationData::main
+     005b IL_005b: ldc.i4.0
+     005c IL_005c: ldelem.ref
+     005d IL_005d: ret
+
+---- UnityEngine.Sprite <initSpecial>b__4_2(Actor pActor)
+     0000 IL_0000: ldarg.1
+     0001 IL_0001: callvirt SpriteAnimation Actor::getSpriteAnimation()
+     0006 IL_0006: ldfld UnityEngine.Sprite SpriteAnimation::currentSpriteGraphic
+     000b IL_000b: ret
+
+---- UnityEngine.Sprite[] <initSpecial>b__4_3(Actor pActor)
+     0000 IL_0000: ldsfld PrefabLibrary PrefabLibrary::instance
+     0005 IL_0005: ldfld DragonAsset PrefabLibrary::dragonAsset
+     000a IL_000a: ldc.i4.0
+     000b IL_000b: callvirt DragonAssetContainer DragonAsset::getAsset(DragonState)
+     0010 IL_0010: ldfld UnityEngine.Sprite[] DragonAssetContainer::frames
+     0015 IL_0015: ret
+
+---- UnityEngine.Sprite <initSpecial>b__4_4(Actor pActor)
+     0000 IL_0000: ldarg.1
+     0001 IL_0001: callvirt SpriteAnimation Actor::getSpriteAnimation()
+     0006 IL_0006: ldfld UnityEngine.Sprite SpriteAnimation::currentSpriteGraphic
+     000b IL_000b: ret
+
+---- System.Boolean <initSpecial>b__4_5(BaseSimObject pTarget, WorldTile _, System.Single _)
+     0000 IL_0000: ldarg.1
+     0001 IL_0001: ldfld Actor BaseSimObject::a
+     0006 IL_0006: ldc.i4.s 13
+     0008 IL_0008: callvirt System.Void Actor::dieAndDestroy(AttackType)
+     000d IL_000d: ldc.i4.1
+     000e IL_000e: ret
+
+---- UnityEngine.Sprite <initSpecial>b__4_6(Actor pActor)
+     0000 IL_0000: ldarg.1
+     0001 IL_0001: callvirt SpriteAnimation Actor::getSpriteAnimation()
+     0006 IL_0006: ldfld UnityEngine.Sprite SpriteAnimation::currentSpriteGraphic
+     000b IL_000b: ret
+
