@@ -1,0 +1,9 @@
+{
+  "trait_group_giantpower_group": "Giant Power",
+  "trait_giantpower_trait": "Giant",
+  "trait_giantpower_trait_info": "Enormous and blisteringly fast.",
+  "giantpower_power": "Become Giants",
+  "giantpower_power_description": "Turns every unit on the clicked tile into a huge, fast giant.",
+  "giantpower_tab": "Giant Power",
+  "giantpower_tab_description": "Powers from GiantPower."
+}

@@ -1,0 +1,20 @@
+﻿{
+    "name":  "GiantPower",
+    "GUID":  "com.example.giantpower",
+    "author":  "Example",
+    "version":  "0.1.0",
+    "description":  "Adds a god power that turns units on the clicked tile into huge, fast giants.",
+    "RepoUrl":  "",
+    "iconPath":  "icon.png",
+    "Dependencies":  [
+
+                     ],
+    "OptionalDependencies":  [
+
+                             ],
+    "IncompatibleWith":  [
+
+                         ],
+    "targetGameBuild":  0,
+    "UsePublicizedAssembly":  true
+}

@@ -1,0 +1,20 @@
+{
+    "name":  "WorldBoxModderTemplate",
+    "GUID":  "com.example.worldboxmoddertemplate",
+    "author":  "example",
+    "version":  "0.1.0",
+    "description":  "Reference mod proving the worldbox-modder toolchain end to end.",
+    "RepoUrl":  "",
+    "iconPath":  "icon.png",
+    "Dependencies":  [
+
+                     ],
+    "OptionalDependencies":  [
+
+                             ],
+    "IncompatibleWith":  [
+
+                         ],
+    "targetGameBuild":  0,
+    "UsePublicizedAssembly":  true
+}

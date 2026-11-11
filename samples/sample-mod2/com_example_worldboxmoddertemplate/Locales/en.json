@@ -1,0 +1,11 @@
+{
+  "trait_group_worldboxmoddertemplate_group": "My Mod",
+  "trait_worldboxmoddertemplate_trait": "My Trait",
+  "trait_worldboxmoddertemplate_trait_info": "A sturdier, faster unit.",
+  "status_worldboxmoddertemplate_effect": "My Effect",
+  "status_worldboxmoddertemplate_effect_description": "A short-lived buff.",
+  "worldboxmoddertemplate_power": "My Power",
+  "worldboxmoddertemplate_power_description": "Grants My Trait to units on the clicked tile.",
+  "worldboxmoddertemplate_tab": "My Mod",
+  "worldboxmoddertemplate_tab_description": "Powers from WorldBoxModderTemplate."
+}
